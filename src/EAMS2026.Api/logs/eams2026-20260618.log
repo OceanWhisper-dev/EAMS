@@ -1,0 +1,570 @@
+2026-06-18 11:00:06.555 +08:00 [INF] Microsoft.Hosting.Lifetime Now listening on: http://0.0.0.0:5106
+2026-06-18 11:00:06.623 +08:00 [INF] Microsoft.Hosting.Lifetime Application started. Press Ctrl+C to shut down.
+2026-06-18 11:00:06.625 +08:00 [INF] Microsoft.Hosting.Lifetime Hosting environment: Development
+2026-06-18 11:00:06.625 +08:00 [INF] Microsoft.Hosting.Lifetime Content root path: D:\Codes\Projects\eams2026\src\EAMS2026.Api
+2026-06-18 11:00:50.496 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteReport] reportId=2, userId=1
+2026-06-18 11:00:50.506 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteReport] hasView=true
+2026-06-18 11:00:50.519 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [BuildFilterConditions] between: ddate 从 "2026-06-01T00:00:00.0000000+08:00" ~ "2026-06-08T00:00:00.0000000+08:00"
+2026-06-18 11:00:50.522 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [BuildFilterConditions] 生成条件: ddate BETWEEN '2026-06-01 00:00:00' AND '2026-06-08 00:00:00' AND year = '2026' AND cpersoncode = '0207'
+2026-06-18 11:00:50.523 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [BuildFilterConditions] 修改后SQL: SELECT year,month,ddate,cdcname,cpersonname,cpersoncode,cCusName,cCusAbbName,cShipAddress,cCusPerson,cdlcode,cmaker,cWhName,cInvTopClsName,cInvName,cInvCCode,cInvCName,iQuantity,iNum,isum
+from dflView_eams_crossYearDispatch
+where 1=1
+    AND (ddate BETWEEN '2026-06-01 00:00:00' AND '2026-06-08 00:00:00' AND year = '2026' AND cpersoncode = '0207')
+2026-06-18 11:00:50.525 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteQueryInternal] 应用报表默认排序: ddate DESC, cdcname ASC
+2026-06-18 11:00:50.584 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] datasource=erp_u871_currentYear, isSqlServer=true, sql=SELECT year,month,ddate,cdcname,cpersonname,cpersoncode,cCusName,cCusAbbName,cShipAddress,cCusPerson,cdlcode,cmaker,cWhName,cInvTopClsName,cInvName,cInvCCode,cInvCName,iQuantity,iNum,isum
+from dflView_eams_crossYearDispatch
+where 1=1
+    AND (ddate BETWEEN '2026-06-01 00:00:00' AND '2026-06-08 00:00:00' AND year = '2026' AND cpersoncode = '0207')
+2026-06-18 11:00:50.586 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] 归一化参数数: 3
+2026-06-18 11:00:50.587 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql]    param ddate -> ddate = ["2026-05-31T16:00:00.000Z","2026-06-07T16:00:00.000Z"] (String)
+2026-06-18 11:00:50.589 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql]    param year -> year = 2026 (String)
+2026-06-18 11:00:50.591 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql]    param cpersoncode -> cpersoncode = 0207 (String)
+2026-06-18 11:00:50.594 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] 应用排序: [ddate] DESC, [cdcname] ASC
+2026-06-18 11:00:50.595 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] page=1, pageSize=0
+2026-06-18 11:00:50.597 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] 无分页SQL: SELECT year,month,ddate,cdcname,cpersonname,cpersoncode,cCusName,cCusAbbName,cShipAddress,cCusPerson,cdlcode,cmaker,cWhName,cInvTopClsName,cInvName,cInvCCode,cInvCName,iQuantity,iNum,isum
+from dflView_eams_crossYearDispatch
+where 1=1
+    AND (ddate BETWEEN '2026-06-01 00:00:00' AND '2026-06-08 00:00:00' AND year = '2026' AND cpersoncode = '0207')
+ORDER BY [ddate] DESC, [cdcname] ASC
+2026-06-18 11:00:52.674 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] 返回列数=20, 行数=300
+2026-06-18 11:01:11.853 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteReport] reportId=2, userId=1
+2026-06-18 11:01:11.863 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteReport] hasView=true
+2026-06-18 11:01:11.865 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [BuildFilterConditions] between: ddate 从 "2026-06-01T00:00:00.0000000+08:00" ~ "2026-06-08T00:00:00.0000000+08:00"
+2026-06-18 11:01:11.868 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [BuildFilterConditions] 生成条件: ddate BETWEEN '2026-06-01 00:00:00' AND '2026-06-08 00:00:00' AND year = '2026' AND cpersoncode = '0207'
+2026-06-18 11:01:11.869 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [BuildFilterConditions] 修改后SQL: SELECT year,month,ddate,cdcname,cpersonname,cpersoncode,cCusName,cCusAbbName,cShipAddress,cCusPerson,cdlcode,cmaker,cWhName,cInvTopClsName,cInvName,cInvCCode,cInvCName,iQuantity,iNum,isum
+from dflView_eams_crossYearDispatch
+where 1=1
+    AND (ddate BETWEEN '2026-06-01 00:00:00' AND '2026-06-08 00:00:00' AND year = '2026' AND cpersoncode = '0207')
+2026-06-18 11:01:11.872 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] datasource=erp_u871_currentYear, isSqlServer=true, sql=SELECT year,month,ddate,cdcname,cpersonname,cpersoncode,cCusName,cCusAbbName,cShipAddress,cCusPerson,cdlcode,cmaker,cWhName,cInvTopClsName,cInvName,cInvCCode,cInvCName,iQuantity,iNum,isum
+from dflView_eams_crossYearDispatch
+where 1=1
+    AND (ddate BETWEEN '2026-06-01 00:00:00' AND '2026-06-08 00:00:00' AND year = '2026' AND cpersoncode = '0207')
+2026-06-18 11:01:11.873 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] 归一化参数数: 3
+2026-06-18 11:01:11.875 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql]    param ddate -> ddate = ["2026-05-31T16:00:00.000Z","2026-06-07T16:00:00.000Z"] (String)
+2026-06-18 11:01:11.877 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql]    param year -> year = 2026 (String)
+2026-06-18 11:01:11.878 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql]    param cpersoncode -> cpersoncode = 0207 (String)
+2026-06-18 11:01:11.884 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] 应用排序: [ddate] ASC
+2026-06-18 11:01:11.885 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] page=1, pageSize=0
+2026-06-18 11:01:11.887 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] 无分页SQL: SELECT year,month,ddate,cdcname,cpersonname,cpersoncode,cCusName,cCusAbbName,cShipAddress,cCusPerson,cdlcode,cmaker,cWhName,cInvTopClsName,cInvName,cInvCCode,cInvCName,iQuantity,iNum,isum
+from dflView_eams_crossYearDispatch
+where 1=1
+    AND (ddate BETWEEN '2026-06-01 00:00:00' AND '2026-06-08 00:00:00' AND year = '2026' AND cpersoncode = '0207')
+ORDER BY [ddate] ASC
+2026-06-18 11:01:12.285 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] 返回列数=20, 行数=300
+2026-06-18 11:01:14.695 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteReport] reportId=2, userId=1
+2026-06-18 11:01:14.701 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteReport] hasView=true
+2026-06-18 11:01:14.703 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [BuildFilterConditions] between: ddate 从 "2026-06-01T00:00:00.0000000+08:00" ~ "2026-06-08T00:00:00.0000000+08:00"
+2026-06-18 11:01:14.712 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [BuildFilterConditions] 生成条件: ddate BETWEEN '2026-06-01 00:00:00' AND '2026-06-08 00:00:00' AND year = '2026' AND cpersoncode = '0207'
+2026-06-18 11:01:14.713 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [BuildFilterConditions] 修改后SQL: SELECT year,month,ddate,cdcname,cpersonname,cpersoncode,cCusName,cCusAbbName,cShipAddress,cCusPerson,cdlcode,cmaker,cWhName,cInvTopClsName,cInvName,cInvCCode,cInvCName,iQuantity,iNum,isum
+from dflView_eams_crossYearDispatch
+where 1=1
+    AND (ddate BETWEEN '2026-06-01 00:00:00' AND '2026-06-08 00:00:00' AND year = '2026' AND cpersoncode = '0207')
+2026-06-18 11:01:14.715 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] datasource=erp_u871_currentYear, isSqlServer=true, sql=SELECT year,month,ddate,cdcname,cpersonname,cpersoncode,cCusName,cCusAbbName,cShipAddress,cCusPerson,cdlcode,cmaker,cWhName,cInvTopClsName,cInvName,cInvCCode,cInvCName,iQuantity,iNum,isum
+from dflView_eams_crossYearDispatch
+where 1=1
+    AND (ddate BETWEEN '2026-06-01 00:00:00' AND '2026-06-08 00:00:00' AND year = '2026' AND cpersoncode = '0207')
+2026-06-18 11:01:14.717 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] 归一化参数数: 3
+2026-06-18 11:01:14.718 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql]    param ddate -> ddate = ["2026-05-31T16:00:00.000Z","2026-06-07T16:00:00.000Z"] (String)
+2026-06-18 11:01:14.720 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql]    param year -> year = 2026 (String)
+2026-06-18 11:01:14.722 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql]    param cpersoncode -> cpersoncode = 0207 (String)
+2026-06-18 11:01:14.725 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] 应用排序: [ddate] DESC
+2026-06-18 11:01:14.728 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] page=1, pageSize=0
+2026-06-18 11:01:14.729 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] 无分页SQL: SELECT year,month,ddate,cdcname,cpersonname,cpersoncode,cCusName,cCusAbbName,cShipAddress,cCusPerson,cdlcode,cmaker,cWhName,cInvTopClsName,cInvName,cInvCCode,cInvCName,iQuantity,iNum,isum
+from dflView_eams_crossYearDispatch
+where 1=1
+    AND (ddate BETWEEN '2026-06-01 00:00:00' AND '2026-06-08 00:00:00' AND year = '2026' AND cpersoncode = '0207')
+ORDER BY [ddate] DESC
+2026-06-18 11:01:15.096 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] 返回列数=20, 行数=300
+2026-06-18 11:01:25.854 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteReport] reportId=3, userId=1
+2026-06-18 11:01:25.865 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteReport] hasView=true
+2026-06-18 11:01:25.869 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] datasource=erp_u871_currentYear, isSqlServer=true, sql=SELECT year(som.ddate) as '年',month(som.ddate) as '月',dc.cdcname as '地区',p.cpersonname as '客户经理',cus.cCusName as '客户名称'
+,case when (CHARINDEX('(', cus.cCusAbbName)>0 and  CHARINDEX(')', cus.cCusAbbName)>0 ) 
+		then SUBSTRING(cus.cCusAbbName,CHARINDEX('(', cus.cCusAbbName)+1, CHARINDEX(')', cus.cCusAbbName)-1-CHARINDEX('(', cus.cCusAbbName))
+		else cus.cCusAbbName end as '客户简称'
+,cus.cCusPerson as '联系人','' as '仓库',
+invtopcls.cInvCName as '存货顶级分类',inv.cInvName '存货名称',invcls.cInvCCode as '存货分类编码',invcls.cInvCName as '存货分类',
+iQuantity as '数量',isum as '金额'
+from SO_SOMain as som LEFT JOIN SO_SODetails as sod on som.id = sod.ID
+LEFT JOIN Inventory as inv on inv.cinvcode = sod.cInvCode 
+LEFT JOIN ComputationUnit as cu on inv.cComUnitCode = cu.cComunitCode
+LEFT JOIN Customer as cus on cus.ccuscode = som.cCusCode
+LEFT JOIN Person as p on p.cpersoncode = som.cPersonCode
+LEFT JOIN DistrictClass as dc on dc.cdccode = cus.cdccode
+LEFT JOIN InventoryClass as invcls on invcls.cinvccode = inv.cinvccode
+LEFT JOIN InventoryClass as invtopcls on left(invcls.cInvCCode,2) = invtopcls.cInvCCode
+where 1 = 1
+2026-06-18 11:01:25.873 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] 归一化参数数: 0
+2026-06-18 11:01:25.875 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] page=1, pageSize=0
+2026-06-18 11:01:25.876 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] 无分页SQL: SELECT year(som.ddate) as '年',month(som.ddate) as '月',dc.cdcname as '地区',p.cpersonname as '客户经理',cus.cCusName as '客户名称'
+,case when (CHARINDEX('(', cus.cCusAbbName)>0 and  CHARINDEX(')', cus.cCusAbbName)>0 ) 
+		then SUBSTRING(cus.cCusAbbName,CHARINDEX('(', cus.cCusAbbName)+1, CHARINDEX(')', cus.cCusAbbName)-1-CHARINDEX('(', cus.cCusAbbName))
+		else cus.cCusAbbName end as '客户简称'
+,cus.cCusPerson as '联系人','' as '仓库',
+invtopcls.cInvCName as '存货顶级分类',inv.cInvName '存货名称',invcls.cInvCCode as '存货分类编码',invcls.cInvCName as '存货分类',
+iQuantity as '数量',isum as '金额'
+from SO_SOMain as som LEFT JOIN SO_SODetails as sod on som.id = sod.ID
+LEFT JOIN Inventory as inv on inv.cinvcode = sod.cInvCode 
+LEFT JOIN ComputationUnit as cu on inv.cComUnitCode = cu.cComunitCode
+LEFT JOIN Customer as cus on cus.ccuscode = som.cCusCode
+LEFT JOIN Person as p on p.cpersoncode = som.cPersonCode
+LEFT JOIN DistrictClass as dc on dc.cdccode = cus.cdccode
+LEFT JOIN InventoryClass as invcls on invcls.cinvccode = inv.cinvccode
+LEFT JOIN InventoryClass as invtopcls on left(invcls.cInvCCode,2) = invtopcls.cInvCCode
+where 1 = 1
+2026-06-18 11:01:26.368 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] 返回列数=14, 行数=26145
+2026-06-18 11:01:30.778 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteReport] reportId=3, userId=1
+2026-06-18 11:01:30.783 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteReport] hasView=true
+2026-06-18 11:01:30.801 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] datasource=erp_u871_currentYear, isSqlServer=true, sql=SELECT year(som.ddate) as '年',month(som.ddate) as '月',dc.cdcname as '地区',p.cpersonname as '客户经理',cus.cCusName as '客户名称'
+,case when (CHARINDEX('(', cus.cCusAbbName)>0 and  CHARINDEX(')', cus.cCusAbbName)>0 ) 
+		then SUBSTRING(cus.cCusAbbName,CHARINDEX('(', cus.cCusAbbName)+1, CHARINDEX(')', cus.cCusAbbName)-1-CHARINDEX('(', cus.cCusAbbName))
+		else cus.cCusAbbName end as '客户简称'
+,cus.cCusPerson as '联系人','' as '仓库',
+invtopcls.cInvCName as '存货顶级分类',inv.cInvName '存货名称',invcls.cInvCCode as '存货分类编码',invcls.cInvCName as '存货分类',
+iQuantity as '数量',isum as '金额'
+from SO_SOMain as som LEFT JOIN SO_SODetails as sod on som.id = sod.ID
+LEFT JOIN Inventory as inv on inv.cinvcode = sod.cInvCode 
+LEFT JOIN ComputationUnit as cu on inv.cComUnitCode = cu.cComunitCode
+LEFT JOIN Customer as cus on cus.ccuscode = som.cCusCode
+LEFT JOIN Person as p on p.cpersoncode = som.cPersonCode
+LEFT JOIN DistrictClass as dc on dc.cdccode = cus.cdccode
+LEFT JOIN InventoryClass as invcls on invcls.cinvccode = inv.cinvccode
+LEFT JOIN InventoryClass as invtopcls on left(invcls.cInvCCode,2) = invtopcls.cInvCCode
+where 1 = 1
+2026-06-18 11:01:30.803 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] 归一化参数数: 0
+2026-06-18 11:01:30.804 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] 应用排序: [年] DESC
+2026-06-18 11:01:30.806 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] page=1, pageSize=0
+2026-06-18 11:01:30.807 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] 无分页SQL: SELECT year(som.ddate) as '年',month(som.ddate) as '月',dc.cdcname as '地区',p.cpersonname as '客户经理',cus.cCusName as '客户名称'
+,case when (CHARINDEX('(', cus.cCusAbbName)>0 and  CHARINDEX(')', cus.cCusAbbName)>0 ) 
+		then SUBSTRING(cus.cCusAbbName,CHARINDEX('(', cus.cCusAbbName)+1, CHARINDEX(')', cus.cCusAbbName)-1-CHARINDEX('(', cus.cCusAbbName))
+		else cus.cCusAbbName end as '客户简称'
+,cus.cCusPerson as '联系人','' as '仓库',
+invtopcls.cInvCName as '存货顶级分类',inv.cInvName '存货名称',invcls.cInvCCode as '存货分类编码',invcls.cInvCName as '存货分类',
+iQuantity as '数量',isum as '金额'
+from SO_SOMain as som LEFT JOIN SO_SODetails as sod on som.id = sod.ID
+LEFT JOIN Inventory as inv on inv.cinvcode = sod.cInvCode 
+LEFT JOIN ComputationUnit as cu on inv.cComUnitCode = cu.cComunitCode
+LEFT JOIN Customer as cus on cus.ccuscode = som.cCusCode
+LEFT JOIN Person as p on p.cpersoncode = som.cPersonCode
+LEFT JOIN DistrictClass as dc on dc.cdccode = cus.cdccode
+LEFT JOIN InventoryClass as invcls on invcls.cinvccode = inv.cinvccode
+LEFT JOIN InventoryClass as invtopcls on left(invcls.cInvCCode,2) = invtopcls.cInvCCode
+where 1 = 1
+ORDER BY [年] DESC
+2026-06-18 11:01:32.188 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] 返回列数=14, 行数=26145
+2026-06-18 11:01:37.098 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteReport] reportId=3, userId=1
+2026-06-18 11:01:37.105 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteReport] hasView=true
+2026-06-18 11:01:37.122 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] datasource=erp_u871_currentYear, isSqlServer=true, sql=SELECT year(som.ddate) as '年',month(som.ddate) as '月',dc.cdcname as '地区',p.cpersonname as '客户经理',cus.cCusName as '客户名称'
+,case when (CHARINDEX('(', cus.cCusAbbName)>0 and  CHARINDEX(')', cus.cCusAbbName)>0 ) 
+		then SUBSTRING(cus.cCusAbbName,CHARINDEX('(', cus.cCusAbbName)+1, CHARINDEX(')', cus.cCusAbbName)-1-CHARINDEX('(', cus.cCusAbbName))
+		else cus.cCusAbbName end as '客户简称'
+,cus.cCusPerson as '联系人','' as '仓库',
+invtopcls.cInvCName as '存货顶级分类',inv.cInvName '存货名称',invcls.cInvCCode as '存货分类编码',invcls.cInvCName as '存货分类',
+iQuantity as '数量',isum as '金额'
+from SO_SOMain as som LEFT JOIN SO_SODetails as sod on som.id = sod.ID
+LEFT JOIN Inventory as inv on inv.cinvcode = sod.cInvCode 
+LEFT JOIN ComputationUnit as cu on inv.cComUnitCode = cu.cComunitCode
+LEFT JOIN Customer as cus on cus.ccuscode = som.cCusCode
+LEFT JOIN Person as p on p.cpersoncode = som.cPersonCode
+LEFT JOIN DistrictClass as dc on dc.cdccode = cus.cdccode
+LEFT JOIN InventoryClass as invcls on invcls.cinvccode = inv.cinvccode
+LEFT JOIN InventoryClass as invtopcls on left(invcls.cInvCCode,2) = invtopcls.cInvCCode
+where 1 = 1
+2026-06-18 11:01:37.124 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] 归一化参数数: 0
+2026-06-18 11:01:37.126 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] 应用排序: [月] DESC
+2026-06-18 11:01:37.127 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] page=1, pageSize=0
+2026-06-18 11:01:37.128 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] 无分页SQL: SELECT year(som.ddate) as '年',month(som.ddate) as '月',dc.cdcname as '地区',p.cpersonname as '客户经理',cus.cCusName as '客户名称'
+,case when (CHARINDEX('(', cus.cCusAbbName)>0 and  CHARINDEX(')', cus.cCusAbbName)>0 ) 
+		then SUBSTRING(cus.cCusAbbName,CHARINDEX('(', cus.cCusAbbName)+1, CHARINDEX(')', cus.cCusAbbName)-1-CHARINDEX('(', cus.cCusAbbName))
+		else cus.cCusAbbName end as '客户简称'
+,cus.cCusPerson as '联系人','' as '仓库',
+invtopcls.cInvCName as '存货顶级分类',inv.cInvName '存货名称',invcls.cInvCCode as '存货分类编码',invcls.cInvCName as '存货分类',
+iQuantity as '数量',isum as '金额'
+from SO_SOMain as som LEFT JOIN SO_SODetails as sod on som.id = sod.ID
+LEFT JOIN Inventory as inv on inv.cinvcode = sod.cInvCode 
+LEFT JOIN ComputationUnit as cu on inv.cComUnitCode = cu.cComunitCode
+LEFT JOIN Customer as cus on cus.ccuscode = som.cCusCode
+LEFT JOIN Person as p on p.cpersoncode = som.cPersonCode
+LEFT JOIN DistrictClass as dc on dc.cdccode = cus.cdccode
+LEFT JOIN InventoryClass as invcls on invcls.cinvccode = inv.cinvccode
+LEFT JOIN InventoryClass as invtopcls on left(invcls.cInvCCode,2) = invtopcls.cInvCCode
+where 1 = 1
+ORDER BY [月] DESC
+2026-06-18 11:01:37.882 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] 返回列数=14, 行数=26145
+2026-06-18 11:01:48.052 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [GetSalespersons] 数据源=erp_u871_currentYear, 获取了 8 个业务员
+2026-06-18 11:02:41.752 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteReport] reportId=3, userId=1
+2026-06-18 11:02:41.759 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteReport] hasView=true
+2026-06-18 11:02:41.761 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [BuildFilterConditions] between: som.ddate 从 "2026-06-01T00:00:00.0000000+08:00" ~ "2026-06-18T00:00:00.0000000+08:00"
+2026-06-18 11:02:41.763 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [BuildFilterConditions] 生成条件: som.ddate BETWEEN '2026-06-01 00:00:00' AND '2026-06-18 00:00:00'
+2026-06-18 11:02:41.764 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [BuildFilterConditions] 修改后SQL: SELECT year(som.ddate) as '年',month(som.ddate) as '月',dc.cdcname as '地区',p.cpersonname as '客户经理',cus.cCusName as '客户名称'
+,case when (CHARINDEX('(', cus.cCusAbbName)>0 and  CHARINDEX(')', cus.cCusAbbName)>0 ) 
+		then SUBSTRING(cus.cCusAbbName,CHARINDEX('(', cus.cCusAbbName)+1, CHARINDEX(')', cus.cCusAbbName)-1-CHARINDEX('(', cus.cCusAbbName))
+		else cus.cCusAbbName end as '客户简称'
+,cus.cCusPerson as '联系人','' as '仓库',
+invtopcls.cInvCName as '存货顶级分类',inv.cInvName '存货名称',invcls.cInvCCode as '存货分类编码',invcls.cInvCName as '存货分类',
+iQuantity as '数量',isum as '金额'
+from SO_SOMain as som LEFT JOIN SO_SODetails as sod on som.id = sod.ID
+LEFT JOIN Inventory as inv on inv.cinvcode = sod.cInvCode 
+LEFT JOIN ComputationUnit as cu on inv.cComUnitCode = cu.cComunitCode
+LEFT JOIN Customer as cus on cus.ccuscode = som.cCusCode
+LEFT JOIN Person as p on p.cpersoncode = som.cPersonCode
+LEFT JOIN DistrictClass as dc on dc.cdccode = cus.cdccode
+LEFT JOIN InventoryClass as invcls on invcls.cinvccode = inv.cinvccode
+LEFT JOIN InventoryClass as invtopcls on left(invcls.cInvCCode,2) = invtopcls.cInvCCode
+where 1 = 1
+    AND (som.ddate BETWEEN '2026-06-01 00:00:00' AND '2026-06-18 00:00:00')
+2026-06-18 11:02:41.768 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] datasource=erp_u871_currentYear, isSqlServer=true, sql=SELECT year(som.ddate) as '年',month(som.ddate) as '月',dc.cdcname as '地区',p.cpersonname as '客户经理',cus.cCusName as '客户名称'
+,case when (CHARINDEX('(', cus.cCusAbbName)>0 and  CHARINDEX(')', cus.cCusAbbName)>0 ) 
+		then SUBSTRING(cus.cCusAbbName,CHARINDEX('(', cus.cCusAbbName)+1, CHARINDEX(')', cus.cCusAbbName)-1-CHARINDEX('(', cus.cCusAbbName))
+		else cus.cCusAbbName end as '客户简称'
+,cus.cCusPerson as '联系人','' as '仓库',
+invtopcls.cInvCName as '存货顶级分类',inv.cInvName '存货名称',invcls.cInvCCode as '存货分类编码',invcls.cInvCName as '存货分类',
+iQuantity as '数量',isum as '金额'
+from SO_SOMain as som LEFT JOIN SO_SODetails as sod on som.id = sod.ID
+LEFT JOIN Inventory as inv on inv.cinvcode = sod.cInvCode 
+LEFT JOIN ComputationUnit as cu on inv.cComUnitCode = cu.cComunitCode
+LEFT JOIN Customer as cus on cus.ccuscode = som.cCusCode
+LEFT JOIN Person as p on p.cpersoncode = som.cPersonCode
+LEFT JOIN DistrictClass as dc on dc.cdccode = cus.cdccode
+LEFT JOIN InventoryClass as invcls on invcls.cinvccode = inv.cinvccode
+LEFT JOIN InventoryClass as invtopcls on left(invcls.cInvCCode,2) = invtopcls.cInvCCode
+where 1 = 1
+    AND (som.ddate BETWEEN '2026-06-01 00:00:00' AND '2026-06-18 00:00:00')
+2026-06-18 11:02:41.770 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] 归一化参数数: 1
+2026-06-18 11:02:41.772 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql]    param som.ddate -> som_ddate = ["2026-05-31T16:00:00.000Z","2026-06-17T16:00:00.000Z"] (String)
+2026-06-18 11:02:41.774 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] 应用排序: [月] DESC
+2026-06-18 11:02:41.775 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] page=1, pageSize=0
+2026-06-18 11:02:41.776 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] 无分页SQL: SELECT year(som.ddate) as '年',month(som.ddate) as '月',dc.cdcname as '地区',p.cpersonname as '客户经理',cus.cCusName as '客户名称'
+,case when (CHARINDEX('(', cus.cCusAbbName)>0 and  CHARINDEX(')', cus.cCusAbbName)>0 ) 
+		then SUBSTRING(cus.cCusAbbName,CHARINDEX('(', cus.cCusAbbName)+1, CHARINDEX(')', cus.cCusAbbName)-1-CHARINDEX('(', cus.cCusAbbName))
+		else cus.cCusAbbName end as '客户简称'
+,cus.cCusPerson as '联系人','' as '仓库',
+invtopcls.cInvCName as '存货顶级分类',inv.cInvName '存货名称',invcls.cInvCCode as '存货分类编码',invcls.cInvCName as '存货分类',
+iQuantity as '数量',isum as '金额'
+from SO_SOMain as som LEFT JOIN SO_SODetails as sod on som.id = sod.ID
+LEFT JOIN Inventory as inv on inv.cinvcode = sod.cInvCode 
+LEFT JOIN ComputationUnit as cu on inv.cComUnitCode = cu.cComunitCode
+LEFT JOIN Customer as cus on cus.ccuscode = som.cCusCode
+LEFT JOIN Person as p on p.cpersoncode = som.cPersonCode
+LEFT JOIN DistrictClass as dc on dc.cdccode = cus.cdccode
+LEFT JOIN InventoryClass as invcls on invcls.cinvccode = inv.cinvccode
+LEFT JOIN InventoryClass as invtopcls on left(invcls.cInvCCode,2) = invtopcls.cInvCCode
+where 1 = 1
+    AND (som.ddate BETWEEN '2026-06-01 00:00:00' AND '2026-06-18 00:00:00')
+ORDER BY [月] DESC
+2026-06-18 11:02:41.878 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] 返回列数=14, 行数=263
+2026-06-18 11:02:46.518 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteReport] reportId=3, userId=1
+2026-06-18 11:02:46.523 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteReport] hasView=true
+2026-06-18 11:02:46.530 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [BuildFilterConditions] between: som.ddate 从 "2026-06-01T00:00:00.0000000+08:00" ~ "2026-06-18T00:00:00.0000000+08:00"
+2026-06-18 11:02:46.531 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [BuildFilterConditions] 生成条件: som.ddate BETWEEN '2026-06-01 00:00:00' AND '2026-06-18 00:00:00'
+2026-06-18 11:02:46.534 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [BuildFilterConditions] 修改后SQL: SELECT year(som.ddate) as '年',month(som.ddate) as '月',dc.cdcname as '地区',p.cpersonname as '客户经理',cus.cCusName as '客户名称'
+,case when (CHARINDEX('(', cus.cCusAbbName)>0 and  CHARINDEX(')', cus.cCusAbbName)>0 ) 
+		then SUBSTRING(cus.cCusAbbName,CHARINDEX('(', cus.cCusAbbName)+1, CHARINDEX(')', cus.cCusAbbName)-1-CHARINDEX('(', cus.cCusAbbName))
+		else cus.cCusAbbName end as '客户简称'
+,cus.cCusPerson as '联系人','' as '仓库',
+invtopcls.cInvCName as '存货顶级分类',inv.cInvName '存货名称',invcls.cInvCCode as '存货分类编码',invcls.cInvCName as '存货分类',
+iQuantity as '数量',isum as '金额'
+from SO_SOMain as som LEFT JOIN SO_SODetails as sod on som.id = sod.ID
+LEFT JOIN Inventory as inv on inv.cinvcode = sod.cInvCode 
+LEFT JOIN ComputationUnit as cu on inv.cComUnitCode = cu.cComunitCode
+LEFT JOIN Customer as cus on cus.ccuscode = som.cCusCode
+LEFT JOIN Person as p on p.cpersoncode = som.cPersonCode
+LEFT JOIN DistrictClass as dc on dc.cdccode = cus.cdccode
+LEFT JOIN InventoryClass as invcls on invcls.cinvccode = inv.cinvccode
+LEFT JOIN InventoryClass as invtopcls on left(invcls.cInvCCode,2) = invtopcls.cInvCCode
+where 1 = 1
+    AND (som.ddate BETWEEN '2026-06-01 00:00:00' AND '2026-06-18 00:00:00')
+2026-06-18 11:02:46.538 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] datasource=erp_u871_currentYear, isSqlServer=true, sql=SELECT year(som.ddate) as '年',month(som.ddate) as '月',dc.cdcname as '地区',p.cpersonname as '客户经理',cus.cCusName as '客户名称'
+,case when (CHARINDEX('(', cus.cCusAbbName)>0 and  CHARINDEX(')', cus.cCusAbbName)>0 ) 
+		then SUBSTRING(cus.cCusAbbName,CHARINDEX('(', cus.cCusAbbName)+1, CHARINDEX(')', cus.cCusAbbName)-1-CHARINDEX('(', cus.cCusAbbName))
+		else cus.cCusAbbName end as '客户简称'
+,cus.cCusPerson as '联系人','' as '仓库',
+invtopcls.cInvCName as '存货顶级分类',inv.cInvName '存货名称',invcls.cInvCCode as '存货分类编码',invcls.cInvCName as '存货分类',
+iQuantity as '数量',isum as '金额'
+from SO_SOMain as som LEFT JOIN SO_SODetails as sod on som.id = sod.ID
+LEFT JOIN Inventory as inv on inv.cinvcode = sod.cInvCode 
+LEFT JOIN ComputationUnit as cu on inv.cComUnitCode = cu.cComunitCode
+LEFT JOIN Customer as cus on cus.ccuscode = som.cCusCode
+LEFT JOIN Person as p on p.cpersoncode = som.cPersonCode
+LEFT JOIN DistrictClass as dc on dc.cdccode = cus.cdccode
+LEFT JOIN InventoryClass as invcls on invcls.cinvccode = inv.cinvccode
+LEFT JOIN InventoryClass as invtopcls on left(invcls.cInvCCode,2) = invtopcls.cInvCCode
+where 1 = 1
+    AND (som.ddate BETWEEN '2026-06-01 00:00:00' AND '2026-06-18 00:00:00')
+2026-06-18 11:02:46.542 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] 归一化参数数: 1
+2026-06-18 11:02:46.543 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql]    param som.ddate -> som_ddate = ["2026-05-31T16:00:00.000Z","2026-06-17T16:00:00.000Z"] (String)
+2026-06-18 11:02:46.545 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] 应用排序: [存货分类编码] ASC
+2026-06-18 11:02:46.546 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] page=1, pageSize=0
+2026-06-18 11:02:46.547 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] 无分页SQL: SELECT year(som.ddate) as '年',month(som.ddate) as '月',dc.cdcname as '地区',p.cpersonname as '客户经理',cus.cCusName as '客户名称'
+,case when (CHARINDEX('(', cus.cCusAbbName)>0 and  CHARINDEX(')', cus.cCusAbbName)>0 ) 
+		then SUBSTRING(cus.cCusAbbName,CHARINDEX('(', cus.cCusAbbName)+1, CHARINDEX(')', cus.cCusAbbName)-1-CHARINDEX('(', cus.cCusAbbName))
+		else cus.cCusAbbName end as '客户简称'
+,cus.cCusPerson as '联系人','' as '仓库',
+invtopcls.cInvCName as '存货顶级分类',inv.cInvName '存货名称',invcls.cInvCCode as '存货分类编码',invcls.cInvCName as '存货分类',
+iQuantity as '数量',isum as '金额'
+from SO_SOMain as som LEFT JOIN SO_SODetails as sod on som.id = sod.ID
+LEFT JOIN Inventory as inv on inv.cinvcode = sod.cInvCode 
+LEFT JOIN ComputationUnit as cu on inv.cComUnitCode = cu.cComunitCode
+LEFT JOIN Customer as cus on cus.ccuscode = som.cCusCode
+LEFT JOIN Person as p on p.cpersoncode = som.cPersonCode
+LEFT JOIN DistrictClass as dc on dc.cdccode = cus.cdccode
+LEFT JOIN InventoryClass as invcls on invcls.cinvccode = inv.cinvccode
+LEFT JOIN InventoryClass as invtopcls on left(invcls.cInvCCode,2) = invtopcls.cInvCCode
+where 1 = 1
+    AND (som.ddate BETWEEN '2026-06-01 00:00:00' AND '2026-06-18 00:00:00')
+ORDER BY [存货分类编码] ASC
+2026-06-18 11:02:46.649 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] 返回列数=14, 行数=263
+2026-06-18 11:03:08.659 +08:00 [INF] EAMS2026.Application.Services.Erp.VouchModifyService [GetSalespersons] 从 erp_settings_salesperson_map 读取业务员列表
+2026-06-18 11:03:08.772 +08:00 [INF] EAMS2026.Application.Services.Erp.VouchModifyService [GetSalespersons] 从映射表获取到 6 个业务员
+2026-06-18 11:03:09.201 +08:00 [INF] EAMS2026.Application.Services.Erp.VouchModifyService [QueryUnverifiedDispatches] 开始查询未审核发货单, 客户编码=null, 日期范围=null~null
+2026-06-18 11:03:09.385 +08:00 [INF] EAMS2026.Application.Services.Erp.VouchModifyService [QueryUnverifiedDispatches] 查询完成, 共 20 条 (总计 390)
+2026-06-18 14:43:19.342 +08:00 [INF] Microsoft.Hosting.Lifetime Now listening on: http://0.0.0.0:5106
+2026-06-18 14:43:19.390 +08:00 [INF] Microsoft.Hosting.Lifetime Application started. Press Ctrl+C to shut down.
+2026-06-18 14:43:19.392 +08:00 [INF] Microsoft.Hosting.Lifetime Hosting environment: Development
+2026-06-18 14:43:19.393 +08:00 [INF] Microsoft.Hosting.Lifetime Content root path: D:\Codes\Projects\eams2026\src\EAMS2026.Api
+2026-06-18 14:43:33.614 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteReport] reportId=2, userId=1
+2026-06-18 14:43:33.627 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteReport] hasView=true
+2026-06-18 14:43:33.635 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [BuildFilterConditions] between: ddate 从 "2026-06-01T00:00:00.0000000+08:00" ~ "2026-06-08T00:00:00.0000000+08:00"
+2026-06-18 14:43:33.639 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [BuildFilterConditions] 生成条件: ddate BETWEEN '2026-06-01 00:00:00' AND '2026-06-08 00:00:00' AND year = '2026' AND cpersoncode = '0207'
+2026-06-18 14:43:33.640 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [BuildFilterConditions] 修改后SQL: SELECT year,month,ddate,cdcname,cpersonname,cpersoncode,cCusName,cCusAbbName,cShipAddress,cCusPerson,cdlcode,cmaker,cWhName,cInvTopClsName,cInvName,cInvCCode,cInvCName,iQuantity,iNum,isum
+from dflView_eams_crossYearDispatch
+where 1=1
+    AND (ddate BETWEEN '2026-06-01 00:00:00' AND '2026-06-08 00:00:00' AND year = '2026' AND cpersoncode = '0207')
+2026-06-18 14:43:33.642 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteQueryInternal] 应用报表默认排序: ddate DESC, cdcname ASC
+2026-06-18 14:43:33.790 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] datasource=erp_u871_currentYear, isSqlServer=true, sql=SELECT year,month,ddate,cdcname,cpersonname,cpersoncode,cCusName,cCusAbbName,cShipAddress,cCusPerson,cdlcode,cmaker,cWhName,cInvTopClsName,cInvName,cInvCCode,cInvCName,iQuantity,iNum,isum
+from dflView_eams_crossYearDispatch
+where 1=1
+    AND (ddate BETWEEN '2026-06-01 00:00:00' AND '2026-06-08 00:00:00' AND year = '2026' AND cpersoncode = '0207')
+2026-06-18 14:43:33.793 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] 归一化参数数: 3
+2026-06-18 14:43:33.795 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql]    param ddate -> ddate = ["2026-05-31T16:00:00.000Z","2026-06-07T16:00:00.000Z"] (String)
+2026-06-18 14:43:33.797 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql]    param year -> year = 2026 (String)
+2026-06-18 14:43:33.891 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql]    param cpersoncode -> cpersoncode = 0207 (String)
+2026-06-18 14:43:33.910 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] 应用排序: [ddate] DESC, [cdcname] ASC
+2026-06-18 14:43:33.912 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] page=1, pageSize=0
+2026-06-18 14:43:33.940 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] 无分页SQL: SELECT year,month,ddate,cdcname,cpersonname,cpersoncode,cCusName,cCusAbbName,cShipAddress,cCusPerson,cdlcode,cmaker,cWhName,cInvTopClsName,cInvName,cInvCCode,cInvCName,iQuantity,iNum,isum
+from dflView_eams_crossYearDispatch
+where 1=1
+    AND (ddate BETWEEN '2026-06-01 00:00:00' AND '2026-06-08 00:00:00' AND year = '2026' AND cpersoncode = '0207')
+ORDER BY [ddate] DESC, [cdcname] ASC
+2026-06-18 14:43:36.312 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] 返回列数=20, 行数=302
+2026-06-18 14:43:40.289 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteReport] reportId=2, userId=1
+2026-06-18 14:43:40.306 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteReport] hasView=true
+2026-06-18 14:43:40.308 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [BuildFilterConditions] between: ddate 从 "2026-06-01T00:00:00.0000000+08:00" ~ "2026-06-08T00:00:00.0000000+08:00"
+2026-06-18 14:43:40.391 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [BuildFilterConditions] 生成条件: ddate BETWEEN '2026-06-01 00:00:00' AND '2026-06-08 00:00:00' AND year = '2026' AND cpersoncode = '0207'
+2026-06-18 14:43:40.404 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [BuildFilterConditions] 修改后SQL: SELECT year,month,ddate,cdcname,cpersonname,cpersoncode,cCusName,cCusAbbName,cShipAddress,cCusPerson,cdlcode,cmaker,cWhName,cInvTopClsName,cInvName,cInvCCode,cInvCName,iQuantity,iNum,isum
+from dflView_eams_crossYearDispatch
+where 1=1
+    AND (ddate BETWEEN '2026-06-01 00:00:00' AND '2026-06-08 00:00:00' AND year = '2026' AND cpersoncode = '0207')
+2026-06-18 14:43:40.408 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] datasource=erp_u871_currentYear, isSqlServer=true, sql=SELECT year,month,ddate,cdcname,cpersonname,cpersoncode,cCusName,cCusAbbName,cShipAddress,cCusPerson,cdlcode,cmaker,cWhName,cInvTopClsName,cInvName,cInvCCode,cInvCName,iQuantity,iNum,isum
+from dflView_eams_crossYearDispatch
+where 1=1
+    AND (ddate BETWEEN '2026-06-01 00:00:00' AND '2026-06-08 00:00:00' AND year = '2026' AND cpersoncode = '0207')
+2026-06-18 14:43:40.412 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] 归一化参数数: 3
+2026-06-18 14:43:40.413 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql]    param ddate -> ddate = ["2026-05-31T16:00:00.000Z","2026-06-07T16:00:00.000Z"] (String)
+2026-06-18 14:43:40.415 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql]    param year -> year = 2026 (String)
+2026-06-18 14:43:40.417 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql]    param cpersoncode -> cpersoncode = 0207 (String)
+2026-06-18 14:43:40.419 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] 应用排序: [ddate] DESC
+2026-06-18 14:43:40.420 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] page=1, pageSize=0
+2026-06-18 14:43:40.422 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] 无分页SQL: SELECT year,month,ddate,cdcname,cpersonname,cpersoncode,cCusName,cCusAbbName,cShipAddress,cCusPerson,cdlcode,cmaker,cWhName,cInvTopClsName,cInvName,cInvCCode,cInvCName,iQuantity,iNum,isum
+from dflView_eams_crossYearDispatch
+where 1=1
+    AND (ddate BETWEEN '2026-06-01 00:00:00' AND '2026-06-08 00:00:00' AND year = '2026' AND cpersoncode = '0207')
+ORDER BY [ddate] DESC
+2026-06-18 14:43:40.803 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] 返回列数=20, 行数=302
+2026-06-18 14:43:42.922 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteReport] reportId=2, userId=1
+2026-06-18 14:43:42.931 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteReport] hasView=true
+2026-06-18 14:43:42.935 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [BuildFilterConditions] between: ddate 从 "2026-06-01T00:00:00.0000000+08:00" ~ "2026-06-08T00:00:00.0000000+08:00"
+2026-06-18 14:43:42.937 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [BuildFilterConditions] 生成条件: ddate BETWEEN '2026-06-01 00:00:00' AND '2026-06-08 00:00:00' AND year = '2026' AND cpersoncode = '0207'
+2026-06-18 14:43:42.938 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [BuildFilterConditions] 修改后SQL: SELECT year,month,ddate,cdcname,cpersonname,cpersoncode,cCusName,cCusAbbName,cShipAddress,cCusPerson,cdlcode,cmaker,cWhName,cInvTopClsName,cInvName,cInvCCode,cInvCName,iQuantity,iNum,isum
+from dflView_eams_crossYearDispatch
+where 1=1
+    AND (ddate BETWEEN '2026-06-01 00:00:00' AND '2026-06-08 00:00:00' AND year = '2026' AND cpersoncode = '0207')
+2026-06-18 14:43:42.941 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] datasource=erp_u871_currentYear, isSqlServer=true, sql=SELECT year,month,ddate,cdcname,cpersonname,cpersoncode,cCusName,cCusAbbName,cShipAddress,cCusPerson,cdlcode,cmaker,cWhName,cInvTopClsName,cInvName,cInvCCode,cInvCName,iQuantity,iNum,isum
+from dflView_eams_crossYearDispatch
+where 1=1
+    AND (ddate BETWEEN '2026-06-01 00:00:00' AND '2026-06-08 00:00:00' AND year = '2026' AND cpersoncode = '0207')
+2026-06-18 14:43:42.943 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] 归一化参数数: 3
+2026-06-18 14:43:42.944 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql]    param ddate -> ddate = ["2026-05-31T16:00:00.000Z","2026-06-07T16:00:00.000Z"] (String)
+2026-06-18 14:43:42.946 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql]    param year -> year = 2026 (String)
+2026-06-18 14:43:42.948 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql]    param cpersoncode -> cpersoncode = 0207 (String)
+2026-06-18 14:43:42.950 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] 应用排序: [ddate] ASC
+2026-06-18 14:43:42.951 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] page=1, pageSize=0
+2026-06-18 14:43:42.952 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] 无分页SQL: SELECT year,month,ddate,cdcname,cpersonname,cpersoncode,cCusName,cCusAbbName,cShipAddress,cCusPerson,cdlcode,cmaker,cWhName,cInvTopClsName,cInvName,cInvCCode,cInvCName,iQuantity,iNum,isum
+from dflView_eams_crossYearDispatch
+where 1=1
+    AND (ddate BETWEEN '2026-06-01 00:00:00' AND '2026-06-08 00:00:00' AND year = '2026' AND cpersoncode = '0207')
+ORDER BY [ddate] ASC
+2026-06-18 14:43:43.233 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] 返回列数=20, 行数=302
+2026-06-18 15:02:14.206 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteReport] reportId=2, userId=1
+2026-06-18 15:02:14.214 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteReport] hasView=true
+2026-06-18 15:02:14.215 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [BuildFilterConditions] between: ddate 从 "2026-06-01T00:00:00.0000000+08:00" ~ "2026-06-08T00:00:00.0000000+08:00"
+2026-06-18 15:02:14.217 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [BuildFilterConditions] 生成条件: ddate BETWEEN '2026-06-01 00:00:00' AND '2026-06-08 00:00:00' AND year = '2026' AND cpersoncode = '0207'
+2026-06-18 15:02:14.218 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [BuildFilterConditions] 修改后SQL: SELECT year,month,ddate,cdcname,cpersonname,cpersoncode,cCusName,cCusAbbName,cShipAddress,cCusPerson,cdlcode,cmaker,cWhName,cInvTopClsName,cInvName,cInvCCode,cInvCName,iQuantity,iNum,isum
+from dflView_eams_crossYearDispatch
+where 1=1
+    AND (ddate BETWEEN '2026-06-01 00:00:00' AND '2026-06-08 00:00:00' AND year = '2026' AND cpersoncode = '0207')
+2026-06-18 15:02:14.221 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteQueryInternal] 应用报表默认排序: ddate DESC, cdcname ASC
+2026-06-18 15:02:14.227 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] datasource=erp_u871_currentYear, isSqlServer=true, sql=SELECT year,month,ddate,cdcname,cpersonname,cpersoncode,cCusName,cCusAbbName,cShipAddress,cCusPerson,cdlcode,cmaker,cWhName,cInvTopClsName,cInvName,cInvCCode,cInvCName,iQuantity,iNum,isum
+from dflView_eams_crossYearDispatch
+where 1=1
+    AND (ddate BETWEEN '2026-06-01 00:00:00' AND '2026-06-08 00:00:00' AND year = '2026' AND cpersoncode = '0207')
+2026-06-18 15:02:14.231 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] 归一化参数数: 3
+2026-06-18 15:02:14.232 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql]    param ddate -> ddate = ["2026-05-31T16:00:00.000Z","2026-06-07T16:00:00.000Z"] (String)
+2026-06-18 15:02:14.234 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql]    param year -> year = 2026 (String)
+2026-06-18 15:02:14.237 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql]    param cpersoncode -> cpersoncode = 0207 (String)
+2026-06-18 15:02:14.240 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] 应用排序: [ddate] DESC, [cdcname] ASC
+2026-06-18 15:02:14.243 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] page=1, pageSize=0
+2026-06-18 15:02:14.244 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] 无分页SQL: SELECT year,month,ddate,cdcname,cpersonname,cpersoncode,cCusName,cCusAbbName,cShipAddress,cCusPerson,cdlcode,cmaker,cWhName,cInvTopClsName,cInvName,cInvCCode,cInvCName,iQuantity,iNum,isum
+from dflView_eams_crossYearDispatch
+where 1=1
+    AND (ddate BETWEEN '2026-06-01 00:00:00' AND '2026-06-08 00:00:00' AND year = '2026' AND cpersoncode = '0207')
+ORDER BY [ddate] DESC, [cdcname] ASC
+2026-06-18 15:02:15.625 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] 返回列数=20, 行数=302
+2026-06-18 15:05:54.073 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteReport] reportId=2, userId=1
+2026-06-18 15:05:54.094 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteReport] hasView=true
+2026-06-18 15:05:54.225 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [BuildFilterConditions] between: ddate 从 "2026-06-01T00:00:00.0000000+08:00" ~ "2026-06-08T00:00:00.0000000+08:00"
+2026-06-18 15:05:54.227 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [BuildFilterConditions] 生成条件: ddate BETWEEN '2026-06-01 00:00:00' AND '2026-06-08 00:00:00' AND year = '2026' AND cpersoncode = '0207'
+2026-06-18 15:05:54.228 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [BuildFilterConditions] 修改后SQL: SELECT year,month,ddate,cdcname,cpersonname,cpersoncode,cCusName,cCusAbbName,cShipAddress,cCusPerson,cdlcode,cmaker,cWhName,cInvTopClsName,cInvName,cInvCCode,cInvCName,iQuantity,iNum,isum
+from dflView_eams_crossYearDispatch
+where 1=1
+    AND (ddate BETWEEN '2026-06-01 00:00:00' AND '2026-06-08 00:00:00' AND year = '2026' AND cpersoncode = '0207')
+2026-06-18 15:05:54.229 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteQueryInternal] 应用报表默认排序: ddate DESC, cdcname ASC
+2026-06-18 15:05:54.232 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] datasource=erp_u871_currentYear, isSqlServer=true, sql=SELECT year,month,ddate,cdcname,cpersonname,cpersoncode,cCusName,cCusAbbName,cShipAddress,cCusPerson,cdlcode,cmaker,cWhName,cInvTopClsName,cInvName,cInvCCode,cInvCName,iQuantity,iNum,isum
+from dflView_eams_crossYearDispatch
+where 1=1
+    AND (ddate BETWEEN '2026-06-01 00:00:00' AND '2026-06-08 00:00:00' AND year = '2026' AND cpersoncode = '0207')
+2026-06-18 15:05:54.243 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] 归一化参数数: 3
+2026-06-18 15:05:54.246 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql]    param ddate -> ddate = ["2026-05-31T16:00:00.000Z","2026-06-07T16:00:00.000Z"] (String)
+2026-06-18 15:05:54.248 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql]    param year -> year = 2026 (String)
+2026-06-18 15:05:54.250 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql]    param cpersoncode -> cpersoncode = 0207 (String)
+2026-06-18 15:05:54.252 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] 应用排序: [ddate] DESC, [cdcname] ASC
+2026-06-18 15:05:54.253 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] page=1, pageSize=0
+2026-06-18 15:05:54.255 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] 无分页SQL: SELECT year,month,ddate,cdcname,cpersonname,cpersoncode,cCusName,cCusAbbName,cShipAddress,cCusPerson,cdlcode,cmaker,cWhName,cInvTopClsName,cInvName,cInvCCode,cInvCName,iQuantity,iNum,isum
+from dflView_eams_crossYearDispatch
+where 1=1
+    AND (ddate BETWEEN '2026-06-01 00:00:00' AND '2026-06-08 00:00:00' AND year = '2026' AND cpersoncode = '0207')
+ORDER BY [ddate] DESC, [cdcname] ASC
+2026-06-18 15:05:54.342 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] 返回列数=20, 行数=302
+2026-06-18 15:24:38.049 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteReport] reportId=2, userId=1
+2026-06-18 15:24:38.059 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteReport] hasView=true
+2026-06-18 15:24:38.060 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [BuildFilterConditions] between: ddate 从 "2026-06-01T00:00:00.0000000+08:00" ~ "2026-06-08T00:00:00.0000000+08:00"
+2026-06-18 15:24:38.062 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [BuildFilterConditions] 生成条件: ddate BETWEEN '2026-06-01 00:00:00' AND '2026-06-08 00:00:00' AND year = '2026' AND cpersoncode = '0207'
+2026-06-18 15:24:38.063 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [BuildFilterConditions] 修改后SQL: SELECT year,month,ddate,cdcname,cpersonname,cpersoncode,cCusName,cCusAbbName,cShipAddress,cCusPerson,cdlcode,cmaker,cWhName,cInvTopClsName,cInvName,cInvCCode,cInvCName,iQuantity,iNum,isum
+from dflView_eams_crossYearDispatch
+where 1=1
+    AND (ddate BETWEEN '2026-06-01 00:00:00' AND '2026-06-08 00:00:00' AND year = '2026' AND cpersoncode = '0207')
+2026-06-18 15:24:38.064 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteQueryInternal] 应用报表默认排序: ddate DESC, cdcname ASC
+2026-06-18 15:24:38.067 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] datasource=erp_u871_currentYear, isSqlServer=true, sql=SELECT year,month,ddate,cdcname,cpersonname,cpersoncode,cCusName,cCusAbbName,cShipAddress,cCusPerson,cdlcode,cmaker,cWhName,cInvTopClsName,cInvName,cInvCCode,cInvCName,iQuantity,iNum,isum
+from dflView_eams_crossYearDispatch
+where 1=1
+    AND (ddate BETWEEN '2026-06-01 00:00:00' AND '2026-06-08 00:00:00' AND year = '2026' AND cpersoncode = '0207')
+2026-06-18 15:24:38.068 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] 归一化参数数: 3
+2026-06-18 15:24:38.069 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql]    param ddate -> ddate = ["2026-05-31T16:00:00.000Z","2026-06-07T16:00:00.000Z"] (String)
+2026-06-18 15:24:38.071 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql]    param year -> year = 2026 (String)
+2026-06-18 15:24:38.073 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql]    param cpersoncode -> cpersoncode = 0207 (String)
+2026-06-18 15:24:38.075 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] 应用排序: [ddate] DESC, [cdcname] ASC
+2026-06-18 15:24:38.076 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] page=1, pageSize=0
+2026-06-18 15:24:38.077 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] 无分页SQL: SELECT year,month,ddate,cdcname,cpersonname,cpersoncode,cCusName,cCusAbbName,cShipAddress,cCusPerson,cdlcode,cmaker,cWhName,cInvTopClsName,cInvName,cInvCCode,cInvCName,iQuantity,iNum,isum
+from dflView_eams_crossYearDispatch
+where 1=1
+    AND (ddate BETWEEN '2026-06-01 00:00:00' AND '2026-06-08 00:00:00' AND year = '2026' AND cpersoncode = '0207')
+ORDER BY [ddate] DESC, [cdcname] ASC
+2026-06-18 15:24:39.440 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] 返回列数=20, 行数=302
+2026-06-18 15:27:12.734 +08:00 [INF] Microsoft.Hosting.Lifetime Now listening on: http://0.0.0.0:5106
+2026-06-18 15:27:12.796 +08:00 [INF] Microsoft.Hosting.Lifetime Application started. Press Ctrl+C to shut down.
+2026-06-18 15:27:12.798 +08:00 [INF] Microsoft.Hosting.Lifetime Hosting environment: Development
+2026-06-18 15:27:12.798 +08:00 [INF] Microsoft.Hosting.Lifetime Content root path: D:\Codes\Projects\eams2026\src\EAMS2026.Api
+2026-06-18 15:28:01.007 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteReport] reportId=2, userId=1
+2026-06-18 15:28:01.032 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteReport] hasView=true
+2026-06-18 15:28:01.056 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [BuildFilterConditions] between: ddate 从 "2026-06-01T00:00:00.0000000+08:00" ~ "2026-06-08T00:00:00.0000000+08:00"
+2026-06-18 15:28:01.061 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [BuildFilterConditions] 生成条件: ddate BETWEEN '2026-06-01 00:00:00' AND '2026-06-08 00:00:00' AND year = '2026' AND cpersoncode = '0207'
+2026-06-18 15:28:01.062 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [BuildFilterConditions] 修改后SQL: SELECT year,month,ddate,cdcname,cpersonname,cpersoncode,cCusName,cCusAbbName,cShipAddress,cCusPerson,cdlcode,cmaker,cWhName,cInvTopClsName,cInvName,cInvCCode,cInvCName,iQuantity,iNum,isum
+from dflView_eams_crossYearDispatch
+where 1=1
+    AND (ddate BETWEEN '2026-06-01 00:00:00' AND '2026-06-08 00:00:00' AND year = '2026' AND cpersoncode = '0207')
+2026-06-18 15:28:01.065 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteQueryInternal] 应用报表默认排序: ddate DESC, cdcname ASC
+2026-06-18 15:28:01.097 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] datasource=erp_u871_currentYear, isSqlServer=true, sql=SELECT year,month,ddate,cdcname,cpersonname,cpersoncode,cCusName,cCusAbbName,cShipAddress,cCusPerson,cdlcode,cmaker,cWhName,cInvTopClsName,cInvName,cInvCCode,cInvCName,iQuantity,iNum,isum
+from dflView_eams_crossYearDispatch
+where 1=1
+    AND (ddate BETWEEN '2026-06-01 00:00:00' AND '2026-06-08 00:00:00' AND year = '2026' AND cpersoncode = '0207')
+2026-06-18 15:28:01.099 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] 归一化参数数: 3
+2026-06-18 15:28:01.101 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql]    param ddate -> ddate = ["2026-05-31T16:00:00.000Z","2026-06-07T16:00:00.000Z"] (String)
+2026-06-18 15:28:01.107 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql]    param year -> year = 2026 (String)
+2026-06-18 15:28:01.110 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql]    param cpersoncode -> cpersoncode = 0207 (String)
+2026-06-18 15:28:01.114 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] 应用排序: [ddate] DESC, [cdcname] ASC
+2026-06-18 15:28:01.115 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] page=1, pageSize=0
+2026-06-18 15:28:01.116 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] 无分页SQL: SELECT year,month,ddate,cdcname,cpersonname,cpersoncode,cCusName,cCusAbbName,cShipAddress,cCusPerson,cdlcode,cmaker,cWhName,cInvTopClsName,cInvName,cInvCCode,cInvCName,iQuantity,iNum,isum
+from dflView_eams_crossYearDispatch
+where 1=1
+    AND (ddate BETWEEN '2026-06-01 00:00:00' AND '2026-06-08 00:00:00' AND year = '2026' AND cpersoncode = '0207')
+ORDER BY [ddate] DESC, [cdcname] ASC
+2026-06-18 15:28:02.588 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] 返回列数=20, 行数=302
+2026-06-18 15:51:01.233 +08:00 [INF] Microsoft.Hosting.Lifetime Now listening on: http://0.0.0.0:5106
+2026-06-18 15:51:01.293 +08:00 [INF] Microsoft.Hosting.Lifetime Application started. Press Ctrl+C to shut down.
+2026-06-18 15:51:01.384 +08:00 [INF] Microsoft.Hosting.Lifetime Hosting environment: Development
+2026-06-18 15:51:01.386 +08:00 [INF] Microsoft.Hosting.Lifetime Content root path: D:\Codes\Projects\eams2026\src\EAMS2026.Api
+2026-06-18 16:00:52.632 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteReport] reportId=2, userId=1
+2026-06-18 16:00:52.650 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteReport] hasView=true
+2026-06-18 16:00:52.659 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [BuildFilterConditions] between: ddate 从 "2026-06-01T00:00:00.0000000+08:00" ~ "2026-06-08T00:00:00.0000000+08:00"
+2026-06-18 16:00:52.663 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [BuildFilterConditions] 生成条件: ddate BETWEEN '2026-06-01 00:00:00' AND '2026-06-08 00:00:00' AND year = '2026' AND cpersoncode = '0207'
+2026-06-18 16:00:52.664 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [BuildFilterConditions] 修改后SQL: SELECT year,month,ddate,cdcname,cpersonname,cpersoncode,cCusName,cCusAbbName,cShipAddress,cCusPerson,cdlcode,cmaker,cWhName,cInvTopClsName,cInvName,cInvCCode,cInvCName,iQuantity,iNum,isum
+from dflView_eams_crossYearDispatch
+where 1=1
+    AND (ddate BETWEEN '2026-06-01 00:00:00' AND '2026-06-08 00:00:00' AND year = '2026' AND cpersoncode = '0207')
+2026-06-18 16:00:52.666 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteQueryInternal] 应用报表默认排序: ddate DESC, cdcname ASC
+2026-06-18 16:00:52.700 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] datasource=erp_u871_currentYear, isSqlServer=true, sql=SELECT year,month,ddate,cdcname,cpersonname,cpersoncode,cCusName,cCusAbbName,cShipAddress,cCusPerson,cdlcode,cmaker,cWhName,cInvTopClsName,cInvName,cInvCCode,cInvCName,iQuantity,iNum,isum
+from dflView_eams_crossYearDispatch
+where 1=1
+    AND (ddate BETWEEN '2026-06-01 00:00:00' AND '2026-06-08 00:00:00' AND year = '2026' AND cpersoncode = '0207')
+2026-06-18 16:00:52.714 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] 归一化参数数: 3
+2026-06-18 16:00:52.716 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql]    param ddate -> ddate = ["2026-05-31T16:00:00.000Z","2026-06-07T16:00:00.000Z"] (String)
+2026-06-18 16:00:52.719 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql]    param year -> year = 2026 (String)
+2026-06-18 16:00:52.722 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql]    param cpersoncode -> cpersoncode = 0207 (String)
+2026-06-18 16:00:52.805 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] 应用排序: [ddate] DESC, [cdcname] ASC
+2026-06-18 16:00:52.808 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] page=1, pageSize=0
+2026-06-18 16:00:52.874 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] 无分页SQL: SELECT year,month,ddate,cdcname,cpersonname,cpersoncode,cCusName,cCusAbbName,cShipAddress,cCusPerson,cdlcode,cmaker,cWhName,cInvTopClsName,cInvName,cInvCCode,cInvCName,iQuantity,iNum,isum
+from dflView_eams_crossYearDispatch
+where 1=1
+    AND (ddate BETWEEN '2026-06-01 00:00:00' AND '2026-06-08 00:00:00' AND year = '2026' AND cpersoncode = '0207')
+ORDER BY [ddate] DESC, [cdcname] ASC
+2026-06-18 16:00:54.491 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] 返回列数=20, 行数=302
+2026-06-18 16:01:10.810 +08:00 [INF] EAMS2026.Application.Services.Erp.VouchModifyService [GetSalespersons] 从 erp_settings_salesperson_map 读取业务员列表
+2026-06-18 16:01:10.823 +08:00 [INF] EAMS2026.Application.Services.Erp.VouchModifyService [GetSalespersons] 从映射表获取到 6 个业务员
+2026-06-18 16:01:11.283 +08:00 [INF] EAMS2026.Application.Services.Erp.VouchModifyService [QueryUnverifiedDispatches] 开始查询未审核发货单, 客户编码=null, 日期范围=null~null
+2026-06-18 16:01:11.434 +08:00 [INF] EAMS2026.Application.Services.Erp.VouchModifyService [QueryUnverifiedDispatches] 查询完成, 共 20 条 (总计 392)
+2026-06-18 17:17:27.167 +08:00 [INF] Microsoft.Hosting.Lifetime Now listening on: http://0.0.0.0:5106
+2026-06-18 17:17:27.258 +08:00 [INF] Microsoft.Hosting.Lifetime Application started. Press Ctrl+C to shut down.
+2026-06-18 17:17:27.260 +08:00 [INF] Microsoft.Hosting.Lifetime Hosting environment: Development
+2026-06-18 17:17:27.261 +08:00 [INF] Microsoft.Hosting.Lifetime Content root path: D:\Codes\Projects\eams2026\src\EAMS2026.Api
+2026-06-18 17:17:56.899 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteReport] reportId=2, userId=1
+2026-06-18 17:17:56.942 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteReport] hasView=true
+2026-06-18 17:17:56.960 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [BuildFilterConditions] between: ddate 从 "2026-06-01T00:00:00.0000000+08:00" ~ "2026-06-08T00:00:00.0000000+08:00"
+2026-06-18 17:17:56.967 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [BuildFilterConditions] 生成条件: ddate BETWEEN '2026-06-01 00:00:00' AND '2026-06-08 00:00:00' AND year = '2026' AND cpersoncode = '0207'
+2026-06-18 17:17:56.968 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [BuildFilterConditions] 修改后SQL: SELECT year,month,ddate,cdcname,cpersonname,cpersoncode,cCusName,cCusAbbName,cShipAddress,cCusPerson,cdlcode,cmaker,cWhName,cInvTopClsName,cInvName,cInvCCode,cInvCName,iQuantity,iNum,isum
+from dflView_eams_crossYearDispatch
+where 1=1
+    AND (ddate BETWEEN '2026-06-01 00:00:00' AND '2026-06-08 00:00:00' AND year = '2026' AND cpersoncode = '0207')
+2026-06-18 17:17:56.971 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteQueryInternal] 应用报表默认排序: ddate DESC, cdcname ASC
+2026-06-18 17:17:57.094 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] datasource=erp_u871_currentYear, isSqlServer=true, sql=SELECT year,month,ddate,cdcname,cpersonname,cpersoncode,cCusName,cCusAbbName,cShipAddress,cCusPerson,cdlcode,cmaker,cWhName,cInvTopClsName,cInvName,cInvCCode,cInvCName,iQuantity,iNum,isum
+from dflView_eams_crossYearDispatch
+where 1=1
+    AND (ddate BETWEEN '2026-06-01 00:00:00' AND '2026-06-08 00:00:00' AND year = '2026' AND cpersoncode = '0207')
+2026-06-18 17:17:57.125 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] 归一化参数数: 3
+2026-06-18 17:17:57.129 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql]    param ddate -> ddate = ["2026-05-31T16:00:00.000Z","2026-06-07T16:00:00.000Z"] (String)
+2026-06-18 17:17:57.132 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql]    param year -> year = 2026 (String)
+2026-06-18 17:17:57.135 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql]    param cpersoncode -> cpersoncode = 0207 (String)
+2026-06-18 17:17:57.157 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] 应用排序: [ddate] DESC, [cdcname] ASC
+2026-06-18 17:17:57.158 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] page=1, pageSize=0
+2026-06-18 17:17:57.162 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] 无分页SQL: SELECT year,month,ddate,cdcname,cpersonname,cpersoncode,cCusName,cCusAbbName,cShipAddress,cCusPerson,cdlcode,cmaker,cWhName,cInvTopClsName,cInvName,cInvCCode,cInvCName,iQuantity,iNum,isum
+from dflView_eams_crossYearDispatch
+where 1=1
+    AND (ddate BETWEEN '2026-06-01 00:00:00' AND '2026-06-08 00:00:00' AND year = '2026' AND cpersoncode = '0207')
+ORDER BY [ddate] DESC, [cdcname] ASC
+2026-06-18 17:17:58.911 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] 返回列数=20, 行数=302
+2026-06-18 20:52:55.893 +08:00 [INF] Microsoft.Hosting.Lifetime Now listening on: http://0.0.0.0:5106
+2026-06-18 20:52:55.950 +08:00 [INF] Microsoft.Hosting.Lifetime Application started. Press Ctrl+C to shut down.
+2026-06-18 20:52:55.953 +08:00 [INF] Microsoft.Hosting.Lifetime Hosting environment: Development
+2026-06-18 20:52:55.954 +08:00 [INF] Microsoft.Hosting.Lifetime Content root path: D:\Codes\Projects\eams2026\src\EAMS2026.Api
+2026-06-18 21:16:20.608 +08:00 [INF] Microsoft.Hosting.Lifetime Now listening on: http://0.0.0.0:5106
+2026-06-18 21:16:20.655 +08:00 [INF] Microsoft.Hosting.Lifetime Application started. Press Ctrl+C to shut down.
+2026-06-18 21:16:20.656 +08:00 [INF] Microsoft.Hosting.Lifetime Hosting environment: Development
+2026-06-18 21:16:20.658 +08:00 [INF] Microsoft.Hosting.Lifetime Content root path: D:\Codes\Projects\eams2026\src\EAMS2026.Api

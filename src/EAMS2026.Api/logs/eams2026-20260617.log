@@ -1,0 +1,298 @@
+2026-06-17 08:47:46.545 +08:00 [INF] Microsoft.Hosting.Lifetime Now listening on: http://0.0.0.0:5106
+2026-06-17 08:47:46.621 +08:00 [INF] Microsoft.Hosting.Lifetime Application started. Press Ctrl+C to shut down.
+2026-06-17 08:47:46.625 +08:00 [INF] Microsoft.Hosting.Lifetime Hosting environment: Development
+2026-06-17 08:47:46.626 +08:00 [INF] Microsoft.Hosting.Lifetime Content root path: D:\Codes\Projects\eams2026\src\EAMS2026.Api
+2026-06-17 08:51:02.692 +08:00 [INF] EAMS2026.Application.Services.Erp.VouchModifyService [GetSalespersons] 从 erp_rpt_salesperson_map 读取业务员列表
+2026-06-17 08:51:02.867 +08:00 [ERR] EAMS2026.Application.Services.Erp.VouchModifyService [GetSalespersons] 读取映射表失败，回退到 U8 ERP 查询
+Npgsql.PostgresException (0x80004005): 42P01: relation "erp_rpt_salesperson_map" does not exist
+
+POSITION: 77
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Dapper.SqlMapper.QueryAsync[T](IDbConnection cnn, Type effectiveType, CommandDefinition command) in /_/Dapper/SqlMapper.Async.cs:line 434
+   at EAMS2026.Infrastructure.Data.Repositories.Erp.VouchModifyLogRepository.GetMappedSalespersonsAsync() in D:\Codes\Projects\eams2026\src\EAMS2026.Infrastructure\Data\Repositories\Erp\VouchModifyLogRepository.cs:line 58
+   at EAMS2026.Application.Services.Erp.VouchModifyService.GetSalespersonsAsync() in D:\Codes\Projects\eams2026\src\EAMS2026.Application\Services\Erp\VouchModifyService.cs:line 386
+  Exception data:
+    Severity: ERROR
+    SqlState: 42P01
+    MessageText: relation "erp_rpt_salesperson_map" does not exist
+    Position: 77
+    File: parse_relation.c
+    Line: 1469
+    Routine: parserOpenTable
+2026-06-17 08:51:02.906 +08:00 [ERR] EAMS2026.Api.Middleware.ExceptionMiddleware 发生未处理的异常: 42P01: relation "erp_rpt_salesperson_map" does not exist
+
+POSITION: 77
+Npgsql.PostgresException (0x80004005): 42P01: relation "erp_rpt_salesperson_map" does not exist
+
+POSITION: 77
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Dapper.SqlMapper.QueryRowAsync[T](IDbConnection cnn, Row row, Type effectiveType, CommandDefinition command) in /_/Dapper/SqlMapper.Async.cs:line 489
+   at EAMS2026.Infrastructure.Services.Erp.ReportService.GetCurrentUserSalespersonInfoAsync(Int64 userId) in D:\Codes\Projects\eams2026\src\EAMS2026.Infrastructure\Services\Erp\ReportService.cs:line 971
+   at EAMS2026.Api.Controllers.Erp.ReportController.GetCurrentSalesperson() in D:\Codes\Projects\eams2026\src\EAMS2026.Api\Controllers\Erp\ReportController.cs:line 257
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at EAMS2026.Api.Middleware.OperationLogMiddleware.InvokeAsync(HttpContext context) in D:\Codes\Projects\eams2026\src\EAMS2026.Api\Middleware\OperationLogMiddleware.cs:line 74
+   at EAMS2026.Api.Middleware.OperationLogMiddleware.InvokeAsync(HttpContext context) in D:\Codes\Projects\eams2026\src\EAMS2026.Api\Middleware\OperationLogMiddleware.cs:line 94
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.ResponseCompression.ResponseCompressionMiddleware.InvokeCore(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at EAMS2026.Api.Middleware.ExceptionMiddleware.InvokeAsync(HttpContext context) in D:\Codes\Projects\eams2026\src\EAMS2026.Api\Middleware\ExceptionMiddleware.cs:line 35
+  Exception data:
+    Severity: ERROR
+    SqlState: 42P01
+    MessageText: relation "erp_rpt_salesperson_map" does not exist
+    Position: 77
+    File: parse_relation.c
+    Line: 1469
+    Routine: parserOpenTable
+2026-06-17 08:51:02.972 +08:00 [WRN] EAMS2026.Infrastructure.Data.Repositories.Erp.ErpVouchModifyRepository ERP SQL Server 操作失败 [GetSalespersons]: 42P01: relation "erp_rpt_datasource" does not exist
+
+POSITION: 31
+Npgsql.PostgresException (0x80004005): 42P01: relation "erp_rpt_datasource" does not exist
+
+POSITION: 31
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult()
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at Dapper.SqlMapper.ExecuteReaderWithFlagsFallback(IDbCommand cmd, Boolean wasClosed, CommandBehavior behavior) in /_/Dapper/SqlMapper.cs:line 1189
+   at Dapper.SqlMapper.QueryRowImpl[T](IDbConnection cnn, Row row, CommandDefinition& command, Type effectiveType) in /_/Dapper/SqlMapper.cs:line 1310
+   at Dapper.SqlMapper.QueryFirstOrDefault[T](IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType) in /_/Dapper/SqlMapper.cs:line 890
+   at EAMS2026.Infrastructure.Data.ErpConnectionFactory.GetConnectionString() in D:\Codes\Projects\eams2026\src\EAMS2026.Infrastructure\Data\ErpConnectionFactory.cs:line 32
+   at EAMS2026.Infrastructure.Data.ErpConnectionFactory.CreateConnection(Int32 year) in D:\Codes\Projects\eams2026\src\EAMS2026.Infrastructure\Data\ErpConnectionFactory.cs:line 54
+   at EAMS2026.Infrastructure.Data.Repositories.Erp.ErpVouchModifyRepository.SafeErpQueryAsync[T](Int32 year, Func`2 query, String operation, T fallback) in D:\Codes\Projects\eams2026\src\EAMS2026.Infrastructure\Data\Repositories\Erp\ErpVouchModifyRepository.cs:line 55
+  Exception data:
+    Severity: ERROR
+    SqlState: 42P01
+    MessageText: relation "erp_rpt_datasource" does not exist
+    Position: 31
+    File: parse_relation.c
+    Line: 1469
+    Routine: parserOpenTable
+2026-06-17 08:51:03.206 +08:00 [INF] EAMS2026.Application.Services.Erp.VouchModifyService [QueryUnverifiedDispatches] 开始查询未审核发货单, 客户编码=null, 日期范围=null~null
+2026-06-17 08:51:03.224 +08:00 [WRN] EAMS2026.Infrastructure.Data.Repositories.Erp.ErpVouchModifyRepository ERP SQL Server 操作失败 [QueryUnverifiedDispatches]: 42P01: relation "erp_rpt_datasource" does not exist
+
+POSITION: 31
+Npgsql.PostgresException (0x80004005): 42P01: relation "erp_rpt_datasource" does not exist
+
+POSITION: 31
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult()
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at Dapper.SqlMapper.ExecuteReaderWithFlagsFallback(IDbCommand cmd, Boolean wasClosed, CommandBehavior behavior) in /_/Dapper/SqlMapper.cs:line 1189
+   at Dapper.SqlMapper.QueryRowImpl[T](IDbConnection cnn, Row row, CommandDefinition& command, Type effectiveType) in /_/Dapper/SqlMapper.cs:line 1310
+   at Dapper.SqlMapper.QueryFirstOrDefault[T](IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType) in /_/Dapper/SqlMapper.cs:line 890
+   at EAMS2026.Infrastructure.Data.ErpConnectionFactory.GetConnectionString() in D:\Codes\Projects\eams2026\src\EAMS2026.Infrastructure\Data\ErpConnectionFactory.cs:line 32
+   at EAMS2026.Infrastructure.Data.ErpConnectionFactory.CreateConnection() in D:\Codes\Projects\eams2026\src\EAMS2026.Infrastructure\Data\ErpConnectionFactory.cs:line 47
+   at EAMS2026.Infrastructure.Data.Repositories.Erp.ErpVouchModifyRepository.SafeErpQueryAsync[T](Func`2 query, String operation, T fallback) in D:\Codes\Projects\eams2026\src\EAMS2026.Infrastructure\Data\Repositories\Erp\ErpVouchModifyRepository.cs:line 33
+  Exception data:
+    Severity: ERROR
+    SqlState: 42P01
+    MessageText: relation "erp_rpt_datasource" does not exist
+    Position: 31
+    File: parse_relation.c
+    Line: 1469
+    Routine: parserOpenTable
+2026-06-17 08:51:03.237 +08:00 [INF] EAMS2026.Application.Services.Erp.VouchModifyService [QueryUnverifiedDispatches] 查询完成, 共 0 条 (总计 0)
+2026-06-17 08:51:06.238 +08:00 [INF] EAMS2026.Application.Services.Erp.VouchModifyService [GetSalespersons] 从 erp_rpt_salesperson_map 读取业务员列表
+2026-06-17 08:51:06.242 +08:00 [ERR] EAMS2026.Application.Services.Erp.VouchModifyService [GetSalespersons] 读取映射表失败，回退到 U8 ERP 查询
+Npgsql.PostgresException (0x80004005): 42P01: relation "erp_rpt_salesperson_map" does not exist
+
+POSITION: 77
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Dapper.SqlMapper.QueryAsync[T](IDbConnection cnn, Type effectiveType, CommandDefinition command) in /_/Dapper/SqlMapper.Async.cs:line 434
+   at EAMS2026.Infrastructure.Data.Repositories.Erp.VouchModifyLogRepository.GetMappedSalespersonsAsync() in D:\Codes\Projects\eams2026\src\EAMS2026.Infrastructure\Data\Repositories\Erp\VouchModifyLogRepository.cs:line 58
+   at EAMS2026.Application.Services.Erp.VouchModifyService.GetSalespersonsAsync() in D:\Codes\Projects\eams2026\src\EAMS2026.Application\Services\Erp\VouchModifyService.cs:line 386
+  Exception data:
+    Severity: ERROR
+    SqlState: 42P01
+    MessageText: relation "erp_rpt_salesperson_map" does not exist
+    Position: 77
+    File: parse_relation.c
+    Line: 1469
+    Routine: parserOpenTable
+2026-06-17 08:51:06.252 +08:00 [ERR] EAMS2026.Api.Middleware.ExceptionMiddleware 发生未处理的异常: 42P01: relation "erp_rpt_salesperson_map" does not exist
+
+POSITION: 77
+Npgsql.PostgresException (0x80004005): 42P01: relation "erp_rpt_salesperson_map" does not exist
+
+POSITION: 77
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Dapper.SqlMapper.QueryRowAsync[T](IDbConnection cnn, Row row, Type effectiveType, CommandDefinition command) in /_/Dapper/SqlMapper.Async.cs:line 489
+   at EAMS2026.Infrastructure.Services.Erp.ReportService.GetCurrentUserSalespersonInfoAsync(Int64 userId) in D:\Codes\Projects\eams2026\src\EAMS2026.Infrastructure\Services\Erp\ReportService.cs:line 971
+   at EAMS2026.Api.Controllers.Erp.ReportController.GetCurrentSalesperson() in D:\Codes\Projects\eams2026\src\EAMS2026.Api\Controllers\Erp\ReportController.cs:line 257
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at EAMS2026.Api.Middleware.OperationLogMiddleware.InvokeAsync(HttpContext context) in D:\Codes\Projects\eams2026\src\EAMS2026.Api\Middleware\OperationLogMiddleware.cs:line 74
+   at EAMS2026.Api.Middleware.OperationLogMiddleware.InvokeAsync(HttpContext context) in D:\Codes\Projects\eams2026\src\EAMS2026.Api\Middleware\OperationLogMiddleware.cs:line 94
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.ResponseCompression.ResponseCompressionMiddleware.InvokeCore(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at EAMS2026.Api.Middleware.ExceptionMiddleware.InvokeAsync(HttpContext context) in D:\Codes\Projects\eams2026\src\EAMS2026.Api\Middleware\ExceptionMiddleware.cs:line 35
+  Exception data:
+    Severity: ERROR
+    SqlState: 42P01
+    MessageText: relation "erp_rpt_salesperson_map" does not exist
+    Position: 77
+    File: parse_relation.c
+    Line: 1469
+    Routine: parserOpenTable
+2026-06-17 08:51:06.272 +08:00 [WRN] EAMS2026.Infrastructure.Data.Repositories.Erp.ErpVouchModifyRepository ERP SQL Server 操作失败 [GetSalespersons]: 42P01: relation "erp_rpt_datasource" does not exist
+
+POSITION: 31
+Npgsql.PostgresException (0x80004005): 42P01: relation "erp_rpt_datasource" does not exist
+
+POSITION: 31
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult()
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at Dapper.SqlMapper.ExecuteReaderWithFlagsFallback(IDbCommand cmd, Boolean wasClosed, CommandBehavior behavior) in /_/Dapper/SqlMapper.cs:line 1189
+   at Dapper.SqlMapper.QueryRowImpl[T](IDbConnection cnn, Row row, CommandDefinition& command, Type effectiveType) in /_/Dapper/SqlMapper.cs:line 1310
+   at Dapper.SqlMapper.QueryFirstOrDefault[T](IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType) in /_/Dapper/SqlMapper.cs:line 890
+   at EAMS2026.Infrastructure.Data.ErpConnectionFactory.GetConnectionString() in D:\Codes\Projects\eams2026\src\EAMS2026.Infrastructure\Data\ErpConnectionFactory.cs:line 32
+   at EAMS2026.Infrastructure.Data.ErpConnectionFactory.CreateConnection(Int32 year) in D:\Codes\Projects\eams2026\src\EAMS2026.Infrastructure\Data\ErpConnectionFactory.cs:line 54
+   at EAMS2026.Infrastructure.Data.Repositories.Erp.ErpVouchModifyRepository.SafeErpQueryAsync[T](Int32 year, Func`2 query, String operation, T fallback) in D:\Codes\Projects\eams2026\src\EAMS2026.Infrastructure\Data\Repositories\Erp\ErpVouchModifyRepository.cs:line 55
+  Exception data:
+    Severity: ERROR
+    SqlState: 42P01
+    MessageText: relation "erp_rpt_datasource" does not exist
+    Position: 31
+    File: parse_relation.c
+    Line: 1469
+    Routine: parserOpenTable
+2026-06-17 08:51:06.420 +08:00 [INF] EAMS2026.Application.Services.Erp.VouchModifyService [QueryOrders] 开始查询订单, 客户编码=null, 日期范围=null~null
+2026-06-17 08:51:06.424 +08:00 [WRN] EAMS2026.Infrastructure.Data.Repositories.Erp.ErpVouchModifyRepository ERP SQL Server 操作失败 [QueryOrders]: 42P01: relation "erp_rpt_datasource" does not exist
+
+POSITION: 31
+Npgsql.PostgresException (0x80004005): 42P01: relation "erp_rpt_datasource" does not exist
+
+POSITION: 31
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult()
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at Dapper.SqlMapper.ExecuteReaderWithFlagsFallback(IDbCommand cmd, Boolean wasClosed, CommandBehavior behavior) in /_/Dapper/SqlMapper.cs:line 1189
+   at Dapper.SqlMapper.QueryRowImpl[T](IDbConnection cnn, Row row, CommandDefinition& command, Type effectiveType) in /_/Dapper/SqlMapper.cs:line 1310
+   at Dapper.SqlMapper.QueryFirstOrDefault[T](IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType) in /_/Dapper/SqlMapper.cs:line 890
+   at EAMS2026.Infrastructure.Data.ErpConnectionFactory.GetConnectionString() in D:\Codes\Projects\eams2026\src\EAMS2026.Infrastructure\Data\ErpConnectionFactory.cs:line 32
+   at EAMS2026.Infrastructure.Data.ErpConnectionFactory.CreateConnection() in D:\Codes\Projects\eams2026\src\EAMS2026.Infrastructure\Data\ErpConnectionFactory.cs:line 47
+   at EAMS2026.Infrastructure.Data.Repositories.Erp.ErpVouchModifyRepository.SafeErpQueryAsync[T](Func`2 query, String operation, T fallback) in D:\Codes\Projects\eams2026\src\EAMS2026.Infrastructure\Data\Repositories\Erp\ErpVouchModifyRepository.cs:line 33
+  Exception data:
+    Severity: ERROR
+    SqlState: 42P01
+    MessageText: relation "erp_rpt_datasource" does not exist
+    Position: 31
+    File: parse_relation.c
+    Line: 1469
+    Routine: parserOpenTable
+2026-06-17 08:51:06.517 +08:00 [INF] EAMS2026.Application.Services.Erp.VouchModifyService [QueryOrders] 查询完成, 共 0 条 (总计 0)
+2026-06-17 10:29:41.926 +08:00 [ERR] EAMS2026.Api.Middleware.ExceptionMiddleware 发生未处理的异常: 42P01: relation "messages" does not exist
+
+POSITION: 22
+Npgsql.PostgresException (0x80004005): 42P01: relation "messages" does not exist
+
+POSITION: 22
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteScalar(Boolean async, CancellationToken cancellationToken)
+   at Dapper.SqlMapper.ExecuteScalarImplAsync[T](IDbConnection cnn, CommandDefinition command) in /_/Dapper/SqlMapper.Async.cs:line 1242
+   at EAMS2026.Infrastructure.Data.Repositories.System.MessageRepository.GetUnreadCountAsync(Int64 userId) in D:\Codes\Projects\eams2026\src\EAMS2026.Infrastructure\Data\Repositories\System\MessageRepository.cs:line 85
+   at EAMS2026.Application.Services.System.MessageService.GetUnreadCountAsync(Int64 userId) in D:\Codes\Projects\eams2026\src\EAMS2026.Application\Services\System\MessageService.cs:line 39
+   at EAMS2026.Api.Controllers.System.MessageController.GetUnreadCount() in D:\Codes\Projects\eams2026\src\EAMS2026.Api\Controllers\System\MessageController.cs:line 47
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at EAMS2026.Api.Middleware.OperationLogMiddleware.InvokeAsync(HttpContext context) in D:\Codes\Projects\eams2026\src\EAMS2026.Api\Middleware\OperationLogMiddleware.cs:line 74
+   at EAMS2026.Api.Middleware.OperationLogMiddleware.InvokeAsync(HttpContext context) in D:\Codes\Projects\eams2026\src\EAMS2026.Api\Middleware\OperationLogMiddleware.cs:line 94
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.ResponseCompression.ResponseCompressionMiddleware.InvokeCore(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at EAMS2026.Api.Middleware.ExceptionMiddleware.InvokeAsync(HttpContext context) in D:\Codes\Projects\eams2026\src\EAMS2026.Api\Middleware\ExceptionMiddleware.cs:line 35
+  Exception data:
+    Severity: ERROR
+    SqlState: 42P01
+    MessageText: relation "messages" does not exist
+    Position: 22
+    File: parse_relation.c
+    Line: 1469
+    Routine: parserOpenTable
+2026-06-17 10:45:05.528 +08:00 [INF] Microsoft.Hosting.Lifetime Now listening on: http://0.0.0.0:5106
+2026-06-17 10:45:05.593 +08:00 [INF] Microsoft.Hosting.Lifetime Application started. Press Ctrl+C to shut down.
+2026-06-17 10:45:05.595 +08:00 [INF] Microsoft.Hosting.Lifetime Hosting environment: Development
+2026-06-17 10:45:05.595 +08:00 [INF] Microsoft.Hosting.Lifetime Content root path: D:\Codes\Projects\eams2026\src\EAMS2026.Api

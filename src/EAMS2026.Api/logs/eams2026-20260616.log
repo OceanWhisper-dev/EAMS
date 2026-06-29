@@ -1,0 +1,143 @@
+2026-06-16 08:53:13.431 +08:00 [INF] Microsoft.Hosting.Lifetime Now listening on: http://0.0.0.0:5106
+2026-06-16 08:53:13.540 +08:00 [INF] Microsoft.Hosting.Lifetime Application started. Press Ctrl+C to shut down.
+2026-06-16 08:53:13.552 +08:00 [INF] Microsoft.Hosting.Lifetime Hosting environment: Development
+2026-06-16 08:53:13.554 +08:00 [INF] Microsoft.Hosting.Lifetime Content root path: D:\Codes\Projects\eams2026\src\EAMS2026.Api
+2026-06-16 08:55:36.092 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteReport] reportId=30002, userId=14
+2026-06-16 08:55:36.146 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteReport] hasView=true
+2026-06-16 08:55:36.179 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteStoredProcedure] 将执行 1 个存储过程: dflproc_report_accountingCost
+2026-06-16 08:55:37.627 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteStoredProcedure] dflproc_report_accountingCost 从 sys.parameters 返回 0 个参数: 
+2026-06-16 08:55:37.632 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteStoredProcedure] dflproc_report_accountingCost 接收了 0 个请求参数: 
+2026-06-16 08:55:37.634 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteStoredProcedure] 执行 dflproc_report_accountingCost, 参数数=0
+2026-06-16 08:55:37.687 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteStoredProcedure] dflproc_report_accountingCost 返回 2842 行
+2026-06-16 08:55:37.780 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteStoredProcedure] 全部完成, 总计 2842 行, 17 列
+2026-06-16 08:56:33.923 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteReport] reportId=2, userId=5
+2026-06-16 08:56:33.928 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteReport] hasView=true
+2026-06-16 08:56:33.934 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [BuildFilterConditions] between: ddate 从 "2026-06-01T00:00:00.0000000+08:00" ~ "2026-06-08T00:00:00.0000000+08:00"
+2026-06-16 08:56:33.938 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [BuildFilterConditions] 生成条件: ddate BETWEEN '2026-06-01 00:00:00' AND '2026-06-08 00:00:00' AND year = '2026' AND cpersoncode = '0207'
+2026-06-16 08:56:33.942 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [BuildFilterConditions] 修改后SQL: SELECT year,month,ddate,cdcname,cpersonname,cpersoncode,cCusName,cCusAbbName,cShipAddress,cCusPerson,cdlcode,cmaker,cWhName,cInvTopClsName,cInvName,cInvCCode,cInvCName,iQuantity,iNum,isum
+from dflView_eams_crossYearDispatch
+where 1=1
+    AND (ddate BETWEEN '2026-06-01 00:00:00' AND '2026-06-08 00:00:00' AND year = '2026' AND cpersoncode = '0207')
+2026-06-16 08:56:33.946 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteQueryInternal] 应用报表默认排序: ddate DESC, cdcname ASC
+2026-06-16 08:56:33.954 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql] datasource=erp_u871_currentYear, isSqlServer=true, sql=SELECT year,month,ddate,cdcname,cpersonname,cpersoncode,cCusName,cCusAbbName,cShipAddress,cCusPerson,cdlcode,cmaker,cWhName,cInvTopClsName,cInvName,cInvCCode,cInvCName,iQuantity,iNum,isum
+from dflView_eams_crossYearDispatch
+where 1=1
+    AND (ddate BETWEEN '2026-06-01 00:00:00' AND '2026-06-08 00:00:00' AND year = '2026' AND cpersoncode = '0207')
+2026-06-16 08:56:33.956 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql] 归一化参数数: 3
+2026-06-16 08:56:33.957 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql]    param ddate -> ddate = ["2026-05-31T16:00:00.000Z","2026-06-07T16:00:00.000Z"] (String)
+2026-06-16 08:56:33.959 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql]    param year -> year = 2026 (String)
+2026-06-16 08:56:33.961 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql]    param cpersoncode -> cpersoncode = 0207 (String)
+2026-06-16 08:56:33.965 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql] 应用排序: ddate DESC, cdcname ASC
+2026-06-16 08:56:33.966 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql] page=1, pageSize=0
+2026-06-16 08:56:33.968 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql] 无分页SQL: SELECT year,month,ddate,cdcname,cpersonname,cpersoncode,cCusName,cCusAbbName,cShipAddress,cCusPerson,cdlcode,cmaker,cWhName,cInvTopClsName,cInvName,cInvCCode,cInvCName,iQuantity,iNum,isum
+from dflView_eams_crossYearDispatch
+where 1=1
+    AND (ddate BETWEEN '2026-06-01 00:00:00' AND '2026-06-08 00:00:00' AND year = '2026' AND cpersoncode = '0207')
+ORDER BY ddate DESC, cdcname ASC
+2026-06-16 08:56:35.140 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql] 返回列数=20, 行数=298
+2026-06-16 09:14:57.711 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteReport] reportId=30002, userId=1
+2026-06-16 09:14:57.715 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteReport] hasView=true
+2026-06-16 09:14:57.774 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteStoredProcedure] 将执行 1 个存储过程: dflproc_report_accountingCost
+2026-06-16 09:14:59.062 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteStoredProcedure] dflproc_report_accountingCost 从 sys.parameters 返回 0 个参数: 
+2026-06-16 09:14:59.065 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteStoredProcedure] dflproc_report_accountingCost 接收了 0 个请求参数: 
+2026-06-16 09:14:59.069 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteStoredProcedure] 执行 dflproc_report_accountingCost, 参数数=0
+2026-06-16 09:14:59.186 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteStoredProcedure] dflproc_report_accountingCost 返回 2842 行
+2026-06-16 09:14:59.200 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteStoredProcedure] 全部完成, 总计 2842 行, 17 列
+2026-06-16 09:15:11.958 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteReport] reportId=30002, userId=14
+2026-06-16 09:15:12.052 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteReport] hasView=true
+2026-06-16 09:15:12.053 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteStoredProcedure] 将执行 1 个存储过程: dflproc_report_accountingCost
+2026-06-16 09:15:12.056 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteStoredProcedure] dflproc_report_accountingCost 从 sys.parameters 返回 0 个参数: 
+2026-06-16 09:15:12.057 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteStoredProcedure] dflproc_report_accountingCost 接收了 0 个请求参数: 
+2026-06-16 09:15:12.059 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteStoredProcedure] 执行 dflproc_report_accountingCost, 参数数=0
+2026-06-16 09:15:12.079 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteStoredProcedure] dflproc_report_accountingCost 返回 2842 行
+2026-06-16 09:15:12.084 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteStoredProcedure] 全部完成, 总计 2842 行, 17 列
+2026-06-16 09:15:51.423 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteReport] reportId=2, userId=5
+2026-06-16 09:15:51.480 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteReport] hasView=true
+2026-06-16 09:15:51.483 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [BuildFilterConditions] between: ddate 从 "2026-06-01T00:00:00.0000000+08:00" ~ "2026-06-08T00:00:00.0000000+08:00"
+2026-06-16 09:15:51.485 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [BuildFilterConditions] 生成条件: ddate BETWEEN '2026-06-01 00:00:00' AND '2026-06-08 00:00:00' AND year = '2026' AND cpersoncode = '0207'
+2026-06-16 09:15:51.486 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [BuildFilterConditions] 修改后SQL: SELECT year,month,ddate,cdcname,cpersonname,cpersoncode,cCusName,cCusAbbName,cShipAddress,cCusPerson,cdlcode,cmaker,cWhName,cInvTopClsName,cInvName,cInvCCode,cInvCName,iQuantity,iNum,isum
+from dflView_eams_crossYearDispatch
+where 1=1
+    AND (ddate BETWEEN '2026-06-01 00:00:00' AND '2026-06-08 00:00:00' AND year = '2026' AND cpersoncode = '0207')
+2026-06-16 09:15:51.487 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteQueryInternal] 应用报表默认排序: ddate DESC, cdcname ASC
+2026-06-16 09:15:51.488 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql] datasource=erp_u871_currentYear, isSqlServer=true, sql=SELECT year,month,ddate,cdcname,cpersonname,cpersoncode,cCusName,cCusAbbName,cShipAddress,cCusPerson,cdlcode,cmaker,cWhName,cInvTopClsName,cInvName,cInvCCode,cInvCName,iQuantity,iNum,isum
+from dflView_eams_crossYearDispatch
+where 1=1
+    AND (ddate BETWEEN '2026-06-01 00:00:00' AND '2026-06-08 00:00:00' AND year = '2026' AND cpersoncode = '0207')
+2026-06-16 09:15:51.490 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql] 归一化参数数: 3
+2026-06-16 09:15:51.491 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql]    param ddate -> ddate = ["2026-05-31T16:00:00.000Z","2026-06-07T16:00:00.000Z"] (String)
+2026-06-16 09:15:51.493 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql]    param year -> year = 2026 (String)
+2026-06-16 09:15:51.495 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql]    param cpersoncode -> cpersoncode = 0207 (String)
+2026-06-16 09:15:51.497 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql] 应用排序: ddate DESC, cdcname ASC
+2026-06-16 09:15:51.498 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql] page=1, pageSize=0
+2026-06-16 09:15:51.499 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql] 无分页SQL: SELECT year,month,ddate,cdcname,cpersonname,cpersoncode,cCusName,cCusAbbName,cShipAddress,cCusPerson,cdlcode,cmaker,cWhName,cInvTopClsName,cInvName,cInvCCode,cInvCName,iQuantity,iNum,isum
+from dflView_eams_crossYearDispatch
+where 1=1
+    AND (ddate BETWEEN '2026-06-01 00:00:00' AND '2026-06-08 00:00:00' AND year = '2026' AND cpersoncode = '0207')
+ORDER BY ddate DESC, cdcname ASC
+2026-06-16 09:15:51.624 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql] 返回列数=20, 行数=298
+2026-06-16 09:32:40.556 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteReport] reportId=2, userId=5
+2026-06-16 09:32:40.570 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteReport] hasView=true
+2026-06-16 09:32:40.571 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [BuildFilterConditions] between: ddate 从 "2026-06-01T00:00:00.0000000+08:00" ~ "2026-06-08T00:00:00.0000000+08:00"
+2026-06-16 09:32:40.573 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [BuildFilterConditions] 生成条件: ddate BETWEEN '2026-06-01 00:00:00' AND '2026-06-08 00:00:00' AND year = '2026' AND cpersoncode = '0207'
+2026-06-16 09:32:40.574 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [BuildFilterConditions] 修改后SQL: SELECT year,month,ddate,cdcname,cpersonname,cpersoncode,cCusName,cCusAbbName,cShipAddress,cCusPerson,cdlcode,cmaker,cWhName,cInvTopClsName,cInvName,cInvCCode,cInvCName,iQuantity,iNum,isum
+from dflView_eams_crossYearDispatch
+where 1=1
+    AND (ddate BETWEEN '2026-06-01 00:00:00' AND '2026-06-08 00:00:00' AND year = '2026' AND cpersoncode = '0207')
+2026-06-16 09:32:40.575 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteQueryInternal] 应用报表默认排序: ddate DESC, cdcname ASC
+2026-06-16 09:32:40.578 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql] datasource=erp_u871_currentYear, isSqlServer=true, sql=SELECT year,month,ddate,cdcname,cpersonname,cpersoncode,cCusName,cCusAbbName,cShipAddress,cCusPerson,cdlcode,cmaker,cWhName,cInvTopClsName,cInvName,cInvCCode,cInvCName,iQuantity,iNum,isum
+from dflView_eams_crossYearDispatch
+where 1=1
+    AND (ddate BETWEEN '2026-06-01 00:00:00' AND '2026-06-08 00:00:00' AND year = '2026' AND cpersoncode = '0207')
+2026-06-16 09:32:40.580 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql] 归一化参数数: 3
+2026-06-16 09:32:40.582 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql]    param ddate -> ddate = ["2026-05-31T16:00:00.000Z","2026-06-07T16:00:00.000Z"] (String)
+2026-06-16 09:32:40.585 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql]    param year -> year = 2026 (String)
+2026-06-16 09:32:40.586 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql]    param cpersoncode -> cpersoncode = 0207 (String)
+2026-06-16 09:32:40.590 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql] 应用排序: ddate DESC, cdcname ASC
+2026-06-16 09:32:40.591 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql] page=1, pageSize=0
+2026-06-16 09:32:40.593 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql] 无分页SQL: SELECT year,month,ddate,cdcname,cpersonname,cpersoncode,cCusName,cCusAbbName,cShipAddress,cCusPerson,cdlcode,cmaker,cWhName,cInvTopClsName,cInvName,cInvCCode,cInvCName,iQuantity,iNum,isum
+from dflView_eams_crossYearDispatch
+where 1=1
+    AND (ddate BETWEEN '2026-06-01 00:00:00' AND '2026-06-08 00:00:00' AND year = '2026' AND cpersoncode = '0207')
+ORDER BY ddate DESC, cdcname ASC
+2026-06-16 09:32:41.956 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql] 返回列数=20, 行数=298
+2026-06-16 09:33:37.601 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteReport] reportId=30002, userId=21
+2026-06-16 09:33:37.609 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteReport] hasView=true
+2026-06-16 09:33:37.613 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteStoredProcedure] 将执行 1 个存储过程: dflproc_report_accountingCost
+2026-06-16 09:33:37.615 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteStoredProcedure] dflproc_report_accountingCost 从 sys.parameters 返回 0 个参数: 
+2026-06-16 09:33:37.617 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteStoredProcedure] dflproc_report_accountingCost 接收了 0 个请求参数: 
+2026-06-16 09:33:37.619 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteStoredProcedure] 执行 dflproc_report_accountingCost, 参数数=0
+2026-06-16 09:33:37.641 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteStoredProcedure] dflproc_report_accountingCost 返回 2842 行
+2026-06-16 09:33:37.647 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteStoredProcedure] 全部完成, 总计 2842 行, 17 列
+2026-06-16 09:34:03.014 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteReport] reportId=30002, userId=9
+2026-06-16 09:34:03.020 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteReport] hasView=true
+2026-06-16 09:34:03.022 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteStoredProcedure] 将执行 1 个存储过程: dflproc_report_accountingCost
+2026-06-16 09:34:03.025 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteStoredProcedure] dflproc_report_accountingCost 从 sys.parameters 返回 0 个参数: 
+2026-06-16 09:34:03.026 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteStoredProcedure] dflproc_report_accountingCost 接收了 0 个请求参数: 
+2026-06-16 09:34:03.028 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteStoredProcedure] 执行 dflproc_report_accountingCost, 参数数=0
+2026-06-16 09:34:03.049 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteStoredProcedure] dflproc_report_accountingCost 返回 2842 行
+2026-06-16 09:34:03.053 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteStoredProcedure] 全部完成, 总计 2842 行, 17 列
+2026-06-16 09:34:19.030 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteReport] reportId=30002, userId=14
+2026-06-16 09:34:19.042 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteReport] hasView=true
+2026-06-16 09:34:19.044 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteStoredProcedure] 将执行 1 个存储过程: dflproc_report_accountingCost
+2026-06-16 09:34:19.046 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteStoredProcedure] dflproc_report_accountingCost 从 sys.parameters 返回 0 个参数: 
+2026-06-16 09:34:19.048 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteStoredProcedure] dflproc_report_accountingCost 接收了 0 个请求参数: 
+2026-06-16 09:34:19.049 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteStoredProcedure] 执行 dflproc_report_accountingCost, 参数数=0
+2026-06-16 09:34:19.066 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteStoredProcedure] dflproc_report_accountingCost 返回 2842 行
+2026-06-16 09:34:19.074 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteStoredProcedure] 全部完成, 总计 2842 行, 17 列
+2026-06-16 09:34:29.234 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [GetSalespersons] 从 rpt_salesperson_map 读取业务员列表
+2026-06-16 09:34:29.245 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [GetSalespersons] 从映射表获取到 6 个业务员
+2026-06-16 09:34:29.429 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [QueryUnverifiedDispatches] 开始查询未审核发货单, 客户编码=null, 日期范围=null~null
+2026-06-16 09:34:29.484 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [QueryUnverifiedDispatches] 查询完成, 共 20 条 (总计 339)
+2026-06-16 09:34:33.259 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [GetSalespersons] 从 rpt_salesperson_map 读取业务员列表
+2026-06-16 09:34:33.261 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [GetSalespersons] 从映射表获取到 6 个业务员
+2026-06-16 09:34:33.296 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [QueryOrders] 开始查询订单, 客户编码=null, 日期范围=null~null
+2026-06-16 09:34:33.704 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [QueryOrders] 查询完成, 共 11 条 (总计 47)
+2026-06-16 09:41:11.714 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [GetSalespersons] 从 rpt_salesperson_map 读取业务员列表
+2026-06-16 09:41:11.845 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [GetSalespersons] 从映射表获取到 6 个业务员
+2026-06-16 09:41:11.874 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [QueryUnverifiedDispatches] 开始查询未审核发货单, 客户编码=null, 日期范围=null~null
+2026-06-16 09:41:12.667 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [GetSalespersons] 从 rpt_salesperson_map 读取业务员列表
+2026-06-16 09:41:12.669 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [GetSalespersons] 从映射表获取到 6 个业务员
+2026-06-16 09:41:12.694 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [QueryOrders] 开始查询订单, 客户编码=null, 日期范围=null~null
+2026-06-16 09:41:13.161 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [QueryUnverifiedDispatches] 查询完成, 共 20 条 (总计 332)
+2026-06-16 09:41:14.090 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [QueryOrders] 查询完成, 共 11 条 (总计 47)

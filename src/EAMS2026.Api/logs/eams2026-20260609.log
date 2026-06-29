@@ -1,0 +1,1418 @@
+2026-06-09 08:25:08.730 +08:00 [INF] Microsoft.Hosting.Lifetime Now listening on: http://0.0.0.0:5106
+2026-06-09 08:25:08.814 +08:00 [INF] Microsoft.Hosting.Lifetime Application started. Press Ctrl+C to shut down.
+2026-06-09 08:25:08.819 +08:00 [INF] Microsoft.Hosting.Lifetime Hosting environment: Development
+2026-06-09 08:25:08.822 +08:00 [INF] Microsoft.Hosting.Lifetime Content root path: D:\Codes\Projects\eams2026\src\EAMS2026.Api
+2026-06-09 08:25:32.501 +08:00 [ERR] EAMS2026.Infrastructure.Services.ReportService 获取业务员列表失败
+System.Data.SqlClient.SqlException (0x80131904): 列名 'iPersonGrade' 无效。
+   at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__126_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Dapper.SqlMapper.QueryAsync[T](IDbConnection cnn, Type effectiveType, CommandDefinition command) in /_/Dapper/SqlMapper.Async.cs:line 434
+   at EAMS2026.Infrastructure.Services.ReportService.GetSalespersonsAsync(String datasource) in D:\Codes\Projects\eams2026\src\EAMS2026.Infrastructure\Services\ReportService.cs:line 743
+ClientConnectionId:c7dd8131-6b07-4377-a9a1-4508e4350dcb
+Error Number:207,State:1,Class:16
+2026-06-09 08:25:32.603 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteReport] reportId=1, userId=1
+2026-06-09 08:25:32.623 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteReport] hasView=true
+2026-06-09 08:25:32.665 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql] datasource=erp_u871_currentYear, isSqlServer=true, sql=select dl.ddate,dl.cdlcode,dl.cCusName,dl.dcreatesystime,case when (CHARINDEX('(', cus.cCusAbbName)>0 and  CHARINDEX(')', cus.cCusAbbName)>0 ) 
+then SUBSTRING(cus.cCusAbbName,CHARINDEX('(', cus.cCusAbbName)+1, CHARINDEX(')', cus.cCusAbbName)-1-CHARINDEX('(', cus.cCusAbbName)) --cus.cCusAbbName 
+else cus.cCusAbbName end as 'CusAbbName'
+,cus.ccusperson,wh.cwhcode,wh.cWhName,inv.cInvCode,inv.cInvName,inv.cinvstd,dls.iquantity,dls.iNum,dls.iTaxUnitPrice,dls.iSum,dl.cVerifier,dl.cshipAddress 
+from DispatchList as dl
+LEFT JOIN DispatchLists as dls on dl.dlid = dls.DLID
+LEFT JOIN Customer as cus on cus.ccuscode = dl.cCusCode
+LEFT JOIN Inventory as inv on inv.cInvCode = dls.cInvCode
+LEFT JOIN InventoryClass as invcls on inv.cInvCCode = invcls.cInvCCode
+LEFT JOIN DistrictClass as dc on cus.cDCCode = dc.cDCCode
+LEFT JOIN WareHouse as wh on wh.cWhCode = dls.cWhCode
+where 1 = 1
+2026-06-09 08:25:32.669 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql] 归一化参数数: 1
+2026-06-09 08:25:32.670 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql]    param ddate = 2026-01-01 (String)
+2026-06-09 08:25:32.672 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql]     -> 将字符串转换为DateTime: "2026-01-01T00:00:00.0000000"
+2026-06-09 08:25:32.674 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql] page=1, pageSize=50
+2026-06-09 08:25:32.781 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql] COUNT结果: 32137
+2026-06-09 08:25:32.784 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql] 分页SQL: SELECT * FROM (SELECT *, ROW_NUMBER() OVER (ORDER BY (SELECT NULL)) AS _rn FROM (select dl.ddate,dl.cdlcode,dl.cCusName,dl.dcreatesystime,case when (CHARINDEX('(', cus.cCusAbbName)>0 and  CHARINDEX(')', cus.cCusAbbName)>0 ) 
+then SUBSTRING(cus.cCusAbbName,CHARINDEX('(', cus.cCusAbbName)+1, CHARINDEX(')', cus.cCusAbbName)-1-CHARINDEX('(', cus.cCusAbbName)) --cus.cCusAbbName 
+else cus.cCusAbbName end as 'CusAbbName'
+,cus.ccusperson,wh.cwhcode,wh.cWhName,inv.cInvCode,inv.cInvName,inv.cinvstd,dls.iquantity,dls.iNum,dls.iTaxUnitPrice,dls.iSum,dl.cVerifier,dl.cshipAddress 
+from DispatchList as dl
+LEFT JOIN DispatchLists as dls on dl.dlid = dls.DLID
+LEFT JOIN Customer as cus on cus.ccuscode = dl.cCusCode
+LEFT JOIN Inventory as inv on inv.cInvCode = dls.cInvCode
+LEFT JOIN InventoryClass as invcls on inv.cInvCCode = invcls.cInvCCode
+LEFT JOIN DistrictClass as dc on cus.cDCCode = dc.cDCCode
+LEFT JOIN WareHouse as wh on wh.cWhCode = dls.cWhCode
+where 1 = 1) AS _inner) AS _outer WHERE _rn BETWEEN @Start AND @End
+2026-06-09 08:25:32.892 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql] 返回列数=18, 行数=50
+2026-06-09 08:25:49.147 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteReport] reportId=1, userId=1
+2026-06-09 08:25:49.155 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteReport] hasView=true
+2026-06-09 08:25:49.162 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [BuildFilterConditions] between: ddate → "2026-05-01T00:00:00.0000000+08:00" ~ "2026-05-09T00:00:00.0000000+08:00"
+2026-06-09 08:25:49.190 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [BuildFilterConditions] 生成条件: ddate BETWEEN @ddate_start AND @ddate_end
+2026-06-09 08:25:49.191 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [BuildFilterConditions] 修改后SQL: select dl.ddate,dl.cdlcode,dl.cCusName,dl.dcreatesystime,case when (CHARINDEX('(', cus.cCusAbbName)>0 and  CHARINDEX(')', cus.cCusAbbName)>0 ) 
+then SUBSTRING(cus.cCusAbbName,CHARINDEX('(', cus.cCusAbbName)+1, CHARINDEX(')', cus.cCusAbbName)-1-CHARINDEX('(', cus.cCusAbbName)) --cus.cCusAbbName 
+else cus.cCusAbbName end as 'CusAbbName'
+,cus.ccusperson,wh.cwhcode,wh.cWhName,inv.cInvCode,inv.cInvName,inv.cinvstd,dls.iquantity,dls.iNum,dls.iTaxUnitPrice,dls.iSum,dl.cVerifier,dl.cshipAddress 
+from DispatchList as dl
+LEFT JOIN DispatchLists as dls on dl.dlid = dls.DLID
+LEFT JOIN Customer as cus on cus.ccuscode = dl.cCusCode
+LEFT JOIN Inventory as inv on inv.cInvCode = dls.cInvCode
+LEFT JOIN InventoryClass as invcls on inv.cInvCCode = invcls.cInvCCode
+LEFT JOIN DistrictClass as dc on cus.cDCCode = dc.cDCCode
+LEFT JOIN WareHouse as wh on wh.cWhCode = dls.cWhCode
+where 1 = 1 AND (ddate BETWEEN @ddate_start AND @ddate_end)
+2026-06-09 08:25:49.193 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [BuildFilterConditions] 额外参数 ddate_start = "2026-05-01T00:00:00.0000000+08:00" (DateTime)
+2026-06-09 08:25:49.194 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [BuildFilterConditions] 额外参数 ddate_end = "2026-05-09T00:00:00.0000000+08:00" (DateTime)
+2026-06-09 08:25:49.198 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql] datasource=erp_u871_currentYear, isSqlServer=true, sql=select dl.ddate,dl.cdlcode,dl.cCusName,dl.dcreatesystime,case when (CHARINDEX('(', cus.cCusAbbName)>0 and  CHARINDEX(')', cus.cCusAbbName)>0 ) 
+then SUBSTRING(cus.cCusAbbName,CHARINDEX('(', cus.cCusAbbName)+1, CHARINDEX(')', cus.cCusAbbName)-1-CHARINDEX('(', cus.cCusAbbName)) --cus.cCusAbbName 
+else cus.cCusAbbName end as 'CusAbbName'
+,cus.ccusperson,wh.cwhcode,wh.cWhName,inv.cInvCode,inv.cInvName,inv.cinvstd,dls.iquantity,dls.iNum,dls.iTaxUnitPrice,dls.iSum,dl.cVerifier,dl.cshipAddress 
+from DispatchList as dl
+LEFT JOIN DispatchLists as dls on dl.dlid = dls.DLID
+LEFT JOIN Customer as cus on cus.ccuscode = dl.cCusCode
+LEFT JOIN Inventory as inv on inv.cInvCode = dls.cInvCode
+LEFT JOIN InventoryClass as invcls on inv.cInvCCode = invcls.cInvCCode
+LEFT JOIN DistrictClass as dc on cus.cDCCode = dc.cDCCode
+LEFT JOIN WareHouse as wh on wh.cWhCode = dls.cWhCode
+where 1 = 1 AND (ddate BETWEEN @ddate_start AND @ddate_end)
+2026-06-09 08:25:49.200 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql] 归一化参数数: 3
+2026-06-09 08:25:49.201 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql]    param ddate = ["2026-04-30T16:00:00.000Z","2026-05-08T16:00:00.000Z"] (String)
+2026-06-09 08:25:49.203 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql]    param ddate_start = "2026-05-01T00:00:00.0000000+08:00" (DateTime)
+2026-06-09 08:25:49.205 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql]    param ddate_end = "2026-05-09T00:00:00.0000000+08:00" (DateTime)
+2026-06-09 08:25:49.207 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql] page=1, pageSize=50
+2026-06-09 08:25:49.218 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql] COUNT结果: 683
+2026-06-09 08:25:49.220 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql] 分页SQL: SELECT * FROM (SELECT *, ROW_NUMBER() OVER (ORDER BY (SELECT NULL)) AS _rn FROM (select dl.ddate,dl.cdlcode,dl.cCusName,dl.dcreatesystime,case when (CHARINDEX('(', cus.cCusAbbName)>0 and  CHARINDEX(')', cus.cCusAbbName)>0 ) 
+then SUBSTRING(cus.cCusAbbName,CHARINDEX('(', cus.cCusAbbName)+1, CHARINDEX(')', cus.cCusAbbName)-1-CHARINDEX('(', cus.cCusAbbName)) --cus.cCusAbbName 
+else cus.cCusAbbName end as 'CusAbbName'
+,cus.ccusperson,wh.cwhcode,wh.cWhName,inv.cInvCode,inv.cInvName,inv.cinvstd,dls.iquantity,dls.iNum,dls.iTaxUnitPrice,dls.iSum,dl.cVerifier,dl.cshipAddress 
+from DispatchList as dl
+LEFT JOIN DispatchLists as dls on dl.dlid = dls.DLID
+LEFT JOIN Customer as cus on cus.ccuscode = dl.cCusCode
+LEFT JOIN Inventory as inv on inv.cInvCode = dls.cInvCode
+LEFT JOIN InventoryClass as invcls on inv.cInvCCode = invcls.cInvCCode
+LEFT JOIN DistrictClass as dc on cus.cDCCode = dc.cDCCode
+LEFT JOIN WareHouse as wh on wh.cWhCode = dls.cWhCode
+where 1 = 1 AND (ddate BETWEEN @ddate_start AND @ddate_end)) AS _inner) AS _outer WHERE _rn BETWEEN @Start AND @End
+2026-06-09 08:25:49.332 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql] 返回列数=18, 行数=50
+2026-06-09 08:26:59.252 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [GetSalespersons] 获取到 0 个业务员
+2026-06-09 08:27:32.872 +08:00 [ERR] EAMS2026.Infrastructure.Services.ReportService 获取业务员列表失败
+System.Data.SqlClient.SqlException (0x80131904): 列名 'iPersonGrade' 无效。
+   at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__126_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Dapper.SqlMapper.QueryAsync[T](IDbConnection cnn, Type effectiveType, CommandDefinition command) in /_/Dapper/SqlMapper.Async.cs:line 434
+   at EAMS2026.Infrastructure.Services.ReportService.GetSalespersonsAsync(String datasource) in D:\Codes\Projects\eams2026\src\EAMS2026.Infrastructure\Services\ReportService.cs:line 743
+ClientConnectionId:c7dd8131-6b07-4377-a9a1-4508e4350dcb
+Error Number:207,State:1,Class:16
+2026-06-09 08:27:33.003 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteReport] reportId=40007, userId=1
+2026-06-09 08:27:33.008 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteReport] hasView=true
+2026-06-09 08:27:33.010 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [BuildFilterConditions] 生成条件: invcode1 >= @invcode1 AND invcode2 <= @invcode2 AND date1 >= @date1 AND date2 <= @date2
+2026-06-09 08:27:33.011 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [BuildFilterConditions] 修改后SQL: dflproc_SOListWithZK WHERE (invcode1 >= @invcode1 AND invcode2 <= @invcode2 AND date1 >= @date1 AND date2 <= @date2)
+2026-06-09 08:27:33.101 +08:00 [ERR] EAMS2026.Api.Middleware.ExceptionMiddleware 发生未处理的异常: 找不到存储过程 'dflproc_SOListWithZK WHERE (invcode1 >= @invcode1 AND invcode2 <= @invcode2 AND date1 >= @date1 AND date2 <= @date2)'。
+System.Data.SqlClient.SqlException (0x80131904): 找不到存储过程 'dflproc_SOListWithZK WHERE (invcode1 >= @invcode1 AND invcode2 <= @invcode2 AND date1 >= @date1 AND date2 <= @date2)'。
+   at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__126_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Dapper.SqlMapper.QueryAsync[T](IDbConnection cnn, Type effectiveType, CommandDefinition command) in /_/Dapper/SqlMapper.Async.cs:line 434
+   at EAMS2026.Infrastructure.Services.ReportService.ExecuteStoredProcedure(String procName, ReportExecuteRequest request, String datasource) in D:\Codes\Projects\eams2026\src\EAMS2026.Infrastructure\Services\ReportService.cs:line 592
+   at EAMS2026.Infrastructure.Services.ReportService.ExecuteQueryInternal(ReportDetailDto report, ReportExecuteRequest request) in D:\Codes\Projects\eams2026\src\EAMS2026.Infrastructure\Services\ReportService.cs:line 377
+   at EAMS2026.Infrastructure.Services.ReportService.ExecuteReportAsync(Int64 reportId, ReportExecuteRequest request, Int64 userId) in D:\Codes\Projects\eams2026\src\EAMS2026.Infrastructure\Services\ReportService.cs:line 147
+   at EAMS2026.Api.Controllers.ReportController.ExecuteReport(Int64 id, ReportExecuteRequest request) in D:\Codes\Projects\eams2026\src\EAMS2026.Api\Controllers\ReportController.cs:line 114
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at EAMS2026.Api.Middleware.OperationLogMiddleware.InvokeAsync(HttpContext context) in D:\Codes\Projects\eams2026\src\EAMS2026.Api\Middleware\OperationLogMiddleware.cs:line 72
+   at EAMS2026.Api.Middleware.OperationLogMiddleware.InvokeAsync(HttpContext context) in D:\Codes\Projects\eams2026\src\EAMS2026.Api\Middleware\OperationLogMiddleware.cs:line 92
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.ResponseCompression.ResponseCompressionMiddleware.InvokeCore(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at EAMS2026.Api.Middleware.ExceptionMiddleware.InvokeAsync(HttpContext context) in D:\Codes\Projects\eams2026\src\EAMS2026.Api\Middleware\ExceptionMiddleware.cs:line 35
+ClientConnectionId:c7dd8131-6b07-4377-a9a1-4508e4350dcb
+Error Number:2812,State:62,Class:16
+2026-06-09 08:27:40.066 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteReport] reportId=40007, userId=1
+2026-06-09 08:27:40.071 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteReport] hasView=true
+2026-06-09 08:27:40.072 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [BuildFilterConditions] 生成条件: invcode1 >= @invcode1 AND invcode2 <= @invcode2 AND date1 >= @date1 AND date2 <= @date2
+2026-06-09 08:27:40.073 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [BuildFilterConditions] 修改后SQL: dflproc_SOListWithZK WHERE (invcode1 >= @invcode1 AND invcode2 <= @invcode2 AND date1 >= @date1 AND date2 <= @date2)
+2026-06-09 08:27:40.103 +08:00 [ERR] EAMS2026.Api.Middleware.ExceptionMiddleware 发生未处理的异常: 找不到存储过程 'dflproc_SOListWithZK WHERE (invcode1 >= @invcode1 AND invcode2 <= @invcode2 AND date1 >= @date1 AND date2 <= @date2)'。
+System.Data.SqlClient.SqlException (0x80131904): 找不到存储过程 'dflproc_SOListWithZK WHERE (invcode1 >= @invcode1 AND invcode2 <= @invcode2 AND date1 >= @date1 AND date2 <= @date2)'。
+   at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__126_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Dapper.SqlMapper.QueryAsync[T](IDbConnection cnn, Type effectiveType, CommandDefinition command) in /_/Dapper/SqlMapper.Async.cs:line 434
+   at EAMS2026.Infrastructure.Services.ReportService.ExecuteStoredProcedure(String procName, ReportExecuteRequest request, String datasource) in D:\Codes\Projects\eams2026\src\EAMS2026.Infrastructure\Services\ReportService.cs:line 592
+   at EAMS2026.Infrastructure.Services.ReportService.ExecuteQueryInternal(ReportDetailDto report, ReportExecuteRequest request) in D:\Codes\Projects\eams2026\src\EAMS2026.Infrastructure\Services\ReportService.cs:line 377
+   at EAMS2026.Infrastructure.Services.ReportService.ExecuteReportAsync(Int64 reportId, ReportExecuteRequest request, Int64 userId) in D:\Codes\Projects\eams2026\src\EAMS2026.Infrastructure\Services\ReportService.cs:line 147
+   at EAMS2026.Api.Controllers.ReportController.ExecuteReport(Int64 id, ReportExecuteRequest request) in D:\Codes\Projects\eams2026\src\EAMS2026.Api\Controllers\ReportController.cs:line 114
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at EAMS2026.Api.Middleware.OperationLogMiddleware.InvokeAsync(HttpContext context) in D:\Codes\Projects\eams2026\src\EAMS2026.Api\Middleware\OperationLogMiddleware.cs:line 72
+   at EAMS2026.Api.Middleware.OperationLogMiddleware.InvokeAsync(HttpContext context) in D:\Codes\Projects\eams2026\src\EAMS2026.Api\Middleware\OperationLogMiddleware.cs:line 92
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.ResponseCompression.ResponseCompressionMiddleware.InvokeCore(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at EAMS2026.Api.Middleware.ExceptionMiddleware.InvokeAsync(HttpContext context) in D:\Codes\Projects\eams2026\src\EAMS2026.Api\Middleware\ExceptionMiddleware.cs:line 35
+ClientConnectionId:c7dd8131-6b07-4377-a9a1-4508e4350dcb
+Error Number:2812,State:62,Class:16
+2026-06-09 08:29:04.607 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [PreviewReport] queryType=proc, datasource=erp_u871_currentYear, paramsCount=4
+2026-06-09 08:29:04.610 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [PreviewReport]    param invcode1 = 0100000 (JsonElement)
+2026-06-09 08:29:04.612 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [PreviewReport]    param invcode2 = 0199999 (JsonElement)
+2026-06-09 08:29:04.614 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [PreviewReport]    param date1 = 2026-05-01 (JsonElement)
+2026-06-09 08:29:04.616 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [PreviewReport]    param date2 = 2026-06-01 (JsonElement)
+2026-06-09 08:29:04.620 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [PreviewReport] 执行存储过程: dflproc_SOListWithZK 
+2026-06-09 08:29:04.860 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [PreviewReport] 完成, 耗时=252ms, 行数=534
+2026-06-09 08:30:28.433 +08:00 [ERR] EAMS2026.Infrastructure.Services.ReportService 获取业务员列表失败
+System.Data.SqlClient.SqlException (0x80131904): 列名 'iPersonGrade' 无效。
+   at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__126_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Dapper.SqlMapper.QueryAsync[T](IDbConnection cnn, Type effectiveType, CommandDefinition command) in /_/Dapper/SqlMapper.Async.cs:line 434
+   at EAMS2026.Infrastructure.Services.ReportService.GetSalespersonsAsync(String datasource) in D:\Codes\Projects\eams2026\src\EAMS2026.Infrastructure\Services\ReportService.cs:line 743
+ClientConnectionId:c7dd8131-6b07-4377-a9a1-4508e4350dcb
+Error Number:207,State:1,Class:16
+2026-06-09 08:30:28.491 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteReport] reportId=40007, userId=1
+2026-06-09 08:30:28.503 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteReport] hasView=true
+2026-06-09 08:30:28.505 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [BuildFilterConditions] 生成条件: invcode1 >= @invcode1 AND invcode2 <= @invcode2 AND date1 >= @date1 AND date2 <= @date2
+2026-06-09 08:30:28.506 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [BuildFilterConditions] 修改后SQL: dflproc_SOListWithZK WHERE (invcode1 >= @invcode1 AND invcode2 <= @invcode2 AND date1 >= @date1 AND date2 <= @date2)
+2026-06-09 08:30:28.510 +08:00 [ERR] EAMS2026.Api.Middleware.ExceptionMiddleware 发生未处理的异常: 找不到存储过程 'dflproc_SOListWithZK WHERE (invcode1 >= @invcode1 AND invcode2 <= @invcode2 AND date1 >= @date1 AND date2 <= @date2)'。
+System.Data.SqlClient.SqlException (0x80131904): 找不到存储过程 'dflproc_SOListWithZK WHERE (invcode1 >= @invcode1 AND invcode2 <= @invcode2 AND date1 >= @date1 AND date2 <= @date2)'。
+   at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__126_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Dapper.SqlMapper.QueryAsync[T](IDbConnection cnn, Type effectiveType, CommandDefinition command) in /_/Dapper/SqlMapper.Async.cs:line 434
+   at EAMS2026.Infrastructure.Services.ReportService.ExecuteStoredProcedure(String procName, ReportExecuteRequest request, String datasource) in D:\Codes\Projects\eams2026\src\EAMS2026.Infrastructure\Services\ReportService.cs:line 592
+   at EAMS2026.Infrastructure.Services.ReportService.ExecuteQueryInternal(ReportDetailDto report, ReportExecuteRequest request) in D:\Codes\Projects\eams2026\src\EAMS2026.Infrastructure\Services\ReportService.cs:line 377
+   at EAMS2026.Infrastructure.Services.ReportService.ExecuteReportAsync(Int64 reportId, ReportExecuteRequest request, Int64 userId) in D:\Codes\Projects\eams2026\src\EAMS2026.Infrastructure\Services\ReportService.cs:line 147
+   at EAMS2026.Api.Controllers.ReportController.ExecuteReport(Int64 id, ReportExecuteRequest request) in D:\Codes\Projects\eams2026\src\EAMS2026.Api\Controllers\ReportController.cs:line 114
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at EAMS2026.Api.Middleware.OperationLogMiddleware.InvokeAsync(HttpContext context) in D:\Codes\Projects\eams2026\src\EAMS2026.Api\Middleware\OperationLogMiddleware.cs:line 72
+   at EAMS2026.Api.Middleware.OperationLogMiddleware.InvokeAsync(HttpContext context) in D:\Codes\Projects\eams2026\src\EAMS2026.Api\Middleware\OperationLogMiddleware.cs:line 92
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.ResponseCompression.ResponseCompressionMiddleware.InvokeCore(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at EAMS2026.Api.Middleware.ExceptionMiddleware.InvokeAsync(HttpContext context) in D:\Codes\Projects\eams2026\src\EAMS2026.Api\Middleware\ExceptionMiddleware.cs:line 35
+ClientConnectionId:c7dd8131-6b07-4377-a9a1-4508e4350dcb
+Error Number:2812,State:62,Class:16
+2026-06-09 08:30:35.147 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteReport] reportId=40007, userId=1
+2026-06-09 08:30:35.155 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteReport] hasView=true
+2026-06-09 08:30:35.156 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [BuildFilterConditions] 生成条件: invcode1 >= @invcode1 AND invcode2 <= @invcode2 AND date1 >= @date1 AND date2 <= @date2
+2026-06-09 08:30:35.158 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [BuildFilterConditions] 修改后SQL: dflproc_SOListWithZK WHERE (invcode1 >= @invcode1 AND invcode2 <= @invcode2 AND date1 >= @date1 AND date2 <= @date2)
+2026-06-09 08:30:35.164 +08:00 [ERR] EAMS2026.Api.Middleware.ExceptionMiddleware 发生未处理的异常: 找不到存储过程 'dflproc_SOListWithZK WHERE (invcode1 >= @invcode1 AND invcode2 <= @invcode2 AND date1 >= @date1 AND date2 <= @date2)'。
+System.Data.SqlClient.SqlException (0x80131904): 找不到存储过程 'dflproc_SOListWithZK WHERE (invcode1 >= @invcode1 AND invcode2 <= @invcode2 AND date1 >= @date1 AND date2 <= @date2)'。
+   at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__126_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Dapper.SqlMapper.QueryAsync[T](IDbConnection cnn, Type effectiveType, CommandDefinition command) in /_/Dapper/SqlMapper.Async.cs:line 434
+   at EAMS2026.Infrastructure.Services.ReportService.ExecuteStoredProcedure(String procName, ReportExecuteRequest request, String datasource) in D:\Codes\Projects\eams2026\src\EAMS2026.Infrastructure\Services\ReportService.cs:line 592
+   at EAMS2026.Infrastructure.Services.ReportService.ExecuteQueryInternal(ReportDetailDto report, ReportExecuteRequest request) in D:\Codes\Projects\eams2026\src\EAMS2026.Infrastructure\Services\ReportService.cs:line 377
+   at EAMS2026.Infrastructure.Services.ReportService.ExecuteReportAsync(Int64 reportId, ReportExecuteRequest request, Int64 userId) in D:\Codes\Projects\eams2026\src\EAMS2026.Infrastructure\Services\ReportService.cs:line 147
+   at EAMS2026.Api.Controllers.ReportController.ExecuteReport(Int64 id, ReportExecuteRequest request) in D:\Codes\Projects\eams2026\src\EAMS2026.Api\Controllers\ReportController.cs:line 114
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at EAMS2026.Api.Middleware.OperationLogMiddleware.InvokeAsync(HttpContext context) in D:\Codes\Projects\eams2026\src\EAMS2026.Api\Middleware\OperationLogMiddleware.cs:line 72
+   at EAMS2026.Api.Middleware.OperationLogMiddleware.InvokeAsync(HttpContext context) in D:\Codes\Projects\eams2026\src\EAMS2026.Api\Middleware\OperationLogMiddleware.cs:line 92
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.ResponseCompression.ResponseCompressionMiddleware.InvokeCore(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at EAMS2026.Api.Middleware.ExceptionMiddleware.InvokeAsync(HttpContext context) in D:\Codes\Projects\eams2026\src\EAMS2026.Api\Middleware\ExceptionMiddleware.cs:line 35
+ClientConnectionId:c7dd8131-6b07-4377-a9a1-4508e4350dcb
+Error Number:2812,State:62,Class:16
+2026-06-09 08:32:00.675 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteReport] reportId=40007, userId=1
+2026-06-09 08:32:00.682 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteReport] hasView=true
+2026-06-09 08:32:00.685 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [BuildFilterConditions] 生成条件: invcode1 >= @invcode1 AND invcode2 <= @invcode2 AND date1 >= @date1 AND date2 <= @date2
+2026-06-09 08:32:00.688 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [BuildFilterConditions] 修改后SQL: dflproc_SOListWithZK WHERE (invcode1 >= @invcode1 AND invcode2 <= @invcode2 AND date1 >= @date1 AND date2 <= @date2)
+2026-06-09 08:32:00.725 +08:00 [ERR] EAMS2026.Api.Middleware.ExceptionMiddleware 发生未处理的异常: 找不到存储过程 'dflproc_SOListWithZK WHERE (invcode1 >= @invcode1 AND invcode2 <= @invcode2 AND date1 >= @date1 AND date2 <= @date2)'。
+System.Data.SqlClient.SqlException (0x80131904): 找不到存储过程 'dflproc_SOListWithZK WHERE (invcode1 >= @invcode1 AND invcode2 <= @invcode2 AND date1 >= @date1 AND date2 <= @date2)'。
+   at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__126_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Dapper.SqlMapper.QueryAsync[T](IDbConnection cnn, Type effectiveType, CommandDefinition command) in /_/Dapper/SqlMapper.Async.cs:line 434
+   at EAMS2026.Infrastructure.Services.ReportService.ExecuteStoredProcedure(String procName, ReportExecuteRequest request, String datasource) in D:\Codes\Projects\eams2026\src\EAMS2026.Infrastructure\Services\ReportService.cs:line 592
+   at EAMS2026.Infrastructure.Services.ReportService.ExecuteQueryInternal(ReportDetailDto report, ReportExecuteRequest request) in D:\Codes\Projects\eams2026\src\EAMS2026.Infrastructure\Services\ReportService.cs:line 377
+   at EAMS2026.Infrastructure.Services.ReportService.ExecuteReportAsync(Int64 reportId, ReportExecuteRequest request, Int64 userId) in D:\Codes\Projects\eams2026\src\EAMS2026.Infrastructure\Services\ReportService.cs:line 147
+   at EAMS2026.Api.Controllers.ReportController.ExecuteReport(Int64 id, ReportExecuteRequest request) in D:\Codes\Projects\eams2026\src\EAMS2026.Api\Controllers\ReportController.cs:line 114
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at EAMS2026.Api.Middleware.OperationLogMiddleware.InvokeAsync(HttpContext context) in D:\Codes\Projects\eams2026\src\EAMS2026.Api\Middleware\OperationLogMiddleware.cs:line 72
+   at EAMS2026.Api.Middleware.OperationLogMiddleware.InvokeAsync(HttpContext context) in D:\Codes\Projects\eams2026\src\EAMS2026.Api\Middleware\OperationLogMiddleware.cs:line 92
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.ResponseCompression.ResponseCompressionMiddleware.InvokeCore(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at EAMS2026.Api.Middleware.ExceptionMiddleware.InvokeAsync(HttpContext context) in D:\Codes\Projects\eams2026\src\EAMS2026.Api\Middleware\ExceptionMiddleware.cs:line 35
+ClientConnectionId:c7dd8131-6b07-4377-a9a1-4508e4350dcb
+Error Number:2812,State:62,Class:16
+2026-06-09 08:35:43.709 +08:00 [INF] Microsoft.Hosting.Lifetime Now listening on: http://0.0.0.0:5106
+2026-06-09 08:35:43.796 +08:00 [INF] Microsoft.Hosting.Lifetime Application started. Press Ctrl+C to shut down.
+2026-06-09 08:35:43.798 +08:00 [INF] Microsoft.Hosting.Lifetime Hosting environment: Development
+2026-06-09 08:35:43.799 +08:00 [INF] Microsoft.Hosting.Lifetime Content root path: D:\Codes\Projects\eams2026\src\EAMS2026.Api
+2026-06-09 08:36:29.808 +08:00 [ERR] EAMS2026.Infrastructure.Services.ReportService 获取业务员列表失败
+System.Data.SqlClient.SqlException (0x80131904): 列名 'iPersonGrade' 无效。
+   at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__126_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Dapper.SqlMapper.QueryAsync[T](IDbConnection cnn, Type effectiveType, CommandDefinition command) in /_/Dapper/SqlMapper.Async.cs:line 434
+   at EAMS2026.Infrastructure.Services.ReportService.GetSalespersonsAsync(String datasource) in D:\Codes\Projects\eams2026\src\EAMS2026.Infrastructure\Services\ReportService.cs:line 745
+ClientConnectionId:7cfdb65c-9b50-4393-bf3c-00401066c400
+Error Number:207,State:1,Class:16
+2026-06-09 08:36:29.960 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteReport] reportId=40007, userId=1
+2026-06-09 08:36:29.973 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteReport] hasView=true
+2026-06-09 08:38:10.743 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteReport] reportId=40007, userId=1
+2026-06-09 08:38:10.749 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteReport] hasView=true
+2026-06-09 08:38:35.394 +08:00 [ERR] EAMS2026.Infrastructure.Services.ReportService 获取业务员列表失败
+System.Data.SqlClient.SqlException (0x80131904): 列名 'iPersonGrade' 无效。
+   at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__126_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Dapper.SqlMapper.QueryAsync[T](IDbConnection cnn, Type effectiveType, CommandDefinition command) in /_/Dapper/SqlMapper.Async.cs:line 434
+   at EAMS2026.Infrastructure.Services.ReportService.GetSalespersonsAsync(String datasource) in D:\Codes\Projects\eams2026\src\EAMS2026.Infrastructure\Services\ReportService.cs:line 745
+ClientConnectionId:7cfdb65c-9b50-4393-bf3c-00401066c400
+Error Number:207,State:1,Class:16
+2026-06-09 08:38:35.487 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteReport] reportId=1, userId=1
+2026-06-09 08:38:35.492 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteReport] hasView=true
+2026-06-09 08:38:35.497 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [BuildFilterConditions] between: ddate → "2026-05-01T00:00:00.0000000+08:00" ~ "2026-05-09T00:00:00.0000000+08:00"
+2026-06-09 08:38:35.500 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [BuildFilterConditions] 生成条件: ddate BETWEEN @ddate_start AND @ddate_end
+2026-06-09 08:38:35.502 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [BuildFilterConditions] 修改后SQL: select dl.ddate,dl.cdlcode,dl.cCusName,dl.dcreatesystime,case when (CHARINDEX('(', cus.cCusAbbName)>0 and  CHARINDEX(')', cus.cCusAbbName)>0 ) 
+then SUBSTRING(cus.cCusAbbName,CHARINDEX('(', cus.cCusAbbName)+1, CHARINDEX(')', cus.cCusAbbName)-1-CHARINDEX('(', cus.cCusAbbName)) --cus.cCusAbbName 
+else cus.cCusAbbName end as 'CusAbbName'
+,cus.ccusperson,wh.cwhcode,wh.cWhName,inv.cInvCode,inv.cInvName,inv.cinvstd,dls.iquantity,dls.iNum,dls.iTaxUnitPrice,dls.iSum,dl.cVerifier,dl.cshipAddress 
+from DispatchList as dl
+LEFT JOIN DispatchLists as dls on dl.dlid = dls.DLID
+LEFT JOIN Customer as cus on cus.ccuscode = dl.cCusCode
+LEFT JOIN Inventory as inv on inv.cInvCode = dls.cInvCode
+LEFT JOIN InventoryClass as invcls on inv.cInvCCode = invcls.cInvCCode
+LEFT JOIN DistrictClass as dc on cus.cDCCode = dc.cDCCode
+LEFT JOIN WareHouse as wh on wh.cWhCode = dls.cWhCode
+where 1 = 1 AND (ddate BETWEEN @ddate_start AND @ddate_end)
+2026-06-09 08:38:35.506 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [BuildFilterConditions] 额外参数 ddate_start = "2026-05-01T00:00:00.0000000+08:00" (DateTime)
+2026-06-09 08:38:35.507 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [BuildFilterConditions] 额外参数 ddate_end = "2026-05-09T00:00:00.0000000+08:00" (DateTime)
+2026-06-09 08:38:35.514 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql] datasource=erp_u871_currentYear, isSqlServer=true, sql=select dl.ddate,dl.cdlcode,dl.cCusName,dl.dcreatesystime,case when (CHARINDEX('(', cus.cCusAbbName)>0 and  CHARINDEX(')', cus.cCusAbbName)>0 ) 
+then SUBSTRING(cus.cCusAbbName,CHARINDEX('(', cus.cCusAbbName)+1, CHARINDEX(')', cus.cCusAbbName)-1-CHARINDEX('(', cus.cCusAbbName)) --cus.cCusAbbName 
+else cus.cCusAbbName end as 'CusAbbName'
+,cus.ccusperson,wh.cwhcode,wh.cWhName,inv.cInvCode,inv.cInvName,inv.cinvstd,dls.iquantity,dls.iNum,dls.iTaxUnitPrice,dls.iSum,dl.cVerifier,dl.cshipAddress 
+from DispatchList as dl
+LEFT JOIN DispatchLists as dls on dl.dlid = dls.DLID
+LEFT JOIN Customer as cus on cus.ccuscode = dl.cCusCode
+LEFT JOIN Inventory as inv on inv.cInvCode = dls.cInvCode
+LEFT JOIN InventoryClass as invcls on inv.cInvCCode = invcls.cInvCCode
+LEFT JOIN DistrictClass as dc on cus.cDCCode = dc.cDCCode
+LEFT JOIN WareHouse as wh on wh.cWhCode = dls.cWhCode
+where 1 = 1 AND (ddate BETWEEN @ddate_start AND @ddate_end)
+2026-06-09 08:38:35.516 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql] 归一化参数数: 3
+2026-06-09 08:38:35.517 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql]    param ddate = ["2026-04-30T16:00:00.000Z","2026-05-08T16:00:00.000Z"] (String)
+2026-06-09 08:38:35.519 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql]    param ddate_start = "2026-05-01T00:00:00.0000000+08:00" (DateTime)
+2026-06-09 08:38:35.521 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql]    param ddate_end = "2026-05-09T00:00:00.0000000+08:00" (DateTime)
+2026-06-09 08:38:35.523 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql] page=1, pageSize=50
+2026-06-09 08:38:35.528 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql] COUNT结果: 683
+2026-06-09 08:38:35.530 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql] 分页SQL: SELECT * FROM (SELECT *, ROW_NUMBER() OVER (ORDER BY (SELECT NULL)) AS _rn FROM (select dl.ddate,dl.cdlcode,dl.cCusName,dl.dcreatesystime,case when (CHARINDEX('(', cus.cCusAbbName)>0 and  CHARINDEX(')', cus.cCusAbbName)>0 ) 
+then SUBSTRING(cus.cCusAbbName,CHARINDEX('(', cus.cCusAbbName)+1, CHARINDEX(')', cus.cCusAbbName)-1-CHARINDEX('(', cus.cCusAbbName)) --cus.cCusAbbName 
+else cus.cCusAbbName end as 'CusAbbName'
+,cus.ccusperson,wh.cwhcode,wh.cWhName,inv.cInvCode,inv.cInvName,inv.cinvstd,dls.iquantity,dls.iNum,dls.iTaxUnitPrice,dls.iSum,dl.cVerifier,dl.cshipAddress 
+from DispatchList as dl
+LEFT JOIN DispatchLists as dls on dl.dlid = dls.DLID
+LEFT JOIN Customer as cus on cus.ccuscode = dl.cCusCode
+LEFT JOIN Inventory as inv on inv.cInvCode = dls.cInvCode
+LEFT JOIN InventoryClass as invcls on inv.cInvCCode = invcls.cInvCCode
+LEFT JOIN DistrictClass as dc on cus.cDCCode = dc.cDCCode
+LEFT JOIN WareHouse as wh on wh.cWhCode = dls.cWhCode
+where 1 = 1 AND (ddate BETWEEN @ddate_start AND @ddate_end)) AS _inner) AS _outer WHERE _rn BETWEEN @Start AND @End
+2026-06-09 08:38:35.539 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql] 返回列数=18, 行数=50
+2026-06-09 08:39:57.976 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteReport] reportId=1, userId=1
+2026-06-09 08:39:57.986 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteReport] hasView=true
+2026-06-09 08:39:57.987 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [BuildFilterConditions] between: ddate → "2026-05-01T00:00:00.0000000+08:00" ~ "2026-05-09T00:00:00.0000000+08:00"
+2026-06-09 08:39:57.989 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [BuildFilterConditions] 生成条件: ddate BETWEEN @ddate_start AND @ddate_end
+2026-06-09 08:39:57.990 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [BuildFilterConditions] 修改后SQL: select dl.ddate,dl.cdlcode,dl.cCusName,dl.dcreatesystime,case when (CHARINDEX('(', cus.cCusAbbName)>0 and  CHARINDEX(')', cus.cCusAbbName)>0 ) 
+then SUBSTRING(cus.cCusAbbName,CHARINDEX('(', cus.cCusAbbName)+1, CHARINDEX(')', cus.cCusAbbName)-1-CHARINDEX('(', cus.cCusAbbName)) --cus.cCusAbbName 
+else cus.cCusAbbName end as 'CusAbbName'
+,cus.ccusperson,wh.cwhcode,wh.cWhName,inv.cInvCode,inv.cInvName,inv.cinvstd,dls.iquantity,dls.iNum,dls.iTaxUnitPrice,dls.iSum,dl.cVerifier,dl.cshipAddress 
+from DispatchList as dl
+LEFT JOIN DispatchLists as dls on dl.dlid = dls.DLID
+LEFT JOIN Customer as cus on cus.ccuscode = dl.cCusCode
+LEFT JOIN Inventory as inv on inv.cInvCode = dls.cInvCode
+LEFT JOIN InventoryClass as invcls on inv.cInvCCode = invcls.cInvCCode
+LEFT JOIN DistrictClass as dc on cus.cDCCode = dc.cDCCode
+LEFT JOIN WareHouse as wh on wh.cWhCode = dls.cWhCode
+where 1 = 1 AND (ddate BETWEEN @ddate_start AND @ddate_end)
+2026-06-09 08:39:57.991 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [BuildFilterConditions] 额外参数 ddate_start = "2026-05-01T00:00:00.0000000+08:00" (DateTime)
+2026-06-09 08:39:57.993 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [BuildFilterConditions] 额外参数 ddate_end = "2026-05-09T00:00:00.0000000+08:00" (DateTime)
+2026-06-09 08:39:57.996 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql] datasource=erp_u871_currentYear, isSqlServer=true, sql=select dl.ddate,dl.cdlcode,dl.cCusName,dl.dcreatesystime,case when (CHARINDEX('(', cus.cCusAbbName)>0 and  CHARINDEX(')', cus.cCusAbbName)>0 ) 
+then SUBSTRING(cus.cCusAbbName,CHARINDEX('(', cus.cCusAbbName)+1, CHARINDEX(')', cus.cCusAbbName)-1-CHARINDEX('(', cus.cCusAbbName)) --cus.cCusAbbName 
+else cus.cCusAbbName end as 'CusAbbName'
+,cus.ccusperson,wh.cwhcode,wh.cWhName,inv.cInvCode,inv.cInvName,inv.cinvstd,dls.iquantity,dls.iNum,dls.iTaxUnitPrice,dls.iSum,dl.cVerifier,dl.cshipAddress 
+from DispatchList as dl
+LEFT JOIN DispatchLists as dls on dl.dlid = dls.DLID
+LEFT JOIN Customer as cus on cus.ccuscode = dl.cCusCode
+LEFT JOIN Inventory as inv on inv.cInvCode = dls.cInvCode
+LEFT JOIN InventoryClass as invcls on inv.cInvCCode = invcls.cInvCCode
+LEFT JOIN DistrictClass as dc on cus.cDCCode = dc.cDCCode
+LEFT JOIN WareHouse as wh on wh.cWhCode = dls.cWhCode
+where 1 = 1 AND (ddate BETWEEN @ddate_start AND @ddate_end)
+2026-06-09 08:39:58.003 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql] 归一化参数数: 3
+2026-06-09 08:39:58.004 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql]    param ddate = ["2026-04-30T16:00:00.000Z","2026-05-08T16:00:00.000Z"] (String)
+2026-06-09 08:39:58.006 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql]    param ddate_start = "2026-05-01T00:00:00.0000000+08:00" (DateTime)
+2026-06-09 08:39:58.008 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql]    param ddate_end = "2026-05-09T00:00:00.0000000+08:00" (DateTime)
+2026-06-09 08:39:58.010 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql] page=2, pageSize=50
+2026-06-09 08:39:58.015 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql] COUNT结果: 683
+2026-06-09 08:39:58.016 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql] 分页SQL: SELECT * FROM (SELECT *, ROW_NUMBER() OVER (ORDER BY (SELECT NULL)) AS _rn FROM (select dl.ddate,dl.cdlcode,dl.cCusName,dl.dcreatesystime,case when (CHARINDEX('(', cus.cCusAbbName)>0 and  CHARINDEX(')', cus.cCusAbbName)>0 ) 
+then SUBSTRING(cus.cCusAbbName,CHARINDEX('(', cus.cCusAbbName)+1, CHARINDEX(')', cus.cCusAbbName)-1-CHARINDEX('(', cus.cCusAbbName)) --cus.cCusAbbName 
+else cus.cCusAbbName end as 'CusAbbName'
+,cus.ccusperson,wh.cwhcode,wh.cWhName,inv.cInvCode,inv.cInvName,inv.cinvstd,dls.iquantity,dls.iNum,dls.iTaxUnitPrice,dls.iSum,dl.cVerifier,dl.cshipAddress 
+from DispatchList as dl
+LEFT JOIN DispatchLists as dls on dl.dlid = dls.DLID
+LEFT JOIN Customer as cus on cus.ccuscode = dl.cCusCode
+LEFT JOIN Inventory as inv on inv.cInvCode = dls.cInvCode
+LEFT JOIN InventoryClass as invcls on inv.cInvCCode = invcls.cInvCCode
+LEFT JOIN DistrictClass as dc on cus.cDCCode = dc.cDCCode
+LEFT JOIN WareHouse as wh on wh.cWhCode = dls.cWhCode
+where 1 = 1 AND (ddate BETWEEN @ddate_start AND @ddate_end)) AS _inner) AS _outer WHERE _rn BETWEEN @Start AND @End
+2026-06-09 08:39:58.027 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql] 返回列数=18, 行数=50
+2026-06-09 08:41:43.387 +08:00 [ERR] EAMS2026.Infrastructure.Services.ReportService 获取业务员列表失败
+System.Data.SqlClient.SqlException (0x80131904): 列名 'iPersonGrade' 无效。
+   at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__126_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Dapper.SqlMapper.QueryAsync[T](IDbConnection cnn, Type effectiveType, CommandDefinition command) in /_/Dapper/SqlMapper.Async.cs:line 434
+   at EAMS2026.Infrastructure.Services.ReportService.GetSalespersonsAsync(String datasource) in D:\Codes\Projects\eams2026\src\EAMS2026.Infrastructure\Services\ReportService.cs:line 745
+ClientConnectionId:7cfdb65c-9b50-4393-bf3c-00401066c400
+Error Number:207,State:1,Class:16
+2026-06-09 08:41:43.445 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteReport] reportId=1, userId=1
+2026-06-09 08:41:43.450 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteReport] hasView=true
+2026-06-09 08:41:43.451 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [BuildFilterConditions] between: ddate → "2026-05-01T00:00:00.0000000+08:00" ~ "2026-05-09T00:00:00.0000000+08:00"
+2026-06-09 08:41:43.453 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [BuildFilterConditions] 生成条件: ddate BETWEEN @ddate_start AND @ddate_end
+2026-06-09 08:41:43.475 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [BuildFilterConditions] 修改后SQL: select dl.ddate,dl.cdlcode,dl.cCusName,dl.dcreatesystime,case when (CHARINDEX('(', cus.cCusAbbName)>0 and  CHARINDEX(')', cus.cCusAbbName)>0 ) 
+then SUBSTRING(cus.cCusAbbName,CHARINDEX('(', cus.cCusAbbName)+1, CHARINDEX(')', cus.cCusAbbName)-1-CHARINDEX('(', cus.cCusAbbName)) --cus.cCusAbbName 
+else cus.cCusAbbName end as 'CusAbbName'
+,cus.ccusperson,wh.cwhcode,wh.cWhName,inv.cInvCode,inv.cInvName,inv.cinvstd,dls.iquantity,dls.iNum,dls.iTaxUnitPrice,dls.iSum,dl.cVerifier,dl.cshipAddress 
+from DispatchList as dl
+LEFT JOIN DispatchLists as dls on dl.dlid = dls.DLID
+LEFT JOIN Customer as cus on cus.ccuscode = dl.cCusCode
+LEFT JOIN Inventory as inv on inv.cInvCode = dls.cInvCode
+LEFT JOIN InventoryClass as invcls on inv.cInvCCode = invcls.cInvCCode
+LEFT JOIN DistrictClass as dc on cus.cDCCode = dc.cDCCode
+LEFT JOIN WareHouse as wh on wh.cWhCode = dls.cWhCode
+where 1 = 1 AND (ddate BETWEEN @ddate_start AND @ddate_end)
+2026-06-09 08:41:43.477 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [BuildFilterConditions] 额外参数 ddate_start = "2026-05-01T00:00:00.0000000+08:00" (DateTime)
+2026-06-09 08:41:43.479 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [BuildFilterConditions] 额外参数 ddate_end = "2026-05-09T00:00:00.0000000+08:00" (DateTime)
+2026-06-09 08:41:43.482 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql] datasource=erp_u871_currentYear, isSqlServer=true, sql=select dl.ddate,dl.cdlcode,dl.cCusName,dl.dcreatesystime,case when (CHARINDEX('(', cus.cCusAbbName)>0 and  CHARINDEX(')', cus.cCusAbbName)>0 ) 
+then SUBSTRING(cus.cCusAbbName,CHARINDEX('(', cus.cCusAbbName)+1, CHARINDEX(')', cus.cCusAbbName)-1-CHARINDEX('(', cus.cCusAbbName)) --cus.cCusAbbName 
+else cus.cCusAbbName end as 'CusAbbName'
+,cus.ccusperson,wh.cwhcode,wh.cWhName,inv.cInvCode,inv.cInvName,inv.cinvstd,dls.iquantity,dls.iNum,dls.iTaxUnitPrice,dls.iSum,dl.cVerifier,dl.cshipAddress 
+from DispatchList as dl
+LEFT JOIN DispatchLists as dls on dl.dlid = dls.DLID
+LEFT JOIN Customer as cus on cus.ccuscode = dl.cCusCode
+LEFT JOIN Inventory as inv on inv.cInvCode = dls.cInvCode
+LEFT JOIN InventoryClass as invcls on inv.cInvCCode = invcls.cInvCCode
+LEFT JOIN DistrictClass as dc on cus.cDCCode = dc.cDCCode
+LEFT JOIN WareHouse as wh on wh.cWhCode = dls.cWhCode
+where 1 = 1 AND (ddate BETWEEN @ddate_start AND @ddate_end)
+2026-06-09 08:41:43.629 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql] 归一化参数数: 3
+2026-06-09 08:41:43.631 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql]    param ddate = ["2026-04-30T16:00:00.000Z","2026-05-08T16:00:00.000Z"] (String)
+2026-06-09 08:41:43.744 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql]    param ddate_start = "2026-05-01T00:00:00.0000000+08:00" (DateTime)
+2026-06-09 08:41:43.799 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql]    param ddate_end = "2026-05-09T00:00:00.0000000+08:00" (DateTime)
+2026-06-09 08:41:43.814 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql] page=1, pageSize=50
+2026-06-09 08:41:43.841 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql] COUNT结果: 683
+2026-06-09 08:41:43.900 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql] 分页SQL: SELECT * FROM (SELECT *, ROW_NUMBER() OVER (ORDER BY (SELECT NULL)) AS _rn FROM (select dl.ddate,dl.cdlcode,dl.cCusName,dl.dcreatesystime,case when (CHARINDEX('(', cus.cCusAbbName)>0 and  CHARINDEX(')', cus.cCusAbbName)>0 ) 
+then SUBSTRING(cus.cCusAbbName,CHARINDEX('(', cus.cCusAbbName)+1, CHARINDEX(')', cus.cCusAbbName)-1-CHARINDEX('(', cus.cCusAbbName)) --cus.cCusAbbName 
+else cus.cCusAbbName end as 'CusAbbName'
+,cus.ccusperson,wh.cwhcode,wh.cWhName,inv.cInvCode,inv.cInvName,inv.cinvstd,dls.iquantity,dls.iNum,dls.iTaxUnitPrice,dls.iSum,dl.cVerifier,dl.cshipAddress 
+from DispatchList as dl
+LEFT JOIN DispatchLists as dls on dl.dlid = dls.DLID
+LEFT JOIN Customer as cus on cus.ccuscode = dl.cCusCode
+LEFT JOIN Inventory as inv on inv.cInvCode = dls.cInvCode
+LEFT JOIN InventoryClass as invcls on inv.cInvCCode = invcls.cInvCCode
+LEFT JOIN DistrictClass as dc on cus.cDCCode = dc.cDCCode
+LEFT JOIN WareHouse as wh on wh.cWhCode = dls.cWhCode
+where 1 = 1 AND (ddate BETWEEN @ddate_start AND @ddate_end)) AS _inner) AS _outer WHERE _rn BETWEEN @Start AND @End
+2026-06-09 08:41:43.929 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql] 返回列数=18, 行数=50
+2026-06-09 08:42:45.984 +08:00 [ERR] EAMS2026.Infrastructure.Services.ReportService 获取业务员列表失败
+System.Data.SqlClient.SqlException (0x80131904): 列名 'iPersonGrade' 无效。
+   at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__126_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Dapper.SqlMapper.QueryAsync[T](IDbConnection cnn, Type effectiveType, CommandDefinition command) in /_/Dapper/SqlMapper.Async.cs:line 434
+   at EAMS2026.Infrastructure.Services.ReportService.GetSalespersonsAsync(String datasource) in D:\Codes\Projects\eams2026\src\EAMS2026.Infrastructure\Services\ReportService.cs:line 745
+ClientConnectionId:7cfdb65c-9b50-4393-bf3c-00401066c400
+Error Number:207,State:1,Class:16
+2026-06-09 08:42:46.083 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteReport] reportId=40007, userId=1
+2026-06-09 08:42:46.117 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteReport] hasView=true
+2026-06-09 08:46:24.063 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteReport] reportId=40007, userId=1
+2026-06-09 08:46:24.071 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteReport] hasView=true
+2026-06-09 09:11:58.229 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [GetSalespersons] 获取到 0 个业务员
+2026-06-09 09:14:57.388 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [GetSalespersons] 获取到 0 个业务员
+2026-06-09 13:04:36.778 +08:00 [INF] Microsoft.Hosting.Lifetime Now listening on: http://0.0.0.0:5106
+2026-06-09 13:04:36.862 +08:00 [INF] Microsoft.Hosting.Lifetime Application started. Press Ctrl+C to shut down.
+2026-06-09 13:04:36.864 +08:00 [INF] Microsoft.Hosting.Lifetime Hosting environment: Development
+2026-06-09 13:04:36.865 +08:00 [INF] Microsoft.Hosting.Lifetime Content root path: D:\Codes\Projects\eams2026\src\EAMS2026.Api
+2026-06-09 13:04:43.188 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [GetSalespersons] 数据源=erp_u871_currentYear, 获取到 8 个业务员
+2026-06-09 13:04:56.287 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [SaveSalespersonMapping] 保存映射 employeeId=5, code=0207, name=苏月军
+2026-06-09 13:04:59.778 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [SaveSalespersonMapping] 保存映射 employeeId=5, code=0207, name=苏月军
+2026-06-09 13:05:19.096 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [SaveSalespersonMapping] 保存映射 employeeId=5, code=0207, name=苏月军
+2026-06-09 13:06:04.067 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [SaveSalespersonMapping] 保存映射 employeeId=5, code=0207, name=苏月军
+2026-06-09 13:06:48.702 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [SaveSalespersonMapping] 保存映射 employeeId=5, code=0207, name=苏月军
+2026-06-09 13:06:55.662 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [GetSalespersons] 数据源=erp_u871_currentYear, 获取到 8 个业务员
+2026-06-09 13:07:05.726 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [GetSalespersons] 数据源=erp_u871_currentYear, 获取到 8 个业务员
+2026-06-09 13:07:34.673 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [GetSalespersons] 数据源=erp_u871_currentYear, 获取到 8 个业务员
+2026-06-09 13:07:40.845 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [SaveSalespersonMapping] 保存映射 employeeId=6, code=0206, name=李隆勋
+2026-06-09 13:07:56.358 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [SaveSalespersonMapping] 保存映射 employeeId=7, code=0202, name=董富海
+2026-06-09 13:08:10.281 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [SaveSalespersonMapping] 保存映射 employeeId=15, code=0221, name=刘见
+2026-06-09 13:09:29.495 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [GetSalespersons] 数据源=erp_u871_currentYear, 获取到 8 个业务员
+2026-06-09 13:11:04.134 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [SaveSalespersonMapping] 保存映射 employeeId=12, code=0216, name=范哲
+2026-06-09 13:11:09.430 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [SaveSalespersonMapping] 保存映射 employeeId=16, code=0223, name=李健
+2026-06-09 13:15:32.764 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [PreviewReport] queryType=sql, datasource=erp_u871_currentYear, paramsCount=2
+2026-06-09 13:15:32.766 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [PreviewReport]    param som.ddate = 2026-05-31T16:00:00.000Z (JsonElement)
+2026-06-09 13:15:32.768 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [PreviewReport]    param dc.cdcname = 济南市 (JsonElement)
+2026-06-09 13:15:32.772 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [BuildFilterConditions] 生成条件: som.ddate = @som.ddate AND dc.cdcname = @dc.cdcname
+2026-06-09 13:15:32.773 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [BuildFilterConditions] 修改后SQL: SELECT year(som.ddate) as '年',month(som.ddate) as '月',dc.cdcname as '地区',p.cpersonname as '客户经理',cus.cCusName as '客户名称'
+,case when (CHARINDEX('(', cus.cCusAbbName)>0 and  CHARINDEX(')', cus.cCusAbbName)>0 ) 
+		then SUBSTRING(cus.cCusAbbName,CHARINDEX('(', cus.cCusAbbName)+1, CHARINDEX(')', cus.cCusAbbName)-1-CHARINDEX('(', cus.cCusAbbName))
+		else cus.cCusAbbName end as '客户简称'
+,cus.cCusPerson as '联系人','' as '仓库',
+invtopcls.cInvCName as '存货顶级分类',inv.cInvName '存货名称',invcls.cInvCCode as '存货分类编码',invcls.cInvCName as '存货分类',
+iQuantity as '数量',isum as '金额'
+from SO_SOMain as som LEFT JOIN SO_SODetails as sod on som.id = sod.ID
+LEFT JOIN Inventory as inv on inv.cinvcode = sod.cInvCode 
+LEFT JOIN ComputationUnit as cu on inv.cComUnitCode = cu.cComunitCode
+LEFT JOIN Customer as cus on cus.ccuscode = som.cCusCode
+LEFT JOIN Person as p on p.cpersoncode = som.cPersonCode
+LEFT JOIN DistrictClass as dc on dc.cdccode = cus.cdccode
+LEFT JOIN InventoryClass as invcls on invcls.cinvccode = inv.cinvccode
+LEFT JOIN InventoryClass as invtopcls on left(invcls.cInvCCode,2) = invtopcls.cInvCCode
+where 1 = 1 and dc.cDCName not like '%济南%' AND (som.ddate = @som.ddate AND dc.cdcname = @dc.cdcname)
+2026-06-09 13:15:32.799 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [PreviewReport] 执行SQL: SELECT year(som.ddate) as '年',month(som.ddate) as '月',dc.cdcname as '地区',p.cpersonname as '客户经理',cus.cCusName as '客户名称'
+,case when (CHARINDEX('(', cus.cCusAbbName)>0 and  CHARINDEX(')', cus.cCusAbbNam...
+2026-06-09 13:15:32.812 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql] datasource=erp_u871_currentYear, isSqlServer=true, sql=SELECT year(som.ddate) as '年',month(som.ddate) as '月',dc.cdcname as '地区',p.cpersonname as '客户经理',cus.cCusName as '客户名称'
+,case when (CHARINDEX('(', cus.cCusAbbName)>0 and  CHARINDEX(')', cus.cCusAbbName)>0 ) 
+		then SUBSTRING(cus.cCusAbbName,CHARINDEX('(', cus.cCusAbbName)+1, CHARINDEX(')', cus.cCusAbbName)-1-CHARINDEX('(', cus.cCusAbbName))
+		else cus.cCusAbbName end as '客户简称'
+,cus.cCusPerson as '联系人','' as '仓库',
+invtopcls.cInvCName as '存货顶级分类',inv.cInvName '存货名称',invcls.cInvCCode as '存货分类编码',invcls.cInvCName as '存货分类',
+iQuantity as '数量',isum as '金额'
+from SO_SOMain as som LEFT JOIN SO_SODetails as sod on som.id = sod.ID
+LEFT JOIN Inventory as inv on inv.cinvcode = sod.cInvCode 
+LEFT JOIN ComputationUnit as cu on inv.cComUnitCode = cu.cComunitCode
+LEFT JOIN Customer as cus on cus.ccuscode = som.cCusCode
+LEFT JOIN Person as p on p.cpersoncode = som.cPersonCode
+LEFT JOIN DistrictClass as dc on dc.cdccode = cus.cdccode
+LEFT JOIN InventoryClass as invcls on invcls.cinvccode = inv.cinvccode
+LEFT JOIN InventoryClass as invtopcls on left(invcls.cInvCCode,2) = invtopcls.cInvCCode
+where 1 = 1 and dc.cDCName not like '%济南%' AND (som.ddate = @som.ddate AND dc.cdcname = @dc.cdcname)
+2026-06-09 13:15:32.816 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql] 归一化参数数: 2
+2026-06-09 13:15:32.817 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql]    param som.ddate = 2026-05-31T16:00:00.000Z (String)
+2026-06-09 13:15:32.818 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql]     -> 将字符串转换为DateTime: "2026-06-01T00:00:00.0000000+08:00"
+2026-06-09 13:15:32.821 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql]    param dc.cdcname = 济南市 (String)
+2026-06-09 13:15:32.823 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql] page=1, pageSize=0
+2026-06-09 13:15:32.824 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql] 无分页SQL: SELECT year(som.ddate) as '年',month(som.ddate) as '月',dc.cdcname as '地区',p.cpersonname as '客户经理',cus.cCusName as '客户名称'
+,case when (CHARINDEX('(', cus.cCusAbbName)>0 and  CHARINDEX(')', cus.cCusAbbName)>0 ) 
+		then SUBSTRING(cus.cCusAbbName,CHARINDEX('(', cus.cCusAbbName)+1, CHARINDEX(')', cus.cCusAbbName)-1-CHARINDEX('(', cus.cCusAbbName))
+		else cus.cCusAbbName end as '客户简称'
+,cus.cCusPerson as '联系人','' as '仓库',
+invtopcls.cInvCName as '存货顶级分类',inv.cInvName '存货名称',invcls.cInvCCode as '存货分类编码',invcls.cInvCName as '存货分类',
+iQuantity as '数量',isum as '金额'
+from SO_SOMain as som LEFT JOIN SO_SODetails as sod on som.id = sod.ID
+LEFT JOIN Inventory as inv on inv.cinvcode = sod.cInvCode 
+LEFT JOIN ComputationUnit as cu on inv.cComUnitCode = cu.cComunitCode
+LEFT JOIN Customer as cus on cus.ccuscode = som.cCusCode
+LEFT JOIN Person as p on p.cpersoncode = som.cPersonCode
+LEFT JOIN DistrictClass as dc on dc.cdccode = cus.cdccode
+LEFT JOIN InventoryClass as invcls on invcls.cinvccode = inv.cinvccode
+LEFT JOIN InventoryClass as invtopcls on left(invcls.cInvCCode,2) = invtopcls.cInvCCode
+where 1 = 1 and dc.cDCName not like '%济南%' AND (som.ddate = @som.ddate AND dc.cdcname = @dc.cdcname)
+2026-06-09 13:16:26.077 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [PreviewReport] queryType=sql, datasource=erp_u871_currentYear, paramsCount=2
+2026-06-09 13:16:26.079 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [PreviewReport]    param som.ddate = 2026-5-1 (JsonElement)
+2026-06-09 13:16:26.081 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [PreviewReport]    param dc.cdcname = 济南市 (JsonElement)
+2026-06-09 13:16:26.083 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [BuildFilterConditions] 生成条件: som.ddate = @som.ddate AND dc.cdcname = @dc.cdcname
+2026-06-09 13:16:26.085 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [BuildFilterConditions] 修改后SQL: SELECT year(som.ddate) as '年',month(som.ddate) as '月',dc.cdcname as '地区',p.cpersonname as '客户经理',cus.cCusName as '客户名称'
+,case when (CHARINDEX('(', cus.cCusAbbName)>0 and  CHARINDEX(')', cus.cCusAbbName)>0 ) 
+		then SUBSTRING(cus.cCusAbbName,CHARINDEX('(', cus.cCusAbbName)+1, CHARINDEX(')', cus.cCusAbbName)-1-CHARINDEX('(', cus.cCusAbbName))
+		else cus.cCusAbbName end as '客户简称'
+,cus.cCusPerson as '联系人','' as '仓库',
+invtopcls.cInvCName as '存货顶级分类',inv.cInvName '存货名称',invcls.cInvCCode as '存货分类编码',invcls.cInvCName as '存货分类',
+iQuantity as '数量',isum as '金额'
+from SO_SOMain as som LEFT JOIN SO_SODetails as sod on som.id = sod.ID
+LEFT JOIN Inventory as inv on inv.cinvcode = sod.cInvCode 
+LEFT JOIN ComputationUnit as cu on inv.cComUnitCode = cu.cComunitCode
+LEFT JOIN Customer as cus on cus.ccuscode = som.cCusCode
+LEFT JOIN Person as p on p.cpersoncode = som.cPersonCode
+LEFT JOIN DistrictClass as dc on dc.cdccode = cus.cdccode
+LEFT JOIN InventoryClass as invcls on invcls.cinvccode = inv.cinvccode
+LEFT JOIN InventoryClass as invtopcls on left(invcls.cInvCCode,2) = invtopcls.cInvCCode
+where 1 = 1 and dc.cDCName not like '%济南%' AND (som.ddate = @som.ddate AND dc.cdcname = @dc.cdcname)
+2026-06-09 13:16:26.176 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [PreviewReport] 执行SQL: SELECT year(som.ddate) as '年',month(som.ddate) as '月',dc.cdcname as '地区',p.cpersonname as '客户经理',cus.cCusName as '客户名称'
+,case when (CHARINDEX('(', cus.cCusAbbName)>0 and  CHARINDEX(')', cus.cCusAbbNam...
+2026-06-09 13:16:26.227 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql] datasource=erp_u871_currentYear, isSqlServer=true, sql=SELECT year(som.ddate) as '年',month(som.ddate) as '月',dc.cdcname as '地区',p.cpersonname as '客户经理',cus.cCusName as '客户名称'
+,case when (CHARINDEX('(', cus.cCusAbbName)>0 and  CHARINDEX(')', cus.cCusAbbName)>0 ) 
+		then SUBSTRING(cus.cCusAbbName,CHARINDEX('(', cus.cCusAbbName)+1, CHARINDEX(')', cus.cCusAbbName)-1-CHARINDEX('(', cus.cCusAbbName))
+		else cus.cCusAbbName end as '客户简称'
+,cus.cCusPerson as '联系人','' as '仓库',
+invtopcls.cInvCName as '存货顶级分类',inv.cInvName '存货名称',invcls.cInvCCode as '存货分类编码',invcls.cInvCName as '存货分类',
+iQuantity as '数量',isum as '金额'
+from SO_SOMain as som LEFT JOIN SO_SODetails as sod on som.id = sod.ID
+LEFT JOIN Inventory as inv on inv.cinvcode = sod.cInvCode 
+LEFT JOIN ComputationUnit as cu on inv.cComUnitCode = cu.cComunitCode
+LEFT JOIN Customer as cus on cus.ccuscode = som.cCusCode
+LEFT JOIN Person as p on p.cpersoncode = som.cPersonCode
+LEFT JOIN DistrictClass as dc on dc.cdccode = cus.cdccode
+LEFT JOIN InventoryClass as invcls on invcls.cinvccode = inv.cinvccode
+LEFT JOIN InventoryClass as invtopcls on left(invcls.cInvCCode,2) = invtopcls.cInvCCode
+where 1 = 1 and dc.cDCName not like '%济南%' AND (som.ddate = @som.ddate AND dc.cdcname = @dc.cdcname)
+2026-06-09 13:16:26.229 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql] 归一化参数数: 2
+2026-06-09 13:16:26.230 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql]    param som.ddate = 2026-5-1 (String)
+2026-06-09 13:16:26.232 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql]     -> 将字符串转换为DateTime: "2026-05-01T00:00:00.0000000"
+2026-06-09 13:16:26.233 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql]    param dc.cdcname = 济南市 (String)
+2026-06-09 13:16:26.235 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql] page=1, pageSize=0
+2026-06-09 13:16:26.236 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql] 无分页SQL: SELECT year(som.ddate) as '年',month(som.ddate) as '月',dc.cdcname as '地区',p.cpersonname as '客户经理',cus.cCusName as '客户名称'
+,case when (CHARINDEX('(', cus.cCusAbbName)>0 and  CHARINDEX(')', cus.cCusAbbName)>0 ) 
+		then SUBSTRING(cus.cCusAbbName,CHARINDEX('(', cus.cCusAbbName)+1, CHARINDEX(')', cus.cCusAbbName)-1-CHARINDEX('(', cus.cCusAbbName))
+		else cus.cCusAbbName end as '客户简称'
+,cus.cCusPerson as '联系人','' as '仓库',
+invtopcls.cInvCName as '存货顶级分类',inv.cInvName '存货名称',invcls.cInvCCode as '存货分类编码',invcls.cInvCName as '存货分类',
+iQuantity as '数量',isum as '金额'
+from SO_SOMain as som LEFT JOIN SO_SODetails as sod on som.id = sod.ID
+LEFT JOIN Inventory as inv on inv.cinvcode = sod.cInvCode 
+LEFT JOIN ComputationUnit as cu on inv.cComUnitCode = cu.cComunitCode
+LEFT JOIN Customer as cus on cus.ccuscode = som.cCusCode
+LEFT JOIN Person as p on p.cpersoncode = som.cPersonCode
+LEFT JOIN DistrictClass as dc on dc.cdccode = cus.cdccode
+LEFT JOIN InventoryClass as invcls on invcls.cinvccode = inv.cinvccode
+LEFT JOIN InventoryClass as invtopcls on left(invcls.cInvCCode,2) = invtopcls.cInvCCode
+where 1 = 1 and dc.cDCName not like '%济南%' AND (som.ddate = @som.ddate AND dc.cdcname = @dc.cdcname)
+2026-06-09 13:18:36.903 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [PreviewReport] queryType=sql, datasource=erp_u871_currentYear, paramsCount=2
+2026-06-09 13:18:36.905 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [PreviewReport]    param som.ddate = 2026-5-1 (JsonElement)
+2026-06-09 13:18:36.906 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [PreviewReport]    param dc.cdcname = 济南市 (JsonElement)
+2026-06-09 13:18:36.908 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [BuildFilterConditions] 生成条件: som.ddate = @som.ddate AND dc.cdcname = @dc.cdcname
+2026-06-09 13:18:36.909 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [BuildFilterConditions] 修改后SQL: SELECT year(som.ddate) as '年',month(som.ddate) as '月',dc.cdcname as '地区',p.cpersonname as '客户经理',cus.cCusName as '客户名称'
+,case when (CHARINDEX('(', cus.cCusAbbName)>0 and  CHARINDEX(')', cus.cCusAbbName)>0 ) 
+		then SUBSTRING(cus.cCusAbbName,CHARINDEX('(', cus.cCusAbbName)+1, CHARINDEX(')', cus.cCusAbbName)-1-CHARINDEX('(', cus.cCusAbbName))
+		else cus.cCusAbbName end as '客户简称'
+,cus.cCusPerson as '联系人','' as '仓库',
+invtopcls.cInvCName as '存货顶级分类',inv.cInvName '存货名称',invcls.cInvCCode as '存货分类编码',invcls.cInvCName as '存货分类',
+iQuantity as '数量',isum as '金额'
+from SO_SOMain as som LEFT JOIN SO_SODetails as sod on som.id = sod.ID
+LEFT JOIN Inventory as inv on inv.cinvcode = sod.cInvCode 
+LEFT JOIN ComputationUnit as cu on inv.cComUnitCode = cu.cComunitCode
+LEFT JOIN Customer as cus on cus.ccuscode = som.cCusCode
+LEFT JOIN Person as p on p.cpersoncode = som.cPersonCode
+LEFT JOIN DistrictClass as dc on dc.cdccode = cus.cdccode
+LEFT JOIN InventoryClass as invcls on invcls.cinvccode = inv.cinvccode
+LEFT JOIN InventoryClass as invtopcls on left(invcls.cInvCCode,2) = invtopcls.cInvCCode
+where 1 = 1 and dc.cDCName not like '%济南%' AND (som.ddate = @som.ddate AND dc.cdcname = @dc.cdcname)
+2026-06-09 13:18:36.911 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [PreviewReport] 执行SQL: SELECT year(som.ddate) as '年',month(som.ddate) as '月',dc.cdcname as '地区',p.cpersonname as '客户经理',cus.cCusName as '客户名称'
+,case when (CHARINDEX('(', cus.cCusAbbName)>0 and  CHARINDEX(')', cus.cCusAbbNam...
+2026-06-09 13:18:36.938 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql] datasource=erp_u871_currentYear, isSqlServer=true, sql=SELECT year(som.ddate) as '年',month(som.ddate) as '月',dc.cdcname as '地区',p.cpersonname as '客户经理',cus.cCusName as '客户名称'
+,case when (CHARINDEX('(', cus.cCusAbbName)>0 and  CHARINDEX(')', cus.cCusAbbName)>0 ) 
+		then SUBSTRING(cus.cCusAbbName,CHARINDEX('(', cus.cCusAbbName)+1, CHARINDEX(')', cus.cCusAbbName)-1-CHARINDEX('(', cus.cCusAbbName))
+		else cus.cCusAbbName end as '客户简称'
+,cus.cCusPerson as '联系人','' as '仓库',
+invtopcls.cInvCName as '存货顶级分类',inv.cInvName '存货名称',invcls.cInvCCode as '存货分类编码',invcls.cInvCName as '存货分类',
+iQuantity as '数量',isum as '金额'
+from SO_SOMain as som LEFT JOIN SO_SODetails as sod on som.id = sod.ID
+LEFT JOIN Inventory as inv on inv.cinvcode = sod.cInvCode 
+LEFT JOIN ComputationUnit as cu on inv.cComUnitCode = cu.cComunitCode
+LEFT JOIN Customer as cus on cus.ccuscode = som.cCusCode
+LEFT JOIN Person as p on p.cpersoncode = som.cPersonCode
+LEFT JOIN DistrictClass as dc on dc.cdccode = cus.cdccode
+LEFT JOIN InventoryClass as invcls on invcls.cinvccode = inv.cinvccode
+LEFT JOIN InventoryClass as invtopcls on left(invcls.cInvCCode,2) = invtopcls.cInvCCode
+where 1 = 1 and dc.cDCName not like '%济南%' AND (som.ddate = @som.ddate AND dc.cdcname = @dc.cdcname)
+2026-06-09 13:18:36.941 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql] 归一化参数数: 2
+2026-06-09 13:18:36.942 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql]    param som.ddate = 2026-5-1 (String)
+2026-06-09 13:18:36.943 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql]     -> 将字符串转换为DateTime: "2026-05-01T00:00:00.0000000"
+2026-06-09 13:18:36.944 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql]    param dc.cdcname = 济南市 (String)
+2026-06-09 13:18:36.946 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql] page=1, pageSize=0
+2026-06-09 13:18:36.947 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql] 无分页SQL: SELECT year(som.ddate) as '年',month(som.ddate) as '月',dc.cdcname as '地区',p.cpersonname as '客户经理',cus.cCusName as '客户名称'
+,case when (CHARINDEX('(', cus.cCusAbbName)>0 and  CHARINDEX(')', cus.cCusAbbName)>0 ) 
+		then SUBSTRING(cus.cCusAbbName,CHARINDEX('(', cus.cCusAbbName)+1, CHARINDEX(')', cus.cCusAbbName)-1-CHARINDEX('(', cus.cCusAbbName))
+		else cus.cCusAbbName end as '客户简称'
+,cus.cCusPerson as '联系人','' as '仓库',
+invtopcls.cInvCName as '存货顶级分类',inv.cInvName '存货名称',invcls.cInvCCode as '存货分类编码',invcls.cInvCName as '存货分类',
+iQuantity as '数量',isum as '金额'
+from SO_SOMain as som LEFT JOIN SO_SODetails as sod on som.id = sod.ID
+LEFT JOIN Inventory as inv on inv.cinvcode = sod.cInvCode 
+LEFT JOIN ComputationUnit as cu on inv.cComUnitCode = cu.cComunitCode
+LEFT JOIN Customer as cus on cus.ccuscode = som.cCusCode
+LEFT JOIN Person as p on p.cpersoncode = som.cPersonCode
+LEFT JOIN DistrictClass as dc on dc.cdccode = cus.cdccode
+LEFT JOIN InventoryClass as invcls on invcls.cinvccode = inv.cinvccode
+LEFT JOIN InventoryClass as invtopcls on left(invcls.cInvCCode,2) = invtopcls.cInvCCode
+where 1 = 1 and dc.cDCName not like '%济南%' AND (som.ddate = @som.ddate AND dc.cdcname = @dc.cdcname)
+2026-06-09 15:38:39.446 +08:00 [INF] Microsoft.Hosting.Lifetime Now listening on: http://0.0.0.0:5106
+2026-06-09 15:38:39.514 +08:00 [INF] Microsoft.Hosting.Lifetime Application started. Press Ctrl+C to shut down.
+2026-06-09 15:38:39.515 +08:00 [INF] Microsoft.Hosting.Lifetime Hosting environment: Development
+2026-06-09 15:38:39.517 +08:00 [INF] Microsoft.Hosting.Lifetime Content root path: D:\Codes\Projects\eams2026\src\EAMS2026.Api
+2026-06-09 15:40:33.690 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [PreviewReport] queryType=sql, datasource=erp_u871_currentYear, paramsCount=2
+2026-06-09 15:40:33.696 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [PreviewReport]    param som.ddate = 2026-5-1 (JsonElement)
+2026-06-09 15:40:33.698 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [PreviewReport]    param dc.cdcname = 济南市 (JsonElement)
+2026-06-09 15:40:33.705 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [BuildFilterConditions] 生成条件: som.ddate = '2026-5-1' AND dc.cdcname = '济南市'
+2026-06-09 15:40:33.706 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [BuildFilterConditions] 修改后SQL: SELECT year(som.ddate) as '年',month(som.ddate) as '月',dc.cdcname as '地区',p.cpersonname as '客户经理',cus.cCusName as '客户名称'
+,case when (CHARINDEX('(', cus.cCusAbbName)>0 and  CHARINDEX(')', cus.cCusAbbName)>0 ) 
+		then SUBSTRING(cus.cCusAbbName,CHARINDEX('(', cus.cCusAbbName)+1, CHARINDEX(')', cus.cCusAbbName)-1-CHARINDEX('(', cus.cCusAbbName))
+		else cus.cCusAbbName end as '客户简称'
+,cus.cCusPerson as '联系人','' as '仓库',
+invtopcls.cInvCName as '存货顶级分类',inv.cInvName '存货名称',invcls.cInvCCode as '存货分类编码',invcls.cInvCName as '存货分类',
+iQuantity as '数量',isum as '金额'
+from SO_SOMain as som LEFT JOIN SO_SODetails as sod on som.id = sod.ID
+LEFT JOIN Inventory as inv on inv.cinvcode = sod.cInvCode 
+LEFT JOIN ComputationUnit as cu on inv.cComUnitCode = cu.cComunitCode
+LEFT JOIN Customer as cus on cus.ccuscode = som.cCusCode
+LEFT JOIN Person as p on p.cpersoncode = som.cPersonCode
+LEFT JOIN DistrictClass as dc on dc.cdccode = cus.cdccode
+LEFT JOIN InventoryClass as invcls on invcls.cinvccode = inv.cinvccode
+LEFT JOIN InventoryClass as invtopcls on left(invcls.cInvCCode,2) = invtopcls.cInvCCode
+where 1 = 1 and dc.cDCName not like '%济南%' AND (som.ddate = '2026-5-1' AND dc.cdcname = '济南市')
+2026-06-09 15:40:33.710 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [PreviewReport] 执行SQL: SELECT year(som.ddate) as '年',month(som.ddate) as '月',dc.cdcname as '地区',p.cpersonname as '客户经理',cus.cCusName as '客户名称'
+,case when (CHARINDEX('(', cus.cCusAbbName)>0 and  CHARINDEX(')', cus.cCusAbbNam...
+2026-06-09 15:40:33.802 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql] datasource=erp_u871_currentYear, isSqlServer=true, sql=SELECT year(som.ddate) as '年',month(som.ddate) as '月',dc.cdcname as '地区',p.cpersonname as '客户经理',cus.cCusName as '客户名称'
+,case when (CHARINDEX('(', cus.cCusAbbName)>0 and  CHARINDEX(')', cus.cCusAbbName)>0 ) 
+		then SUBSTRING(cus.cCusAbbName,CHARINDEX('(', cus.cCusAbbName)+1, CHARINDEX(')', cus.cCusAbbName)-1-CHARINDEX('(', cus.cCusAbbName))
+		else cus.cCusAbbName end as '客户简称'
+,cus.cCusPerson as '联系人','' as '仓库',
+invtopcls.cInvCName as '存货顶级分类',inv.cInvName '存货名称',invcls.cInvCCode as '存货分类编码',invcls.cInvCName as '存货分类',
+iQuantity as '数量',isum as '金额'
+from SO_SOMain as som LEFT JOIN SO_SODetails as sod on som.id = sod.ID
+LEFT JOIN Inventory as inv on inv.cinvcode = sod.cInvCode 
+LEFT JOIN ComputationUnit as cu on inv.cComUnitCode = cu.cComunitCode
+LEFT JOIN Customer as cus on cus.ccuscode = som.cCusCode
+LEFT JOIN Person as p on p.cpersoncode = som.cPersonCode
+LEFT JOIN DistrictClass as dc on dc.cdccode = cus.cdccode
+LEFT JOIN InventoryClass as invcls on invcls.cinvccode = inv.cinvccode
+LEFT JOIN InventoryClass as invtopcls on left(invcls.cInvCCode,2) = invtopcls.cInvCCode
+where 1 = 1 and dc.cDCName not like '%济南%' AND (som.ddate = '2026-5-1' AND dc.cdcname = '济南市')
+2026-06-09 15:40:33.805 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql] 归一化参数数: 2
+2026-06-09 15:40:33.806 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql]    param som.ddate = 2026-5-1 (String)
+2026-06-09 15:40:33.808 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql]     -> 将字符串转换为DateTime: "2026-05-01T00:00:00.0000000"
+2026-06-09 15:40:33.810 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql]    param dc.cdcname = 济南市 (String)
+2026-06-09 15:40:33.812 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql] page=1, pageSize=0
+2026-06-09 15:40:33.813 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql] 无分页SQL: SELECT year(som.ddate) as '年',month(som.ddate) as '月',dc.cdcname as '地区',p.cpersonname as '客户经理',cus.cCusName as '客户名称'
+,case when (CHARINDEX('(', cus.cCusAbbName)>0 and  CHARINDEX(')', cus.cCusAbbName)>0 ) 
+		then SUBSTRING(cus.cCusAbbName,CHARINDEX('(', cus.cCusAbbName)+1, CHARINDEX(')', cus.cCusAbbName)-1-CHARINDEX('(', cus.cCusAbbName))
+		else cus.cCusAbbName end as '客户简称'
+,cus.cCusPerson as '联系人','' as '仓库',
+invtopcls.cInvCName as '存货顶级分类',inv.cInvName '存货名称',invcls.cInvCCode as '存货分类编码',invcls.cInvCName as '存货分类',
+iQuantity as '数量',isum as '金额'
+from SO_SOMain as som LEFT JOIN SO_SODetails as sod on som.id = sod.ID
+LEFT JOIN Inventory as inv on inv.cinvcode = sod.cInvCode 
+LEFT JOIN ComputationUnit as cu on inv.cComUnitCode = cu.cComunitCode
+LEFT JOIN Customer as cus on cus.ccuscode = som.cCusCode
+LEFT JOIN Person as p on p.cpersoncode = som.cPersonCode
+LEFT JOIN DistrictClass as dc on dc.cdccode = cus.cdccode
+LEFT JOIN InventoryClass as invcls on invcls.cinvccode = inv.cinvccode
+LEFT JOIN InventoryClass as invtopcls on left(invcls.cInvCCode,2) = invtopcls.cInvCCode
+where 1 = 1 and dc.cDCName not like '%济南%' AND (som.ddate = '2026-5-1' AND dc.cdcname = '济南市')
+2026-06-09 15:41:23.723 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [PreviewReport] queryType=sql, datasource=erp_u871_currentYear, paramsCount=2
+2026-06-09 15:41:23.725 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [PreviewReport]    param som.ddate = 2026-5-1 (JsonElement)
+2026-06-09 15:41:23.726 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [PreviewReport]    param dc.cdcname = 济南市 (JsonElement)
+2026-06-09 15:41:23.729 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [BuildFilterConditions] 生成条件: som.ddate = '2026-5-1' AND dc.cdcname = '济南市'
+2026-06-09 15:41:23.731 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [BuildFilterConditions] 修改后SQL: SELECT year(som.ddate) as '年',month(som.ddate) as '月',dc.cdcname as '地区',p.cpersonname as '客户经理',cus.cCusName as '客户名称'
+,case when (CHARINDEX('(', cus.cCusAbbName)>0 and  CHARINDEX(')', cus.cCusAbbName)>0 ) 
+		then SUBSTRING(cus.cCusAbbName,CHARINDEX('(', cus.cCusAbbName)+1, CHARINDEX(')', cus.cCusAbbName)-1-CHARINDEX('(', cus.cCusAbbName))
+		else cus.cCusAbbName end as '客户简称'
+,cus.cCusPerson as '联系人','' as '仓库',
+invtopcls.cInvCName as '存货顶级分类',inv.cInvName '存货名称',invcls.cInvCCode as '存货分类编码',invcls.cInvCName as '存货分类',
+iQuantity as '数量',isum as '金额'
+from SO_SOMain as som LEFT JOIN SO_SODetails as sod on som.id = sod.ID
+LEFT JOIN Inventory as inv on inv.cinvcode = sod.cInvCode 
+LEFT JOIN ComputationUnit as cu on inv.cComUnitCode = cu.cComunitCode
+LEFT JOIN Customer as cus on cus.ccuscode = som.cCusCode
+LEFT JOIN Person as p on p.cpersoncode = som.cPersonCode
+LEFT JOIN DistrictClass as dc on dc.cdccode = cus.cdccode
+LEFT JOIN InventoryClass as invcls on invcls.cinvccode = inv.cinvccode
+LEFT JOIN InventoryClass as invtopcls on left(invcls.cInvCCode,2) = invtopcls.cInvCCode
+where 1 = 1 and dc.cDCName not like '%济南%' AND (som.ddate = '2026-5-1' AND dc.cdcname = '济南市')
+2026-06-09 15:41:23.753 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [PreviewReport] 执行SQL: SELECT year(som.ddate) as '年',month(som.ddate) as '月',dc.cdcname as '地区',p.cpersonname as '客户经理',cus.cCusName as '客户名称'
+,case when (CHARINDEX('(', cus.cCusAbbName)>0 and  CHARINDEX(')', cus.cCusAbbNam...
+2026-06-09 15:41:23.757 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql] datasource=erp_u871_currentYear, isSqlServer=true, sql=SELECT year(som.ddate) as '年',month(som.ddate) as '月',dc.cdcname as '地区',p.cpersonname as '客户经理',cus.cCusName as '客户名称'
+,case when (CHARINDEX('(', cus.cCusAbbName)>0 and  CHARINDEX(')', cus.cCusAbbName)>0 ) 
+		then SUBSTRING(cus.cCusAbbName,CHARINDEX('(', cus.cCusAbbName)+1, CHARINDEX(')', cus.cCusAbbName)-1-CHARINDEX('(', cus.cCusAbbName))
+		else cus.cCusAbbName end as '客户简称'
+,cus.cCusPerson as '联系人','' as '仓库',
+invtopcls.cInvCName as '存货顶级分类',inv.cInvName '存货名称',invcls.cInvCCode as '存货分类编码',invcls.cInvCName as '存货分类',
+iQuantity as '数量',isum as '金额'
+from SO_SOMain as som LEFT JOIN SO_SODetails as sod on som.id = sod.ID
+LEFT JOIN Inventory as inv on inv.cinvcode = sod.cInvCode 
+LEFT JOIN ComputationUnit as cu on inv.cComUnitCode = cu.cComunitCode
+LEFT JOIN Customer as cus on cus.ccuscode = som.cCusCode
+LEFT JOIN Person as p on p.cpersoncode = som.cPersonCode
+LEFT JOIN DistrictClass as dc on dc.cdccode = cus.cdccode
+LEFT JOIN InventoryClass as invcls on invcls.cinvccode = inv.cinvccode
+LEFT JOIN InventoryClass as invtopcls on left(invcls.cInvCCode,2) = invtopcls.cInvCCode
+where 1 = 1 and dc.cDCName not like '%济南%' AND (som.ddate = '2026-5-1' AND dc.cdcname = '济南市')
+2026-06-09 15:41:23.761 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql] 归一化参数数: 2
+2026-06-09 15:41:23.762 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql]    param som.ddate = 2026-5-1 (String)
+2026-06-09 15:41:23.765 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql]     -> 将字符串转换为DateTime: "2026-05-01T00:00:00.0000000"
+2026-06-09 15:41:23.766 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql]    param dc.cdcname = 济南市 (String)
+2026-06-09 15:41:23.767 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql] page=1, pageSize=0
+2026-06-09 15:41:23.769 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql] 无分页SQL: SELECT year(som.ddate) as '年',month(som.ddate) as '月',dc.cdcname as '地区',p.cpersonname as '客户经理',cus.cCusName as '客户名称'
+,case when (CHARINDEX('(', cus.cCusAbbName)>0 and  CHARINDEX(')', cus.cCusAbbName)>0 ) 
+		then SUBSTRING(cus.cCusAbbName,CHARINDEX('(', cus.cCusAbbName)+1, CHARINDEX(')', cus.cCusAbbName)-1-CHARINDEX('(', cus.cCusAbbName))
+		else cus.cCusAbbName end as '客户简称'
+,cus.cCusPerson as '联系人','' as '仓库',
+invtopcls.cInvCName as '存货顶级分类',inv.cInvName '存货名称',invcls.cInvCCode as '存货分类编码',invcls.cInvCName as '存货分类',
+iQuantity as '数量',isum as '金额'
+from SO_SOMain as som LEFT JOIN SO_SODetails as sod on som.id = sod.ID
+LEFT JOIN Inventory as inv on inv.cinvcode = sod.cInvCode 
+LEFT JOIN ComputationUnit as cu on inv.cComUnitCode = cu.cComunitCode
+LEFT JOIN Customer as cus on cus.ccuscode = som.cCusCode
+LEFT JOIN Person as p on p.cpersoncode = som.cPersonCode
+LEFT JOIN DistrictClass as dc on dc.cdccode = cus.cdccode
+LEFT JOIN InventoryClass as invcls on invcls.cinvccode = inv.cinvccode
+LEFT JOIN InventoryClass as invtopcls on left(invcls.cInvCCode,2) = invtopcls.cInvCCode
+where 1 = 1 and dc.cDCName not like '%济南%' AND (som.ddate = '2026-5-1' AND dc.cdcname = '济南市')
+2026-06-09 16:29:12.224 +08:00 [INF] Microsoft.Hosting.Lifetime Application is shutting down...
+2026-06-09 16:29:19.267 +08:00 [INF] Microsoft.Hosting.Lifetime Now listening on: http://0.0.0.0:5106
+2026-06-09 16:29:19.330 +08:00 [INF] Microsoft.Hosting.Lifetime Application started. Press Ctrl+C to shut down.
+2026-06-09 16:29:19.331 +08:00 [INF] Microsoft.Hosting.Lifetime Hosting environment: Development
+2026-06-09 16:29:19.333 +08:00 [INF] Microsoft.Hosting.Lifetime Content root path: D:\Codes\Projects\eams2026\src\EAMS2026.Api
+2026-06-09 16:30:24.306 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [PreviewReport] queryType=sql, datasource=erp_u871_currentYear, paramsCount=2
+2026-06-09 16:30:24.312 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [PreviewReport]    param som.ddate = 2026-5-1 (JsonElement)
+2026-06-09 16:30:24.314 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [PreviewReport]    param dc.cdcname = 济南市 (JsonElement)
+2026-06-09 16:30:24.318 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [BuildFilterConditions] 生成条件: som.ddate = '2026-5-1' AND dc.cdcname = '济南市'
+2026-06-09 16:30:24.319 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [BuildFilterConditions] 修改后SQL: SELECT year(som.ddate) as '年',month(som.ddate) as '月',dc.cdcname as '地区',p.cpersonname as '客户经理',cus.cCusName as '客户名称'
+,case when (CHARINDEX('(', cus.cCusAbbName)>0 and  CHARINDEX(')', cus.cCusAbbName)>0 ) 
+		then SUBSTRING(cus.cCusAbbName,CHARINDEX('(', cus.cCusAbbName)+1, CHARINDEX(')', cus.cCusAbbName)-1-CHARINDEX('(', cus.cCusAbbName))
+		else cus.cCusAbbName end as '客户简称'
+,cus.cCusPerson as '联系人','' as '仓库',
+invtopcls.cInvCName as '存货顶级分类',inv.cInvName '存货名称',invcls.cInvCCode as '存货分类编码',invcls.cInvCName as '存货分类',
+iQuantity as '数量',isum as '金额'
+from SO_SOMain as som LEFT JOIN SO_SODetails as sod on som.id = sod.ID
+LEFT JOIN Inventory as inv on inv.cinvcode = sod.cInvCode 
+LEFT JOIN ComputationUnit as cu on inv.cComUnitCode = cu.cComunitCode
+LEFT JOIN Customer as cus on cus.ccuscode = som.cCusCode
+LEFT JOIN Person as p on p.cpersoncode = som.cPersonCode
+LEFT JOIN DistrictClass as dc on dc.cdccode = cus.cdccode
+LEFT JOIN InventoryClass as invcls on invcls.cinvccode = inv.cinvccode
+LEFT JOIN InventoryClass as invtopcls on left(invcls.cInvCCode,2) = invtopcls.cInvCCode
+where 1 = 1 AND (som.ddate = '2026-5-1' AND dc.cdcname = '济南市')
+2026-06-09 16:30:24.322 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [PreviewReport] 执行SQL: SELECT year(som.ddate) as '年',month(som.ddate) as '月',dc.cdcname as '地区',p.cpersonname as '客户经理',cus.cCusName as '客户名称'
+,case when (CHARINDEX('(', cus.cCusAbbName)>0 and  CHARINDEX(')', cus.cCusAbbNam...
+2026-06-09 16:30:24.342 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql] datasource=erp_u871_currentYear, isSqlServer=true, sql=SELECT year(som.ddate) as '年',month(som.ddate) as '月',dc.cdcname as '地区',p.cpersonname as '客户经理',cus.cCusName as '客户名称'
+,case when (CHARINDEX('(', cus.cCusAbbName)>0 and  CHARINDEX(')', cus.cCusAbbName)>0 ) 
+		then SUBSTRING(cus.cCusAbbName,CHARINDEX('(', cus.cCusAbbName)+1, CHARINDEX(')', cus.cCusAbbName)-1-CHARINDEX('(', cus.cCusAbbName))
+		else cus.cCusAbbName end as '客户简称'
+,cus.cCusPerson as '联系人','' as '仓库',
+invtopcls.cInvCName as '存货顶级分类',inv.cInvName '存货名称',invcls.cInvCCode as '存货分类编码',invcls.cInvCName as '存货分类',
+iQuantity as '数量',isum as '金额'
+from SO_SOMain as som LEFT JOIN SO_SODetails as sod on som.id = sod.ID
+LEFT JOIN Inventory as inv on inv.cinvcode = sod.cInvCode 
+LEFT JOIN ComputationUnit as cu on inv.cComUnitCode = cu.cComunitCode
+LEFT JOIN Customer as cus on cus.ccuscode = som.cCusCode
+LEFT JOIN Person as p on p.cpersoncode = som.cPersonCode
+LEFT JOIN DistrictClass as dc on dc.cdccode = cus.cdccode
+LEFT JOIN InventoryClass as invcls on invcls.cinvccode = inv.cinvccode
+LEFT JOIN InventoryClass as invtopcls on left(invcls.cInvCCode,2) = invtopcls.cInvCCode
+where 1 = 1 AND (som.ddate = '2026-5-1' AND dc.cdcname = '济南市')
+2026-06-09 16:30:24.345 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql] 归一化参数数: 2
+2026-06-09 16:30:24.346 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql]    param som.ddate = 2026-5-1 (String)
+2026-06-09 16:30:24.348 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql]     -> 将字符串转换为DateTime: "2026-05-01T00:00:00.0000000"
+2026-06-09 16:30:24.350 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql]    param dc.cdcname = 济南市 (String)
+2026-06-09 16:30:24.352 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql] page=1, pageSize=0
+2026-06-09 16:30:24.353 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql] 无分页SQL: SELECT year(som.ddate) as '年',month(som.ddate) as '月',dc.cdcname as '地区',p.cpersonname as '客户经理',cus.cCusName as '客户名称'
+,case when (CHARINDEX('(', cus.cCusAbbName)>0 and  CHARINDEX(')', cus.cCusAbbName)>0 ) 
+		then SUBSTRING(cus.cCusAbbName,CHARINDEX('(', cus.cCusAbbName)+1, CHARINDEX(')', cus.cCusAbbName)-1-CHARINDEX('(', cus.cCusAbbName))
+		else cus.cCusAbbName end as '客户简称'
+,cus.cCusPerson as '联系人','' as '仓库',
+invtopcls.cInvCName as '存货顶级分类',inv.cInvName '存货名称',invcls.cInvCCode as '存货分类编码',invcls.cInvCName as '存货分类',
+iQuantity as '数量',isum as '金额'
+from SO_SOMain as som LEFT JOIN SO_SODetails as sod on som.id = sod.ID
+LEFT JOIN Inventory as inv on inv.cinvcode = sod.cInvCode 
+LEFT JOIN ComputationUnit as cu on inv.cComUnitCode = cu.cComunitCode
+LEFT JOIN Customer as cus on cus.ccuscode = som.cCusCode
+LEFT JOIN Person as p on p.cpersoncode = som.cPersonCode
+LEFT JOIN DistrictClass as dc on dc.cdccode = cus.cdccode
+LEFT JOIN InventoryClass as invcls on invcls.cinvccode = inv.cinvccode
+LEFT JOIN InventoryClass as invtopcls on left(invcls.cInvCCode,2) = invtopcls.cInvCCode
+where 1 = 1 AND (som.ddate = '2026-5-1' AND dc.cdcname = '济南市')
+2026-06-09 16:41:47.225 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [PreviewReport] queryType=sql, datasource=main, paramsCount=0
+2026-06-09 16:46:08.967 +08:00 [INF] Microsoft.Hosting.Lifetime Now listening on: http://0.0.0.0:5106
+2026-06-09 16:46:09.052 +08:00 [INF] Microsoft.Hosting.Lifetime Application started. Press Ctrl+C to shut down.
+2026-06-09 16:46:09.055 +08:00 [INF] Microsoft.Hosting.Lifetime Hosting environment: Development
+2026-06-09 16:46:09.056 +08:00 [INF] Microsoft.Hosting.Lifetime Content root path: D:\Codes\Projects\eams2026\src\EAMS2026.Api
+2026-06-09 16:50:07.836 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [GetSalespersons] 数据源=erp_u871_currentYear, 获取到 8 个业务员
+2026-06-09 16:50:07.951 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteReport] reportId=3, userId=1
+2026-06-09 16:50:07.995 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteReport] hasView=true
+2026-06-09 16:50:08.001 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [BuildFilterConditions] 生成条件: som.ddate = '2026-5-1' AND dc.cdcname = '济南市'
+2026-06-09 16:50:08.029 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [BuildFilterConditions] 修改后SQL: SELECT year(som.ddate) as '年',month(som.ddate) as '月',dc.cdcname as '地区',p.cpersonname as '客户经理',cus.cCusName as '客户名称'
+,case when (CHARINDEX('(', cus.cCusAbbName)>0 and  CHARINDEX(')', cus.cCusAbbName)>0 ) 
+		then SUBSTRING(cus.cCusAbbName,CHARINDEX('(', cus.cCusAbbName)+1, CHARINDEX(')', cus.cCusAbbName)-1-CHARINDEX('(', cus.cCusAbbName))
+		else cus.cCusAbbName end as '客户简称'
+,cus.cCusPerson as '联系人','' as '仓库',
+invtopcls.cInvCName as '存货顶级分类',inv.cInvName '存货名称',invcls.cInvCCode as '存货分类编码',invcls.cInvCName as '存货分类',
+iQuantity as '数量',isum as '金额'
+from SO_SOMain as som LEFT JOIN SO_SODetails as sod on som.id = sod.ID
+LEFT JOIN Inventory as inv on inv.cinvcode = sod.cInvCode 
+LEFT JOIN ComputationUnit as cu on inv.cComUnitCode = cu.cComunitCode
+LEFT JOIN Customer as cus on cus.ccuscode = som.cCusCode
+LEFT JOIN Person as p on p.cpersoncode = som.cPersonCode
+LEFT JOIN DistrictClass as dc on dc.cdccode = cus.cdccode
+LEFT JOIN InventoryClass as invcls on invcls.cinvccode = inv.cinvccode
+LEFT JOIN InventoryClass as invtopcls on left(invcls.cInvCCode,2) = invtopcls.cInvCCode
+where 1 = 1 AND (som.ddate = '2026-5-1' AND dc.cdcname = '济南市')
+2026-06-09 16:50:08.037 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql] datasource=erp_u871_currentYear, isSqlServer=true, sql=SELECT year(som.ddate) as '年',month(som.ddate) as '月',dc.cdcname as '地区',p.cpersonname as '客户经理',cus.cCusName as '客户名称'
+,case when (CHARINDEX('(', cus.cCusAbbName)>0 and  CHARINDEX(')', cus.cCusAbbName)>0 ) 
+		then SUBSTRING(cus.cCusAbbName,CHARINDEX('(', cus.cCusAbbName)+1, CHARINDEX(')', cus.cCusAbbName)-1-CHARINDEX('(', cus.cCusAbbName))
+		else cus.cCusAbbName end as '客户简称'
+,cus.cCusPerson as '联系人','' as '仓库',
+invtopcls.cInvCName as '存货顶级分类',inv.cInvName '存货名称',invcls.cInvCCode as '存货分类编码',invcls.cInvCName as '存货分类',
+iQuantity as '数量',isum as '金额'
+from SO_SOMain as som LEFT JOIN SO_SODetails as sod on som.id = sod.ID
+LEFT JOIN Inventory as inv on inv.cinvcode = sod.cInvCode 
+LEFT JOIN ComputationUnit as cu on inv.cComUnitCode = cu.cComunitCode
+LEFT JOIN Customer as cus on cus.ccuscode = som.cCusCode
+LEFT JOIN Person as p on p.cpersoncode = som.cPersonCode
+LEFT JOIN DistrictClass as dc on dc.cdccode = cus.cdccode
+LEFT JOIN InventoryClass as invcls on invcls.cinvccode = inv.cinvccode
+LEFT JOIN InventoryClass as invtopcls on left(invcls.cInvCCode,2) = invtopcls.cInvCCode
+where 1 = 1 AND (som.ddate = '2026-5-1' AND dc.cdcname = '济南市')
+2026-06-09 16:50:08.041 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql] 归一化参数数: 2
+2026-06-09 16:50:08.042 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql]    param som.ddate -> som_ddate = 2026-5-1 (String)
+2026-06-09 16:50:08.044 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql]     -> 将字符串转换为DateTime: "2026-05-01T00:00:00.0000000"
+2026-06-09 16:50:08.046 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql]    param dc.cdcname -> dc_cdcname = 济南市 (String)
+2026-06-09 16:50:08.049 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql] page=1, pageSize=50
+2026-06-09 16:50:08.141 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql] COUNT结果: 2
+2026-06-09 16:50:08.149 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql] 分页SQL: SELECT * FROM (SELECT *, ROW_NUMBER() OVER (ORDER BY (SELECT NULL)) AS _rn FROM (SELECT year(som.ddate) as '年',month(som.ddate) as '月',dc.cdcname as '地区',p.cpersonname as '客户经理',cus.cCusName as '客户名称'
+,case when (CHARINDEX('(', cus.cCusAbbName)>0 and  CHARINDEX(')', cus.cCusAbbName)>0 ) 
+		then SUBSTRING(cus.cCusAbbName,CHARINDEX('(', cus.cCusAbbName)+1, CHARINDEX(')', cus.cCusAbbName)-1-CHARINDEX('(', cus.cCusAbbName))
+		else cus.cCusAbbName end as '客户简称'
+,cus.cCusPerson as '联系人','' as '仓库',
+invtopcls.cInvCName as '存货顶级分类',inv.cInvName '存货名称',invcls.cInvCCode as '存货分类编码',invcls.cInvCName as '存货分类',
+iQuantity as '数量',isum as '金额'
+from SO_SOMain as som LEFT JOIN SO_SODetails as sod on som.id = sod.ID
+LEFT JOIN Inventory as inv on inv.cinvcode = sod.cInvCode 
+LEFT JOIN ComputationUnit as cu on inv.cComUnitCode = cu.cComunitCode
+LEFT JOIN Customer as cus on cus.ccuscode = som.cCusCode
+LEFT JOIN Person as p on p.cpersoncode = som.cPersonCode
+LEFT JOIN DistrictClass as dc on dc.cdccode = cus.cdccode
+LEFT JOIN InventoryClass as invcls on invcls.cinvccode = inv.cinvccode
+LEFT JOIN InventoryClass as invtopcls on left(invcls.cInvCCode,2) = invtopcls.cInvCCode
+where 1 = 1 AND (som.ddate = '2026-5-1' AND dc.cdcname = '济南市')) AS _inner) AS _outer WHERE _rn BETWEEN @Start AND @End
+2026-06-09 16:50:08.267 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql] 返回列数=15, 行数=2
+2026-06-09 16:50:23.129 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [PreviewReport] queryType=sql, datasource=erp_u871_currentYear, paramsCount=2
+2026-06-09 16:50:23.133 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [PreviewReport]    param som.ddate = 2026-5-1 (JsonElement)
+2026-06-09 16:50:23.134 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [PreviewReport]    param dc.cdcname = 济南市 (JsonElement)
+2026-06-09 16:50:23.136 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [BuildFilterConditions] 生成条件: som.ddate = '2026-5-1' AND dc.cdcname = '济南市'
+2026-06-09 16:50:23.137 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [BuildFilterConditions] 修改后SQL: SELECT year(som.ddate) as '年',month(som.ddate) as '月',dc.cdcname as '地区',p.cpersonname as '客户经理',cus.cCusName as '客户名称'
+,case when (CHARINDEX('(', cus.cCusAbbName)>0 and  CHARINDEX(')', cus.cCusAbbName)>0 ) 
+		then SUBSTRING(cus.cCusAbbName,CHARINDEX('(', cus.cCusAbbName)+1, CHARINDEX(')', cus.cCusAbbName)-1-CHARINDEX('(', cus.cCusAbbName))
+		else cus.cCusAbbName end as '客户简称'
+,cus.cCusPerson as '联系人','' as '仓库',
+invtopcls.cInvCName as '存货顶级分类',inv.cInvName '存货名称',invcls.cInvCCode as '存货分类编码',invcls.cInvCName as '存货分类',
+iQuantity as '数量',isum as '金额'
+from SO_SOMain as som LEFT JOIN SO_SODetails as sod on som.id = sod.ID
+LEFT JOIN Inventory as inv on inv.cinvcode = sod.cInvCode 
+LEFT JOIN ComputationUnit as cu on inv.cComUnitCode = cu.cComunitCode
+LEFT JOIN Customer as cus on cus.ccuscode = som.cCusCode
+LEFT JOIN Person as p on p.cpersoncode = som.cPersonCode
+LEFT JOIN DistrictClass as dc on dc.cdccode = cus.cdccode
+LEFT JOIN InventoryClass as invcls on invcls.cinvccode = inv.cinvccode
+LEFT JOIN InventoryClass as invtopcls on left(invcls.cInvCCode,2) = invtopcls.cInvCCode
+where 1 = 1 AND (som.ddate = '2026-5-1' AND dc.cdcname = '济南市')
+2026-06-09 16:50:23.163 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [PreviewReport] 执行SQL: SELECT year(som.ddate) as '年',month(som.ddate) as '月',dc.cdcname as '地区',p.cpersonname as '客户经理',cus.cCusName as '客户名称'
+,case when (CHARINDEX('(', cus.cCusAbbName)>0 and  CHARINDEX(')', cus.cCusAbbNam...
+2026-06-09 16:50:23.166 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql] datasource=erp_u871_currentYear, isSqlServer=true, sql=SELECT year(som.ddate) as '年',month(som.ddate) as '月',dc.cdcname as '地区',p.cpersonname as '客户经理',cus.cCusName as '客户名称'
+,case when (CHARINDEX('(', cus.cCusAbbName)>0 and  CHARINDEX(')', cus.cCusAbbName)>0 ) 
+		then SUBSTRING(cus.cCusAbbName,CHARINDEX('(', cus.cCusAbbName)+1, CHARINDEX(')', cus.cCusAbbName)-1-CHARINDEX('(', cus.cCusAbbName))
+		else cus.cCusAbbName end as '客户简称'
+,cus.cCusPerson as '联系人','' as '仓库',
+invtopcls.cInvCName as '存货顶级分类',inv.cInvName '存货名称',invcls.cInvCCode as '存货分类编码',invcls.cInvCName as '存货分类',
+iQuantity as '数量',isum as '金额'
+from SO_SOMain as som LEFT JOIN SO_SODetails as sod on som.id = sod.ID
+LEFT JOIN Inventory as inv on inv.cinvcode = sod.cInvCode 
+LEFT JOIN ComputationUnit as cu on inv.cComUnitCode = cu.cComunitCode
+LEFT JOIN Customer as cus on cus.ccuscode = som.cCusCode
+LEFT JOIN Person as p on p.cpersoncode = som.cPersonCode
+LEFT JOIN DistrictClass as dc on dc.cdccode = cus.cdccode
+LEFT JOIN InventoryClass as invcls on invcls.cinvccode = inv.cinvccode
+LEFT JOIN InventoryClass as invtopcls on left(invcls.cInvCCode,2) = invtopcls.cInvCCode
+where 1 = 1 AND (som.ddate = '2026-5-1' AND dc.cdcname = '济南市')
+2026-06-09 16:50:23.192 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql] 归一化参数数: 2
+2026-06-09 16:50:23.193 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql]    param som.ddate -> som_ddate = 2026-5-1 (String)
+2026-06-09 16:50:23.196 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql]     -> 将字符串转换为DateTime: "2026-05-01T00:00:00.0000000"
+2026-06-09 16:50:23.197 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql]    param dc.cdcname -> dc_cdcname = 济南市 (String)
+2026-06-09 16:50:23.199 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql] page=1, pageSize=0
+2026-06-09 16:50:23.200 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql] 无分页SQL: SELECT year(som.ddate) as '年',month(som.ddate) as '月',dc.cdcname as '地区',p.cpersonname as '客户经理',cus.cCusName as '客户名称'
+,case when (CHARINDEX('(', cus.cCusAbbName)>0 and  CHARINDEX(')', cus.cCusAbbName)>0 ) 
+		then SUBSTRING(cus.cCusAbbName,CHARINDEX('(', cus.cCusAbbName)+1, CHARINDEX(')', cus.cCusAbbName)-1-CHARINDEX('(', cus.cCusAbbName))
+		else cus.cCusAbbName end as '客户简称'
+,cus.cCusPerson as '联系人','' as '仓库',
+invtopcls.cInvCName as '存货顶级分类',inv.cInvName '存货名称',invcls.cInvCCode as '存货分类编码',invcls.cInvCName as '存货分类',
+iQuantity as '数量',isum as '金额'
+from SO_SOMain as som LEFT JOIN SO_SODetails as sod on som.id = sod.ID
+LEFT JOIN Inventory as inv on inv.cinvcode = sod.cInvCode 
+LEFT JOIN ComputationUnit as cu on inv.cComUnitCode = cu.cComunitCode
+LEFT JOIN Customer as cus on cus.ccuscode = som.cCusCode
+LEFT JOIN Person as p on p.cpersoncode = som.cPersonCode
+LEFT JOIN DistrictClass as dc on dc.cdccode = cus.cdccode
+LEFT JOIN InventoryClass as invcls on invcls.cinvccode = inv.cinvccode
+LEFT JOIN InventoryClass as invtopcls on left(invcls.cInvCCode,2) = invtopcls.cInvCCode
+where 1 = 1 AND (som.ddate = '2026-5-1' AND dc.cdcname = '济南市')
+2026-06-09 16:50:23.232 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql] 返回列数=14, 行数=2
+2026-06-09 16:50:23.241 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [PreviewReport] 完成, 耗时=111ms, 行数=2
+2026-06-09 16:50:35.232 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [GetSalespersons] 数据源=erp_u871_currentYear, 获取到 8 个业务员
+2026-06-09 16:50:35.385 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteReport] reportId=40007, userId=1
+2026-06-09 16:50:35.414 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteReport] hasView=true
+2026-06-09 16:53:46.822 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [PreviewReport] queryType=proc, datasource=erp_u871_currentYear, paramsCount=0
+2026-06-09 16:53:46.824 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [PreviewReport] 执行存储过程: --exec dflproc_ex_accountingCost
+exec dflproc_report_accountingCost
+2026-06-09 16:54:05.315 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [PreviewReport] queryType=proc, datasource=erp_u871_currentYear, paramsCount=0
+2026-06-09 16:54:05.316 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [PreviewReport] 执行存储过程: exec dflproc_report_accountingCost
+2026-06-09 16:55:01.021 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [PreviewReport] queryType=proc, datasource=erp_u871_currentYear, paramsCount=0
+2026-06-09 16:55:01.022 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [PreviewReport] 执行存储过程: dflproc_report_accountingCost
+2026-06-09 16:55:01.100 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [PreviewReport] 完成, 耗时=79ms, 行数=2185
+2026-06-09 16:55:02.700 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [PreviewReport] queryType=proc, datasource=erp_u871_currentYear, paramsCount=0
+2026-06-09 16:55:02.703 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [PreviewReport] 执行存储过程: dflproc_report_accountingCost
+2026-06-09 16:55:02.718 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [PreviewReport] 完成, 耗时=17ms, 行数=2185
+2026-06-09 16:55:18.320 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [PreviewReport] queryType=sql, datasource=erp_u871_currentYear, paramsCount=0
+2026-06-09 17:00:38.800 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [GetSalespersons] 数据源=erp_u871_currentYear, 获取到 8 个业务员
+2026-06-09 17:00:38.813 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteReport] reportId=30002, userId=1
+2026-06-09 17:00:38.847 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteReport] hasView=true
+2026-06-09 17:00:45.839 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteReport] reportId=30002, userId=1
+2026-06-09 17:00:45.844 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteReport] hasView=true
+2026-06-09 17:01:25.520 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [PreviewReport] queryType=proc, datasource=erp_u871_currentYear, paramsCount=0
+2026-06-09 17:01:25.542 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [PreviewReport] 执行存储过程: dflproc_report_accountingCost
+2026-06-09 17:01:25.927 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [PreviewReport] 完成, 耗时=407ms, 行数=2192
+2026-06-09 17:04:22.658 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [PreviewReport] queryType=sql, datasource=erp_u871_currentYear, paramsCount=4
+2026-06-09 17:04:22.660 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [PreviewReport]    param dl.ddate = ["2026-05-31T16:00:00.000Z","2026-06-07T16:00:00.000Z"] (JsonElement)
+2026-06-09 17:04:22.662 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [PreviewReport]    param year(dl.ddate) = 2026 (JsonElement)
+2026-06-09 17:04:22.664 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [PreviewReport]    param p.cpersonname = 董富海 (JsonElement)
+2026-06-09 17:04:22.665 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [PreviewReport]    param dc.cdcname = 济南市 (JsonElement)
+2026-06-09 17:04:22.669 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [BuildFilterConditions] between: dl.ddate → "2026-06-01T00:00:00.0000000+08:00" ~ "2026-06-08T00:00:00.0000000+08:00"
+2026-06-09 17:04:22.671 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [BuildFilterConditions] 生成条件: dl.ddate BETWEEN '2026-06-01 00:00:00' AND '2026-06-08 00:00:00' AND year(dl.ddate) = '2026' AND p.cpersonname = '董富海' AND dc.cdcname = '济南市'
+2026-06-09 17:04:22.672 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [BuildFilterConditions] 修改后SQL: SELECT year(dl.ddate) as '年',month(dl.ddate) as '月',dc.cdcname as '地区',p.cpersonname as '客户经理',cus.cCusName as '客户名称'
+,case when (CHARINDEX('(', cus.cCusAbbName)>0 and  CHARINDEX(')', cus.cCusAbbName)>0 ) 
+		then SUBSTRING(cus.cCusAbbName,CHARINDEX('(', cus.cCusAbbName)+1, CHARINDEX(')', cus.cCusAbbName)-1-CHARINDEX('(', cus.cCusAbbName))
+		else cus.cCusAbbName end as '客户简称',dl.cShipAddress as '发货地址'
+,cus.cCusPerson as '联系人',wh.cWhName as '仓库',
+invtopcls.cInvCName as '存货顶级分类',inv.cInvName '存货名称',invcls.cInvCCode as '存货分类编码',invcls.cInvCName as '存货分类',
+iQuantity as '数量',iNum as '件数',isum as '金额'
+from DispatchList as dl LEFT JOIN DispatchLists as dls on dl.dlid = dls.DLID
+LEFT JOIN Inventory as inv on inv.cinvcode = dls.cInvCode 
+LEFT JOIN ComputationUnit as cu on inv.cComUnitCode = cu.cComunitCode
+LEFT JOIN Customer as cus on cus.ccuscode = dl.cCusCode
+LEFT JOIN Person as p on p.cpersoncode = dl.cPersonCode
+LEFT JOIN DistrictClass as dc on dc.cdccode = cus.cdccode
+LEFT JOIN InventoryClass as invcls on invcls.cinvccode = inv.cinvccode
+LEFT JOIN InventoryClass as invtopcls on left(invcls.cInvCCode,2) = invtopcls.cInvCCode
+LEFT JOIN Warehouse as wh on wh.cWhCode = dls.cWhCode
+where 1 = 1 --and dc.cDCName like '%济南%' AND (dl.ddate BETWEEN '2026-06-01 00:00:00' AND '2026-06-08 00:00:00' AND year(dl.ddate) = '2026' AND p.cpersonname = '董富海' AND dc.cdcname = '济南市')
+2026-06-09 17:04:22.697 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [PreviewReport] 执行SQL: SELECT year(dl.ddate) as '年',month(dl.ddate) as '月',dc.cdcname as '地区',p.cpersonname as '客户经理',cus.cCusName as '客户名称'
+,case when (CHARINDEX('(', cus.cCusAbbName)>0 and  CHARINDEX(')', cus.cCusAbbName)...
+2026-06-09 17:04:22.701 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql] datasource=erp_u871_currentYear, isSqlServer=true, sql=SELECT year(dl.ddate) as '年',month(dl.ddate) as '月',dc.cdcname as '地区',p.cpersonname as '客户经理',cus.cCusName as '客户名称'
+,case when (CHARINDEX('(', cus.cCusAbbName)>0 and  CHARINDEX(')', cus.cCusAbbName)>0 ) 
+		then SUBSTRING(cus.cCusAbbName,CHARINDEX('(', cus.cCusAbbName)+1, CHARINDEX(')', cus.cCusAbbName)-1-CHARINDEX('(', cus.cCusAbbName))
+		else cus.cCusAbbName end as '客户简称',dl.cShipAddress as '发货地址'
+,cus.cCusPerson as '联系人',wh.cWhName as '仓库',
+invtopcls.cInvCName as '存货顶级分类',inv.cInvName '存货名称',invcls.cInvCCode as '存货分类编码',invcls.cInvCName as '存货分类',
+iQuantity as '数量',iNum as '件数',isum as '金额'
+from DispatchList as dl LEFT JOIN DispatchLists as dls on dl.dlid = dls.DLID
+LEFT JOIN Inventory as inv on inv.cinvcode = dls.cInvCode 
+LEFT JOIN ComputationUnit as cu on inv.cComUnitCode = cu.cComunitCode
+LEFT JOIN Customer as cus on cus.ccuscode = dl.cCusCode
+LEFT JOIN Person as p on p.cpersoncode = dl.cPersonCode
+LEFT JOIN DistrictClass as dc on dc.cdccode = cus.cdccode
+LEFT JOIN InventoryClass as invcls on invcls.cinvccode = inv.cinvccode
+LEFT JOIN InventoryClass as invtopcls on left(invcls.cInvCCode,2) = invtopcls.cInvCCode
+LEFT JOIN Warehouse as wh on wh.cWhCode = dls.cWhCode
+where 1 = 1 --and dc.cDCName like '%济南%' AND (dl.ddate BETWEEN '2026-06-01 00:00:00' AND '2026-06-08 00:00:00' AND year(dl.ddate) = '2026' AND p.cpersonname = '董富海' AND dc.cdcname = '济南市')
+2026-06-09 17:04:22.703 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql] 归一化参数数: 4
+2026-06-09 17:04:22.704 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql]    param dl.ddate -> dl_ddate = ["2026-05-31T16:00:00.000Z","2026-06-07T16:00:00.000Z"] (String)
+2026-06-09 17:04:22.706 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql]    param year(dl.ddate) -> year(dl_ddate) = 2026 (String)
+2026-06-09 17:04:22.708 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql]    param p.cpersonname -> p_cpersonname = 董富海 (String)
+2026-06-09 17:04:22.710 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql]    param dc.cdcname -> dc_cdcname = 济南市 (String)
+2026-06-09 17:04:22.713 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql] page=1, pageSize=0
+2026-06-09 17:04:22.714 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql] 无分页SQL: SELECT year(dl.ddate) as '年',month(dl.ddate) as '月',dc.cdcname as '地区',p.cpersonname as '客户经理',cus.cCusName as '客户名称'
+,case when (CHARINDEX('(', cus.cCusAbbName)>0 and  CHARINDEX(')', cus.cCusAbbName)>0 ) 
+		then SUBSTRING(cus.cCusAbbName,CHARINDEX('(', cus.cCusAbbName)+1, CHARINDEX(')', cus.cCusAbbName)-1-CHARINDEX('(', cus.cCusAbbName))
+		else cus.cCusAbbName end as '客户简称',dl.cShipAddress as '发货地址'
+,cus.cCusPerson as '联系人',wh.cWhName as '仓库',
+invtopcls.cInvCName as '存货顶级分类',inv.cInvName '存货名称',invcls.cInvCCode as '存货分类编码',invcls.cInvCName as '存货分类',
+iQuantity as '数量',iNum as '件数',isum as '金额'
+from DispatchList as dl LEFT JOIN DispatchLists as dls on dl.dlid = dls.DLID
+LEFT JOIN Inventory as inv on inv.cinvcode = dls.cInvCode 
+LEFT JOIN ComputationUnit as cu on inv.cComUnitCode = cu.cComunitCode
+LEFT JOIN Customer as cus on cus.ccuscode = dl.cCusCode
+LEFT JOIN Person as p on p.cpersoncode = dl.cPersonCode
+LEFT JOIN DistrictClass as dc on dc.cdccode = cus.cdccode
+LEFT JOIN InventoryClass as invcls on invcls.cinvccode = inv.cinvccode
+LEFT JOIN InventoryClass as invtopcls on left(invcls.cInvCCode,2) = invtopcls.cInvCCode
+LEFT JOIN Warehouse as wh on wh.cWhCode = dls.cWhCode
+where 1 = 1 --and dc.cDCName like '%济南%' AND (dl.ddate BETWEEN '2026-06-01 00:00:00' AND '2026-06-08 00:00:00' AND year(dl.ddate) = '2026' AND p.cpersonname = '董富海' AND dc.cdcname = '济南市')
+2026-06-09 17:04:24.605 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [PreviewReport] queryType=sql, datasource=erp_u871_currentYear, paramsCount=4
+2026-06-09 17:04:24.607 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [PreviewReport]    param dl.ddate = ["2026-05-31T16:00:00.000Z","2026-06-07T16:00:00.000Z"] (JsonElement)
+2026-06-09 17:04:24.608 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [PreviewReport]    param year(dl.ddate) = 2026 (JsonElement)
+2026-06-09 17:04:24.610 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [PreviewReport]    param p.cpersonname = 董富海 (JsonElement)
+2026-06-09 17:04:24.612 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [PreviewReport]    param dc.cdcname = 济南市 (JsonElement)
+2026-06-09 17:04:24.613 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [BuildFilterConditions] between: dl.ddate → "2026-06-01T00:00:00.0000000+08:00" ~ "2026-06-08T00:00:00.0000000+08:00"
+2026-06-09 17:04:24.615 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [BuildFilterConditions] 生成条件: dl.ddate BETWEEN '2026-06-01 00:00:00' AND '2026-06-08 00:00:00' AND year(dl.ddate) = '2026' AND p.cpersonname = '董富海' AND dc.cdcname = '济南市'
+2026-06-09 17:04:24.616 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [BuildFilterConditions] 修改后SQL: SELECT year(dl.ddate) as '年',month(dl.ddate) as '月',dc.cdcname as '地区',p.cpersonname as '客户经理',cus.cCusName as '客户名称'
+,case when (CHARINDEX('(', cus.cCusAbbName)>0 and  CHARINDEX(')', cus.cCusAbbName)>0 ) 
+		then SUBSTRING(cus.cCusAbbName,CHARINDEX('(', cus.cCusAbbName)+1, CHARINDEX(')', cus.cCusAbbName)-1-CHARINDEX('(', cus.cCusAbbName))
+		else cus.cCusAbbName end as '客户简称',dl.cShipAddress as '发货地址'
+,cus.cCusPerson as '联系人',wh.cWhName as '仓库',
+invtopcls.cInvCName as '存货顶级分类',inv.cInvName '存货名称',invcls.cInvCCode as '存货分类编码',invcls.cInvCName as '存货分类',
+iQuantity as '数量',iNum as '件数',isum as '金额'
+from DispatchList as dl LEFT JOIN DispatchLists as dls on dl.dlid = dls.DLID
+LEFT JOIN Inventory as inv on inv.cinvcode = dls.cInvCode 
+LEFT JOIN ComputationUnit as cu on inv.cComUnitCode = cu.cComunitCode
+LEFT JOIN Customer as cus on cus.ccuscode = dl.cCusCode
+LEFT JOIN Person as p on p.cpersoncode = dl.cPersonCode
+LEFT JOIN DistrictClass as dc on dc.cdccode = cus.cdccode
+LEFT JOIN InventoryClass as invcls on invcls.cinvccode = inv.cinvccode
+LEFT JOIN InventoryClass as invtopcls on left(invcls.cInvCCode,2) = invtopcls.cInvCCode
+LEFT JOIN Warehouse as wh on wh.cWhCode = dls.cWhCode
+where 1 = 1 --and dc.cDCName like '%济南%' AND (dl.ddate BETWEEN '2026-06-01 00:00:00' AND '2026-06-08 00:00:00' AND year(dl.ddate) = '2026' AND p.cpersonname = '董富海' AND dc.cdcname = '济南市')
+2026-06-09 17:04:24.620 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [PreviewReport] 执行SQL: SELECT year(dl.ddate) as '年',month(dl.ddate) as '月',dc.cdcname as '地区',p.cpersonname as '客户经理',cus.cCusName as '客户名称'
+,case when (CHARINDEX('(', cus.cCusAbbName)>0 and  CHARINDEX(')', cus.cCusAbbName)...
+2026-06-09 17:04:24.622 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql] datasource=erp_u871_currentYear, isSqlServer=true, sql=SELECT year(dl.ddate) as '年',month(dl.ddate) as '月',dc.cdcname as '地区',p.cpersonname as '客户经理',cus.cCusName as '客户名称'
+,case when (CHARINDEX('(', cus.cCusAbbName)>0 and  CHARINDEX(')', cus.cCusAbbName)>0 ) 
+		then SUBSTRING(cus.cCusAbbName,CHARINDEX('(', cus.cCusAbbName)+1, CHARINDEX(')', cus.cCusAbbName)-1-CHARINDEX('(', cus.cCusAbbName))
+		else cus.cCusAbbName end as '客户简称',dl.cShipAddress as '发货地址'
+,cus.cCusPerson as '联系人',wh.cWhName as '仓库',
+invtopcls.cInvCName as '存货顶级分类',inv.cInvName '存货名称',invcls.cInvCCode as '存货分类编码',invcls.cInvCName as '存货分类',
+iQuantity as '数量',iNum as '件数',isum as '金额'
+from DispatchList as dl LEFT JOIN DispatchLists as dls on dl.dlid = dls.DLID
+LEFT JOIN Inventory as inv on inv.cinvcode = dls.cInvCode 
+LEFT JOIN ComputationUnit as cu on inv.cComUnitCode = cu.cComunitCode
+LEFT JOIN Customer as cus on cus.ccuscode = dl.cCusCode
+LEFT JOIN Person as p on p.cpersoncode = dl.cPersonCode
+LEFT JOIN DistrictClass as dc on dc.cdccode = cus.cdccode
+LEFT JOIN InventoryClass as invcls on invcls.cinvccode = inv.cinvccode
+LEFT JOIN InventoryClass as invtopcls on left(invcls.cInvCCode,2) = invtopcls.cInvCCode
+LEFT JOIN Warehouse as wh on wh.cWhCode = dls.cWhCode
+where 1 = 1 --and dc.cDCName like '%济南%' AND (dl.ddate BETWEEN '2026-06-01 00:00:00' AND '2026-06-08 00:00:00' AND year(dl.ddate) = '2026' AND p.cpersonname = '董富海' AND dc.cdcname = '济南市')
+2026-06-09 17:04:24.646 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql] 归一化参数数: 4
+2026-06-09 17:04:24.647 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql]    param dl.ddate -> dl_ddate = ["2026-05-31T16:00:00.000Z","2026-06-07T16:00:00.000Z"] (String)
+2026-06-09 17:04:24.654 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql]    param year(dl.ddate) -> year(dl_ddate) = 2026 (String)
+2026-06-09 17:04:24.656 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql]    param p.cpersonname -> p_cpersonname = 董富海 (String)
+2026-06-09 17:04:24.658 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql]    param dc.cdcname -> dc_cdcname = 济南市 (String)
+2026-06-09 17:04:24.661 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql] page=1, pageSize=0
+2026-06-09 17:04:24.662 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql] 无分页SQL: SELECT year(dl.ddate) as '年',month(dl.ddate) as '月',dc.cdcname as '地区',p.cpersonname as '客户经理',cus.cCusName as '客户名称'
+,case when (CHARINDEX('(', cus.cCusAbbName)>0 and  CHARINDEX(')', cus.cCusAbbName)>0 ) 
+		then SUBSTRING(cus.cCusAbbName,CHARINDEX('(', cus.cCusAbbName)+1, CHARINDEX(')', cus.cCusAbbName)-1-CHARINDEX('(', cus.cCusAbbName))
+		else cus.cCusAbbName end as '客户简称',dl.cShipAddress as '发货地址'
+,cus.cCusPerson as '联系人',wh.cWhName as '仓库',
+invtopcls.cInvCName as '存货顶级分类',inv.cInvName '存货名称',invcls.cInvCCode as '存货分类编码',invcls.cInvCName as '存货分类',
+iQuantity as '数量',iNum as '件数',isum as '金额'
+from DispatchList as dl LEFT JOIN DispatchLists as dls on dl.dlid = dls.DLID
+LEFT JOIN Inventory as inv on inv.cinvcode = dls.cInvCode 
+LEFT JOIN ComputationUnit as cu on inv.cComUnitCode = cu.cComunitCode
+LEFT JOIN Customer as cus on cus.ccuscode = dl.cCusCode
+LEFT JOIN Person as p on p.cpersoncode = dl.cPersonCode
+LEFT JOIN DistrictClass as dc on dc.cdccode = cus.cdccode
+LEFT JOIN InventoryClass as invcls on invcls.cinvccode = inv.cinvccode
+LEFT JOIN InventoryClass as invtopcls on left(invcls.cInvCCode,2) = invtopcls.cInvCCode
+LEFT JOIN Warehouse as wh on wh.cWhCode = dls.cWhCode
+where 1 = 1 --and dc.cDCName like '%济南%' AND (dl.ddate BETWEEN '2026-06-01 00:00:00' AND '2026-06-08 00:00:00' AND year(dl.ddate) = '2026' AND p.cpersonname = '董富海' AND dc.cdcname = '济南市')
+2026-06-09 17:27:20.609 +08:00 [INF] Microsoft.Hosting.Lifetime Now listening on: http://0.0.0.0:5106
+2026-06-09 17:27:20.682 +08:00 [INF] Microsoft.Hosting.Lifetime Application started. Press Ctrl+C to shut down.
+2026-06-09 17:27:20.684 +08:00 [INF] Microsoft.Hosting.Lifetime Hosting environment: Development
+2026-06-09 17:27:20.685 +08:00 [INF] Microsoft.Hosting.Lifetime Content root path: D:\Codes\Projects\eams2026\src\EAMS2026.Api
+2026-06-09 17:27:31.383 +08:00 [ERR] EAMS2026.Api.Middleware.ExceptionMiddleware 发生未处理的异常: 42P01: relation "role" does not exist
+
+POSITION: 22
+Npgsql.PostgresException (0x80004005): 42P01: relation "role" does not exist
+
+POSITION: 22
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Dapper.SqlMapper.QueryAsync[T](IDbConnection cnn, Type effectiveType, CommandDefinition command) in /_/Dapper/SqlMapper.Async.cs:line 434
+   at EAMS2026.Infrastructure.Services.ReportService.GetPrincipalOptionsAsync() in D:\Codes\Projects\eams2026\src\EAMS2026.Infrastructure\Services\ReportService.cs:line 1175
+   at EAMS2026.Api.Controllers.ReportController.GetPrincipalOptions() in D:\Codes\Projects\eams2026\src\EAMS2026.Api\Controllers\ReportController.cs:line 298
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at EAMS2026.Api.Middleware.OperationLogMiddleware.InvokeAsync(HttpContext context) in D:\Codes\Projects\eams2026\src\EAMS2026.Api\Middleware\OperationLogMiddleware.cs:line 72
+   at EAMS2026.Api.Middleware.OperationLogMiddleware.InvokeAsync(HttpContext context) in D:\Codes\Projects\eams2026\src\EAMS2026.Api\Middleware\OperationLogMiddleware.cs:line 92
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.ResponseCompression.ResponseCompressionMiddleware.InvokeCore(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at EAMS2026.Api.Middleware.ExceptionMiddleware.InvokeAsync(HttpContext context) in D:\Codes\Projects\eams2026\src\EAMS2026.Api\Middleware\ExceptionMiddleware.cs:line 35
+  Exception data:
+    Severity: ERROR
+    SqlState: 42P01
+    MessageText: relation "role" does not exist
+    Position: 22
+    File: parse_relation.c
+    Line: 1469
+    Routine: parserOpenTable
+2026-06-09 17:27:31.395 +08:00 [ERR] EAMS2026.Api.Middleware.ExceptionMiddleware 发生未处理的异常: 42703: column "employee_name" does not exist
+
+POSITION: 8
+Npgsql.PostgresException (0x80004005): 42703: column "employee_name" does not exist
+
+POSITION: 8
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteScalar(Boolean async, CancellationToken cancellationToken)
+   at Dapper.SqlMapper.ExecuteScalarImplAsync[T](IDbConnection cnn, CommandDefinition command) in /_/Dapper/SqlMapper.Async.cs:line 1242
+   at EAMS2026.Infrastructure.Services.ReportService.GetReportPermissionsAsync(Int64 reportId) in D:\Codes\Projects\eams2026\src\EAMS2026.Infrastructure\Services\ReportService.cs:line 1135
+   at EAMS2026.Api.Controllers.ReportController.GetReportPermissions(Int64 id) in D:\Codes\Projects\eams2026\src\EAMS2026.Api\Controllers\ReportController.cs:line 290
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at EAMS2026.Api.Middleware.OperationLogMiddleware.InvokeAsync(HttpContext context) in D:\Codes\Projects\eams2026\src\EAMS2026.Api\Middleware\OperationLogMiddleware.cs:line 72
+   at EAMS2026.Api.Middleware.OperationLogMiddleware.InvokeAsync(HttpContext context) in D:\Codes\Projects\eams2026\src\EAMS2026.Api\Middleware\OperationLogMiddleware.cs:line 92
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.ResponseCompression.ResponseCompressionMiddleware.InvokeCore(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at EAMS2026.Api.Middleware.ExceptionMiddleware.InvokeAsync(HttpContext context) in D:\Codes\Projects\eams2026\src\EAMS2026.Api\Middleware\ExceptionMiddleware.cs:line 35
+  Exception data:
+    Severity: ERROR
+    SqlState: 42703
+    MessageText: column "employee_name" does not exist
+    Position: 8
+    File: parse_relation.c
+    Line: 3827
+    Routine: errorMissingColumn
+2026-06-09 17:28:20.672 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [PreviewReport] queryType=sql, datasource=erp_u871_currentYear, paramsCount=5
+2026-06-09 17:28:20.678 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [PreviewReport]    param dl.ddate = ["2026-05-31T16:00:00.000Z","2026-06-04T16:00:00.000Z"] (JsonElement)
+2026-06-09 17:28:20.680 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [PreviewReport]    param year(dl.ddate) = 2026 (JsonElement)
+2026-06-09 17:28:20.682 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [PreviewReport]    param cus.cCusAbbName = 九淦 (JsonElement)
+2026-06-09 17:28:20.683 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [PreviewReport]    param p.cpersonname = 董富海 (JsonElement)
+2026-06-09 17:28:20.685 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [PreviewReport]    param dc.cdcname = 济南市 (JsonElement)
+2026-06-09 17:28:20.706 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [BuildFilterConditions] between: dl.ddate → "2026-06-01T00:00:00.0000000+08:00" ~ "2026-06-05T00:00:00.0000000+08:00"
+2026-06-09 17:28:20.710 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [BuildFilterConditions] 生成条件: dl.ddate BETWEEN '2026-06-01 00:00:00' AND '2026-06-05 00:00:00' AND year(dl.ddate) = '2026' AND cus.cCusAbbName LIKE '九淦' AND p.cpersonname = '董富海' AND dc.cdcname = '济南市'
+2026-06-09 17:28:20.712 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [BuildFilterConditions] 修改后SQL: SELECT year(dl.ddate) as '年',month(dl.ddate) as '月',dc.cdcname as '地区',p.cpersonname as '客户经理',cus.cCusName as '客户名称'
+,case when (CHARINDEX('(', cus.cCusAbbName)>0 and  CHARINDEX(')', cus.cCusAbbName)>0 ) 
+		then SUBSTRING(cus.cCusAbbName,CHARINDEX('(', cus.cCusAbbName)+1, CHARINDEX(')', cus.cCusAbbName)-1-CHARINDEX('(', cus.cCusAbbName))
+		else cus.cCusAbbName end as '客户简称',dl.cShipAddress as '发货地址'
+,cus.cCusPerson as '联系人',wh.cWhName as '仓库',
+invtopcls.cInvCName as '存货顶级分类',inv.cInvName '存货名称',invcls.cInvCCode as '存货分类编码',invcls.cInvCName as '存货分类',
+iQuantity as '数量',iNum as '件数',isum as '金额'
+from DispatchList as dl LEFT JOIN DispatchLists as dls on dl.dlid = dls.DLID
+LEFT JOIN Inventory as inv on inv.cinvcode = dls.cInvCode 
+LEFT JOIN ComputationUnit as cu on inv.cComUnitCode = cu.cComunitCode
+LEFT JOIN Customer as cus on cus.ccuscode = dl.cCusCode
+LEFT JOIN Person as p on p.cpersoncode = dl.cPersonCode
+LEFT JOIN DistrictClass as dc on dc.cdccode = cus.cdccode
+LEFT JOIN InventoryClass as invcls on invcls.cinvccode = inv.cinvccode
+LEFT JOIN InventoryClass as invtopcls on left(invcls.cInvCCode,2) = invtopcls.cInvCCode
+LEFT JOIN Warehouse as wh on wh.cWhCode = dls.cWhCode
+where 1 = 1
+    AND (dl.ddate BETWEEN '2026-06-01 00:00:00' AND '2026-06-05 00:00:00' AND year(dl.ddate) = '2026' AND cus.cCusAbbName LIKE '九淦' AND p.cpersonname = '董富海' AND dc.cdcname = '济南市')
+2026-06-09 17:28:20.715 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [PreviewReport] 执行SQL: SELECT year(dl.ddate) as '年',month(dl.ddate) as '月',dc.cdcname as '地区',p.cpersonname as '客户经理',cus.cCusName as '客户名称'
+,case when (CHARINDEX('(', cus.cCusAbbName)>0 and  CHARINDEX(')', cus.cCusAbbName)...
+2026-06-09 17:28:20.767 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql] datasource=erp_u871_currentYear, isSqlServer=true, sql=SELECT year(dl.ddate) as '年',month(dl.ddate) as '月',dc.cdcname as '地区',p.cpersonname as '客户经理',cus.cCusName as '客户名称'
+,case when (CHARINDEX('(', cus.cCusAbbName)>0 and  CHARINDEX(')', cus.cCusAbbName)>0 ) 
+		then SUBSTRING(cus.cCusAbbName,CHARINDEX('(', cus.cCusAbbName)+1, CHARINDEX(')', cus.cCusAbbName)-1-CHARINDEX('(', cus.cCusAbbName))
+		else cus.cCusAbbName end as '客户简称',dl.cShipAddress as '发货地址'
+,cus.cCusPerson as '联系人',wh.cWhName as '仓库',
+invtopcls.cInvCName as '存货顶级分类',inv.cInvName '存货名称',invcls.cInvCCode as '存货分类编码',invcls.cInvCName as '存货分类',
+iQuantity as '数量',iNum as '件数',isum as '金额'
+from DispatchList as dl LEFT JOIN DispatchLists as dls on dl.dlid = dls.DLID
+LEFT JOIN Inventory as inv on inv.cinvcode = dls.cInvCode 
+LEFT JOIN ComputationUnit as cu on inv.cComUnitCode = cu.cComunitCode
+LEFT JOIN Customer as cus on cus.ccuscode = dl.cCusCode
+LEFT JOIN Person as p on p.cpersoncode = dl.cPersonCode
+LEFT JOIN DistrictClass as dc on dc.cdccode = cus.cdccode
+LEFT JOIN InventoryClass as invcls on invcls.cinvccode = inv.cinvccode
+LEFT JOIN InventoryClass as invtopcls on left(invcls.cInvCCode,2) = invtopcls.cInvCCode
+LEFT JOIN Warehouse as wh on wh.cWhCode = dls.cWhCode
+where 1 = 1
+    AND (dl.ddate BETWEEN '2026-06-01 00:00:00' AND '2026-06-05 00:00:00' AND year(dl.ddate) = '2026' AND cus.cCusAbbName LIKE '九淦' AND p.cpersonname = '董富海' AND dc.cdcname = '济南市')
+2026-06-09 17:28:20.771 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql] 归一化参数数: 5
+2026-06-09 17:28:20.773 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql]    param dl.ddate -> dl_ddate = ["2026-05-31T16:00:00.000Z","2026-06-04T16:00:00.000Z"] (String)
+2026-06-09 17:28:20.775 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql]    param year(dl.ddate) -> year(dl_ddate) = 2026 (String)
+2026-06-09 17:28:20.777 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql]    param cus.cCusAbbName -> cus_cCusAbbName = 九淦 (String)
+2026-06-09 17:28:20.779 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql]    param p.cpersonname -> p_cpersonname = 董富海 (String)
+2026-06-09 17:28:20.781 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql]    param dc.cdcname -> dc_cdcname = 济南市 (String)
+2026-06-09 17:28:20.783 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql] page=1, pageSize=0
+2026-06-09 17:28:20.785 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql] 无分页SQL: SELECT year(dl.ddate) as '年',month(dl.ddate) as '月',dc.cdcname as '地区',p.cpersonname as '客户经理',cus.cCusName as '客户名称'
+,case when (CHARINDEX('(', cus.cCusAbbName)>0 and  CHARINDEX(')', cus.cCusAbbName)>0 ) 
+		then SUBSTRING(cus.cCusAbbName,CHARINDEX('(', cus.cCusAbbName)+1, CHARINDEX(')', cus.cCusAbbName)-1-CHARINDEX('(', cus.cCusAbbName))
+		else cus.cCusAbbName end as '客户简称',dl.cShipAddress as '发货地址'
+,cus.cCusPerson as '联系人',wh.cWhName as '仓库',
+invtopcls.cInvCName as '存货顶级分类',inv.cInvName '存货名称',invcls.cInvCCode as '存货分类编码',invcls.cInvCName as '存货分类',
+iQuantity as '数量',iNum as '件数',isum as '金额'
+from DispatchList as dl LEFT JOIN DispatchLists as dls on dl.dlid = dls.DLID
+LEFT JOIN Inventory as inv on inv.cinvcode = dls.cInvCode 
+LEFT JOIN ComputationUnit as cu on inv.cComUnitCode = cu.cComunitCode
+LEFT JOIN Customer as cus on cus.ccuscode = dl.cCusCode
+LEFT JOIN Person as p on p.cpersoncode = dl.cPersonCode
+LEFT JOIN DistrictClass as dc on dc.cdccode = cus.cdccode
+LEFT JOIN InventoryClass as invcls on invcls.cinvccode = inv.cinvccode
+LEFT JOIN InventoryClass as invtopcls on left(invcls.cInvCCode,2) = invtopcls.cInvCCode
+LEFT JOIN Warehouse as wh on wh.cWhCode = dls.cWhCode
+where 1 = 1
+    AND (dl.ddate BETWEEN '2026-06-01 00:00:00' AND '2026-06-05 00:00:00' AND year(dl.ddate) = '2026' AND cus.cCusAbbName LIKE '九淦' AND p.cpersonname = '董富海' AND dc.cdcname = '济南市')
+2026-06-09 17:28:25.236 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [PreviewReport] queryType=sql, datasource=erp_u871_currentYear, paramsCount=4
+2026-06-09 17:28:25.238 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [PreviewReport]    param dl.ddate = ["2026-05-31T16:00:00.000Z","2026-06-04T16:00:00.000Z"] (JsonElement)
+2026-06-09 17:28:25.240 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [PreviewReport]    param year(dl.ddate) = 2026 (JsonElement)
+2026-06-09 17:28:25.241 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [PreviewReport]    param p.cpersonname = 董富海 (JsonElement)
+2026-06-09 17:28:25.243 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [PreviewReport]    param dc.cdcname = 济南市 (JsonElement)
+2026-06-09 17:28:25.245 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [BuildFilterConditions] between: dl.ddate → "2026-06-01T00:00:00.0000000+08:00" ~ "2026-06-05T00:00:00.0000000+08:00"
+2026-06-09 17:28:25.247 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [BuildFilterConditions] 生成条件: dl.ddate BETWEEN '2026-06-01 00:00:00' AND '2026-06-05 00:00:00' AND year(dl.ddate) = '2026' AND p.cpersonname = '董富海' AND dc.cdcname = '济南市'
+2026-06-09 17:28:25.248 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [BuildFilterConditions] 修改后SQL: SELECT year(dl.ddate) as '年',month(dl.ddate) as '月',dc.cdcname as '地区',p.cpersonname as '客户经理',cus.cCusName as '客户名称'
+,case when (CHARINDEX('(', cus.cCusAbbName)>0 and  CHARINDEX(')', cus.cCusAbbName)>0 ) 
+		then SUBSTRING(cus.cCusAbbName,CHARINDEX('(', cus.cCusAbbName)+1, CHARINDEX(')', cus.cCusAbbName)-1-CHARINDEX('(', cus.cCusAbbName))
+		else cus.cCusAbbName end as '客户简称',dl.cShipAddress as '发货地址'
+,cus.cCusPerson as '联系人',wh.cWhName as '仓库',
+invtopcls.cInvCName as '存货顶级分类',inv.cInvName '存货名称',invcls.cInvCCode as '存货分类编码',invcls.cInvCName as '存货分类',
+iQuantity as '数量',iNum as '件数',isum as '金额'
+from DispatchList as dl LEFT JOIN DispatchLists as dls on dl.dlid = dls.DLID
+LEFT JOIN Inventory as inv on inv.cinvcode = dls.cInvCode 
+LEFT JOIN ComputationUnit as cu on inv.cComUnitCode = cu.cComunitCode
+LEFT JOIN Customer as cus on cus.ccuscode = dl.cCusCode
+LEFT JOIN Person as p on p.cpersoncode = dl.cPersonCode
+LEFT JOIN DistrictClass as dc on dc.cdccode = cus.cdccode
+LEFT JOIN InventoryClass as invcls on invcls.cinvccode = inv.cinvccode
+LEFT JOIN InventoryClass as invtopcls on left(invcls.cInvCCode,2) = invtopcls.cInvCCode
+LEFT JOIN Warehouse as wh on wh.cWhCode = dls.cWhCode
+where 1 = 1
+    AND (dl.ddate BETWEEN '2026-06-01 00:00:00' AND '2026-06-05 00:00:00' AND year(dl.ddate) = '2026' AND p.cpersonname = '董富海' AND dc.cdcname = '济南市')
+2026-06-09 17:28:25.250 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [PreviewReport] 执行SQL: SELECT year(dl.ddate) as '年',month(dl.ddate) as '月',dc.cdcname as '地区',p.cpersonname as '客户经理',cus.cCusName as '客户名称'
+,case when (CHARINDEX('(', cus.cCusAbbName)>0 and  CHARINDEX(')', cus.cCusAbbName)...
+2026-06-09 17:28:25.267 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql] datasource=erp_u871_currentYear, isSqlServer=true, sql=SELECT year(dl.ddate) as '年',month(dl.ddate) as '月',dc.cdcname as '地区',p.cpersonname as '客户经理',cus.cCusName as '客户名称'
+,case when (CHARINDEX('(', cus.cCusAbbName)>0 and  CHARINDEX(')', cus.cCusAbbName)>0 ) 
+		then SUBSTRING(cus.cCusAbbName,CHARINDEX('(', cus.cCusAbbName)+1, CHARINDEX(')', cus.cCusAbbName)-1-CHARINDEX('(', cus.cCusAbbName))
+		else cus.cCusAbbName end as '客户简称',dl.cShipAddress as '发货地址'
+,cus.cCusPerson as '联系人',wh.cWhName as '仓库',
+invtopcls.cInvCName as '存货顶级分类',inv.cInvName '存货名称',invcls.cInvCCode as '存货分类编码',invcls.cInvCName as '存货分类',
+iQuantity as '数量',iNum as '件数',isum as '金额'
+from DispatchList as dl LEFT JOIN DispatchLists as dls on dl.dlid = dls.DLID
+LEFT JOIN Inventory as inv on inv.cinvcode = dls.cInvCode 
+LEFT JOIN ComputationUnit as cu on inv.cComUnitCode = cu.cComunitCode
+LEFT JOIN Customer as cus on cus.ccuscode = dl.cCusCode
+LEFT JOIN Person as p on p.cpersoncode = dl.cPersonCode
+LEFT JOIN DistrictClass as dc on dc.cdccode = cus.cdccode
+LEFT JOIN InventoryClass as invcls on invcls.cinvccode = inv.cinvccode
+LEFT JOIN InventoryClass as invtopcls on left(invcls.cInvCCode,2) = invtopcls.cInvCCode
+LEFT JOIN Warehouse as wh on wh.cWhCode = dls.cWhCode
+where 1 = 1
+    AND (dl.ddate BETWEEN '2026-06-01 00:00:00' AND '2026-06-05 00:00:00' AND year(dl.ddate) = '2026' AND p.cpersonname = '董富海' AND dc.cdcname = '济南市')
+2026-06-09 17:28:25.271 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql] 归一化参数数: 4
+2026-06-09 17:28:25.272 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql]    param dl.ddate -> dl_ddate = ["2026-05-31T16:00:00.000Z","2026-06-04T16:00:00.000Z"] (String)
+2026-06-09 17:28:25.274 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql]    param year(dl.ddate) -> year(dl_ddate) = 2026 (String)
+2026-06-09 17:28:25.276 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql]    param p.cpersonname -> p_cpersonname = 董富海 (String)
+2026-06-09 17:28:25.278 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql]    param dc.cdcname -> dc_cdcname = 济南市 (String)
+2026-06-09 17:28:25.280 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql] page=1, pageSize=0
+2026-06-09 17:28:25.282 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql] 无分页SQL: SELECT year(dl.ddate) as '年',month(dl.ddate) as '月',dc.cdcname as '地区',p.cpersonname as '客户经理',cus.cCusName as '客户名称'
+,case when (CHARINDEX('(', cus.cCusAbbName)>0 and  CHARINDEX(')', cus.cCusAbbName)>0 ) 
+		then SUBSTRING(cus.cCusAbbName,CHARINDEX('(', cus.cCusAbbName)+1, CHARINDEX(')', cus.cCusAbbName)-1-CHARINDEX('(', cus.cCusAbbName))
+		else cus.cCusAbbName end as '客户简称',dl.cShipAddress as '发货地址'
+,cus.cCusPerson as '联系人',wh.cWhName as '仓库',
+invtopcls.cInvCName as '存货顶级分类',inv.cInvName '存货名称',invcls.cInvCCode as '存货分类编码',invcls.cInvCName as '存货分类',
+iQuantity as '数量',iNum as '件数',isum as '金额'
+from DispatchList as dl LEFT JOIN DispatchLists as dls on dl.dlid = dls.DLID
+LEFT JOIN Inventory as inv on inv.cinvcode = dls.cInvCode 
+LEFT JOIN ComputationUnit as cu on inv.cComUnitCode = cu.cComunitCode
+LEFT JOIN Customer as cus on cus.ccuscode = dl.cCusCode
+LEFT JOIN Person as p on p.cpersoncode = dl.cPersonCode
+LEFT JOIN DistrictClass as dc on dc.cdccode = cus.cdccode
+LEFT JOIN InventoryClass as invcls on invcls.cinvccode = inv.cinvccode
+LEFT JOIN InventoryClass as invtopcls on left(invcls.cInvCCode,2) = invtopcls.cInvCCode
+LEFT JOIN Warehouse as wh on wh.cWhCode = dls.cWhCode
+where 1 = 1
+    AND (dl.ddate BETWEEN '2026-06-01 00:00:00' AND '2026-06-05 00:00:00' AND year(dl.ddate) = '2026' AND p.cpersonname = '董富海' AND dc.cdcname = '济南市')

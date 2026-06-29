@@ -1,0 +1,12 @@
+2026-06-24 08:57:18.466 +08:00 [INF] Microsoft.Hosting.Lifetime Now listening on: http://localhost:5106
+2026-06-24 08:57:18.525 +08:00 [INF] Microsoft.Hosting.Lifetime Application started. Press Ctrl+C to shut down.
+2026-06-24 08:57:18.526 +08:00 [INF] Microsoft.Hosting.Lifetime Hosting environment: Development
+2026-06-24 08:57:18.528 +08:00 [INF] Microsoft.Hosting.Lifetime Content root path: D:\Codes\Projects\eams2026\src\EAMS2026.Api
+2026-06-24 08:57:51.694 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteReport] reportId=30002, userId=1
+2026-06-24 08:57:51.702 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteReport] hasView=true
+2026-06-24 08:57:51.837 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteStoredProcedure] 将执行 1 个存储过程: dflproc_report_accountingCost
+2026-06-24 08:57:53.461 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteStoredProcedure] dflproc_report_accountingCost 从 sys.parameters 返回 0 个参数: 
+2026-06-24 08:57:53.463 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteStoredProcedure] dflproc_report_accountingCost 接收了 0 个请求参数: 
+2026-06-24 08:57:53.467 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteStoredProcedure] 执行 dflproc_report_accountingCost, 参数数=0
+2026-06-24 08:57:53.655 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteStoredProcedure] dflproc_report_accountingCost 返回 3721 行
+2026-06-24 08:57:53.774 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteStoredProcedure] 全部完成, 总计 3721 行, 17 列

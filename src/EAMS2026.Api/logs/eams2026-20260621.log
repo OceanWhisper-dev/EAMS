@@ -1,0 +1,4 @@
+2026-06-21 15:55:39.340 +08:00 [INF] Microsoft.Hosting.Lifetime Now listening on: http://0.0.0.0:5106
+2026-06-21 15:55:39.435 +08:00 [INF] Microsoft.Hosting.Lifetime Application started. Press Ctrl+C to shut down.
+2026-06-21 15:55:39.461 +08:00 [INF] Microsoft.Hosting.Lifetime Hosting environment: Development
+2026-06-21 15:55:39.463 +08:00 [INF] Microsoft.Hosting.Lifetime Content root path: D:\Codes\Projects\eams2026\src\EAMS2026.Api

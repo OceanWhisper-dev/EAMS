@@ -1,0 +1,289 @@
+2026-06-06 09:34:13.751 +08:00 [ERR] EAMS2026.Infrastructure.Services.ReportService 更新报表失败
+Npgsql.PostgresException (0x80004005): 42703: column "created_by" of relation "rpt_field" does not exist
+
+POSITION: 220
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteNonQuery(Boolean async, CancellationToken cancellationToken)
+   at Dapper.SqlMapper.ExecuteImplAsync(IDbConnection cnn, CommandDefinition command, Object param) in /_/Dapper/SqlMapper.Async.cs:line 663
+   at EAMS2026.Infrastructure.Data.Repositories.ReportRepository.UpdateReportAsync(ReportDetailDto report, Int64 operatorId) in D:\Codes\Projects\eams2026\src\EAMS2026.Infrastructure\Data\Repositories\ReportRepository.cs:line 259
+   at EAMS2026.Infrastructure.Services.ReportService.UpdateReportAsync(ReportDetailDto report, Int64 operatorId) in D:\Codes\Projects\eams2026\src\EAMS2026.Infrastructure\Services\ReportService.cs:line 86
+  Exception data:
+    Severity: ERROR
+    SqlState: 42703
+    MessageText: column "created_by" of relation "rpt_field" does not exist
+    Position: 220
+    File: parse_target.c
+    Line: 1073
+    Routine: checkInsertTargets
+2026-06-06 09:34:30.701 +08:00 [ERR] EAMS2026.Infrastructure.Services.ReportService 更新报表失败
+Npgsql.PostgresException (0x80004005): 42703: column "created_by" of relation "rpt_field" does not exist
+
+POSITION: 220
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteNonQuery(Boolean async, CancellationToken cancellationToken)
+   at Dapper.SqlMapper.ExecuteImplAsync(IDbConnection cnn, CommandDefinition command, Object param) in /_/Dapper/SqlMapper.Async.cs:line 663
+   at EAMS2026.Infrastructure.Data.Repositories.ReportRepository.UpdateReportAsync(ReportDetailDto report, Int64 operatorId) in D:\Codes\Projects\eams2026\src\EAMS2026.Infrastructure\Data\Repositories\ReportRepository.cs:line 259
+   at EAMS2026.Infrastructure.Services.ReportService.UpdateReportAsync(ReportDetailDto report, Int64 operatorId) in D:\Codes\Projects\eams2026\src\EAMS2026.Infrastructure\Services\ReportService.cs:line 86
+  Exception data:
+    Severity: ERROR
+    SqlState: 42703
+    MessageText: column "created_by" of relation "rpt_field" does not exist
+    Position: 220
+    File: parse_target.c
+    Line: 1073
+    Routine: checkInsertTargets
+2026-06-06 09:34:35.312 +08:00 [ERR] EAMS2026.Infrastructure.Services.ReportService 更新报表失败
+Npgsql.PostgresException (0x80004005): 42703: column "created_by" of relation "rpt_field" does not exist
+
+POSITION: 220
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteNonQuery(Boolean async, CancellationToken cancellationToken)
+   at Dapper.SqlMapper.ExecuteImplAsync(IDbConnection cnn, CommandDefinition command, Object param) in /_/Dapper/SqlMapper.Async.cs:line 663
+   at EAMS2026.Infrastructure.Data.Repositories.ReportRepository.UpdateReportAsync(ReportDetailDto report, Int64 operatorId) in D:\Codes\Projects\eams2026\src\EAMS2026.Infrastructure\Data\Repositories\ReportRepository.cs:line 259
+   at EAMS2026.Infrastructure.Services.ReportService.UpdateReportAsync(ReportDetailDto report, Int64 operatorId) in D:\Codes\Projects\eams2026\src\EAMS2026.Infrastructure\Services\ReportService.cs:line 86
+  Exception data:
+    Severity: ERROR
+    SqlState: 42703
+    MessageText: column "created_by" of relation "rpt_field" does not exist
+    Position: 220
+    File: parse_target.c
+    Line: 1073
+    Routine: checkInsertTargets
+2026-06-06 09:34:40.471 +08:00 [ERR] EAMS2026.Infrastructure.Services.ReportService 更新报表失败
+Npgsql.PostgresException (0x80004005): 42703: column "created_by" of relation "rpt_field" does not exist
+
+POSITION: 220
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteNonQuery(Boolean async, CancellationToken cancellationToken)
+   at Dapper.SqlMapper.ExecuteImplAsync(IDbConnection cnn, CommandDefinition command, Object param) in /_/Dapper/SqlMapper.Async.cs:line 663
+   at EAMS2026.Infrastructure.Data.Repositories.ReportRepository.UpdateReportAsync(ReportDetailDto report, Int64 operatorId) in D:\Codes\Projects\eams2026\src\EAMS2026.Infrastructure\Data\Repositories\ReportRepository.cs:line 259
+   at EAMS2026.Infrastructure.Services.ReportService.UpdateReportAsync(ReportDetailDto report, Int64 operatorId) in D:\Codes\Projects\eams2026\src\EAMS2026.Infrastructure\Services\ReportService.cs:line 86
+  Exception data:
+    Severity: ERROR
+    SqlState: 42703
+    MessageText: column "created_by" of relation "rpt_field" does not exist
+    Position: 220
+    File: parse_target.c
+    Line: 1073
+    Routine: checkInsertTargets
+2026-06-06 09:59:59.408 +08:00 [INF] Microsoft.Hosting.Lifetime Now listening on: http://0.0.0.0:5106
+2026-06-06 09:59:59.478 +08:00 [INF] Microsoft.Hosting.Lifetime Application started. Press Ctrl+C to shut down.
+2026-06-06 09:59:59.479 +08:00 [INF] Microsoft.Hosting.Lifetime Hosting environment: Development
+2026-06-06 09:59:59.495 +08:00 [INF] Microsoft.Hosting.Lifetime Content root path: D:\Codes\Projects\eams2026\src\EAMS2026.Api
+2026-06-06 10:26:22.792 +08:00 [INF] Microsoft.Hosting.Lifetime Now listening on: http://0.0.0.0:5106
+2026-06-06 10:26:22.962 +08:00 [INF] Microsoft.Hosting.Lifetime Application started. Press Ctrl+C to shut down.
+2026-06-06 10:26:22.964 +08:00 [INF] Microsoft.Hosting.Lifetime Hosting environment: Development
+2026-06-06 10:26:22.965 +08:00 [INF] Microsoft.Hosting.Lifetime Content root path: D:\Codes\Projects\eams2026\src\EAMS2026.Api
+2026-06-06 10:27:04.785 +08:00 [ERR] EAMS2026.Infrastructure.Services.ReportService 数据源连接测试失败
+Microsoft.Data.SqlClient.SqlException (0x80131904): 已成功与服务器建立连接，但是在登录过程中发生错误。 (provider: SSL 提供程序, error: 0 - 远程主机强迫关闭了一个现有的连接。)
+ ---> System.ComponentModel.Win32Exception (10054): 远程主机强迫关闭了一个现有的连接。
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, SqlCommand command, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParserStateObject.ThrowExceptionAndWarning(Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParserStateObject.SNIWritePacket(PacketHandle packet, UInt32& sniError, Boolean canAccumulate, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParserStateObject.WriteSni(Boolean canAccumulate)
+   at Microsoft.Data.SqlClient.TdsParserStateObject.WritePacket(Byte flushMode, Boolean canAccumulate)
+   at Microsoft.Data.SqlClient.TdsParser.TdsLogin(SqlLogin rec, FeatureExtension requestedFeatures, SessionData recoverySessionData, FederatedAuthenticationFeatureExtensionData fedAuthFeatureExtensionData, SqlConnectionEncryptOption encrypt)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.Login(ServerInfo server, TimeoutTimer timeout, String newPassword, SecureString newSecurePassword, SqlConnectionEncryptOption encrypt)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool, Func`3 accessTokenCallback)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at EAMS2026.Infrastructure.Data.Repositories.ReportRepository.TestConnectionAsync(String dbType, String connectionString) in D:\Codes\Projects\eams2026\src\EAMS2026.Infrastructure\Data\Repositories\ReportRepository.cs:line 502
+   at EAMS2026.Infrastructure.Data.Repositories.ReportRepository.TestConnectionAsync(String dbType, String connectionString) in D:\Codes\Projects\eams2026\src\EAMS2026.Infrastructure\Data\Repositories\ReportRepository.cs:line 503
+   at EAMS2026.Infrastructure.Services.ReportService.TestConnectionAsync(String dbType, String connectionString) in D:\Codes\Projects\eams2026\src\EAMS2026.Infrastructure\Services\ReportService.cs:line 454
+ClientConnectionId:460e0c51-f54e-4220-8fe0-10e3e4744fae
+Error Number:10054,State:0,Class:20
+2026-06-06 10:29:30.612 +08:00 [ERR] EAMS2026.Infrastructure.Services.ReportService 数据源连接测试失败
+Microsoft.Data.SqlClient.SqlException (0x80131904): 已成功与服务器建立连接，但是在登录过程中发生错误。 (provider: SSL 提供程序, error: 0 - 远程主机强迫关闭了一个现有的连接。)
+ ---> System.ComponentModel.Win32Exception (10054): 远程主机强迫关闭了一个现有的连接。
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, SqlCommand command, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParserStateObject.ThrowExceptionAndWarning(Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParserStateObject.SNIWritePacket(PacketHandle packet, UInt32& sniError, Boolean canAccumulate, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParserStateObject.WriteSni(Boolean canAccumulate)
+   at Microsoft.Data.SqlClient.TdsParserStateObject.WritePacket(Byte flushMode, Boolean canAccumulate)
+   at Microsoft.Data.SqlClient.TdsParser.TdsLogin(SqlLogin rec, FeatureExtension requestedFeatures, SessionData recoverySessionData, FederatedAuthenticationFeatureExtensionData fedAuthFeatureExtensionData, SqlConnectionEncryptOption encrypt)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.Login(ServerInfo server, TimeoutTimer timeout, String newPassword, SecureString newSecurePassword, SqlConnectionEncryptOption encrypt)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool, Func`3 accessTokenCallback)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at EAMS2026.Infrastructure.Data.Repositories.ReportRepository.TestConnectionAsync(String dbType, String connectionString) in D:\Codes\Projects\eams2026\src\EAMS2026.Infrastructure\Data\Repositories\ReportRepository.cs:line 502
+   at EAMS2026.Infrastructure.Data.Repositories.ReportRepository.TestConnectionAsync(String dbType, String connectionString) in D:\Codes\Projects\eams2026\src\EAMS2026.Infrastructure\Data\Repositories\ReportRepository.cs:line 503
+   at EAMS2026.Infrastructure.Services.ReportService.TestConnectionAsync(String dbType, String connectionString) in D:\Codes\Projects\eams2026\src\EAMS2026.Infrastructure\Services\ReportService.cs:line 454
+ClientConnectionId:adaba1f4-8d6c-4759-9af2-fa9e65461535
+Error Number:10054,State:0,Class:20
+2026-06-06 10:29:55.369 +08:00 [ERR] EAMS2026.Infrastructure.Services.ReportService 数据源连接测试失败
+Microsoft.Data.SqlClient.SqlException (0x80131904): 已成功与服务器建立连接，但是在登录过程中发生错误。 (provider: SSL 提供程序, error: 0 - 远程主机强迫关闭了一个现有的连接。)
+ ---> System.ComponentModel.Win32Exception (10054): 远程主机强迫关闭了一个现有的连接。
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, SqlCommand command, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParserStateObject.ThrowExceptionAndWarning(Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParserStateObject.SNIWritePacket(PacketHandle packet, UInt32& sniError, Boolean canAccumulate, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParserStateObject.WriteSni(Boolean canAccumulate)
+   at Microsoft.Data.SqlClient.TdsParserStateObject.WritePacket(Byte flushMode, Boolean canAccumulate)
+   at Microsoft.Data.SqlClient.TdsParser.TdsLogin(SqlLogin rec, FeatureExtension requestedFeatures, SessionData recoverySessionData, FederatedAuthenticationFeatureExtensionData fedAuthFeatureExtensionData, SqlConnectionEncryptOption encrypt)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.Login(ServerInfo server, TimeoutTimer timeout, String newPassword, SecureString newSecurePassword, SqlConnectionEncryptOption encrypt)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool, Func`3 accessTokenCallback)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at EAMS2026.Infrastructure.Data.Repositories.ReportRepository.TestConnectionAsync(String dbType, String connectionString) in D:\Codes\Projects\eams2026\src\EAMS2026.Infrastructure\Data\Repositories\ReportRepository.cs:line 502
+   at EAMS2026.Infrastructure.Data.Repositories.ReportRepository.TestConnectionAsync(String dbType, String connectionString) in D:\Codes\Projects\eams2026\src\EAMS2026.Infrastructure\Data\Repositories\ReportRepository.cs:line 503
+   at EAMS2026.Infrastructure.Services.ReportService.TestConnectionAsync(String dbType, String connectionString) in D:\Codes\Projects\eams2026\src\EAMS2026.Infrastructure\Services\ReportService.cs:line 454
+ClientConnectionId:170e4752-e6f0-4571-a438-0a17454d5f5a
+Error Number:10054,State:0,Class:20
+2026-06-06 10:30:46.957 +08:00 [ERR] EAMS2026.Infrastructure.Services.ReportService 数据源连接测试失败
+Microsoft.Data.SqlClient.SqlException (0x80131904): 已成功与服务器建立连接，但是在登录过程中发生错误。 (provider: SSL 提供程序, error: 0 - 远程主机强迫关闭了一个现有的连接。)
+ ---> System.ComponentModel.Win32Exception (10054): 远程主机强迫关闭了一个现有的连接。
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, SqlCommand command, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParserStateObject.ThrowExceptionAndWarning(Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParserStateObject.SNIWritePacket(PacketHandle packet, UInt32& sniError, Boolean canAccumulate, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParserStateObject.WriteSni(Boolean canAccumulate)
+   at Microsoft.Data.SqlClient.TdsParserStateObject.WritePacket(Byte flushMode, Boolean canAccumulate)
+   at Microsoft.Data.SqlClient.TdsParser.TdsLogin(SqlLogin rec, FeatureExtension requestedFeatures, SessionData recoverySessionData, FederatedAuthenticationFeatureExtensionData fedAuthFeatureExtensionData, SqlConnectionEncryptOption encrypt)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.Login(ServerInfo server, TimeoutTimer timeout, String newPassword, SecureString newSecurePassword, SqlConnectionEncryptOption encrypt)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool, Func`3 accessTokenCallback)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at EAMS2026.Infrastructure.Data.Repositories.ReportRepository.TestConnectionAsync(String dbType, String connectionString) in D:\Codes\Projects\eams2026\src\EAMS2026.Infrastructure\Data\Repositories\ReportRepository.cs:line 502
+   at EAMS2026.Infrastructure.Data.Repositories.ReportRepository.TestConnectionAsync(String dbType, String connectionString) in D:\Codes\Projects\eams2026\src\EAMS2026.Infrastructure\Data\Repositories\ReportRepository.cs:line 503
+   at EAMS2026.Infrastructure.Services.ReportService.TestConnectionAsync(String dbType, String connectionString) in D:\Codes\Projects\eams2026\src\EAMS2026.Infrastructure\Services\ReportService.cs:line 454
+ClientConnectionId:beaecf98-59ac-4f8b-ae8f-53a52e910615
+Error Number:10054,State:0,Class:20
+2026-06-06 10:34:58.970 +08:00 [INF] Microsoft.Hosting.Lifetime Now listening on: http://0.0.0.0:5106
+2026-06-06 10:34:59.011 +08:00 [INF] Microsoft.Hosting.Lifetime Application started. Press Ctrl+C to shut down.
+2026-06-06 10:34:59.013 +08:00 [INF] Microsoft.Hosting.Lifetime Hosting environment: Development
+2026-06-06 10:34:59.014 +08:00 [INF] Microsoft.Hosting.Lifetime Content root path: D:\Codes\Projects\eams2026\src\EAMS2026.Api
+2026-06-06 10:35:31.433 +08:00 [ERR] EAMS2026.Infrastructure.Services.ReportService 数据源连接测试失败
+Microsoft.Data.SqlClient.SqlException (0x80131904): 已成功与服务器建立连接，但是在登录过程中发生错误。 (provider: SSL 提供程序, error: 0 - 远程主机强迫关闭了一个现有的连接。)
+ ---> System.ComponentModel.Win32Exception (10054): 远程主机强迫关闭了一个现有的连接。
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, SqlCommand command, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParserStateObject.ThrowExceptionAndWarning(Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParserStateObject.SNIWritePacket(PacketHandle packet, UInt32& sniError, Boolean canAccumulate, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParserStateObject.WriteSni(Boolean canAccumulate)
+   at Microsoft.Data.SqlClient.TdsParserStateObject.WritePacket(Byte flushMode, Boolean canAccumulate)
+   at Microsoft.Data.SqlClient.TdsParser.TdsLogin(SqlLogin rec, FeatureExtension requestedFeatures, SessionData recoverySessionData, FederatedAuthenticationFeatureExtensionData fedAuthFeatureExtensionData, SqlConnectionEncryptOption encrypt)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.Login(ServerInfo server, TimeoutTimer timeout, String newPassword, SecureString newSecurePassword, SqlConnectionEncryptOption encrypt)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool, Func`3 accessTokenCallback)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at EAMS2026.Infrastructure.Data.Repositories.ReportRepository.TestConnectionAsync(String dbType, String connectionString) in D:\Codes\Projects\eams2026\src\EAMS2026.Infrastructure\Data\Repositories\ReportRepository.cs:line 516
+   at EAMS2026.Infrastructure.Data.Repositories.ReportRepository.TestConnectionAsync(String dbType, String connectionString) in D:\Codes\Projects\eams2026\src\EAMS2026.Infrastructure\Data\Repositories\ReportRepository.cs:line 517
+   at EAMS2026.Infrastructure.Services.ReportService.TestConnectionAsync(String dbType, String connectionString) in D:\Codes\Projects\eams2026\src\EAMS2026.Infrastructure\Services\ReportService.cs:line 454
+ClientConnectionId:d27c631f-0db0-4b3a-add2-7e91b4a233d8
+Error Number:10054,State:0,Class:20
+2026-06-06 10:40:14.511 +08:00 [INF] Microsoft.Hosting.Lifetime Now listening on: http://0.0.0.0:5106
+2026-06-06 10:40:14.550 +08:00 [INF] Microsoft.Hosting.Lifetime Application started. Press Ctrl+C to shut down.
+2026-06-06 10:40:14.553 +08:00 [INF] Microsoft.Hosting.Lifetime Hosting environment: Development
+2026-06-06 10:40:14.557 +08:00 [INF] Microsoft.Hosting.Lifetime Content root path: D:\Codes\Projects\eams2026\src\EAMS2026.Api
+2026-06-06 10:49:02.453 +08:00 [INF] Microsoft.Hosting.Lifetime Now listening on: http://0.0.0.0:5106
+2026-06-06 10:49:02.518 +08:00 [INF] Microsoft.Hosting.Lifetime Application started. Press Ctrl+C to shut down.
+2026-06-06 10:49:02.520 +08:00 [INF] Microsoft.Hosting.Lifetime Hosting environment: Development
+2026-06-06 10:49:02.521 +08:00 [INF] Microsoft.Hosting.Lifetime Content root path: D:\Codes\Projects\eams2026\src\EAMS2026.Api
+2026-06-06 10:49:43.983 +08:00 [ERR] EAMS2026.Infrastructure.Services.ReportService 更新报表失败
+Npgsql.PostgresException (0x80004005): 42703: column "created_by" of relation "rpt_field" does not exist
+
+POSITION: 220
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteNonQuery(Boolean async, CancellationToken cancellationToken)
+   at Dapper.SqlMapper.ExecuteImplAsync(IDbConnection cnn, CommandDefinition command, Object param) in /_/Dapper/SqlMapper.Async.cs:line 663
+   at EAMS2026.Infrastructure.Data.Repositories.ReportRepository.UpdateReportAsync(ReportDetailDto report, Int64 operatorId) in D:\Codes\Projects\eams2026\src\EAMS2026.Infrastructure\Data\Repositories\ReportRepository.cs:line 259
+   at EAMS2026.Infrastructure.Services.ReportService.UpdateReportAsync(ReportDetailDto report, Int64 operatorId) in D:\Codes\Projects\eams2026\src\EAMS2026.Infrastructure\Services\ReportService.cs:line 87
+  Exception data:
+    Severity: ERROR
+    SqlState: 42703
+    MessageText: column "created_by" of relation "rpt_field" does not exist
+    Position: 220
+    File: parse_target.c
+    Line: 1073
+    Routine: checkInsertTargets
+2026-06-06 10:57:28.244 +08:00 [INF] Microsoft.Hosting.Lifetime Now listening on: http://0.0.0.0:5106
+2026-06-06 10:57:28.300 +08:00 [INF] Microsoft.Hosting.Lifetime Application started. Press Ctrl+C to shut down.
+2026-06-06 10:57:28.301 +08:00 [INF] Microsoft.Hosting.Lifetime Hosting environment: Development
+2026-06-06 10:57:28.302 +08:00 [INF] Microsoft.Hosting.Lifetime Content root path: D:\Codes\Projects\eams2026\src\EAMS2026.Api
+2026-06-06 11:07:23.940 +08:00 [INF] Microsoft.Hosting.Lifetime Now listening on: http://0.0.0.0:5106
+2026-06-06 11:07:24.004 +08:00 [INF] Microsoft.Hosting.Lifetime Application started. Press Ctrl+C to shut down.
+2026-06-06 11:07:24.005 +08:00 [INF] Microsoft.Hosting.Lifetime Hosting environment: Development
+2026-06-06 11:07:24.006 +08:00 [INF] Microsoft.Hosting.Lifetime Content root path: D:\Codes\Projects\eams2026\src\EAMS2026.Api
+2026-06-06 11:22:21.854 +08:00 [INF] Microsoft.Hosting.Lifetime Now listening on: http://0.0.0.0:5106
+2026-06-06 11:22:21.917 +08:00 [INF] Microsoft.Hosting.Lifetime Application started. Press Ctrl+C to shut down.
+2026-06-06 11:22:21.919 +08:00 [INF] Microsoft.Hosting.Lifetime Hosting environment: Development
+2026-06-06 11:22:21.922 +08:00 [INF] Microsoft.Hosting.Lifetime Content root path: D:\Codes\Projects\eams2026\src\EAMS2026.Api
+2026-06-06 11:35:05.581 +08:00 [INF] Microsoft.Hosting.Lifetime Now listening on: http://0.0.0.0:5106
+2026-06-06 11:35:05.638 +08:00 [INF] Microsoft.Hosting.Lifetime Application started. Press Ctrl+C to shut down.
+2026-06-06 11:35:05.639 +08:00 [INF] Microsoft.Hosting.Lifetime Hosting environment: Development
+2026-06-06 11:35:05.640 +08:00 [INF] Microsoft.Hosting.Lifetime Content root path: D:\Codes\Projects\eams2026\src\EAMS2026.Api
+2026-06-06 11:45:53.084 +08:00 [INF] Microsoft.Hosting.Lifetime Now listening on: http://0.0.0.0:5106
+2026-06-06 11:45:53.165 +08:00 [INF] Microsoft.Hosting.Lifetime Application started. Press Ctrl+C to shut down.
+2026-06-06 11:45:53.168 +08:00 [INF] Microsoft.Hosting.Lifetime Hosting environment: Development
+2026-06-06 11:45:53.169 +08:00 [INF] Microsoft.Hosting.Lifetime Content root path: D:\Codes\Projects\eams2026\src\EAMS2026.Api
+2026-06-06 12:01:00.847 +08:00 [INF] Microsoft.Hosting.Lifetime Now listening on: http://0.0.0.0:5106
+2026-06-06 12:01:00.926 +08:00 [INF] Microsoft.Hosting.Lifetime Application started. Press Ctrl+C to shut down.
+2026-06-06 12:01:00.928 +08:00 [INF] Microsoft.Hosting.Lifetime Hosting environment: Development
+2026-06-06 12:01:00.950 +08:00 [INF] Microsoft.Hosting.Lifetime Content root path: D:\Codes\Projects\eams2026\src\EAMS2026.Api

@@ -1,0 +1,22 @@
+2026-06-26 11:29:17.957 +08:00 [ERR] Microsoft.Extensions.Hosting.Internal.Host Hosting failed to start
+System.InvalidOperationException: Unrecognized scheme in server address '<http://localhost:5106>'. Only 'http://' and 'https://' are supported.
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.ParseAddress(String address, Boolean& https)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.AddressesStrategy.BindAsync(AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindAsync(ListenOptions[] listenOptions, AddressBindContext context, Func`2 useHttps, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.BindAsync(CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.StartAsync[TContext](IHttpApplication`1 application, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.Internal.Host.<StartAsync>b__15_1(IHostedService service, CancellationToken token)
+   at Microsoft.Extensions.Hosting.Internal.Host.ForeachService[T](IEnumerable`1 services, CancellationToken token, Boolean concurrent, Boolean abortOnFirstException, List`1 exceptions, Func`3 operation)
+2026-06-26 11:29:34.974 +08:00 [INF] Microsoft.Hosting.Lifetime Now listening on: http://localhost:5106
+2026-06-26 11:29:35.025 +08:00 [INF] Microsoft.Hosting.Lifetime Application started. Press Ctrl+C to shut down.
+2026-06-26 11:29:35.030 +08:00 [INF] Microsoft.Hosting.Lifetime Hosting environment: Development
+2026-06-26 11:29:35.031 +08:00 [INF] Microsoft.Hosting.Lifetime Content root path: D:\Codes\Projects\eams2026\src\EAMS2026.Api
+2026-06-26 11:29:56.884 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteReport] reportId=30002, userId=1
+2026-06-26 11:29:56.894 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteReport] hasView=true
+2026-06-26 11:29:57.051 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteStoredProcedure] 将执行 1 个存储过程: dflproc_report_accountingCost
+2026-06-26 11:29:58.765 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteStoredProcedure] dflproc_report_accountingCost 从 sys.parameters 返回 0 个参数: 
+2026-06-26 11:29:58.769 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteStoredProcedure] dflproc_report_accountingCost 接收了 0 个请求参数: 
+2026-06-26 11:29:58.774 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteStoredProcedure] 执行 dflproc_report_accountingCost, 参数数=0
+2026-06-26 11:29:59.036 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteStoredProcedure] dflproc_report_accountingCost 返回 4083 行
+2026-06-26 11:29:59.080 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteStoredProcedure] 全部完成, 总计 4083 行, 17 列

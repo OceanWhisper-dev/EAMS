@@ -1,0 +1,73 @@
+2026-06-25 10:52:43.225 +08:00 [ERR] Microsoft.Extensions.Hosting.Internal.Host Hosting failed to start
+System.InvalidOperationException: Unrecognized scheme in server address '<http://localhost:5106>'. Only 'http://' and 'https://' are supported.
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.ParseAddress(String address, Boolean& https)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.AddressesStrategy.BindAsync(AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindAsync(ListenOptions[] listenOptions, AddressBindContext context, Func`2 useHttps, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.BindAsync(CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.StartAsync[TContext](IHttpApplication`1 application, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.Internal.Host.<StartAsync>b__15_1(IHostedService service, CancellationToken token)
+   at Microsoft.Extensions.Hosting.Internal.Host.ForeachService[T](IEnumerable`1 services, CancellationToken token, Boolean concurrent, Boolean abortOnFirstException, List`1 exceptions, Func`3 operation)
+2026-06-25 10:53:10.830 +08:00 [INF] Microsoft.Hosting.Lifetime Now listening on: http://localhost:5106
+2026-06-25 10:53:10.892 +08:00 [INF] Microsoft.Hosting.Lifetime Application started. Press Ctrl+C to shut down.
+2026-06-25 10:53:11.235 +08:00 [INF] Microsoft.Hosting.Lifetime Hosting environment: Development
+2026-06-25 10:53:11.237 +08:00 [INF] Microsoft.Hosting.Lifetime Content root path: D:\Codes\Projects\eams2026\src\EAMS2026.Api
+2026-06-25 10:53:37.856 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteReport] reportId=2, userId=1
+2026-06-25 10:53:37.881 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteReport] hasView=true
+2026-06-25 10:53:37.950 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [BuildFilterConditions] between: ddate 从 "2025-01-01T00:00:00.0000000+08:00" ~ "2026-06-23T00:00:00.0000000+08:00"
+2026-06-25 10:53:37.956 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [BuildFilterConditions] 生成条件: ddate BETWEEN @_bf0 AND @_bf1 AND year = @_bf2 AND cpersoncode = @_bf3
+2026-06-25 10:53:37.969 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [BuildFilterConditions] 修改后SQL: SELECT year,month,ddate,cdcname,cpersonname,cpersoncode,cCusName,cCusAbbName,cShipAddress,cCusPerson,cdlcode,cmaker,cWhName,cInvTopClsName,cInvName,cInvCCode,cInvCName,iQuantity,iNum,isum
+from dflView_eams_crossYearDispatch
+where 1=1
+    AND (ddate BETWEEN @_bf0 AND @_bf1 AND year = @_bf2 AND cpersoncode = @_bf3)
+2026-06-25 10:53:37.971 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [BuildFilterConditions] 额外参数 _bf0 = "2025-01-01T00:00:00.0000000+08:00" (DateTime)
+2026-06-25 10:53:38.008 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [BuildFilterConditions] 额外参数 _bf1 = "2026-06-23T00:00:00.0000000+08:00" (DateTime)
+2026-06-25 10:53:38.010 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [BuildFilterConditions] 额外参数 _bf2 = 2026 (String)
+2026-06-25 10:53:38.014 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [BuildFilterConditions] 额外参数 _bf3 = 0207 (String)
+2026-06-25 10:53:38.018 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteQueryInternal] 应用报表默认排序: ddate DESC, cdcname ASC
+2026-06-25 10:53:38.281 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] datasource=erp_u871_currentYear, isSqlServer=true, sql=SELECT year,month,ddate,cdcname,cpersonname,cpersoncode,cCusName,cCusAbbName,cShipAddress,cCusPerson,cdlcode,cmaker,cWhName,cInvTopClsName,cInvName,cInvCCode,cInvCName,iQuantity,iNum,isum
+from dflView_eams_crossYearDispatch
+where 1=1
+    AND (ddate BETWEEN @_bf0 AND @_bf1 AND year = @_bf2 AND cpersoncode = @_bf3)
+2026-06-25 10:53:38.283 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] 归一化参数数: 7
+2026-06-25 10:53:38.288 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] 应用排序: [ddate] DESC, [cdcname] ASC
+2026-06-25 10:53:38.289 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] page=1, pageSize=0
+2026-06-25 10:53:38.293 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] 无分页SQL: SELECT year,month,ddate,cdcname,cpersonname,cpersoncode,cCusName,cCusAbbName,cShipAddress,cCusPerson,cdlcode,cmaker,cWhName,cInvTopClsName,cInvName,cInvCCode,cInvCName,iQuantity,iNum,isum
+from dflView_eams_crossYearDispatch
+where 1=1
+    AND (ddate BETWEEN @_bf0 AND @_bf1 AND year = @_bf2 AND cpersoncode = @_bf3)
+ORDER BY [ddate] DESC, [cdcname] ASC
+2026-06-25 10:53:40.381 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] 返回列数=20, 行数=5079
+2026-06-25 12:02:05.940 +08:00 [INF] Microsoft.Hosting.Lifetime Application is shutting down...
+2026-06-25 12:02:21.023 +08:00 [INF] Microsoft.Hosting.Lifetime Now listening on: http://localhost:5106
+2026-06-25 12:02:21.138 +08:00 [INF] Microsoft.Hosting.Lifetime Application started. Press Ctrl+C to shut down.
+2026-06-25 12:02:21.141 +08:00 [INF] Microsoft.Hosting.Lifetime Hosting environment: Development
+2026-06-25 12:02:21.144 +08:00 [INF] Microsoft.Hosting.Lifetime Content root path: D:\Codes\Projects\eams2026\src\EAMS2026.Api
+2026-06-25 12:03:22.518 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteReport] reportId=2, userId=1
+2026-06-25 12:03:22.542 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteReport] hasView=true
+2026-06-25 12:03:22.552 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [BuildFilterConditions] between: ddate 从 "2025-01-01T00:00:00.0000000+08:00" ~ "2026-06-23T00:00:00.0000000+08:00"
+2026-06-25 12:03:22.573 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [BuildFilterConditions] 生成条件: ddate BETWEEN @_bf0 AND @_bf1 AND year = @_bf2 AND cpersoncode = @_bf3
+2026-06-25 12:03:22.576 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [BuildFilterConditions] 修改后SQL: SELECT year,month,ddate,cdcname,cpersonname,cpersoncode,cCusName,cCusAbbName,cShipAddress,cCusPerson,cdlcode,cmaker,cWhName,cInvTopClsName,cInvName,cInvCCode,cInvCName,iQuantity,iNum,isum
+from dflView_eams_crossYearDispatch
+where 1=1
+    AND (ddate BETWEEN @_bf0 AND @_bf1 AND year = @_bf2 AND cpersoncode = @_bf3)
+2026-06-25 12:03:22.578 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [BuildFilterConditions] 额外参数 _bf0 = "2025-01-01T00:00:00.0000000+08:00" (DateTime)
+2026-06-25 12:03:22.581 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [BuildFilterConditions] 额外参数 _bf1 = "2026-06-23T00:00:00.0000000+08:00" (DateTime)
+2026-06-25 12:03:22.583 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [BuildFilterConditions] 额外参数 _bf2 = 2026 (String)
+2026-06-25 12:03:22.584 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [BuildFilterConditions] 额外参数 _bf3 = 0207 (String)
+2026-06-25 12:03:22.596 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteQueryInternal] 应用报表默认排序: ddate DESC, cdcname ASC
+2026-06-25 12:03:22.637 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] datasource=erp_u871_currentYear, isSqlServer=true, sql=SELECT year,month,ddate,cdcname,cpersonname,cpersoncode,cCusName,cCusAbbName,cShipAddress,cCusPerson,cdlcode,cmaker,cWhName,cInvTopClsName,cInvName,cInvCCode,cInvCName,iQuantity,iNum,isum
+from dflView_eams_crossYearDispatch
+where 1=1
+    AND (ddate BETWEEN @_bf0 AND @_bf1 AND year = @_bf2 AND cpersoncode = @_bf3)
+2026-06-25 12:03:22.639 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] 归一化参数数: 7
+2026-06-25 12:03:22.641 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] DateTime("2025-01-01T00:00:00.0000000+08:00") -> ODBC格式: 20250101 00:00:00.000
+2026-06-25 12:03:22.642 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] DateTime("2026-06-23T00:00:00.0000000+08:00") -> ODBC格式: 20260623 00:00:00.000
+2026-06-25 12:03:22.645 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] 应用排序: [ddate] DESC, [cdcname] ASC
+2026-06-25 12:03:22.647 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] page=1, pageSize=0
+2026-06-25 12:03:22.666 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] 无分页SQL: SELECT year,month,ddate,cdcname,cpersonname,cpersoncode,cCusName,cCusAbbName,cShipAddress,cCusPerson,cdlcode,cmaker,cWhName,cInvTopClsName,cInvName,cInvCCode,cInvCName,iQuantity,iNum,isum
+from dflView_eams_crossYearDispatch
+where 1=1
+    AND (ddate BETWEEN @_bf0 AND @_bf1 AND year = @_bf2 AND cpersoncode = @_bf3)
+ORDER BY [ddate] DESC, [cdcname] ASC
+2026-06-25 12:03:24.376 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] 返回列数=20, 行数=5079

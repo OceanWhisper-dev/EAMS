@@ -1,0 +1,641 @@
+2026-06-23 10:08:45.043 +08:00 [INF] Microsoft.Hosting.Lifetime Now listening on: http://0.0.0.0:5106
+2026-06-23 10:08:45.112 +08:00 [INF] Microsoft.Hosting.Lifetime Application started. Press Ctrl+C to shut down.
+2026-06-23 10:08:45.113 +08:00 [INF] Microsoft.Hosting.Lifetime Hosting environment: Development
+2026-06-23 10:08:45.114 +08:00 [INF] Microsoft.Hosting.Lifetime Content root path: D:\Codes\Projects\eams2026\src\EAMS2026.Api
+2026-06-23 10:12:12.779 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteReport] reportId=2, userId=1
+2026-06-23 10:12:12.800 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteReport] hasView=true
+2026-06-23 10:12:12.813 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [BuildFilterConditions] 生成条件: year = '2026'
+2026-06-23 10:12:12.814 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [BuildFilterConditions] 修改后SQL: SELECT year,month,ddate,cdcname,cpersonname,cpersoncode,cCusName,cCusAbbName,cShipAddress,cCusPerson,cdlcode,cmaker,cWhName,cInvTopClsName,cInvName,cInvCCode,cInvCName,iQuantity,iNum,isum
+from dflView_eams_crossYearDispatch
+where 1=1
+    AND (year = '2026')
+2026-06-23 10:12:12.816 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteQueryInternal] 应用报表默认排序: ddate DESC, cdcname ASC
+2026-06-23 10:12:12.825 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] datasource=erp_u871_currentYear, isSqlServer=true, sql=SELECT year,month,ddate,cdcname,cpersonname,cpersoncode,cCusName,cCusAbbName,cShipAddress,cCusPerson,cdlcode,cmaker,cWhName,cInvTopClsName,cInvName,cInvCCode,cInvCName,iQuantity,iNum,isum
+from dflView_eams_crossYearDispatch
+where 1=1
+    AND (year = '2026')
+2026-06-23 10:12:12.827 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] 归一化参数数: 2
+2026-06-23 10:12:12.830 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] 应用排序: [ddate] DESC, [cdcname] ASC
+2026-06-23 10:12:12.831 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] page=1, pageSize=0
+2026-06-23 10:12:12.833 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] 无分页SQL: SELECT year,month,ddate,cdcname,cpersonname,cpersoncode,cCusName,cCusAbbName,cShipAddress,cCusPerson,cdlcode,cmaker,cWhName,cInvTopClsName,cInvName,cInvCCode,cInvCName,iQuantity,iNum,isum
+from dflView_eams_crossYearDispatch
+where 1=1
+    AND (year = '2026')
+ORDER BY [ddate] DESC, [cdcname] ASC
+2026-06-23 10:12:15.209 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] 返回列数=20, 行数=17830
+2026-06-23 10:12:29.581 +08:00 [INF] EAMS2026.Application.Services.Erp.VouchModifyService [GetSalespersons] 从 erp_settings_salesperson_map 读取业务员列表
+2026-06-23 10:12:29.611 +08:00 [INF] EAMS2026.Application.Services.Erp.VouchModifyService [GetSalespersons] 从映射表获取到 6 个业务员
+2026-06-23 10:12:29.659 +08:00 [INF] EAMS2026.Application.Services.Erp.VouchModifyService [QueryOrders] 开始查询订单, 客户编码=null, 日期范围=null~null
+2026-06-23 10:12:30.170 +08:00 [INF] EAMS2026.Application.Services.Erp.VouchModifyService [QueryOrders] 查询完成, 共 12 条 (总计 66)
+2026-06-23 10:12:59.921 +08:00 [INF] EAMS2026.Application.Services.Erp.VouchModifyService [QueryOrders] 开始查询订单, 客户编码=null, 日期范围=2026-06-01~2026-06-23
+2026-06-23 10:12:59.997 +08:00 [INF] EAMS2026.Application.Services.Erp.VouchModifyService [QueryOrders] 查询完成, 共 0 条 (总计 0)
+2026-06-23 10:13:41.576 +08:00 [INF] EAMS2026.Application.Services.Erp.VouchModifyService [QueryOrders] 开始查询订单, 客户编码=null, 日期范围=2026-06-01~2026-06-23
+2026-06-23 10:13:41.670 +08:00 [INF] EAMS2026.Application.Services.Erp.VouchModifyService [QueryOrders] 查询完成, 共 12 条 (总计 51)
+2026-06-23 10:13:54.401 +08:00 [INF] EAMS2026.Application.Services.Erp.VouchModifyService [QueryOrders] 开始查询订单, 客户编码=null, 日期范围=2026-06-01~2026-06-23
+2026-06-23 10:13:54.508 +08:00 [INF] EAMS2026.Application.Services.Erp.VouchModifyService [QueryOrders] 查询完成, 共 14 条 (总计 51)
+2026-06-23 10:13:59.871 +08:00 [INF] EAMS2026.Application.Services.Erp.VouchModifyService [QueryOrders] 开始查询订单, 客户编码=null, 日期范围=2026-06-01~2026-06-23
+2026-06-23 10:13:59.973 +08:00 [INF] EAMS2026.Application.Services.Erp.VouchModifyService [QueryOrders] 查询完成, 共 10 条 (总计 51)
+2026-06-23 10:14:10.617 +08:00 [INF] EAMS2026.Application.Services.Erp.VouchModifyService [QueryOrders] 开始查询订单, 客户编码=null, 日期范围=2026-06-01~2026-06-23
+2026-06-23 10:14:10.628 +08:00 [INF] EAMS2026.Application.Services.Erp.VouchModifyService [QueryOrders] 查询完成, 共 0 条 (总计 12)
+2026-06-23 10:14:10.878 +08:00 [INF] EAMS2026.Application.Services.Erp.VouchModifyService [QueryOrders] 开始查询订单, 客户编码=null, 日期范围=2026-06-01~2026-06-23
+2026-06-23 10:14:10.992 +08:00 [INF] EAMS2026.Application.Services.Erp.VouchModifyService [QueryOrders] 查询完成, 共 11 条 (总计 12)
+2026-06-23 10:14:35.094 +08:00 [INF] EAMS2026.Application.Services.Erp.VouchModifyService [QueryOrders] 开始查询订单, 客户编码=null, 日期范围=2026-06-01~2026-06-23
+2026-06-23 10:14:35.107 +08:00 [INF] EAMS2026.Application.Services.Erp.VouchModifyService [QueryOrders] 查询完成, 共 8 条 (总计 8)
+2026-06-23 10:14:38.703 +08:00 [INF] EAMS2026.Application.Services.Erp.VouchModifyService [QueryOrders] 开始查询订单, 客户编码=null, 日期范围=2026-06-01~2026-06-23
+2026-06-23 10:14:38.713 +08:00 [INF] EAMS2026.Application.Services.Erp.VouchModifyService [QueryOrders] 查询完成, 共 4 条 (总计 4)
+2026-06-23 10:14:43.240 +08:00 [INF] EAMS2026.Application.Services.Erp.VouchModifyService [QueryOrders] 开始查询订单, 客户编码=null, 日期范围=2026-06-01~2026-06-23
+2026-06-23 10:14:43.246 +08:00 [INF] EAMS2026.Application.Services.Erp.VouchModifyService [QueryOrders] 查询完成, 共 0 条 (总计 0)
+2026-06-23 10:14:46.901 +08:00 [INF] EAMS2026.Application.Services.Erp.VouchModifyService [QueryOrders] 开始查询订单, 客户编码=null, 日期范围=2026-06-01~2026-06-23
+2026-06-23 10:14:46.911 +08:00 [INF] EAMS2026.Application.Services.Erp.VouchModifyService [QueryOrders] 查询完成, 共 9 条 (总计 12)
+2026-06-23 10:15:07.110 +08:00 [INF] EAMS2026.Application.Services.Erp.VouchModifyService [QueryOrders] 开始查询订单, 客户编码=null, 日期范围=2026-06-01~2026-06-23
+2026-06-23 10:15:07.121 +08:00 [INF] EAMS2026.Application.Services.Erp.VouchModifyService [QueryOrders] 查询完成, 共 12 条 (总计 51)
+2026-06-23 10:16:09.450 +08:00 [INF] System.Net.Http.HttpClient.IDingTalkService.LogicalHandler Start processing HTTP request GET https://oapi.dingtalk.com/gettoken?appkey=dingolaz4gqcrbdponui&appsecret=--gIaMyXIQM23OFOxmItZUvhgDIy-f_VGtAFxa7O0KDwNaPT2NrfdGHb-R2O_TVE
+2026-06-23 10:16:09.454 +08:00 [INF] System.Net.Http.HttpClient.IDingTalkService.ClientHandler Sending HTTP request GET https://oapi.dingtalk.com/gettoken?appkey=dingolaz4gqcrbdponui&appsecret=--gIaMyXIQM23OFOxmItZUvhgDIy-f_VGtAFxa7O0KDwNaPT2NrfdGHb-R2O_TVE
+2026-06-23 10:16:09.809 +08:00 [INF] System.Net.Http.HttpClient.IDingTalkService.ClientHandler Received HTTP response headers after 350.9692ms - 200
+2026-06-23 10:16:09.811 +08:00 [INF] System.Net.Http.HttpClient.IDingTalkService.LogicalHandler End processing HTTP request after 365.3697ms - 200
+2026-06-23 10:16:09.822 +08:00 [INF] EAMS2026.Infrastructure.Data.DingTalkService 钉钉Token已刷新
+2026-06-23 10:16:09.825 +08:00 [INF] System.Net.Http.HttpClient.IDingTalkService.LogicalHandler Start processing HTTP request POST https://oapi.dingtalk.com/attendance/list?access_token=f4f56c135ff23ebcb0931fb2ab3858a2
+2026-06-23 10:16:09.827 +08:00 [INF] System.Net.Http.HttpClient.IDingTalkService.ClientHandler Sending HTTP request POST https://oapi.dingtalk.com/attendance/list?access_token=f4f56c135ff23ebcb0931fb2ab3858a2
+2026-06-23 10:16:09.888 +08:00 [INF] System.Net.Http.HttpClient.IDingTalkService.ClientHandler Received HTTP response headers after 60.2288ms - 200
+2026-06-23 10:16:09.968 +08:00 [INF] System.Net.Http.HttpClient.IDingTalkService.LogicalHandler End processing HTTP request after 143.3158ms - 200
+2026-06-23 10:16:10.316 +08:00 [INF] EAMS2026.Application.Services.Attendance.AttendanceCalculationService UPDATE record: emp=2, date=2026-06-01, bAtt="08:48:48", eAtt="08:48:48", id=5324
+2026-06-23 10:16:10.471 +08:00 [INF] EAMS2026.Application.Services.Attendance.AttendanceCalculationService Schedule UPDATE: emp=2, date=2026-06-01, period=1
+2026-06-23 10:16:10.582 +08:00 [INF] EAMS2026.Application.Services.Attendance.AttendanceCalculationService INSERT record: emp=2, date=2026-06-02, bAtt="08:53:23", eAtt="08:53:23", id=5341
+2026-06-23 10:16:10.590 +08:00 [INF] EAMS2026.Application.Services.Attendance.AttendanceCalculationService Schedule UPDATE: emp=2, date=2026-06-02, period=2
+2026-06-23 10:16:10.664 +08:00 [INF] EAMS2026.Application.Services.Attendance.AttendanceCalculationService INSERT record: emp=2, date=2026-06-03, bAtt="08:46:34", eAtt="09:02:05", id=5342
+2026-06-23 10:16:10.701 +08:00 [INF] EAMS2026.Application.Services.Attendance.AttendanceCalculationService Schedule UPDATE: emp=2, date=2026-06-03, period=3
+2026-06-23 10:16:38.321 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteReport] reportId=2, userId=5
+2026-06-23 10:16:38.329 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteReport] hasView=true
+2026-06-23 10:16:38.331 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [BuildFilterConditions] 生成条件: year = '2026' AND cpersoncode = '0207'
+2026-06-23 10:16:38.332 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [BuildFilterConditions] 修改后SQL: SELECT year,month,ddate,cdcname,cpersonname,cpersoncode,cCusName,cCusAbbName,cShipAddress,cCusPerson,cdlcode,cmaker,cWhName,cInvTopClsName,cInvName,cInvCCode,cInvCName,iQuantity,iNum,isum
+from dflView_eams_crossYearDispatch
+where 1=1
+    AND (year = '2026' AND cpersoncode = '0207')
+2026-06-23 10:16:38.334 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteQueryInternal] 应用报表默认排序: ddate DESC, cdcname ASC
+2026-06-23 10:16:38.335 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] datasource=erp_u871_currentYear, isSqlServer=true, sql=SELECT year,month,ddate,cdcname,cpersonname,cpersoncode,cCusName,cCusAbbName,cShipAddress,cCusPerson,cdlcode,cmaker,cWhName,cInvTopClsName,cInvName,cInvCCode,cInvCName,iQuantity,iNum,isum
+from dflView_eams_crossYearDispatch
+where 1=1
+    AND (year = '2026' AND cpersoncode = '0207')
+2026-06-23 10:16:38.337 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] 归一化参数数: 3
+2026-06-23 10:16:38.338 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] 应用排序: [ddate] DESC, [cdcname] ASC
+2026-06-23 10:16:38.339 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] page=1, pageSize=0
+2026-06-23 10:16:38.340 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] 无分页SQL: SELECT year,month,ddate,cdcname,cpersonname,cpersoncode,cCusName,cCusAbbName,cShipAddress,cCusPerson,cdlcode,cmaker,cWhName,cInvTopClsName,cInvName,cInvCCode,cInvCName,iQuantity,iNum,isum
+from dflView_eams_crossYearDispatch
+where 1=1
+    AND (year = '2026' AND cpersoncode = '0207')
+ORDER BY [ddate] DESC, [cdcname] ASC
+2026-06-23 10:16:38.774 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] 返回列数=20, 行数=5036
+2026-06-23 10:17:24.860 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteReport] reportId=2, userId=5
+2026-06-23 10:17:24.866 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteReport] hasView=true
+2026-06-23 10:17:24.870 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [BuildFilterConditions] between: ddate 从 "2025-01-01T00:00:00.0000000+08:00" ~ "2026-06-23T00:00:00.0000000+08:00"
+2026-06-23 10:17:24.871 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [BuildFilterConditions] 生成条件: ddate BETWEEN '2025-01-01 00:00:00' AND '2026-06-23 00:00:00' AND cpersoncode = '0207'
+2026-06-23 10:17:24.872 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [BuildFilterConditions] 修改后SQL: SELECT year,month,ddate,cdcname,cpersonname,cpersoncode,cCusName,cCusAbbName,cShipAddress,cCusPerson,cdlcode,cmaker,cWhName,cInvTopClsName,cInvName,cInvCCode,cInvCName,iQuantity,iNum,isum
+from dflView_eams_crossYearDispatch
+where 1=1
+    AND (ddate BETWEEN '2025-01-01 00:00:00' AND '2026-06-23 00:00:00' AND cpersoncode = '0207')
+2026-06-23 10:17:24.878 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteQueryInternal] 应用报表默认排序: ddate DESC, cdcname ASC
+2026-06-23 10:17:24.880 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] datasource=erp_u871_currentYear, isSqlServer=true, sql=SELECT year,month,ddate,cdcname,cpersonname,cpersoncode,cCusName,cCusAbbName,cShipAddress,cCusPerson,cdlcode,cmaker,cWhName,cInvTopClsName,cInvName,cInvCCode,cInvCName,iQuantity,iNum,isum
+from dflView_eams_crossYearDispatch
+where 1=1
+    AND (ddate BETWEEN '2025-01-01 00:00:00' AND '2026-06-23 00:00:00' AND cpersoncode = '0207')
+2026-06-23 10:17:25.017 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] 归一化参数数: 2
+2026-06-23 10:17:25.019 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] 应用排序: [ddate] DESC, [cdcname] ASC
+2026-06-23 10:17:25.020 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] page=1, pageSize=0
+2026-06-23 10:17:25.021 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] 无分页SQL: SELECT year,month,ddate,cdcname,cpersonname,cpersoncode,cCusName,cCusAbbName,cShipAddress,cCusPerson,cdlcode,cmaker,cWhName,cInvTopClsName,cInvName,cInvCCode,cInvCName,iQuantity,iNum,isum
+from dflView_eams_crossYearDispatch
+where 1=1
+    AND (ddate BETWEEN '2025-01-01 00:00:00' AND '2026-06-23 00:00:00' AND cpersoncode = '0207')
+ORDER BY [ddate] DESC, [cdcname] ASC
+2026-06-23 10:17:26.308 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] 返回列数=20, 行数=16314
+2026-06-23 10:25:47.125 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteReport] reportId=3, userId=5
+2026-06-23 10:25:47.131 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteReport] hasView=true
+2026-06-23 10:25:47.132 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [BuildFilterConditions] 生成条件: p.cpersoncode = '0207'
+2026-06-23 10:25:47.133 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [BuildFilterConditions] 修改后SQL: SELECT year(som.ddate) as '年',month(som.ddate) as '月',dc.cdcname as '地区',p.cpersonname as '客户经理',cus.cCusName as '客户名称'
+,case when (CHARINDEX('(', cus.cCusAbbName)>0 and  CHARINDEX(')', cus.cCusAbbName)>0 ) 
+		then SUBSTRING(cus.cCusAbbName,CHARINDEX('(', cus.cCusAbbName)+1, CHARINDEX(')', cus.cCusAbbName)-1-CHARINDEX('(', cus.cCusAbbName))
+		else cus.cCusAbbName end as '客户简称'
+,cus.cCusPerson as '联系人','' as '仓库',
+invtopcls.cInvCName as '存货顶级分类',inv.cInvName '存货名称',invcls.cInvCCode as '存货分类编码',invcls.cInvCName as '存货分类',
+iQuantity as '数量',isum as '金额'
+from SO_SOMain as som LEFT JOIN SO_SODetails as sod on som.id = sod.ID
+LEFT JOIN Inventory as inv on inv.cinvcode = sod.cInvCode 
+LEFT JOIN ComputationUnit as cu on inv.cComUnitCode = cu.cComunitCode
+LEFT JOIN Customer as cus on cus.ccuscode = som.cCusCode
+LEFT JOIN Person as p on p.cpersoncode = som.cPersonCode
+LEFT JOIN DistrictClass as dc on dc.cdccode = cus.cdccode
+LEFT JOIN InventoryClass as invcls on invcls.cinvccode = inv.cinvccode
+LEFT JOIN InventoryClass as invtopcls on left(invcls.cInvCCode,2) = invtopcls.cInvCCode
+where 1 = 1
+    AND (p.cpersoncode = '0207')
+2026-06-23 10:25:47.136 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] datasource=erp_u871_currentYear, isSqlServer=true, sql=SELECT year(som.ddate) as '年',month(som.ddate) as '月',dc.cdcname as '地区',p.cpersonname as '客户经理',cus.cCusName as '客户名称'
+,case when (CHARINDEX('(', cus.cCusAbbName)>0 and  CHARINDEX(')', cus.cCusAbbName)>0 ) 
+		then SUBSTRING(cus.cCusAbbName,CHARINDEX('(', cus.cCusAbbName)+1, CHARINDEX(')', cus.cCusAbbName)-1-CHARINDEX('(', cus.cCusAbbName))
+		else cus.cCusAbbName end as '客户简称'
+,cus.cCusPerson as '联系人','' as '仓库',
+invtopcls.cInvCName as '存货顶级分类',inv.cInvName '存货名称',invcls.cInvCCode as '存货分类编码',invcls.cInvCName as '存货分类',
+iQuantity as '数量',isum as '金额'
+from SO_SOMain as som LEFT JOIN SO_SODetails as sod on som.id = sod.ID
+LEFT JOIN Inventory as inv on inv.cinvcode = sod.cInvCode 
+LEFT JOIN ComputationUnit as cu on inv.cComUnitCode = cu.cComunitCode
+LEFT JOIN Customer as cus on cus.ccuscode = som.cCusCode
+LEFT JOIN Person as p on p.cpersoncode = som.cPersonCode
+LEFT JOIN DistrictClass as dc on dc.cdccode = cus.cdccode
+LEFT JOIN InventoryClass as invcls on invcls.cinvccode = inv.cinvccode
+LEFT JOIN InventoryClass as invtopcls on left(invcls.cInvCCode,2) = invtopcls.cInvCCode
+where 1 = 1
+    AND (p.cpersoncode = '0207')
+2026-06-23 10:25:47.138 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] 归一化参数数: 1
+2026-06-23 10:25:47.139 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] page=1, pageSize=0
+2026-06-23 10:25:47.145 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] 无分页SQL: SELECT year(som.ddate) as '年',month(som.ddate) as '月',dc.cdcname as '地区',p.cpersonname as '客户经理',cus.cCusName as '客户名称'
+,case when (CHARINDEX('(', cus.cCusAbbName)>0 and  CHARINDEX(')', cus.cCusAbbName)>0 ) 
+		then SUBSTRING(cus.cCusAbbName,CHARINDEX('(', cus.cCusAbbName)+1, CHARINDEX(')', cus.cCusAbbName)-1-CHARINDEX('(', cus.cCusAbbName))
+		else cus.cCusAbbName end as '客户简称'
+,cus.cCusPerson as '联系人','' as '仓库',
+invtopcls.cInvCName as '存货顶级分类',inv.cInvName '存货名称',invcls.cInvCCode as '存货分类编码',invcls.cInvCName as '存货分类',
+iQuantity as '数量',isum as '金额'
+from SO_SOMain as som LEFT JOIN SO_SODetails as sod on som.id = sod.ID
+LEFT JOIN Inventory as inv on inv.cinvcode = sod.cInvCode 
+LEFT JOIN ComputationUnit as cu on inv.cComUnitCode = cu.cComunitCode
+LEFT JOIN Customer as cus on cus.ccuscode = som.cCusCode
+LEFT JOIN Person as p on p.cpersoncode = som.cPersonCode
+LEFT JOIN DistrictClass as dc on dc.cdccode = cus.cdccode
+LEFT JOIN InventoryClass as invcls on invcls.cinvccode = inv.cinvccode
+LEFT JOIN InventoryClass as invtopcls on left(invcls.cInvCCode,2) = invtopcls.cInvCCode
+where 1 = 1
+    AND (p.cpersoncode = '0207')
+2026-06-23 10:25:48.608 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] 返回列数=14, 行数=5231
+2026-06-23 10:33:05.593 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteReport] reportId=30002, userId=9
+2026-06-23 10:33:05.611 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteReport] hasView=true
+2026-06-23 10:33:05.617 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteStoredProcedure] 将执行 1 个存储过程: dflproc_report_accountingCost
+2026-06-23 10:33:06.918 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteStoredProcedure] dflproc_report_accountingCost 从 sys.parameters 返回 0 个参数: 
+2026-06-23 10:33:06.919 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteStoredProcedure] dflproc_report_accountingCost 接收了 0 个请求参数: 
+2026-06-23 10:33:06.921 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteStoredProcedure] 执行 dflproc_report_accountingCost, 参数数=0
+2026-06-23 10:33:06.944 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteStoredProcedure] dflproc_report_accountingCost 返回 3578 行
+2026-06-23 10:33:06.949 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteStoredProcedure] 全部完成, 总计 3578 行, 17 列
+2026-06-23 10:33:24.239 +08:00 [INF] EAMS2026.Application.Services.Erp.VouchModifyService [GetSalespersons] 从 erp_settings_salesperson_map 读取业务员列表
+2026-06-23 10:33:24.242 +08:00 [INF] EAMS2026.Application.Services.Erp.VouchModifyService [GetSalespersons] 从映射表获取到 6 个业务员
+2026-06-23 10:33:24.589 +08:00 [INF] EAMS2026.Application.Services.Erp.VouchModifyService [QueryUnverifiedDispatches] 开始查询未审核发货单, 客户编码=null, 日期范围=null~null
+2026-06-23 10:33:24.710 +08:00 [INF] EAMS2026.Application.Services.Erp.VouchModifyService [QueryUnverifiedDispatches] 查询完成, 共 20 条 (总计 424)
+2026-06-23 10:33:32.487 +08:00 [INF] EAMS2026.Application.Services.Erp.VouchModifyService [GetSalespersons] 从 erp_settings_salesperson_map 读取业务员列表
+2026-06-23 10:33:32.489 +08:00 [INF] EAMS2026.Application.Services.Erp.VouchModifyService [GetSalespersons] 从映射表获取到 6 个业务员
+2026-06-23 10:33:32.822 +08:00 [INF] EAMS2026.Application.Services.Erp.VouchModifyService [QueryUnverifiedDispatches] 开始查询未审核发货单, 客户编码=null, 日期范围=null~null
+2026-06-23 10:33:32.863 +08:00 [INF] EAMS2026.Application.Services.Erp.VouchModifyService [QueryUnverifiedDispatches] 查询完成, 共 20 条 (总计 424)
+2026-06-23 10:35:14.960 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteReport] reportId=2, userId=5
+2026-06-23 10:35:14.970 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteReport] hasView=true
+2026-06-23 10:35:14.974 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [BuildFilterConditions] between: ddate 从 "2025-01-01T00:00:00.0000000+08:00" ~ "2026-06-23T00:00:00.0000000+08:00"
+2026-06-23 10:35:14.975 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [BuildFilterConditions] 生成条件: ddate BETWEEN '2025-01-01 00:00:00' AND '2026-06-23 00:00:00' AND year = '2026' AND cpersoncode = '0207'
+2026-06-23 10:35:14.976 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [BuildFilterConditions] 修改后SQL: SELECT year,month,ddate,cdcname,cpersonname,cpersoncode,cCusName,cCusAbbName,cShipAddress,cCusPerson,cdlcode,cmaker,cWhName,cInvTopClsName,cInvName,cInvCCode,cInvCName,iQuantity,iNum,isum
+from dflView_eams_crossYearDispatch
+where 1=1
+    AND (ddate BETWEEN '2025-01-01 00:00:00' AND '2026-06-23 00:00:00' AND year = '2026' AND cpersoncode = '0207')
+2026-06-23 10:35:14.978 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteQueryInternal] 应用报表默认排序: ddate DESC, cdcname ASC
+2026-06-23 10:35:14.980 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] datasource=erp_u871_currentYear, isSqlServer=true, sql=SELECT year,month,ddate,cdcname,cpersonname,cpersoncode,cCusName,cCusAbbName,cShipAddress,cCusPerson,cdlcode,cmaker,cWhName,cInvTopClsName,cInvName,cInvCCode,cInvCName,iQuantity,iNum,isum
+from dflView_eams_crossYearDispatch
+where 1=1
+    AND (ddate BETWEEN '2025-01-01 00:00:00' AND '2026-06-23 00:00:00' AND year = '2026' AND cpersoncode = '0207')
+2026-06-23 10:35:14.986 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] 归一化参数数: 3
+2026-06-23 10:35:14.987 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] 应用排序: [ddate] DESC, [cdcname] ASC
+2026-06-23 10:35:14.988 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] page=1, pageSize=0
+2026-06-23 10:35:14.990 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] 无分页SQL: SELECT year,month,ddate,cdcname,cpersonname,cpersoncode,cCusName,cCusAbbName,cShipAddress,cCusPerson,cdlcode,cmaker,cWhName,cInvTopClsName,cInvName,cInvCCode,cInvCName,iQuantity,iNum,isum
+from dflView_eams_crossYearDispatch
+where 1=1
+    AND (ddate BETWEEN '2025-01-01 00:00:00' AND '2026-06-23 00:00:00' AND year = '2026' AND cpersoncode = '0207')
+ORDER BY [ddate] DESC, [cdcname] ASC
+2026-06-23 10:35:15.368 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] 返回列数=20, 行数=5039
+2026-06-23 11:09:25.796 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteReport] reportId=2, userId=5
+2026-06-23 11:09:25.805 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteReport] hasView=true
+2026-06-23 11:09:25.808 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [BuildFilterConditions] between: ddate 从 "2025-01-01T00:00:00.0000000+08:00" ~ "2026-06-23T00:00:00.0000000+08:00"
+2026-06-23 11:09:25.810 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [BuildFilterConditions] 生成条件: ddate BETWEEN '2025-01-01 00:00:00' AND '2026-06-23 00:00:00' AND year = '2026' AND cpersoncode = '0207'
+2026-06-23 11:09:25.811 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [BuildFilterConditions] 修改后SQL: SELECT year,month,ddate,cdcname,cpersonname,cpersoncode,cCusName,cCusAbbName,cShipAddress,cCusPerson,cdlcode,cmaker,cWhName,cInvTopClsName,cInvName,cInvCCode,cInvCName,iQuantity,iNum,isum
+from dflView_eams_crossYearDispatch
+where 1=1
+    AND (ddate BETWEEN '2025-01-01 00:00:00' AND '2026-06-23 00:00:00' AND year = '2026' AND cpersoncode = '0207')
+2026-06-23 11:09:25.812 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteQueryInternal] 应用报表默认排序: ddate DESC, cdcname ASC
+2026-06-23 11:09:25.816 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] datasource=erp_u871_currentYear, isSqlServer=true, sql=SELECT year,month,ddate,cdcname,cpersonname,cpersoncode,cCusName,cCusAbbName,cShipAddress,cCusPerson,cdlcode,cmaker,cWhName,cInvTopClsName,cInvName,cInvCCode,cInvCName,iQuantity,iNum,isum
+from dflView_eams_crossYearDispatch
+where 1=1
+    AND (ddate BETWEEN '2025-01-01 00:00:00' AND '2026-06-23 00:00:00' AND year = '2026' AND cpersoncode = '0207')
+2026-06-23 11:09:25.829 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] 归一化参数数: 3
+2026-06-23 11:09:25.831 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] 应用排序: [ddate] DESC, [cdcname] ASC
+2026-06-23 11:09:25.833 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] page=1, pageSize=0
+2026-06-23 11:09:25.834 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] 无分页SQL: SELECT year,month,ddate,cdcname,cpersonname,cpersoncode,cCusName,cCusAbbName,cShipAddress,cCusPerson,cdlcode,cmaker,cWhName,cInvTopClsName,cInvName,cInvCCode,cInvCName,iQuantity,iNum,isum
+from dflView_eams_crossYearDispatch
+where 1=1
+    AND (ddate BETWEEN '2025-01-01 00:00:00' AND '2026-06-23 00:00:00' AND year = '2026' AND cpersoncode = '0207')
+ORDER BY [ddate] DESC, [cdcname] ASC
+2026-06-23 11:09:27.259 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] 返回列数=20, 行数=5043
+2026-06-23 11:10:20.597 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteReport] reportId=2, userId=5
+2026-06-23 11:10:20.655 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteReport] hasView=true
+2026-06-23 11:10:20.656 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [BuildFilterConditions] between: ddate 从 "2025-01-01T00:00:00.0000000+08:00" ~ "2026-06-23T00:00:00.0000000+08:00"
+2026-06-23 11:10:20.658 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [BuildFilterConditions] 生成条件: ddate BETWEEN '2025-01-01 00:00:00' AND '2026-06-23 00:00:00' AND cpersoncode = '0207'
+2026-06-23 11:10:20.659 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [BuildFilterConditions] 修改后SQL: SELECT year,month,ddate,cdcname,cpersonname,cpersoncode,cCusName,cCusAbbName,cShipAddress,cCusPerson,cdlcode,cmaker,cWhName,cInvTopClsName,cInvName,cInvCCode,cInvCName,iQuantity,iNum,isum
+from dflView_eams_crossYearDispatch
+where 1=1
+    AND (ddate BETWEEN '2025-01-01 00:00:00' AND '2026-06-23 00:00:00' AND cpersoncode = '0207')
+2026-06-23 11:10:20.660 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteQueryInternal] 应用报表默认排序: ddate DESC, cdcname ASC
+2026-06-23 11:10:20.665 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] datasource=erp_u871_currentYear, isSqlServer=true, sql=SELECT year,month,ddate,cdcname,cpersonname,cpersoncode,cCusName,cCusAbbName,cShipAddress,cCusPerson,cdlcode,cmaker,cWhName,cInvTopClsName,cInvName,cInvCCode,cInvCName,iQuantity,iNum,isum
+from dflView_eams_crossYearDispatch
+where 1=1
+    AND (ddate BETWEEN '2025-01-01 00:00:00' AND '2026-06-23 00:00:00' AND cpersoncode = '0207')
+2026-06-23 11:10:20.667 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] 归一化参数数: 2
+2026-06-23 11:10:20.668 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] 应用排序: [ddate] DESC, [cdcname] ASC
+2026-06-23 11:10:20.669 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] page=1, pageSize=0
+2026-06-23 11:10:20.671 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] 无分页SQL: SELECT year,month,ddate,cdcname,cpersonname,cpersoncode,cCusName,cCusAbbName,cShipAddress,cCusPerson,cdlcode,cmaker,cWhName,cInvTopClsName,cInvName,cInvCCode,cInvCName,iQuantity,iNum,isum
+from dflView_eams_crossYearDispatch
+where 1=1
+    AND (ddate BETWEEN '2025-01-01 00:00:00' AND '2026-06-23 00:00:00' AND cpersoncode = '0207')
+ORDER BY [ddate] DESC, [cdcname] ASC
+2026-06-23 11:10:21.965 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] 返回列数=20, 行数=16321
+2026-06-23 14:54:19.778 +08:00 [ERR] Microsoft.Extensions.Hosting.Internal.Host Hosting failed to start
+System.InvalidOperationException: Unrecognized scheme in server address '<http://localhost:5106>'. Only 'http://' and 'https://' are supported.
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.ParseAddress(String address, Boolean& https)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.AddressesStrategy.BindAsync(AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindAsync(ListenOptions[] listenOptions, AddressBindContext context, Func`2 useHttps, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.BindAsync(CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.StartAsync[TContext](IHttpApplication`1 application, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.Internal.Host.<StartAsync>b__15_1(IHostedService service, CancellationToken token)
+   at Microsoft.Extensions.Hosting.Internal.Host.ForeachService[T](IEnumerable`1 services, CancellationToken token, Boolean concurrent, Boolean abortOnFirstException, List`1 exceptions, Func`3 operation)
+2026-06-23 14:54:19.909 +08:00 [ERR] Microsoft.Extensions.Hosting.Internal.Host BackgroundService failed
+System.OperationCanceledException: The operation was canceled.
+   at System.Threading.Channels.AsyncOperation`1.GetResult(Int16 token)
+   at System.Threading.Channels.ChannelReader`1.ReadAllAsync(CancellationToken cancellationToken)+MoveNext()
+   at EAMS2026.Infrastructure.Services.BackgroundTaskService.ExecuteAsync(CancellationToken stoppingToken) in D:\Codes\Projects\eams2026\src\EAMS2026.Infrastructure\Services\BackgroundTaskService.cs:line 29
+   at EAMS2026.Infrastructure.Services.BackgroundTaskService.ExecuteAsync(CancellationToken stoppingToken) in D:\Codes\Projects\eams2026\src\EAMS2026.Infrastructure\Services\BackgroundTaskService.cs:line 29
+   at Microsoft.Extensions.Hosting.Internal.Host.TryExecuteBackgroundServiceAsync(BackgroundService backgroundService)
+2026-06-23 14:54:19.917 +08:00 [FTL] Microsoft.Extensions.Hosting.Internal.Host The HostOptions.BackgroundServiceExceptionBehavior is configured to StopHost. A BackgroundService has thrown an unhandled exception, and the IHost instance is stopping. To avoid this behavior, configure this to Ignore; however the BackgroundService will not be restarted.
+System.OperationCanceledException: The operation was canceled.
+   at System.Threading.Channels.AsyncOperation`1.GetResult(Int16 token)
+   at System.Threading.Channels.ChannelReader`1.ReadAllAsync(CancellationToken cancellationToken)+MoveNext()
+   at EAMS2026.Infrastructure.Services.BackgroundTaskService.ExecuteAsync(CancellationToken stoppingToken) in D:\Codes\Projects\eams2026\src\EAMS2026.Infrastructure\Services\BackgroundTaskService.cs:line 29
+   at EAMS2026.Infrastructure.Services.BackgroundTaskService.ExecuteAsync(CancellationToken stoppingToken) in D:\Codes\Projects\eams2026\src\EAMS2026.Infrastructure\Services\BackgroundTaskService.cs:line 29
+   at Microsoft.Extensions.Hosting.Internal.Host.TryExecuteBackgroundServiceAsync(BackgroundService backgroundService)
+2026-06-23 14:54:45.200 +08:00 [ERR] Microsoft.Extensions.Hosting.Internal.Host Hosting failed to start
+System.InvalidOperationException: Unrecognized scheme in server address '<http://localhost:5106>'. Only 'http://' and 'https://' are supported.
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.ParseAddress(String address, Boolean& https)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.AddressesStrategy.BindAsync(AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindAsync(ListenOptions[] listenOptions, AddressBindContext context, Func`2 useHttps, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.BindAsync(CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.StartAsync[TContext](IHttpApplication`1 application, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.Internal.Host.<StartAsync>b__15_1(IHostedService service, CancellationToken token)
+   at Microsoft.Extensions.Hosting.Internal.Host.ForeachService[T](IEnumerable`1 services, CancellationToken token, Boolean concurrent, Boolean abortOnFirstException, List`1 exceptions, Func`3 operation)
+2026-06-23 14:54:46.620 +08:00 [ERR] Microsoft.Extensions.Hosting.Internal.Host BackgroundService failed
+System.OperationCanceledException: The operation was canceled.
+   at System.Threading.Channels.AsyncOperation`1.GetResult(Int16 token)
+   at System.Threading.Channels.ChannelReader`1.ReadAllAsync(CancellationToken cancellationToken)+MoveNext()
+   at EAMS2026.Infrastructure.Services.BackgroundTaskService.ExecuteAsync(CancellationToken stoppingToken) in D:\Codes\Projects\eams2026\src\EAMS2026.Infrastructure\Services\BackgroundTaskService.cs:line 29
+   at EAMS2026.Infrastructure.Services.BackgroundTaskService.ExecuteAsync(CancellationToken stoppingToken) in D:\Codes\Projects\eams2026\src\EAMS2026.Infrastructure\Services\BackgroundTaskService.cs:line 29
+   at Microsoft.Extensions.Hosting.Internal.Host.TryExecuteBackgroundServiceAsync(BackgroundService backgroundService)
+2026-06-23 14:54:49.422 +08:00 [FTL] Microsoft.Extensions.Hosting.Internal.Host The HostOptions.BackgroundServiceExceptionBehavior is configured to StopHost. A BackgroundService has thrown an unhandled exception, and the IHost instance is stopping. To avoid this behavior, configure this to Ignore; however the BackgroundService will not be restarted.
+System.OperationCanceledException: The operation was canceled.
+   at System.Threading.Channels.AsyncOperation`1.GetResult(Int16 token)
+   at System.Threading.Channels.ChannelReader`1.ReadAllAsync(CancellationToken cancellationToken)+MoveNext()
+   at EAMS2026.Infrastructure.Services.BackgroundTaskService.ExecuteAsync(CancellationToken stoppingToken) in D:\Codes\Projects\eams2026\src\EAMS2026.Infrastructure\Services\BackgroundTaskService.cs:line 29
+   at EAMS2026.Infrastructure.Services.BackgroundTaskService.ExecuteAsync(CancellationToken stoppingToken) in D:\Codes\Projects\eams2026\src\EAMS2026.Infrastructure\Services\BackgroundTaskService.cs:line 29
+   at Microsoft.Extensions.Hosting.Internal.Host.TryExecuteBackgroundServiceAsync(BackgroundService backgroundService)
+2026-06-23 15:30:18.281 +08:00 [INF] Microsoft.Hosting.Lifetime Now listening on: http://localhost:5106
+2026-06-23 15:30:18.572 +08:00 [INF] Microsoft.Hosting.Lifetime Application started. Press Ctrl+C to shut down.
+2026-06-23 15:30:18.981 +08:00 [INF] Microsoft.Hosting.Lifetime Hosting environment: Development
+2026-06-23 15:30:19.688 +08:00 [INF] Microsoft.Hosting.Lifetime Content root path: D:\Codes\Projects\eams2026\src\EAMS2026.Api
+2026-06-23 15:30:47.803 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteReport] reportId=2, userId=5
+2026-06-23 15:30:47.816 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteReport] hasView=true
+2026-06-23 15:30:47.954 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [BuildFilterConditions] between: ddate 从 "2025-01-01T00:00:00.0000000+08:00" ~ "2026-06-23T00:00:00.0000000+08:00"
+2026-06-23 15:30:47.965 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [BuildFilterConditions] 生成条件: ddate BETWEEN @_bf0 AND @_bf1 AND year = @_bf2 AND cpersoncode = @_bf3
+2026-06-23 15:30:47.966 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [BuildFilterConditions] 修改后SQL: SELECT year,month,ddate,cdcname,cpersonname,cpersoncode,cCusName,cCusAbbName,cShipAddress,cCusPerson,cdlcode,cmaker,cWhName,cInvTopClsName,cInvName,cInvCCode,cInvCName,iQuantity,iNum,isum
+from dflView_eams_crossYearDispatch
+where 1=1
+    AND (ddate BETWEEN @_bf0 AND @_bf1 AND year = @_bf2 AND cpersoncode = @_bf3)
+2026-06-23 15:30:47.968 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [BuildFilterConditions] 额外参数 _bf0 = "2025-01-01T00:00:00.0000000+08:00" (DateTime)
+2026-06-23 15:30:47.970 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [BuildFilterConditions] 额外参数 _bf1 = "2026-06-23T00:00:00.0000000+08:00" (DateTime)
+2026-06-23 15:30:47.972 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [BuildFilterConditions] 额外参数 _bf2 = 2026 (String)
+2026-06-23 15:30:47.978 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [BuildFilterConditions] 额外参数 _bf3 = 0207 (String)
+2026-06-23 15:30:47.982 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteQueryInternal] 应用报表默认排序: ddate DESC, cdcname ASC
+2026-06-23 15:30:48.142 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] datasource=erp_u871_currentYear, isSqlServer=true, sql=SELECT year,month,ddate,cdcname,cpersonname,cpersoncode,cCusName,cCusAbbName,cShipAddress,cCusPerson,cdlcode,cmaker,cWhName,cInvTopClsName,cInvName,cInvCCode,cInvCName,iQuantity,iNum,isum
+from dflView_eams_crossYearDispatch
+where 1=1
+    AND (ddate BETWEEN @_bf0 AND @_bf1 AND year = @_bf2 AND cpersoncode = @_bf3)
+2026-06-23 15:30:48.145 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] 归一化参数数: 7
+2026-06-23 15:30:48.150 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] 应用排序: [ddate] DESC, [cdcname] ASC
+2026-06-23 15:30:48.152 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] page=1, pageSize=0
+2026-06-23 15:30:48.153 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] 无分页SQL: SELECT year,month,ddate,cdcname,cpersonname,cpersoncode,cCusName,cCusAbbName,cShipAddress,cCusPerson,cdlcode,cmaker,cWhName,cInvTopClsName,cInvName,cInvCCode,cInvCName,iQuantity,iNum,isum
+from dflView_eams_crossYearDispatch
+where 1=1
+    AND (ddate BETWEEN @_bf0 AND @_bf1 AND year = @_bf2 AND cpersoncode = @_bf3)
+ORDER BY [ddate] DESC, [cdcname] ASC
+2026-06-23 15:30:50.666 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteReport] reportId=2, userId=5
+2026-06-23 15:30:50.678 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteReport] hasView=true
+2026-06-23 15:30:50.680 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [BuildFilterConditions] between: ddate 从 "2025-01-01T00:00:00.0000000+08:00" ~ "2026-06-23T00:00:00.0000000+08:00"
+2026-06-23 15:30:50.757 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [BuildFilterConditions] 生成条件: ddate BETWEEN @_bf0 AND @_bf1 AND year = @_bf2 AND cpersoncode = @_bf3
+2026-06-23 15:30:50.758 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [BuildFilterConditions] 修改后SQL: SELECT year,month,ddate,cdcname,cpersonname,cpersoncode,cCusName,cCusAbbName,cShipAddress,cCusPerson,cdlcode,cmaker,cWhName,cInvTopClsName,cInvName,cInvCCode,cInvCName,iQuantity,iNum,isum
+from dflView_eams_crossYearDispatch
+where 1=1
+    AND (ddate BETWEEN @_bf0 AND @_bf1 AND year = @_bf2 AND cpersoncode = @_bf3)
+2026-06-23 15:30:50.762 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [BuildFilterConditions] 额外参数 _bf0 = "2025-01-01T00:00:00.0000000+08:00" (DateTime)
+2026-06-23 15:30:50.764 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [BuildFilterConditions] 额外参数 _bf1 = "2026-06-23T00:00:00.0000000+08:00" (DateTime)
+2026-06-23 15:30:50.766 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [BuildFilterConditions] 额外参数 _bf2 = 2026 (String)
+2026-06-23 15:30:50.768 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [BuildFilterConditions] 额外参数 _bf3 = 0207 (String)
+2026-06-23 15:30:50.772 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteQueryInternal] 应用报表默认排序: ddate DESC, cdcname ASC
+2026-06-23 15:30:50.776 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] datasource=erp_u871_currentYear, isSqlServer=true, sql=SELECT year,month,ddate,cdcname,cpersonname,cpersoncode,cCusName,cCusAbbName,cShipAddress,cCusPerson,cdlcode,cmaker,cWhName,cInvTopClsName,cInvName,cInvCCode,cInvCName,iQuantity,iNum,isum
+from dflView_eams_crossYearDispatch
+where 1=1
+    AND (ddate BETWEEN @_bf0 AND @_bf1 AND year = @_bf2 AND cpersoncode = @_bf3)
+2026-06-23 15:30:50.778 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] 归一化参数数: 7
+2026-06-23 15:30:50.779 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] 应用排序: [ddate] DESC, [cdcname] ASC
+2026-06-23 15:30:50.780 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] page=1, pageSize=0
+2026-06-23 15:30:50.781 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] 无分页SQL: SELECT year,month,ddate,cdcname,cpersonname,cpersoncode,cCusName,cCusAbbName,cShipAddress,cCusPerson,cdlcode,cmaker,cWhName,cInvTopClsName,cInvName,cInvCCode,cInvCName,iQuantity,iNum,isum
+from dflView_eams_crossYearDispatch
+where 1=1
+    AND (ddate BETWEEN @_bf0 AND @_bf1 AND year = @_bf2 AND cpersoncode = @_bf3)
+ORDER BY [ddate] DESC, [cdcname] ASC
+2026-06-23 15:30:50.876 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] 返回列数=20, 行数=5070
+2026-06-23 15:30:51.368 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] 返回列数=20, 行数=5070
+2026-06-23 15:31:22.887 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteReport] reportId=3, userId=5
+2026-06-23 15:31:22.896 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteReport] hasView=true
+2026-06-23 15:31:22.898 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [BuildFilterConditions] 生成条件: p.cpersoncode = @_bf0
+2026-06-23 15:31:22.899 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [BuildFilterConditions] 修改后SQL: SELECT year(som.ddate) as '年',month(som.ddate) as '月',dc.cdcname as '地区',p.cpersonname as '客户经理',cus.cCusName as '客户名称'
+,case when (CHARINDEX('(', cus.cCusAbbName)>0 and  CHARINDEX(')', cus.cCusAbbName)>0 ) 
+		then SUBSTRING(cus.cCusAbbName,CHARINDEX('(', cus.cCusAbbName)+1, CHARINDEX(')', cus.cCusAbbName)-1-CHARINDEX('(', cus.cCusAbbName))
+		else cus.cCusAbbName end as '客户简称'
+,cus.cCusPerson as '联系人','' as '仓库',
+invtopcls.cInvCName as '存货顶级分类',inv.cInvName '存货名称',invcls.cInvCCode as '存货分类编码',invcls.cInvCName as '存货分类',
+iQuantity as '数量',isum as '金额'
+from SO_SOMain as som LEFT JOIN SO_SODetails as sod on som.id = sod.ID
+LEFT JOIN Inventory as inv on inv.cinvcode = sod.cInvCode 
+LEFT JOIN ComputationUnit as cu on inv.cComUnitCode = cu.cComunitCode
+LEFT JOIN Customer as cus on cus.ccuscode = som.cCusCode
+LEFT JOIN Person as p on p.cpersoncode = som.cPersonCode
+LEFT JOIN DistrictClass as dc on dc.cdccode = cus.cdccode
+LEFT JOIN InventoryClass as invcls on invcls.cinvccode = inv.cinvccode
+LEFT JOIN InventoryClass as invtopcls on left(invcls.cInvCCode,2) = invtopcls.cInvCCode
+where 1 = 1
+    AND (p.cpersoncode = @_bf0)
+2026-06-23 15:31:22.900 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [BuildFilterConditions] 额外参数 _bf0 = 0207 (String)
+2026-06-23 15:31:22.902 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] datasource=erp_u871_currentYear, isSqlServer=true, sql=SELECT year(som.ddate) as '年',month(som.ddate) as '月',dc.cdcname as '地区',p.cpersonname as '客户经理',cus.cCusName as '客户名称'
+,case when (CHARINDEX('(', cus.cCusAbbName)>0 and  CHARINDEX(')', cus.cCusAbbName)>0 ) 
+		then SUBSTRING(cus.cCusAbbName,CHARINDEX('(', cus.cCusAbbName)+1, CHARINDEX(')', cus.cCusAbbName)-1-CHARINDEX('(', cus.cCusAbbName))
+		else cus.cCusAbbName end as '客户简称'
+,cus.cCusPerson as '联系人','' as '仓库',
+invtopcls.cInvCName as '存货顶级分类',inv.cInvName '存货名称',invcls.cInvCCode as '存货分类编码',invcls.cInvCName as '存货分类',
+iQuantity as '数量',isum as '金额'
+from SO_SOMain as som LEFT JOIN SO_SODetails as sod on som.id = sod.ID
+LEFT JOIN Inventory as inv on inv.cinvcode = sod.cInvCode 
+LEFT JOIN ComputationUnit as cu on inv.cComUnitCode = cu.cComunitCode
+LEFT JOIN Customer as cus on cus.ccuscode = som.cCusCode
+LEFT JOIN Person as p on p.cpersoncode = som.cPersonCode
+LEFT JOIN DistrictClass as dc on dc.cdccode = cus.cdccode
+LEFT JOIN InventoryClass as invcls on invcls.cinvccode = inv.cinvccode
+LEFT JOIN InventoryClass as invtopcls on left(invcls.cInvCCode,2) = invtopcls.cInvCCode
+where 1 = 1
+    AND (p.cpersoncode = @_bf0)
+2026-06-23 15:31:22.904 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] 归一化参数数: 2
+2026-06-23 15:31:22.905 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] page=1, pageSize=0
+2026-06-23 15:31:22.907 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] 无分页SQL: SELECT year(som.ddate) as '年',month(som.ddate) as '月',dc.cdcname as '地区',p.cpersonname as '客户经理',cus.cCusName as '客户名称'
+,case when (CHARINDEX('(', cus.cCusAbbName)>0 and  CHARINDEX(')', cus.cCusAbbName)>0 ) 
+		then SUBSTRING(cus.cCusAbbName,CHARINDEX('(', cus.cCusAbbName)+1, CHARINDEX(')', cus.cCusAbbName)-1-CHARINDEX('(', cus.cCusAbbName))
+		else cus.cCusAbbName end as '客户简称'
+,cus.cCusPerson as '联系人','' as '仓库',
+invtopcls.cInvCName as '存货顶级分类',inv.cInvName '存货名称',invcls.cInvCCode as '存货分类编码',invcls.cInvCName as '存货分类',
+iQuantity as '数量',isum as '金额'
+from SO_SOMain as som LEFT JOIN SO_SODetails as sod on som.id = sod.ID
+LEFT JOIN Inventory as inv on inv.cinvcode = sod.cInvCode 
+LEFT JOIN ComputationUnit as cu on inv.cComUnitCode = cu.cComunitCode
+LEFT JOIN Customer as cus on cus.ccuscode = som.cCusCode
+LEFT JOIN Person as p on p.cpersoncode = som.cPersonCode
+LEFT JOIN DistrictClass as dc on dc.cdccode = cus.cdccode
+LEFT JOIN InventoryClass as invcls on invcls.cinvccode = inv.cinvccode
+LEFT JOIN InventoryClass as invtopcls on left(invcls.cInvCCode,2) = invtopcls.cInvCCode
+where 1 = 1
+    AND (p.cpersoncode = @_bf0)
+2026-06-23 15:31:23.340 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] 返回列数=14, 行数=5240
+2026-06-23 15:31:50.013 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteReport] reportId=2, userId=5
+2026-06-23 15:31:50.025 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteReport] hasView=true
+2026-06-23 15:31:50.026 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [BuildFilterConditions] between: ddate 从 "2025-01-01T00:00:00.0000000+08:00" ~ "2026-06-23T00:00:00.0000000+08:00"
+2026-06-23 15:31:50.028 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [BuildFilterConditions] 生成条件: ddate BETWEEN @_bf0 AND @_bf1 AND year = @_bf2 AND cpersoncode = @_bf3
+2026-06-23 15:31:50.029 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [BuildFilterConditions] 修改后SQL: SELECT year,month,ddate,cdcname,cpersonname,cpersoncode,cCusName,cCusAbbName,cShipAddress,cCusPerson,cdlcode,cmaker,cWhName,cInvTopClsName,cInvName,cInvCCode,cInvCName,iQuantity,iNum,isum
+from dflView_eams_crossYearDispatch
+where 1=1
+    AND (ddate BETWEEN @_bf0 AND @_bf1 AND year = @_bf2 AND cpersoncode = @_bf3)
+2026-06-23 15:31:50.030 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [BuildFilterConditions] 额外参数 _bf0 = "2025-01-01T00:00:00.0000000+08:00" (DateTime)
+2026-06-23 15:31:50.032 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [BuildFilterConditions] 额外参数 _bf1 = "2026-06-23T00:00:00.0000000+08:00" (DateTime)
+2026-06-23 15:31:50.041 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [BuildFilterConditions] 额外参数 _bf2 = 2026 (String)
+2026-06-23 15:31:50.043 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [BuildFilterConditions] 额外参数 _bf3 = 0207 (String)
+2026-06-23 15:31:50.046 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteQueryInternal] 应用报表默认排序: ddate DESC, cdcname ASC
+2026-06-23 15:31:50.049 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] datasource=erp_u871_currentYear, isSqlServer=true, sql=SELECT year,month,ddate,cdcname,cpersonname,cpersoncode,cCusName,cCusAbbName,cShipAddress,cCusPerson,cdlcode,cmaker,cWhName,cInvTopClsName,cInvName,cInvCCode,cInvCName,iQuantity,iNum,isum
+from dflView_eams_crossYearDispatch
+where 1=1
+    AND (ddate BETWEEN @_bf0 AND @_bf1 AND year = @_bf2 AND cpersoncode = @_bf3)
+2026-06-23 15:31:50.050 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] 归一化参数数: 7
+2026-06-23 15:31:50.141 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] 应用排序: [ddate] DESC, [cdcname] ASC
+2026-06-23 15:31:50.145 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] page=1, pageSize=0
+2026-06-23 15:31:50.147 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] 无分页SQL: SELECT year,month,ddate,cdcname,cpersonname,cpersoncode,cCusName,cCusAbbName,cShipAddress,cCusPerson,cdlcode,cmaker,cWhName,cInvTopClsName,cInvName,cInvCCode,cInvCName,iQuantity,iNum,isum
+from dflView_eams_crossYearDispatch
+where 1=1
+    AND (ddate BETWEEN @_bf0 AND @_bf1 AND year = @_bf2 AND cpersoncode = @_bf3)
+ORDER BY [ddate] DESC, [cdcname] ASC
+2026-06-23 15:31:50.549 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] 返回列数=20, 行数=5070
+2026-06-23 15:32:29.766 +08:00 [ERR] EAMS2026.Api.Middleware.ExceptionMiddleware 发生未处理的异常: Unable to resolve service for type 'EAMS2026.Infrastructure.Services.BackgroundTaskService' while attempting to activate 'EAMS2026.Api.Controllers.Attendance.AttendanceController'.
+System.InvalidOperationException: Unable to resolve service for type 'EAMS2026.Infrastructure.Services.BackgroundTaskService' while attempting to activate 'EAMS2026.Api.Controllers.Attendance.AttendanceController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.ThrowHelperUnableToResolveService(Type type, Type requiredBy)
+   at lambda_method123(Closure, IServiceProvider, Object[])
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at EAMS2026.Api.Middleware.OperationLogMiddleware.InvokeAsync(HttpContext context) in D:\Codes\Projects\eams2026\src\EAMS2026.Api\Middleware\OperationLogMiddleware.cs:line 62
+   at EAMS2026.Api.Middleware.OperationLogMiddleware.InvokeAsync(HttpContext context) in D:\Codes\Projects\eams2026\src\EAMS2026.Api\Middleware\OperationLogMiddleware.cs:line 95
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.ResponseCompression.ResponseCompressionMiddleware.InvokeCore(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at EAMS2026.Api.Middleware.ExceptionMiddleware.InvokeAsync(HttpContext context) in D:\Codes\Projects\eams2026\src\EAMS2026.Api\Middleware\ExceptionMiddleware.cs:line 35
+2026-06-23 15:32:29.952 +08:00 [ERR] EAMS2026.Api.Middleware.ExceptionMiddleware 发生未处理的异常: Unable to resolve service for type 'EAMS2026.Infrastructure.Services.BackgroundTaskService' while attempting to activate 'EAMS2026.Api.Controllers.Attendance.AttendanceController'.
+System.InvalidOperationException: Unable to resolve service for type 'EAMS2026.Infrastructure.Services.BackgroundTaskService' while attempting to activate 'EAMS2026.Api.Controllers.Attendance.AttendanceController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.ThrowHelperUnableToResolveService(Type type, Type requiredBy)
+   at lambda_method135(Closure, IServiceProvider, Object[])
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at EAMS2026.Api.Middleware.OperationLogMiddleware.InvokeAsync(HttpContext context) in D:\Codes\Projects\eams2026\src\EAMS2026.Api\Middleware\OperationLogMiddleware.cs:line 62
+   at EAMS2026.Api.Middleware.OperationLogMiddleware.InvokeAsync(HttpContext context) in D:\Codes\Projects\eams2026\src\EAMS2026.Api\Middleware\OperationLogMiddleware.cs:line 95
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.ResponseCompression.ResponseCompressionMiddleware.InvokeCore(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at EAMS2026.Api.Middleware.ExceptionMiddleware.InvokeAsync(HttpContext context) in D:\Codes\Projects\eams2026\src\EAMS2026.Api\Middleware\ExceptionMiddleware.cs:line 35
+2026-06-23 17:06:28.771 +08:00 [ERR] EAMS2026.Api.Middleware.ExceptionMiddleware 发生未处理的异常: Unable to resolve service for type 'EAMS2026.Infrastructure.Services.BackgroundTaskService' while attempting to activate 'EAMS2026.Api.Controllers.Attendance.AttendanceController'.
+System.InvalidOperationException: Unable to resolve service for type 'EAMS2026.Infrastructure.Services.BackgroundTaskService' while attempting to activate 'EAMS2026.Api.Controllers.Attendance.AttendanceController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.ThrowHelperUnableToResolveService(Type type, Type requiredBy)
+   at lambda_method123(Closure, IServiceProvider, Object[])
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at EAMS2026.Api.Middleware.OperationLogMiddleware.InvokeAsync(HttpContext context) in D:\Codes\Projects\eams2026\src\EAMS2026.Api\Middleware\OperationLogMiddleware.cs:line 62
+   at EAMS2026.Api.Middleware.OperationLogMiddleware.InvokeAsync(HttpContext context) in D:\Codes\Projects\eams2026\src\EAMS2026.Api\Middleware\OperationLogMiddleware.cs:line 95
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.ResponseCompression.ResponseCompressionMiddleware.InvokeCore(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at EAMS2026.Api.Middleware.ExceptionMiddleware.InvokeAsync(HttpContext context) in D:\Codes\Projects\eams2026\src\EAMS2026.Api\Middleware\ExceptionMiddleware.cs:line 35
+2026-06-23 17:06:28.921 +08:00 [ERR] EAMS2026.Api.Middleware.ExceptionMiddleware 发生未处理的异常: Unable to resolve service for type 'EAMS2026.Infrastructure.Services.BackgroundTaskService' while attempting to activate 'EAMS2026.Api.Controllers.Attendance.AttendanceController'.
+System.InvalidOperationException: Unable to resolve service for type 'EAMS2026.Infrastructure.Services.BackgroundTaskService' while attempting to activate 'EAMS2026.Api.Controllers.Attendance.AttendanceController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.ThrowHelperUnableToResolveService(Type type, Type requiredBy)
+   at lambda_method135(Closure, IServiceProvider, Object[])
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at EAMS2026.Api.Middleware.OperationLogMiddleware.InvokeAsync(HttpContext context) in D:\Codes\Projects\eams2026\src\EAMS2026.Api\Middleware\OperationLogMiddleware.cs:line 62
+   at EAMS2026.Api.Middleware.OperationLogMiddleware.InvokeAsync(HttpContext context) in D:\Codes\Projects\eams2026\src\EAMS2026.Api\Middleware\OperationLogMiddleware.cs:line 95
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.ResponseCompression.ResponseCompressionMiddleware.InvokeCore(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at EAMS2026.Api.Middleware.ExceptionMiddleware.InvokeAsync(HttpContext context) in D:\Codes\Projects\eams2026\src\EAMS2026.Api\Middleware\ExceptionMiddleware.cs:line 35
+2026-06-23 17:06:50.920 +08:00 [ERR] EAMS2026.Api.Middleware.ExceptionMiddleware 发生未处理的异常: Unable to resolve service for type 'EAMS2026.Infrastructure.Services.BackgroundTaskService' while attempting to activate 'EAMS2026.Api.Controllers.Attendance.AttendanceController'.
+System.InvalidOperationException: Unable to resolve service for type 'EAMS2026.Infrastructure.Services.BackgroundTaskService' while attempting to activate 'EAMS2026.Api.Controllers.Attendance.AttendanceController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.ThrowHelperUnableToResolveService(Type type, Type requiredBy)
+   at lambda_method123(Closure, IServiceProvider, Object[])
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at EAMS2026.Api.Middleware.OperationLogMiddleware.InvokeAsync(HttpContext context) in D:\Codes\Projects\eams2026\src\EAMS2026.Api\Middleware\OperationLogMiddleware.cs:line 62
+   at EAMS2026.Api.Middleware.OperationLogMiddleware.InvokeAsync(HttpContext context) in D:\Codes\Projects\eams2026\src\EAMS2026.Api\Middleware\OperationLogMiddleware.cs:line 95
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.ResponseCompression.ResponseCompressionMiddleware.InvokeCore(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at EAMS2026.Api.Middleware.ExceptionMiddleware.InvokeAsync(HttpContext context) in D:\Codes\Projects\eams2026\src\EAMS2026.Api\Middleware\ExceptionMiddleware.cs:line 35
+2026-06-23 17:06:51.301 +08:00 [ERR] EAMS2026.Api.Middleware.ExceptionMiddleware 发生未处理的异常: Unable to resolve service for type 'EAMS2026.Infrastructure.Services.BackgroundTaskService' while attempting to activate 'EAMS2026.Api.Controllers.Attendance.AttendanceController'.
+System.InvalidOperationException: Unable to resolve service for type 'EAMS2026.Infrastructure.Services.BackgroundTaskService' while attempting to activate 'EAMS2026.Api.Controllers.Attendance.AttendanceController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.ThrowHelperUnableToResolveService(Type type, Type requiredBy)
+   at lambda_method135(Closure, IServiceProvider, Object[])
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at EAMS2026.Api.Middleware.OperationLogMiddleware.InvokeAsync(HttpContext context) in D:\Codes\Projects\eams2026\src\EAMS2026.Api\Middleware\OperationLogMiddleware.cs:line 62
+   at EAMS2026.Api.Middleware.OperationLogMiddleware.InvokeAsync(HttpContext context) in D:\Codes\Projects\eams2026\src\EAMS2026.Api\Middleware\OperationLogMiddleware.cs:line 95
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.ResponseCompression.ResponseCompressionMiddleware.InvokeCore(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at EAMS2026.Api.Middleware.ExceptionMiddleware.InvokeAsync(HttpContext context) in D:\Codes\Projects\eams2026\src\EAMS2026.Api\Middleware\ExceptionMiddleware.cs:line 35
+2026-06-23 17:07:07.591 +08:00 [ERR] EAMS2026.Api.Middleware.ExceptionMiddleware 发生未处理的异常: Unable to resolve service for type 'EAMS2026.Infrastructure.Services.BackgroundTaskService' while attempting to activate 'EAMS2026.Api.Controllers.Attendance.AttendanceController'.
+System.InvalidOperationException: Unable to resolve service for type 'EAMS2026.Infrastructure.Services.BackgroundTaskService' while attempting to activate 'EAMS2026.Api.Controllers.Attendance.AttendanceController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.ThrowHelperUnableToResolveService(Type type, Type requiredBy)
+   at lambda_method123(Closure, IServiceProvider, Object[])
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at EAMS2026.Api.Middleware.OperationLogMiddleware.InvokeAsync(HttpContext context) in D:\Codes\Projects\eams2026\src\EAMS2026.Api\Middleware\OperationLogMiddleware.cs:line 62
+   at EAMS2026.Api.Middleware.OperationLogMiddleware.InvokeAsync(HttpContext context) in D:\Codes\Projects\eams2026\src\EAMS2026.Api\Middleware\OperationLogMiddleware.cs:line 95
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.ResponseCompression.ResponseCompressionMiddleware.InvokeCore(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at EAMS2026.Api.Middleware.ExceptionMiddleware.InvokeAsync(HttpContext context) in D:\Codes\Projects\eams2026\src\EAMS2026.Api\Middleware\ExceptionMiddleware.cs:line 35
+2026-06-23 17:07:08.141 +08:00 [ERR] EAMS2026.Api.Middleware.ExceptionMiddleware 发生未处理的异常: Unable to resolve service for type 'EAMS2026.Infrastructure.Services.BackgroundTaskService' while attempting to activate 'EAMS2026.Api.Controllers.Attendance.AttendanceController'.
+System.InvalidOperationException: Unable to resolve service for type 'EAMS2026.Infrastructure.Services.BackgroundTaskService' while attempting to activate 'EAMS2026.Api.Controllers.Attendance.AttendanceController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.ThrowHelperUnableToResolveService(Type type, Type requiredBy)
+   at lambda_method135(Closure, IServiceProvider, Object[])
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at EAMS2026.Api.Middleware.OperationLogMiddleware.InvokeAsync(HttpContext context) in D:\Codes\Projects\eams2026\src\EAMS2026.Api\Middleware\OperationLogMiddleware.cs:line 62
+   at EAMS2026.Api.Middleware.OperationLogMiddleware.InvokeAsync(HttpContext context) in D:\Codes\Projects\eams2026\src\EAMS2026.Api\Middleware\OperationLogMiddleware.cs:line 95
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.ResponseCompression.ResponseCompressionMiddleware.InvokeCore(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at EAMS2026.Api.Middleware.ExceptionMiddleware.InvokeAsync(HttpContext context) in D:\Codes\Projects\eams2026\src\EAMS2026.Api\Middleware\ExceptionMiddleware.cs:line 35
+2026-06-23 17:53:50.295 +08:00 [INF] Microsoft.Hosting.Lifetime Now listening on: http://localhost:5106
+2026-06-23 17:53:50.416 +08:00 [INF] Microsoft.Hosting.Lifetime Application started. Press Ctrl+C to shut down.
+2026-06-23 17:53:50.418 +08:00 [INF] Microsoft.Hosting.Lifetime Hosting environment: Development
+2026-06-23 17:53:50.419 +08:00 [INF] Microsoft.Hosting.Lifetime Content root path: D:\Codes\Projects\eams2026\src\EAMS2026.Api
+2026-06-23 17:54:28.677 +08:00 [INF] System.Net.Http.HttpClient.IDingTalkService.LogicalHandler Start processing HTTP request GET https://oapi.dingtalk.com/gettoken?appkey=dingolaz4gqcrbdponui&appsecret=--gIaMyXIQM23OFOxmItZUvhgDIy-f_VGtAFxa7O0KDwNaPT2NrfdGHb-R2O_TVE
+2026-06-23 17:54:28.683 +08:00 [INF] System.Net.Http.HttpClient.IDingTalkService.ClientHandler Sending HTTP request GET https://oapi.dingtalk.com/gettoken?appkey=dingolaz4gqcrbdponui&appsecret=--gIaMyXIQM23OFOxmItZUvhgDIy-f_VGtAFxa7O0KDwNaPT2NrfdGHb-R2O_TVE
+2026-06-23 17:54:28.996 +08:00 [INF] System.Net.Http.HttpClient.IDingTalkService.ClientHandler Received HTTP response headers after 309.674ms - 200
+2026-06-23 17:54:29.001 +08:00 [INF] System.Net.Http.HttpClient.IDingTalkService.LogicalHandler End processing HTTP request after 332.0506ms - 200
+2026-06-23 17:54:29.010 +08:00 [INF] EAMS2026.Infrastructure.Data.DingTalkService 钉钉Token已刷新
+2026-06-23 17:54:29.101 +08:00 [INF] System.Net.Http.HttpClient.IDingTalkService.LogicalHandler Start processing HTTP request POST https://oapi.dingtalk.com/attendance/list?access_token=b596900f949a30d9b83a166376787363
+2026-06-23 17:54:29.103 +08:00 [INF] System.Net.Http.HttpClient.IDingTalkService.ClientHandler Sending HTTP request POST https://oapi.dingtalk.com/attendance/list?access_token=b596900f949a30d9b83a166376787363
+2026-06-23 17:54:29.200 +08:00 [INF] System.Net.Http.HttpClient.IDingTalkService.ClientHandler Received HTTP response headers after 94.9642ms - 200
+2026-06-23 17:54:29.210 +08:00 [INF] System.Net.Http.HttpClient.IDingTalkService.LogicalHandler End processing HTTP request after 109.2666ms - 200
+2026-06-23 17:54:29.459 +08:00 [INF] EAMS2026.Application.Services.Attendance.AttendanceCalculationService INSERT record: emp=3, date=2026-06-05, bAtt="08:11:13", eAtt="08:11:13", id=5343
+2026-06-23 17:54:29.492 +08:00 [INF] EAMS2026.Application.Services.Attendance.AttendanceCalculationService Schedule UPDATE: emp=3, date=2026-06-05, period=5
+2026-06-23 17:54:29.702 +08:00 [INF] EAMS2026.Application.Services.Attendance.AttendanceCalculationService INSERT record: emp=3, date=2026-06-06, bAtt="08:17:47", eAtt="08:17:47", id=5344
+2026-06-23 17:54:29.718 +08:00 [INF] EAMS2026.Application.Services.Attendance.AttendanceCalculationService Schedule UPDATE: emp=3, date=2026-06-06, period=6
+2026-06-23 17:54:29.822 +08:00 [INF] EAMS2026.Application.Services.Attendance.AttendanceCalculationService INSERT record: emp=3, date=2026-06-07, bAtt=null, eAtt=null, id=5345
+2026-06-23 17:54:29.837 +08:00 [INF] EAMS2026.Application.Services.Attendance.AttendanceCalculationService Schedule UPDATE: emp=3, date=2026-06-07, period=7
+2026-06-23 17:54:42.461 +08:00 [INF] EAMS2026.Application.Services.Erp.VouchModifyService [GetSalespersons] 从 erp_settings_salesperson_map 读取业务员列表
+2026-06-23 17:54:42.624 +08:00 [INF] EAMS2026.Application.Services.Erp.VouchModifyService [GetSalespersons] 从映射表获取到 6 个业务员
+2026-06-23 17:54:42.774 +08:00 [INF] EAMS2026.Application.Services.Erp.VouchModifyService [QueryOrders] 开始查询订单, 客户编码=null, 日期范围=null~null
+2026-06-23 17:54:44.705 +08:00 [INF] EAMS2026.Application.Services.Erp.VouchModifyService [QueryOrders] 查询完成, 共 12 条 (总计 70)
+2026-06-23 17:54:46.687 +08:00 [INF] EAMS2026.Application.Services.Erp.VouchModifyService [GetSalespersons] 从 erp_settings_salesperson_map 读取业务员列表
+2026-06-23 17:54:46.708 +08:00 [INF] EAMS2026.Application.Services.Erp.VouchModifyService [GetSalespersons] 从映射表获取到 6 个业务员
+2026-06-23 17:54:46.874 +08:00 [INF] EAMS2026.Application.Services.Erp.VouchModifyService [QueryUnverifiedDispatches] 开始查询未审核发货单, 客户编码=null, 日期范围=null~null
+2026-06-23 17:54:47.105 +08:00 [INF] EAMS2026.Application.Services.Erp.VouchModifyService [QueryUnverifiedDispatches] 查询完成, 共 20 条 (总计 443)
+2026-06-23 17:54:56.540 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteReport] reportId=2, userId=1
+2026-06-23 17:54:56.718 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteReport] hasView=true
+2026-06-23 17:54:56.738 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [BuildFilterConditions] between: ddate 从 "2025-01-01T00:00:00.0000000+08:00" ~ "2026-06-23T00:00:00.0000000+08:00"
+2026-06-23 17:54:56.745 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [BuildFilterConditions] 生成条件: ddate BETWEEN @_bf0 AND @_bf1 AND year = @_bf2 AND cpersoncode = @_bf3
+2026-06-23 17:54:56.837 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [BuildFilterConditions] 修改后SQL: SELECT year,month,ddate,cdcname,cpersonname,cpersoncode,cCusName,cCusAbbName,cShipAddress,cCusPerson,cdlcode,cmaker,cWhName,cInvTopClsName,cInvName,cInvCCode,cInvCName,iQuantity,iNum,isum
+from dflView_eams_crossYearDispatch
+where 1=1
+    AND (ddate BETWEEN @_bf0 AND @_bf1 AND year = @_bf2 AND cpersoncode = @_bf3)
+2026-06-23 17:54:56.839 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [BuildFilterConditions] 额外参数 _bf0 = "2025-01-01T00:00:00.0000000+08:00" (DateTime)
+2026-06-23 17:54:56.841 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [BuildFilterConditions] 额外参数 _bf1 = "2026-06-23T00:00:00.0000000+08:00" (DateTime)
+2026-06-23 17:54:56.844 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [BuildFilterConditions] 额外参数 _bf2 = 2026 (String)
+2026-06-23 17:54:56.846 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [BuildFilterConditions] 额外参数 _bf3 = 0207 (String)
+2026-06-23 17:54:56.851 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteQueryInternal] 应用报表默认排序: ddate DESC, cdcname ASC
+2026-06-23 17:54:56.875 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] datasource=erp_u871_currentYear, isSqlServer=true, sql=SELECT year,month,ddate,cdcname,cpersonname,cpersoncode,cCusName,cCusAbbName,cShipAddress,cCusPerson,cdlcode,cmaker,cWhName,cInvTopClsName,cInvName,cInvCCode,cInvCName,iQuantity,iNum,isum
+from dflView_eams_crossYearDispatch
+where 1=1
+    AND (ddate BETWEEN @_bf0 AND @_bf1 AND year = @_bf2 AND cpersoncode = @_bf3)
+2026-06-23 17:54:56.944 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] 归一化参数数: 7
+2026-06-23 17:54:56.947 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] 应用排序: [ddate] DESC, [cdcname] ASC
+2026-06-23 17:54:56.948 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] page=1, pageSize=0
+2026-06-23 17:54:56.950 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] 无分页SQL: SELECT year,month,ddate,cdcname,cpersonname,cpersoncode,cCusName,cCusAbbName,cShipAddress,cCusPerson,cdlcode,cmaker,cWhName,cInvTopClsName,cInvName,cInvCCode,cInvCName,iQuantity,iNum,isum
+from dflView_eams_crossYearDispatch
+where 1=1
+    AND (ddate BETWEEN @_bf0 AND @_bf1 AND year = @_bf2 AND cpersoncode = @_bf3)
+ORDER BY [ddate] DESC, [cdcname] ASC
+2026-06-23 17:54:57.324 +08:00 [INF] EAMS2026.Infrastructure.Services.Erp.ReportService [ExecuteRawSql] 返回列数=20, 行数=5079

@@ -1,0 +1,32 @@
+{
+  "name": "eams2026-web",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc -b && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@element-plus/icons-vue": "^2.3.1",
+    "@microsoft/signalr": "^10.0.0",
+    "@visactor/vtable": "^1.26.3",
+    "@visactor/vue-vtable": "^1.26.3",
+    "axios": "^1.7.0",
+    "echarts": "^6.1.0",
+    "element-plus": "^2.9.0",
+    "pinia": "^3.0.0",
+    "sortablejs": "^1.15.0",
+    "vue": "^3.5.13",
+    "vue-router": "^4.5.0",
+    "xlsx": "^0.18.5"
+  },
+  "devDependencies": {
+    "@types/sortablejs": "^1.15.9",
+    "@vitejs/plugin-vue": "^5.2.0",
+    "typescript": "~5.7.0",
+    "vite": "^6.3.0",
+    "vue-tsc": "^2.2.0"
+  }
+}

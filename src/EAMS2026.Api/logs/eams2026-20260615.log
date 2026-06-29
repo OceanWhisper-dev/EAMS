@@ -1,0 +1,559 @@
+2026-06-15 11:39:08.982 +08:00 [INF] Microsoft.Hosting.Lifetime Now listening on: http://0.0.0.0:5106
+2026-06-15 11:39:09.086 +08:00 [INF] Microsoft.Hosting.Lifetime Application started. Press Ctrl+C to shut down.
+2026-06-15 11:39:09.116 +08:00 [INF] Microsoft.Hosting.Lifetime Hosting environment: Development
+2026-06-15 11:39:09.116 +08:00 [INF] Microsoft.Hosting.Lifetime Content root path: D:\Codes\Projects\eams2026\src\EAMS2026.Api
+2026-06-15 11:45:38.777 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [GetSalespersons] 从 rpt_salesperson_map 读取业务员列表
+2026-06-15 11:45:38.891 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [GetSalespersons] 从映射表获取到 6 个业务员
+2026-06-15 11:45:39.039 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [QueryUnverifiedDispatches] 开始查询未审核发货单, 客户编码=null, 日期范围=null~null
+2026-06-15 11:45:40.642 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [QueryUnverifiedDispatches] 查询完成, 共 20 条 (总计 356)
+2026-06-15 11:45:55.143 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [QueryUnverifiedDispatches] 开始查询未审核发货单, 客户编码=null, 日期范围=2026-06-01~2026-06-15
+2026-06-15 11:45:55.686 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [QueryUnverifiedDispatches] 查询完成, 共 20 条 (总计 68)
+2026-06-15 12:19:12.084 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [QueryUnverifiedDispatches] 开始查询未审核发货单, 客户编码=null, 日期范围=2026-06-01~2026-06-15
+2026-06-15 12:19:13.381 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [QueryUnverifiedDispatches] 查询完成, 共 0 条 (总计 0)
+2026-06-15 12:19:43.237 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [QueryUnverifiedDispatches] 开始查询未审核发货单, 客户编码=null, 日期范围=2026-06-01~2026-06-15
+2026-06-15 12:19:43.260 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [QueryUnverifiedDispatches] 查询完成, 共 1 条 (总计 1)
+2026-06-15 12:20:14.812 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [GetSalespersons] 从 rpt_salesperson_map 读取业务员列表
+2026-06-15 12:20:14.820 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [GetSalespersons] 从映射表获取到 6 个业务员
+2026-06-15 12:20:15.079 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [QueryOrders] 开始查询订单, 客户编码=null, 日期范围=null~null
+2026-06-15 12:20:15.771 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [QueryOrders] 查询完成, 共 10 条 (总计 48)
+2026-06-15 12:20:21.280 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [QueryOrders] 开始查询订单, 客户编码=null, 日期范围=null~null
+2026-06-15 12:20:21.518 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [QueryOrders] 查询完成, 共 0 条 (总计 0)
+2026-06-15 12:20:36.097 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [QueryOrders] 开始查询订单, 客户编码=null, 日期范围=null~null
+2026-06-15 12:20:36.145 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [QueryOrders] 查询完成, 共 0 条 (总计 0)
+2026-06-15 12:21:05.535 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [QueryOrders] 开始查询订单, 客户编码=null, 日期范围=null~null
+2026-06-15 12:21:05.597 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [QueryOrders] 查询完成, 共 1 条 (总计 1)
+2026-06-15 12:21:47.566 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [GetCustomerReference] 查询客户参照: code=0531JLB
+2026-06-15 12:21:47.574 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [GetCustomerReference] 查询结果: 找到客户 经理办
+2026-06-15 12:21:47.685 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [GetCustomerReference] 查询客户参照: code=0531JLB
+2026-06-15 12:21:47.688 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [GetCustomerReference] 查询结果: 找到客户 经理办
+2026-06-15 12:21:51.404 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [GetCustomerReference] 查询客户参照: code=0531JLB
+2026-06-15 12:21:51.407 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [GetCustomerReference] 查询结果: 找到客户 经理办
+2026-06-15 12:21:58.765 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [GetCustomerReference] 查询客户参照: code=0531JLB
+2026-06-15 12:21:58.767 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [GetCustomerReference] 查询结果: 找到客户 经理办
+2026-06-15 12:27:11.878 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [GetSalespersons] 从 rpt_salesperson_map 读取业务员列表
+2026-06-15 12:27:11.882 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [GetSalespersons] 从映射表获取到 6 个业务员
+2026-06-15 12:27:12.005 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [QueryOrders] 开始查询订单, 客户编码=null, 日期范围=null~null
+2026-06-15 12:27:13.394 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [QueryOrders] 查询完成, 共 11 条 (总计 49)
+2026-06-15 12:27:48.219 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [GetSalespersons] 从 rpt_salesperson_map 读取业务员列表
+2026-06-15 12:27:48.222 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [GetSalespersons] 从映射表获取到 6 个业务员
+2026-06-15 12:27:48.256 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [QueryOrders] 开始查询订单, 客户编码=null, 日期范围=null~null
+2026-06-15 12:27:48.357 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [QueryOrders] 查询完成, 共 11 条 (总计 49)
+2026-06-15 12:49:38.867 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [GetCustomerReference] 查询客户参照: code=0531jlb
+2026-06-15 12:49:40.133 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [GetCustomerReference] 查询结果: 找到客户 经理办
+2026-06-15 12:49:52.404 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [HasVerifiedDispatches] 检查订单 67168 是否有已审核发货单
+2026-06-15 12:49:53.712 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [HasVerifiedDispatches] 订单 67168 检查结果: false
+2026-06-15 12:49:53.739 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [UpdateOrderCustomer] 操作人=admin(1), soid=67168, 新客户=0531jlb/经理办
+2026-06-15 12:49:53.744 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [UpdateOrderCustomer] 校验客户编码 0531jlb 是否存在
+2026-06-15 12:49:53.748 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [UpdateOrderCustomer] 执行修改 soid=67168
+2026-06-15 12:49:53.781 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [UpdateOrderCustomer] 同步修改关联发货单客户: soid=67168
+2026-06-15 12:49:53.814 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [UpdateOrderCustomer] 修改成功 soid=67168
+2026-06-15 12:49:53.840 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [QueryOrders] 开始查询订单, 客户编码=null, 日期范围=null~null
+2026-06-15 12:49:53.958 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [QueryOrders] 查询完成, 共 11 条 (总计 49)
+2026-06-15 12:51:40.899 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [GetSalespersons] 从 rpt_salesperson_map 读取业务员列表
+2026-06-15 12:51:40.950 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [GetSalespersons] 从映射表获取到 6 个业务员
+2026-06-15 12:51:40.967 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [QueryUnverifiedDispatches] 开始查询未审核发货单, 客户编码=null, 日期范围=null~null
+2026-06-15 12:51:40.997 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [QueryUnverifiedDispatches] 查询完成, 共 20 条 (总计 357)
+2026-06-15 12:52:01.821 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [QueryUnverifiedDispatches] 开始查询未审核发货单, 客户编码=null, 日期范围=null~null
+2026-06-15 12:52:01.952 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [QueryUnverifiedDispatches] 查询完成, 共 1 条 (总计 1)
+2026-06-15 12:52:07.390 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [GetSalespersons] 从 rpt_salesperson_map 读取业务员列表
+2026-06-15 12:52:07.395 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [GetSalespersons] 从映射表获取到 6 个业务员
+2026-06-15 12:52:07.449 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [QueryDispatches] 开始查询发货单, 客户编码=null, 日期范围=null~null
+2026-06-15 12:52:07.554 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [QueryDispatches] 查询完成, 共 16 条 (总计 21731)
+2026-06-15 12:52:11.412 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [QueryDispatches] 开始查询发货单, 客户编码=null, 日期范围=null~null
+2026-06-15 12:52:11.558 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [QueryDispatches] 查询完成, 共 1 条 (总计 1)
+2026-06-15 12:52:22.087 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [GetCustomerReference] 查询客户参照: code=0531jlb
+2026-06-15 12:52:22.092 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [GetCustomerReference] 查询结果: 找到客户 经理办
+2026-06-15 12:52:23.548 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [UpdateDispatchCustomer] 操作人=admin(1), dlid=41457, 新客户=0531jlb/经理办
+2026-06-15 12:52:23.551 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [UpdateDispatchCustomer] 校验客户编码 0531jlb 是否存在
+2026-06-15 12:52:23.554 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [UpdateDispatchCustomer] 检查发货单 41457 是否未审核
+2026-06-15 12:52:23.562 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [UpdateDispatchCustomer] 执行修改 dlid=41457
+2026-06-15 12:52:23.620 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [UpdateDispatchCustomer] 修改成功 dlid=41457
+2026-06-15 12:52:23.636 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [QueryDispatches] 开始查询发货单, 客户编码=null, 日期范围=null~null
+2026-06-15 12:52:23.718 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [QueryDispatches] 查询完成, 共 1 条 (总计 1)
+2026-06-15 12:52:28.211 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [QueryDispatches] 开始查询发货单, 客户编码=null, 日期范围=null~null
+2026-06-15 12:52:28.296 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [QueryDispatches] 查询完成, 共 1 条 (总计 1)
+2026-06-15 12:52:29.211 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [QueryDispatches] 开始查询发货单, 客户编码=null, 日期范围=null~null
+2026-06-15 12:52:29.331 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [QueryDispatches] 查询完成, 共 1 条 (总计 1)
+2026-06-15 12:52:35.855 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [QueryDispatches] 开始查询发货单, 客户编码=null, 日期范围=null~null
+2026-06-15 12:52:35.971 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [QueryDispatches] 查询完成, 共 1 条 (总计 1)
+2026-06-15 13:11:49.173 +08:00 [INF] Microsoft.Hosting.Lifetime Now listening on: http://0.0.0.0:5106
+2026-06-15 13:11:49.318 +08:00 [INF] Microsoft.Hosting.Lifetime Application started. Press Ctrl+C to shut down.
+2026-06-15 13:11:49.320 +08:00 [INF] Microsoft.Hosting.Lifetime Hosting environment: Development
+2026-06-15 13:11:49.340 +08:00 [INF] Microsoft.Hosting.Lifetime Content root path: D:\Codes\Projects\eams2026\src\EAMS2026.Api
+2026-06-15 13:12:08.090 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [QueryDispatches] 开始查询发货单, 客户编码=null, 日期范围=null~null
+2026-06-15 13:12:09.688 +08:00 [INF] EAMS2026.Infrastructure.Data.Repositories.ErpVouchModifyRepository [QueryDispatches] Dapper原始行数: 2
+2026-06-15 13:12:09.821 +08:00 [INF] EAMS2026.Infrastructure.Data.Repositories.ErpVouchModifyRepository [QueryDispatches] 列名列表: RowNum, dlCusCode, dlid, cDLCode, dlDate, DlCusName, dlInvCode, dlInvName, dlInvStd, dlQuantity, dlVerifier, cPersonName
+2026-06-15 13:12:09.830 +08:00 [INF] EAMS2026.Infrastructure.Data.Repositories.ErpVouchModifyRepository [QueryDispatches] Dapper原始前 2 条客户字段: cDLCode=[DP20260600038830], DlCusName=[刘见暂不定名], dlCusName=[(null)] | cDLCode=[DP20260600038830], DlCusName=[刘见暂不定名], dlCusName=[(null)]
+2026-06-15 13:12:09.865 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [QueryDispatches] 查询完成, 共 1 条 (总计 1)
+2026-06-15 13:12:09.867 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [QueryDispatches] 前 1 条客户信息: dlid=41456, cDLCode=DP20260600038830, dlCusCode=0531LJ1, dlCusName=[]
+2026-06-15 13:12:10.004 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [QueryDispatches] 开始查询发货单, 客户编码=null, 日期范围=null~null
+2026-06-15 13:12:10.116 +08:00 [INF] EAMS2026.Infrastructure.Data.Repositories.ErpVouchModifyRepository [QueryDispatches] Dapper原始行数: 2
+2026-06-15 13:12:10.143 +08:00 [INF] EAMS2026.Infrastructure.Data.Repositories.ErpVouchModifyRepository [QueryDispatches] 列名列表: RowNum, dlCusCode, dlid, cDLCode, dlDate, DlCusName, dlInvCode, dlInvName, dlInvStd, dlQuantity, dlVerifier, cPersonName
+2026-06-15 13:12:10.145 +08:00 [INF] EAMS2026.Infrastructure.Data.Repositories.ErpVouchModifyRepository [QueryDispatches] Dapper原始前 2 条客户字段: cDLCode=[DP20260600038830], DlCusName=[刘见暂不定名], dlCusName=[(null)] | cDLCode=[DP20260600038830], DlCusName=[刘见暂不定名], dlCusName=[(null)]
+2026-06-15 13:12:10.147 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [QueryDispatches] 查询完成, 共 1 条 (总计 1)
+2026-06-15 13:12:10.148 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [QueryDispatches] 前 1 条客户信息: dlid=41456, cDLCode=DP20260600038830, dlCusCode=0531LJ1, dlCusName=[]
+2026-06-15 13:12:12.810 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [QueryDispatches] 开始查询发货单, 客户编码=null, 日期范围=null~null
+2026-06-15 13:12:12.943 +08:00 [INF] EAMS2026.Infrastructure.Data.Repositories.ErpVouchModifyRepository [QueryDispatches] Dapper原始行数: 2
+2026-06-15 13:12:12.945 +08:00 [INF] EAMS2026.Infrastructure.Data.Repositories.ErpVouchModifyRepository [QueryDispatches] 列名列表: RowNum, dlCusCode, dlid, cDLCode, dlDate, DlCusName, dlInvCode, dlInvName, dlInvStd, dlQuantity, dlVerifier, cPersonName
+2026-06-15 13:12:12.946 +08:00 [INF] EAMS2026.Infrastructure.Data.Repositories.ErpVouchModifyRepository [QueryDispatches] Dapper原始前 2 条客户字段: cDLCode=[DP20260600038830], DlCusName=[刘见暂不定名], dlCusName=[(null)] | cDLCode=[DP20260600038830], DlCusName=[刘见暂不定名], dlCusName=[(null)]
+2026-06-15 13:12:12.947 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [QueryDispatches] 查询完成, 共 1 条 (总计 1)
+2026-06-15 13:12:12.949 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [QueryDispatches] 前 1 条客户信息: dlid=41456, cDLCode=DP20260600038830, dlCusCode=0531LJ1, dlCusName=[]
+2026-06-15 13:12:14.021 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [QueryDispatches] 开始查询发货单, 客户编码=null, 日期范围=null~null
+2026-06-15 13:12:14.194 +08:00 [INF] EAMS2026.Infrastructure.Data.Repositories.ErpVouchModifyRepository [QueryDispatches] Dapper原始行数: 2
+2026-06-15 13:12:14.196 +08:00 [INF] EAMS2026.Infrastructure.Data.Repositories.ErpVouchModifyRepository [QueryDispatches] 列名列表: RowNum, dlCusCode, dlid, cDLCode, dlDate, DlCusName, dlInvCode, dlInvName, dlInvStd, dlQuantity, dlVerifier, cPersonName
+2026-06-15 13:12:14.198 +08:00 [INF] EAMS2026.Infrastructure.Data.Repositories.ErpVouchModifyRepository [QueryDispatches] Dapper原始前 2 条客户字段: cDLCode=[DP20260600038830], DlCusName=[刘见暂不定名], dlCusName=[(null)] | cDLCode=[DP20260600038830], DlCusName=[刘见暂不定名], dlCusName=[(null)]
+2026-06-15 13:12:14.201 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [QueryDispatches] 查询完成, 共 1 条 (总计 1)
+2026-06-15 13:12:14.202 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [QueryDispatches] 前 1 条客户信息: dlid=41456, cDLCode=DP20260600038830, dlCusCode=0531LJ1, dlCusName=[]
+2026-06-15 13:12:18.702 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [GetSalespersons] 从 rpt_salesperson_map 读取业务员列表
+2026-06-15 13:12:18.848 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [GetSalespersons] 从映射表获取到 6 个业务员
+2026-06-15 13:12:18.902 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [QueryDispatches] 开始查询发货单, 客户编码=null, 日期范围=null~null
+2026-06-15 13:12:19.016 +08:00 [INF] EAMS2026.Infrastructure.Data.Repositories.ErpVouchModifyRepository [QueryDispatches] Dapper原始行数: 20
+2026-06-15 13:12:19.017 +08:00 [INF] EAMS2026.Infrastructure.Data.Repositories.ErpVouchModifyRepository [QueryDispatches] 列名列表: RowNum, dlCusCode, dlid, cDLCode, dlDate, DlCusName, dlInvCode, dlInvName, dlInvStd, dlQuantity, dlVerifier, cPersonName
+2026-06-15 13:12:19.019 +08:00 [INF] EAMS2026.Infrastructure.Data.Repositories.ErpVouchModifyRepository [QueryDispatches] Dapper原始前 3 条客户字段: cDLCode=[DP20241200279047], DlCusName=[济南捷易惠信息科技有限公司], dlCusName=[(null)] | cDLCode=[DP20241200279044], DlCusName=[济南迈瑞信息技术有限公司], dlCusName=[(null)] | cDLCode=[DP20241200279040], DlCusName=[济南晶千商贸有限公司], dlCusName=[(null)]
+2026-06-15 13:12:19.020 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [QueryDispatches] 查询完成, 共 16 条 (总计 21731)
+2026-06-15 13:12:19.022 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [QueryDispatches] 前 3 条客户信息: dlid=301821, cDLCode=DP20241200279047, dlCusCode=0531JYHXX, dlCusName=[] | dlid=301818, cDLCode=DP20241200279044, dlCusCode=0531MRXX, dlCusName=[] | dlid=301814, cDLCode=DP20241200279040, dlCusCode=0531JQSM1, dlCusName=[]
+2026-06-15 13:16:17.294 +08:00 [INF] Microsoft.Hosting.Lifetime Now listening on: http://0.0.0.0:5106
+2026-06-15 13:16:17.440 +08:00 [INF] Microsoft.Hosting.Lifetime Application started. Press Ctrl+C to shut down.
+2026-06-15 13:16:17.443 +08:00 [INF] Microsoft.Hosting.Lifetime Hosting environment: Development
+2026-06-15 13:16:17.444 +08:00 [INF] Microsoft.Hosting.Lifetime Content root path: D:\Codes\Projects\eams2026\src\EAMS2026.Api
+2026-06-15 13:17:23.816 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [GetSalespersons] 从 rpt_salesperson_map 读取业务员列表
+2026-06-15 13:17:23.978 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [GetSalespersons] 从映射表获取到 6 个业务员
+2026-06-15 13:17:24.169 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [QueryDispatches] 开始查询发货单, 客户编码=null, 日期范围=null~null
+2026-06-15 13:17:25.874 +08:00 [INF] EAMS2026.Infrastructure.Data.Repositories.ErpVouchModifyRepository [QueryDispatches] Dapper原始行数: 20
+2026-06-15 13:17:25.994 +08:00 [INF] EAMS2026.Infrastructure.Data.Repositories.ErpVouchModifyRepository [QueryDispatches] 列名列表: RowNum, dlCusCode, dlid, cDLCode, dlDate, DlCusName, dlInvCode, dlInvName, dlInvStd, dlQuantity, dlVerifier, cPersonName
+2026-06-15 13:17:26.003 +08:00 [INF] EAMS2026.Infrastructure.Data.Repositories.ErpVouchModifyRepository [QueryDispatches] Dapper原始前 3 条客户字段: cDLCode=[DP20241200279047], DlCusName=[济南捷易惠信息科技有限公司], dlCusName=[(null)] | cDLCode=[DP20241200279044], DlCusName=[济南迈瑞信息技术有限公司], dlCusName=[(null)] | cDLCode=[DP20241200279040], DlCusName=[济南晶千商贸有限公司], dlCusName=[(null)]
+2026-06-15 13:17:26.038 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [QueryDispatches] 查询完成, 共 16 条 (总计 21731)
+2026-06-15 13:17:26.040 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [QueryDispatches] 前 3 条客户信息: dlid=301821, cDLCode=DP20241200279047, dlCusCode=0531JYHXX, dlCusName=[济南捷易惠信息科技有限公司] | dlid=301818, cDLCode=DP20241200279044, dlCusCode=0531MRXX, dlCusName=[济南迈瑞信息技术有限公司] | dlid=301814, cDLCode=DP20241200279040, dlCusCode=0531JQSM1, dlCusName=[济南晶千商贸有限公司]
+2026-06-15 13:17:28.795 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [GetSalespersons] 从 rpt_salesperson_map 读取业务员列表
+2026-06-15 13:17:28.798 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [GetSalespersons] 从映射表获取到 6 个业务员
+2026-06-15 13:17:28.876 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [QueryOrders] 开始查询订单, 客户编码=null, 日期范围=null~null
+2026-06-15 13:17:29.202 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [QueryOrders] 查询完成, 共 11 条 (总计 49)
+2026-06-15 13:17:32.283 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [GetSalespersons] 从 rpt_salesperson_map 读取业务员列表
+2026-06-15 13:17:32.286 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [GetSalespersons] 从映射表获取到 6 个业务员
+2026-06-15 13:17:32.318 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [QueryDispatches] 开始查询发货单, 客户编码=null, 日期范围=null~null
+2026-06-15 13:17:32.448 +08:00 [INF] EAMS2026.Infrastructure.Data.Repositories.ErpVouchModifyRepository [QueryDispatches] Dapper原始行数: 20
+2026-06-15 13:17:32.473 +08:00 [INF] EAMS2026.Infrastructure.Data.Repositories.ErpVouchModifyRepository [QueryDispatches] 列名列表: RowNum, dlCusCode, dlid, cDLCode, dlDate, DlCusName, dlInvCode, dlInvName, dlInvStd, dlQuantity, dlVerifier, cPersonName
+2026-06-15 13:17:32.474 +08:00 [INF] EAMS2026.Infrastructure.Data.Repositories.ErpVouchModifyRepository [QueryDispatches] Dapper原始前 3 条客户字段: cDLCode=[DP20241200279047], DlCusName=[济南捷易惠信息科技有限公司], dlCusName=[(null)] | cDLCode=[DP20241200279044], DlCusName=[济南迈瑞信息技术有限公司], dlCusName=[(null)] | cDLCode=[DP20241200279040], DlCusName=[济南晶千商贸有限公司], dlCusName=[(null)]
+2026-06-15 13:17:32.476 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [QueryDispatches] 查询完成, 共 16 条 (总计 21731)
+2026-06-15 13:17:32.481 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [QueryDispatches] 前 3 条客户信息: dlid=301821, cDLCode=DP20241200279047, dlCusCode=0531JYHXX, dlCusName=[济南捷易惠信息科技有限公司] | dlid=301818, cDLCode=DP20241200279044, dlCusCode=0531MRXX, dlCusName=[济南迈瑞信息技术有限公司] | dlid=301814, cDLCode=DP20241200279040, dlCusCode=0531JQSM1, dlCusName=[济南晶千商贸有限公司]
+2026-06-15 13:18:01.259 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [QueryDispatches] 开始查询发货单, 客户编码=null, 日期范围=null~null
+2026-06-15 13:18:01.416 +08:00 [INF] EAMS2026.Infrastructure.Data.Repositories.ErpVouchModifyRepository [QueryDispatches] Dapper原始行数: 1
+2026-06-15 13:18:01.424 +08:00 [INF] EAMS2026.Infrastructure.Data.Repositories.ErpVouchModifyRepository [QueryDispatches] 列名列表: RowNum, dlCusCode, dlid, cDLCode, dlDate, DlCusName, dlInvCode, dlInvName, dlInvStd, dlQuantity, dlVerifier, cPersonName
+2026-06-15 13:18:01.446 +08:00 [INF] EAMS2026.Infrastructure.Data.Repositories.ErpVouchModifyRepository [QueryDispatches] Dapper原始前 1 条客户字段: cDLCode=[DP20260600038831], DlCusName=[经理办], dlCusName=[(null)]
+2026-06-15 13:18:01.448 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [QueryDispatches] 查询完成, 共 1 条 (总计 1)
+2026-06-15 13:18:01.450 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [QueryDispatches] 前 1 条客户信息: dlid=41457, cDLCode=DP20260600038831, dlCusCode=0531jlb, dlCusName=[经理办]
+2026-06-15 13:18:06.296 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [QueryDispatches] 开始查询发货单, 客户编码=null, 日期范围=null~null
+2026-06-15 13:18:06.412 +08:00 [INF] EAMS2026.Infrastructure.Data.Repositories.ErpVouchModifyRepository [QueryDispatches] Dapper原始行数: 2
+2026-06-15 13:18:06.420 +08:00 [INF] EAMS2026.Infrastructure.Data.Repositories.ErpVouchModifyRepository [QueryDispatches] 列名列表: RowNum, dlCusCode, dlid, cDLCode, dlDate, DlCusName, dlInvCode, dlInvName, dlInvStd, dlQuantity, dlVerifier, cPersonName
+2026-06-15 13:18:06.423 +08:00 [INF] EAMS2026.Infrastructure.Data.Repositories.ErpVouchModifyRepository [QueryDispatches] Dapper原始前 2 条客户字段: cDLCode=[DP20260600038830], DlCusName=[刘见暂不定名], dlCusName=[(null)] | cDLCode=[DP20260600038830], DlCusName=[刘见暂不定名], dlCusName=[(null)]
+2026-06-15 13:18:06.437 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [QueryDispatches] 查询完成, 共 1 条 (总计 1)
+2026-06-15 13:18:06.439 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [QueryDispatches] 前 1 条客户信息: dlid=41456, cDLCode=DP20260600038830, dlCusCode=0531LJ1, dlCusName=[刘见暂不定名]
+2026-06-15 13:18:41.015 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [GetSalespersons] 从 rpt_salesperson_map 读取业务员列表
+2026-06-15 13:18:41.018 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [GetSalespersons] 从映射表获取到 6 个业务员
+2026-06-15 13:18:41.088 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [QueryOrders] 开始查询订单, 客户编码=null, 日期范围=null~null
+2026-06-15 13:18:41.217 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [QueryOrders] 查询完成, 共 11 条 (总计 49)
+2026-06-15 13:18:49.691 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [GetCustomerReference] 查询客户参照: code=0531cwzy
+2026-06-15 13:18:49.786 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [GetCustomerReference] 查询结果: 找到客户 财务自用
+2026-06-15 13:18:51.946 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [HasVerifiedDispatches] 检查订单 67168 是否有已审核发货单
+2026-06-15 13:18:51.952 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [HasVerifiedDispatches] 订单 67168 检查结果: false
+2026-06-15 13:18:52.096 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [UpdateOrderCustomer] 操作人=admin(1), soid=67168, 新客户=0531cwzy/财务自用
+2026-06-15 13:18:52.099 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [UpdateOrderCustomer] 校验客户编码 0531cwzy 是否存在
+2026-06-15 13:18:52.185 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [UpdateOrderCustomer] 执行修改 soid=67168
+2026-06-15 13:18:52.201 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [UpdateOrderCustomer] 开始同步修改关联发货单客户: soid=67168
+2026-06-15 13:18:52.320 +08:00 [INF] EAMS2026.Infrastructure.Data.Repositories.ErpVouchModifyRepository [GetDispatchIdsByOrderId] 订单 67168 关联发货单: 41457
+2026-06-15 13:18:52.324 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [UpdateOrderCustomer] 订单 67168 关联了 1 个发货单: 41457
+2026-06-15 13:18:52.325 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [UpdateOrderCustomer] 检查发货单 41457 是否未审核
+2026-06-15 13:18:52.333 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [UpdateOrderCustomer] 更新发货单 41457 客户: 0531cwzy/财务自用
+2026-06-15 13:18:52.391 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [UpdateOrderCustomer] 发货单 41457 客户更新成功
+2026-06-15 13:18:52.457 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [UpdateOrderCustomer] 同步发货单完成: 成功 1, 跳过 0, 失败 0 (共 1)
+2026-06-15 13:18:52.465 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [UpdateOrderCustomer] 修改成功 soid=67168
+2026-06-15 13:18:52.484 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [QueryOrders] 开始查询订单, 客户编码=null, 日期范围=null~null
+2026-06-15 13:18:52.910 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [QueryOrders] 查询完成, 共 11 条 (总计 49)
+2026-06-15 13:18:57.553 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [GetSalespersons] 从 rpt_salesperson_map 读取业务员列表
+2026-06-15 13:18:57.555 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [GetSalespersons] 从映射表获取到 6 个业务员
+2026-06-15 13:18:57.623 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [QueryDispatches] 开始查询发货单, 客户编码=null, 日期范围=null~null
+2026-06-15 13:18:57.775 +08:00 [INF] EAMS2026.Infrastructure.Data.Repositories.ErpVouchModifyRepository [QueryDispatches] Dapper原始行数: 20
+2026-06-15 13:18:57.779 +08:00 [INF] EAMS2026.Infrastructure.Data.Repositories.ErpVouchModifyRepository [QueryDispatches] 列名列表: RowNum, dlCusCode, dlid, cDLCode, dlDate, DlCusName, dlInvCode, dlInvName, dlInvStd, dlQuantity, dlVerifier, cPersonName
+2026-06-15 13:18:57.781 +08:00 [INF] EAMS2026.Infrastructure.Data.Repositories.ErpVouchModifyRepository [QueryDispatches] Dapper原始前 3 条客户字段: cDLCode=[DP20241200279047], DlCusName=[济南捷易惠信息科技有限公司], dlCusName=[(null)] | cDLCode=[DP20241200279044], DlCusName=[济南迈瑞信息技术有限公司], dlCusName=[(null)] | cDLCode=[DP20241200279040], DlCusName=[济南晶千商贸有限公司], dlCusName=[(null)]
+2026-06-15 13:18:57.782 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [QueryDispatches] 查询完成, 共 16 条 (总计 21731)
+2026-06-15 13:18:57.784 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [QueryDispatches] 前 3 条客户信息: dlid=301821, cDLCode=DP20241200279047, dlCusCode=0531JYHXX, dlCusName=[济南捷易惠信息科技有限公司] | dlid=301818, cDLCode=DP20241200279044, dlCusCode=0531MRXX, dlCusName=[济南迈瑞信息技术有限公司] | dlid=301814, cDLCode=DP20241200279040, dlCusCode=0531JQSM1, dlCusName=[济南晶千商贸有限公司]
+2026-06-15 13:19:01.891 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [QueryDispatches] 开始查询发货单, 客户编码=null, 日期范围=null~null
+2026-06-15 13:19:02.021 +08:00 [INF] EAMS2026.Infrastructure.Data.Repositories.ErpVouchModifyRepository [QueryDispatches] Dapper原始行数: 1
+2026-06-15 13:19:02.040 +08:00 [INF] EAMS2026.Infrastructure.Data.Repositories.ErpVouchModifyRepository [QueryDispatches] 列名列表: RowNum, dlCusCode, dlid, cDLCode, dlDate, DlCusName, dlInvCode, dlInvName, dlInvStd, dlQuantity, dlVerifier, cPersonName
+2026-06-15 13:19:02.041 +08:00 [INF] EAMS2026.Infrastructure.Data.Repositories.ErpVouchModifyRepository [QueryDispatches] Dapper原始前 1 条客户字段: cDLCode=[DP20260600038831], DlCusName=[财务自用], dlCusName=[(null)]
+2026-06-15 13:19:02.043 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [QueryDispatches] 查询完成, 共 1 条 (总计 1)
+2026-06-15 13:19:02.045 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [QueryDispatches] 前 1 条客户信息: dlid=41457, cDLCode=DP20260600038831, dlCusCode=0531cwzy, dlCusName=[财务自用]
+2026-06-15 13:19:29.584 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [GetSalespersons] 从 rpt_salesperson_map 读取业务员列表
+2026-06-15 13:19:29.586 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [GetSalespersons] 从映射表获取到 6 个业务员
+2026-06-15 13:19:29.639 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [QueryOrders] 开始查询订单, 客户编码=null, 日期范围=null~null
+2026-06-15 13:19:29.921 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [QueryOrders] 查询完成, 共 11 条 (总计 49)
+2026-06-15 13:19:32.076 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [GetSalespersons] 从 rpt_salesperson_map 读取业务员列表
+2026-06-15 13:19:32.077 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [GetSalespersons] 从映射表获取到 6 个业务员
+2026-06-15 13:19:32.103 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [QueryDispatches] 开始查询发货单, 客户编码=null, 日期范围=null~null
+2026-06-15 13:19:32.225 +08:00 [INF] EAMS2026.Infrastructure.Data.Repositories.ErpVouchModifyRepository [QueryDispatches] Dapper原始行数: 20
+2026-06-15 13:19:32.226 +08:00 [INF] EAMS2026.Infrastructure.Data.Repositories.ErpVouchModifyRepository [QueryDispatches] 列名列表: RowNum, dlCusCode, dlid, cDLCode, dlDate, DlCusName, dlInvCode, dlInvName, dlInvStd, dlQuantity, dlVerifier, cPersonName
+2026-06-15 13:19:32.230 +08:00 [INF] EAMS2026.Infrastructure.Data.Repositories.ErpVouchModifyRepository [QueryDispatches] Dapper原始前 3 条客户字段: cDLCode=[DP20241200279047], DlCusName=[济南捷易惠信息科技有限公司], dlCusName=[(null)] | cDLCode=[DP20241200279044], DlCusName=[济南迈瑞信息技术有限公司], dlCusName=[(null)] | cDLCode=[DP20241200279040], DlCusName=[济南晶千商贸有限公司], dlCusName=[(null)]
+2026-06-15 13:19:32.232 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [QueryDispatches] 查询完成, 共 16 条 (总计 21731)
+2026-06-15 13:19:32.233 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [QueryDispatches] 前 3 条客户信息: dlid=301821, cDLCode=DP20241200279047, dlCusCode=0531JYHXX, dlCusName=[济南捷易惠信息科技有限公司] | dlid=301818, cDLCode=DP20241200279044, dlCusCode=0531MRXX, dlCusName=[济南迈瑞信息技术有限公司] | dlid=301814, cDLCode=DP20241200279040, dlCusCode=0531JQSM1, dlCusName=[济南晶千商贸有限公司]
+2026-06-15 13:23:01.094 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteReport] reportId=2, userId=1
+2026-06-15 13:23:01.099 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteReport] hasView=true
+2026-06-15 13:23:01.112 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [BuildFilterConditions] 生成条件: year = '2026'
+2026-06-15 13:23:01.113 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [BuildFilterConditions] 修改后SQL: SELECT year,month,ddate,cdcname,cpersonname,cpersoncode,cCusName,cCusAbbName,cShipAddress,cCusPerson,cdlcode,cmaker,cWhName,cInvTopClsName,cInvName,cInvCCode,cInvCName,iQuantity,iNum,isum
+from dflView_eams_crossYearDispatch
+where 1=1
+    AND (year = '2026')
+2026-06-15 13:23:01.115 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteQueryInternal] 应用报表默认排序: ddate DESC, cdcname ASC
+2026-06-15 13:23:01.125 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql] datasource=erp_u871_currentYear, isSqlServer=true, sql=SELECT year,month,ddate,cdcname,cpersonname,cpersoncode,cCusName,cCusAbbName,cShipAddress,cCusPerson,cdlcode,cmaker,cWhName,cInvTopClsName,cInvName,cInvCCode,cInvCName,iQuantity,iNum,isum
+from dflView_eams_crossYearDispatch
+where 1=1
+    AND (year = '2026')
+2026-06-15 13:23:01.253 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql] 归一化参数数: 2
+2026-06-15 13:23:01.268 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql]    param ddate -> ddate = 2026-01-01 (String)
+2026-06-15 13:23:01.270 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql]     -> 将字符串转换为DateTime: "2026-01-01T00:00:00.0000000"
+2026-06-15 13:23:01.271 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql]    param year -> year = 2026 (String)
+2026-06-15 13:23:01.279 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql] 应用排序: ddate DESC, cdcname ASC
+2026-06-15 13:23:01.280 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql] page=1, pageSize=0
+2026-06-15 13:23:01.282 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql] 无分页SQL: SELECT year,month,ddate,cdcname,cpersonname,cpersoncode,cCusName,cCusAbbName,cShipAddress,cCusPerson,cdlcode,cmaker,cWhName,cInvTopClsName,cInvName,cInvCCode,cInvCName,iQuantity,iNum,isum
+from dflView_eams_crossYearDispatch
+where 1=1
+    AND (year = '2026')
+ORDER BY ddate DESC, cdcname ASC
+2026-06-15 13:23:02.475 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql] 返回列数=20, 行数=17154
+2026-06-15 13:23:56.239 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [GetSalespersons] 从 rpt_salesperson_map 读取业务员列表
+2026-06-15 13:23:56.249 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [GetSalespersons] 从映射表获取到 6 个业务员
+2026-06-15 13:23:56.369 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [QueryOrders] 开始查询订单, 客户编码=null, 日期范围=null~null
+2026-06-15 13:23:56.499 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [QueryOrders] 查询完成, 共 11 条 (总计 49)
+2026-06-15 13:24:00.930 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [GetSalespersons] 从 rpt_salesperson_map 读取业务员列表
+2026-06-15 13:24:00.934 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [GetSalespersons] 从映射表获取到 6 个业务员
+2026-06-15 13:24:01.183 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [QueryUnverifiedDispatches] 开始查询未审核发货单, 客户编码=null, 日期范围=null~null
+2026-06-15 13:24:01.313 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [QueryUnverifiedDispatches] 查询完成, 共 20 条 (总计 357)
+2026-06-15 13:24:07.134 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [QueryUnverifiedDispatches] 开始查询未审核发货单, 客户编码=null, 日期范围=null~null
+2026-06-15 13:24:07.271 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [QueryUnverifiedDispatches] 查询完成, 共 1 条 (总计 1)
+2026-06-15 13:24:18.497 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [BatchUpdateDispatchDate] 操作人=admin(1), 共 1 条, 自动计算=true, 目标日期=2026-07-04
+2026-06-15 13:24:18.500 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [BatchUpdateDispatchDate] 自动计算目标日期为: 2026-07-05
+2026-06-15 13:24:18.552 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [BatchUpdateDispatchDate] 批量修改完成: 成功 1/1 条
+2026-06-15 13:24:18.630 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [QueryUnverifiedDispatches] 开始查询未审核发货单, 客户编码=null, 日期范围=null~null
+2026-06-15 13:24:18.985 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [QueryUnverifiedDispatches] 查询完成, 共 1 条 (总计 1)
+2026-06-15 14:16:31.787 +08:00 [INF] Microsoft.Hosting.Lifetime Now listening on: http://0.0.0.0:5106
+2026-06-15 14:16:31.845 +08:00 [INF] Microsoft.Hosting.Lifetime Application started. Press Ctrl+C to shut down.
+2026-06-15 14:16:31.846 +08:00 [INF] Microsoft.Hosting.Lifetime Hosting environment: Development
+2026-06-15 14:16:31.848 +08:00 [INF] Microsoft.Hosting.Lifetime Content root path: D:\Codes\Projects\eams2026\src\EAMS2026.Api
+2026-06-15 14:25:02.091 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteReport] reportId=2, userId=5
+2026-06-15 14:25:02.121 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteReport] hasView=true
+2026-06-15 14:25:02.146 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [BuildFilterConditions] 生成条件: year = '2026' AND cpersoncode = '0207'
+2026-06-15 14:25:02.148 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [BuildFilterConditions] 修改后SQL: SELECT year,month,ddate,cdcname,cpersonname,cpersoncode,cCusName,cCusAbbName,cShipAddress,cCusPerson,cdlcode,cmaker,cWhName,cInvTopClsName,cInvName,cInvCCode,cInvCName,iQuantity,iNum,isum
+from dflView_eams_crossYearDispatch
+where 1=1
+    AND (year = '2026' AND cpersoncode = '0207')
+2026-06-15 14:25:02.152 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteQueryInternal] 应用报表默认排序: ddate DESC, cdcname ASC
+2026-06-15 14:25:02.193 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql] datasource=erp_u871_currentYear, isSqlServer=true, sql=SELECT year,month,ddate,cdcname,cpersonname,cpersoncode,cCusName,cCusAbbName,cShipAddress,cCusPerson,cdlcode,cmaker,cWhName,cInvTopClsName,cInvName,cInvCCode,cInvCName,iQuantity,iNum,isum
+from dflView_eams_crossYearDispatch
+where 1=1
+    AND (year = '2026' AND cpersoncode = '0207')
+2026-06-15 14:25:02.196 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql] 归一化参数数: 3
+2026-06-15 14:25:02.198 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql]    param ddate -> ddate = 2026-01-01 (String)
+2026-06-15 14:25:02.201 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql]     -> 将字符串转换为DateTime: "2026-01-01T00:00:00.0000000"
+2026-06-15 14:25:02.203 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql]    param year -> year = 2026 (String)
+2026-06-15 14:25:02.206 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql]    param cpersoncode -> cpersoncode = 0207 (String)
+2026-06-15 14:25:02.210 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql] 应用排序: ddate DESC, cdcname ASC
+2026-06-15 14:25:02.211 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql] page=1, pageSize=0
+2026-06-15 14:25:02.213 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql] 无分页SQL: SELECT year,month,ddate,cdcname,cpersonname,cpersoncode,cCusName,cCusAbbName,cShipAddress,cCusPerson,cdlcode,cmaker,cWhName,cInvTopClsName,cInvName,cInvCCode,cInvCName,iQuantity,iNum,isum
+from dflView_eams_crossYearDispatch
+where 1=1
+    AND (year = '2026' AND cpersoncode = '0207')
+ORDER BY ddate DESC, cdcname ASC
+2026-06-15 14:25:08.150 +08:00 [ERR] EAMS2026.Api.Middleware.ExceptionMiddleware 发生未处理的异常: 事务(进程 ID 220)与另一个进程被死锁在 锁 资源上，并且已被选作死锁牺牲品。请重新运行该事务。
+System.Data.SqlClient.SqlException (0x80131904): 事务(进程 ID 220)与另一个进程被死锁在 锁 资源上，并且已被选作死锁牺牲品。请重新运行该事务。
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at System.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at System.Data.SqlClient.SqlDataReader.<>c__DisplayClass190_0.<ReadAsync>b__1(Task t)
+   at System.Data.SqlClient.SqlDataReader.InvokeRetryable[T](Func`2 moreFunc, TaskCompletionSource`1 source, IDisposable objectToDispose)
+--- End of stack trace from previous location ---
+   at Dapper.SqlMapper.QueryAsync[T](IDbConnection cnn, Type effectiveType, CommandDefinition command) in /_/Dapper/SqlMapper.Async.cs:line 452
+   at EAMS2026.Infrastructure.Services.ReportService.ExecuteRawSql(String sql, ReportExecuteRequest request, String datasource) in D:\Codes\Projects\eams2026\src\EAMS2026.Infrastructure\Services\ReportService.cs:line 624
+   at EAMS2026.Infrastructure.Services.ReportService.ExecuteQueryInternal(ReportDetailDto report, ReportExecuteRequest request) in D:\Codes\Projects\eams2026\src\EAMS2026.Infrastructure\Services\ReportService.cs:line 476
+   at EAMS2026.Infrastructure.Services.ReportService.ExecuteReportAsync(Int64 reportId, ReportExecuteRequest request, Int64 userId) in D:\Codes\Projects\eams2026\src\EAMS2026.Infrastructure\Services\ReportService.cs:line 158
+   at EAMS2026.Api.Controllers.ReportController.ExecuteReport(Int64 id, ReportExecuteRequest request) in D:\Codes\Projects\eams2026\src\EAMS2026.Api\Controllers\ReportController.cs:line 114
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at EAMS2026.Api.Middleware.OperationLogMiddleware.InvokeAsync(HttpContext context) in D:\Codes\Projects\eams2026\src\EAMS2026.Api\Middleware\OperationLogMiddleware.cs:line 74
+   at EAMS2026.Api.Middleware.OperationLogMiddleware.InvokeAsync(HttpContext context) in D:\Codes\Projects\eams2026\src\EAMS2026.Api\Middleware\OperationLogMiddleware.cs:line 94
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.ResponseCompression.ResponseCompressionMiddleware.InvokeCore(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at EAMS2026.Api.Middleware.ExceptionMiddleware.InvokeAsync(HttpContext context) in D:\Codes\Projects\eams2026\src\EAMS2026.Api\Middleware\ExceptionMiddleware.cs:line 35
+ClientConnectionId:2c9cad0a-b62c-4b48-a3b2-576023a81297
+Error Number:1205,State:51,Class:13
+2026-06-15 14:25:14.679 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteReport] reportId=2, userId=5
+2026-06-15 14:25:14.684 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteReport] hasView=true
+2026-06-15 14:25:14.691 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [BuildFilterConditions] between: ddate → "2026-06-01T00:00:00.0000000+08:00" ~ "2026-06-08T00:00:00.0000000+08:00"
+2026-06-15 14:25:14.693 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [BuildFilterConditions] 生成条件: ddate BETWEEN '2026-06-01 00:00:00' AND '2026-06-08 00:00:00' AND year = '2026' AND cpersoncode = '0207'
+2026-06-15 14:25:14.695 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [BuildFilterConditions] 修改后SQL: SELECT year,month,ddate,cdcname,cpersonname,cpersoncode,cCusName,cCusAbbName,cShipAddress,cCusPerson,cdlcode,cmaker,cWhName,cInvTopClsName,cInvName,cInvCCode,cInvCName,iQuantity,iNum,isum
+from dflView_eams_crossYearDispatch
+where 1=1
+    AND (ddate BETWEEN '2026-06-01 00:00:00' AND '2026-06-08 00:00:00' AND year = '2026' AND cpersoncode = '0207')
+2026-06-15 14:25:14.696 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteQueryInternal] 应用报表默认排序: ddate DESC, cdcname ASC
+2026-06-15 14:25:14.699 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql] datasource=erp_u871_currentYear, isSqlServer=true, sql=SELECT year,month,ddate,cdcname,cpersonname,cpersoncode,cCusName,cCusAbbName,cShipAddress,cCusPerson,cdlcode,cmaker,cWhName,cInvTopClsName,cInvName,cInvCCode,cInvCName,iQuantity,iNum,isum
+from dflView_eams_crossYearDispatch
+where 1=1
+    AND (ddate BETWEEN '2026-06-01 00:00:00' AND '2026-06-08 00:00:00' AND year = '2026' AND cpersoncode = '0207')
+2026-06-15 14:25:14.700 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql] 归一化参数数: 3
+2026-06-15 14:25:14.701 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql]    param ddate -> ddate = ["2026-05-31T16:00:00.000Z","2026-06-07T16:00:00.000Z"] (String)
+2026-06-15 14:25:14.704 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql]    param year -> year = 2026 (String)
+2026-06-15 14:25:14.706 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql]    param cpersoncode -> cpersoncode = 0207 (String)
+2026-06-15 14:25:14.708 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql] 应用排序: ddate DESC, cdcname ASC
+2026-06-15 14:25:14.709 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql] page=1, pageSize=0
+2026-06-15 14:25:14.710 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql] 无分页SQL: SELECT year,month,ddate,cdcname,cpersonname,cpersoncode,cCusName,cCusAbbName,cShipAddress,cCusPerson,cdlcode,cmaker,cWhName,cInvTopClsName,cInvName,cInvCCode,cInvCName,iQuantity,iNum,isum
+from dflView_eams_crossYearDispatch
+where 1=1
+    AND (ddate BETWEEN '2026-06-01 00:00:00' AND '2026-06-08 00:00:00' AND year = '2026' AND cpersoncode = '0207')
+ORDER BY ddate DESC, cdcname ASC
+2026-06-15 14:25:15.056 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql] 返回列数=20, 行数=298
+2026-06-15 14:26:10.884 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [GetSalespersons] 从 rpt_salesperson_map 读取业务员列表
+2026-06-15 14:26:11.088 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [GetSalespersons] 从映射表获取到 6 个业务员
+2026-06-15 14:26:11.134 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [QueryUnverifiedDispatches] 开始查询未审核发货单, 客户编码=null, 日期范围=null~null
+2026-06-15 14:26:11.274 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [QueryUnverifiedDispatches] 查询完成, 共 20 条 (总计 331)
+2026-06-15 14:26:23.417 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [GetSalespersons] 从 rpt_salesperson_map 读取业务员列表
+2026-06-15 14:26:23.432 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [GetSalespersons] 从映射表获取到 6 个业务员
+2026-06-15 14:26:23.693 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [QueryOrders] 开始查询订单, 客户编码=null, 日期范围=null~null
+2026-06-15 14:26:23.875 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [QueryOrders] 查询完成, 共 9 条 (总计 45)
+2026-06-15 14:26:31.608 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [GetSalespersons] 从 rpt_salesperson_map 读取业务员列表
+2026-06-15 14:26:31.613 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [GetSalespersons] 从映射表获取到 6 个业务员
+2026-06-15 14:26:31.764 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [QueryDispatches] 开始查询发货单, 客户编码=null, 日期范围=null~null
+2026-06-15 14:26:31.885 +08:00 [INF] EAMS2026.Infrastructure.Data.Repositories.ErpVouchModifyRepository [QueryDispatches] Dapper原始行数: 20
+2026-06-15 14:26:31.890 +08:00 [INF] EAMS2026.Infrastructure.Data.Repositories.ErpVouchModifyRepository [QueryDispatches] 列名列表: RowNum, dlCusCode, dlid, cDLCode, dlDate, DlCusName, dlInvCode, dlInvName, dlInvStd, dlQuantity, dlVerifier, cPersonName
+2026-06-15 14:26:31.895 +08:00 [INF] EAMS2026.Infrastructure.Data.Repositories.ErpVouchModifyRepository [QueryDispatches] Dapper原始前 3 条客户字段: cDLCode=[DP20241200279047], DlCusName=[济南捷易惠信息科技有限公司], dlCusName=[(null)] | cDLCode=[DP20241200279044], DlCusName=[济南迈瑞信息技术有限公司], dlCusName=[(null)] | cDLCode=[DP20241200279040], DlCusName=[济南晶千商贸有限公司], dlCusName=[(null)]
+2026-06-15 14:26:31.900 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [QueryDispatches] 查询完成, 共 16 条 (总计 21737)
+2026-06-15 14:26:31.911 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [QueryDispatches] 前 3 条客户信息: dlid=301821, cDLCode=DP20241200279047, dlCusCode=0531JYHXX, dlCusName=[济南捷易惠信息科技有限公司] | dlid=301818, cDLCode=DP20241200279044, dlCusCode=0531MRXX, dlCusName=[济南迈瑞信息技术有限公司] | dlid=301814, cDLCode=DP20241200279040, dlCusCode=0531JQSM1, dlCusName=[济南晶千商贸有限公司]
+2026-06-15 14:26:52.318 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [GetSalespersons] 从 rpt_salesperson_map 读取业务员列表
+2026-06-15 14:26:52.321 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [GetSalespersons] 从映射表获取到 6 个业务员
+2026-06-15 14:26:52.491 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [QueryUnverifiedDispatches] 开始查询未审核发货单, 客户编码=null, 日期范围=null~null
+2026-06-15 14:26:52.536 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [QueryUnverifiedDispatches] 查询完成, 共 20 条 (总计 331)
+2026-06-15 14:28:06.614 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [GetSalespersons] 从 rpt_salesperson_map 读取业务员列表
+2026-06-15 14:28:06.619 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [GetSalespersons] 从映射表获取到 6 个业务员
+2026-06-15 14:28:06.656 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [QueryUnverifiedDispatches] 开始查询未审核发货单, 客户编码=null, 日期范围=null~null
+2026-06-15 14:28:06.694 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [QueryUnverifiedDispatches] 查询完成, 共 20 条 (总计 332)
+2026-06-15 14:28:08.686 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [GetSalespersons] 从 rpt_salesperson_map 读取业务员列表
+2026-06-15 14:28:08.694 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [GetSalespersons] 从映射表获取到 6 个业务员
+2026-06-15 14:28:08.738 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [QueryOrders] 开始查询订单, 客户编码=null, 日期范围=null~null
+2026-06-15 14:28:08.891 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [QueryOrders] 查询完成, 共 9 条 (总计 46)
+2026-06-15 14:28:10.766 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [GetSalespersons] 从 rpt_salesperson_map 读取业务员列表
+2026-06-15 14:28:10.769 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [GetSalespersons] 从映射表获取到 6 个业务员
+2026-06-15 14:28:10.803 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [QueryDispatches] 开始查询发货单, 客户编码=null, 日期范围=null~null
+2026-06-15 14:28:10.884 +08:00 [INF] EAMS2026.Infrastructure.Data.Repositories.ErpVouchModifyRepository [QueryDispatches] Dapper原始行数: 20
+2026-06-15 14:28:10.950 +08:00 [INF] EAMS2026.Infrastructure.Data.Repositories.ErpVouchModifyRepository [QueryDispatches] 列名列表: RowNum, dlCusCode, dlid, cDLCode, dlDate, DlCusName, dlInvCode, dlInvName, dlInvStd, dlQuantity, dlVerifier, cPersonName
+2026-06-15 14:28:10.952 +08:00 [INF] EAMS2026.Infrastructure.Data.Repositories.ErpVouchModifyRepository [QueryDispatches] Dapper原始前 3 条客户字段: cDLCode=[DP20241200279047], DlCusName=[济南捷易惠信息科技有限公司], dlCusName=[(null)] | cDLCode=[DP20241200279044], DlCusName=[济南迈瑞信息技术有限公司], dlCusName=[(null)] | cDLCode=[DP20241200279040], DlCusName=[济南晶千商贸有限公司], dlCusName=[(null)]
+2026-06-15 14:28:10.955 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [QueryDispatches] 查询完成, 共 16 条 (总计 21738)
+2026-06-15 14:28:10.959 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [QueryDispatches] 前 3 条客户信息: dlid=301821, cDLCode=DP20241200279047, dlCusCode=0531JYHXX, dlCusName=[济南捷易惠信息科技有限公司] | dlid=301818, cDLCode=DP20241200279044, dlCusCode=0531MRXX, dlCusName=[济南迈瑞信息技术有限公司] | dlid=301814, cDLCode=DP20241200279040, dlCusCode=0531JQSM1, dlCusName=[济南晶千商贸有限公司]
+2026-06-15 14:32:58.079 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [GetSalespersons] 从 rpt_salesperson_map 读取业务员列表
+2026-06-15 14:32:58.087 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [GetSalespersons] 从映射表获取到 6 个业务员
+2026-06-15 14:32:58.249 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [QueryDispatches] 开始查询发货单, 客户编码=null, 日期范围=null~null
+2026-06-15 14:32:59.626 +08:00 [INF] EAMS2026.Infrastructure.Data.Repositories.ErpVouchModifyRepository [QueryDispatches] Dapper原始行数: 20
+2026-06-15 14:32:59.627 +08:00 [INF] EAMS2026.Infrastructure.Data.Repositories.ErpVouchModifyRepository [QueryDispatches] 列名列表: RowNum, dlCusCode, dlid, cDLCode, dlDate, DlCusName, dlInvCode, dlInvName, dlInvStd, dlQuantity, dlVerifier, cPersonName
+2026-06-15 14:32:59.628 +08:00 [INF] EAMS2026.Infrastructure.Data.Repositories.ErpVouchModifyRepository [QueryDispatches] Dapper原始前 3 条客户字段: cDLCode=[DP20241200279047], DlCusName=[济南捷易惠信息科技有限公司], dlCusName=[(null)] | cDLCode=[DP20241200279044], DlCusName=[济南迈瑞信息技术有限公司], dlCusName=[(null)] | cDLCode=[DP20241200279040], DlCusName=[济南晶千商贸有限公司], dlCusName=[(null)]
+2026-06-15 14:32:59.630 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [QueryDispatches] 查询完成, 共 16 条 (总计 21740)
+2026-06-15 14:32:59.631 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [QueryDispatches] 前 3 条客户信息: dlid=301821, cDLCode=DP20241200279047, dlCusCode=0531JYHXX, dlCusName=[济南捷易惠信息科技有限公司] | dlid=301818, cDLCode=DP20241200279044, dlCusCode=0531MRXX, dlCusName=[济南迈瑞信息技术有限公司] | dlid=301814, cDLCode=DP20241200279040, dlCusCode=0531JQSM1, dlCusName=[济南晶千商贸有限公司]
+2026-06-15 14:39:55.164 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [GetSalespersons] 从 rpt_salesperson_map 读取业务员列表
+2026-06-15 14:39:55.310 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [GetSalespersons] 从映射表获取到 6 个业务员
+2026-06-15 14:39:55.419 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [QueryDispatches] 开始查询发货单, 客户编码=null, 日期范围=null~null
+2026-06-15 14:39:55.584 +08:00 [INF] EAMS2026.Infrastructure.Data.Repositories.ErpVouchModifyRepository [QueryDispatches] Dapper原始行数: 20
+2026-06-15 14:39:55.591 +08:00 [INF] EAMS2026.Infrastructure.Data.Repositories.ErpVouchModifyRepository [QueryDispatches] 列名列表: RowNum, dlCusCode, dlid, cDLCode, dlDate, DlCusName, dlInvCode, dlInvName, dlInvStd, dlQuantity, dlVerifier, cPersonName
+2026-06-15 14:39:55.592 +08:00 [INF] EAMS2026.Infrastructure.Data.Repositories.ErpVouchModifyRepository [QueryDispatches] Dapper原始前 3 条客户字段: cDLCode=[DP20241200279047], DlCusName=[济南捷易惠信息科技有限公司], dlCusName=[(null)] | cDLCode=[DP20241200279044], DlCusName=[济南迈瑞信息技术有限公司], dlCusName=[(null)] | cDLCode=[DP20241200279040], DlCusName=[济南晶千商贸有限公司], dlCusName=[(null)]
+2026-06-15 14:39:55.594 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [QueryDispatches] 查询完成, 共 16 条 (总计 21740)
+2026-06-15 14:39:55.595 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [QueryDispatches] 前 3 条客户信息: dlid=301821, cDLCode=DP20241200279047, dlCusCode=0531JYHXX, dlCusName=[济南捷易惠信息科技有限公司] | dlid=301818, cDLCode=DP20241200279044, dlCusCode=0531MRXX, dlCusName=[济南迈瑞信息技术有限公司] | dlid=301814, cDLCode=DP20241200279040, dlCusCode=0531JQSM1, dlCusName=[济南晶千商贸有限公司]
+2026-06-15 15:46:18.732 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteReport] reportId=30006, userId=14
+2026-06-15 15:46:18.828 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteReport] hasView=true
+2026-06-15 15:46:18.836 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteStoredProcedure] 将执行 2 个存储过程: dflproc_ex_accountingCost, dflproc_report_accountingCost
+2026-06-15 15:46:20.150 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteStoredProcedure] dflproc_ex_accountingCost 的 sys.parameters 返回 1 个参数: enddate
+2026-06-15 15:46:20.153 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteStoredProcedure] dflproc_ex_accountingCost 接收到 0 个请求参数: 
+2026-06-15 15:46:20.157 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteStoredProcedure] 执行 dflproc_ex_accountingCost, 参数数=1
+2026-06-15 15:46:20.159 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteStoredProcedure]    -> 参数名: enddate
+2026-06-15 15:46:21.445 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteStoredProcedure] dflproc_ex_accountingCost 返回 0 行
+2026-06-15 15:46:21.449 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteStoredProcedure] dflproc_report_accountingCost 的 sys.parameters 返回 0 个参数: 
+2026-06-15 15:46:21.451 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteStoredProcedure] dflproc_report_accountingCost 接收到 0 个请求参数: 
+2026-06-15 15:46:21.454 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteStoredProcedure] 执行 dflproc_report_accountingCost, 参数数=0
+2026-06-15 15:46:21.474 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteStoredProcedure] dflproc_report_accountingCost 返回 2823 行
+2026-06-15 15:46:21.482 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteStoredProcedure] 全部完成, 总计 2823 行, 17 列
+2026-06-15 15:47:51.973 +08:00 [INF] Microsoft.Hosting.Lifetime Now listening on: http://0.0.0.0:5106
+2026-06-15 15:47:52.119 +08:00 [INF] Microsoft.Hosting.Lifetime Application started. Press Ctrl+C to shut down.
+2026-06-15 15:47:52.121 +08:00 [INF] Microsoft.Hosting.Lifetime Hosting environment: Development
+2026-06-15 15:47:52.122 +08:00 [INF] Microsoft.Hosting.Lifetime Content root path: D:\Codes\Projects\eams2026\src\EAMS2026.Api
+2026-06-15 15:48:09.213 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteReport] reportId=30006, userId=21
+2026-06-15 15:48:09.226 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteReport] hasView=true
+2026-06-15 15:48:09.257 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteStoredProcedure] 将执行 2 个存储过程: dflproc_ex_accountingCost, dflproc_report_accountingCost
+2026-06-15 15:48:10.728 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteStoredProcedure] dflproc_ex_accountingCost 的 sys.parameters 返回 1 个参数: enddate
+2026-06-15 15:48:10.730 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteStoredProcedure] dflproc_ex_accountingCost 接收到 0 个请求参数: 
+2026-06-15 15:48:10.732 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteStoredProcedure] 执行 dflproc_ex_accountingCost, 参数数=1
+2026-06-15 15:48:10.734 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteStoredProcedure]    -> 参数名: enddate
+2026-06-15 15:48:12.167 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteStoredProcedure] dflproc_ex_accountingCost 返回 0 行
+2026-06-15 15:48:12.170 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteStoredProcedure] dflproc_report_accountingCost 的 sys.parameters 返回 0 个参数: 
+2026-06-15 15:48:12.172 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteStoredProcedure] dflproc_report_accountingCost 接收到 0 个请求参数: 
+2026-06-15 15:48:12.173 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteStoredProcedure] 执行 dflproc_report_accountingCost, 参数数=0
+2026-06-15 15:48:12.202 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteStoredProcedure] dflproc_report_accountingCost 返回 2823 行
+2026-06-15 15:48:12.332 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteStoredProcedure] 全部完成, 总计 2823 行, 17 列
+2026-06-15 15:48:16.715 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExportReportAsync] 开始导出报表 30006, 格式=xlsx, 参数数=0
+2026-06-15 15:48:16.722 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteStoredProcedure] 将执行 2 个存储过程: dflproc_ex_accountingCost, dflproc_report_accountingCost
+2026-06-15 15:48:16.725 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteStoredProcedure] dflproc_ex_accountingCost 的 sys.parameters 返回 1 个参数: enddate
+2026-06-15 15:48:16.726 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteStoredProcedure] dflproc_ex_accountingCost 接收到 0 个请求参数: 
+2026-06-15 15:48:16.728 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteStoredProcedure] 执行 dflproc_ex_accountingCost, 参数数=1
+2026-06-15 15:48:16.729 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteStoredProcedure]    -> 参数名: enddate
+2026-06-15 15:48:18.083 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteStoredProcedure] dflproc_ex_accountingCost 返回 0 行
+2026-06-15 15:48:18.085 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteStoredProcedure] dflproc_report_accountingCost 的 sys.parameters 返回 0 个参数: 
+2026-06-15 15:48:18.087 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteStoredProcedure] dflproc_report_accountingCost 接收到 0 个请求参数: 
+2026-06-15 15:48:18.089 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteStoredProcedure] 执行 dflproc_report_accountingCost, 参数数=0
+2026-06-15 15:48:18.148 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteStoredProcedure] dflproc_report_accountingCost 返回 2823 行
+2026-06-15 15:48:18.159 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteStoredProcedure] 全部完成, 总计 2823 行, 17 列
+2026-06-15 15:48:18.161 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExportReportAsync] 查询结果: 2823 行, 17 列
+2026-06-15 15:48:18.273 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExportReportAsync] 权限过滤后: 2823 行, 17 列
+2026-06-15 15:48:19.853 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExportReportAsync] 导出完成, 数据大小=242072 bytes
+2026-06-15 15:48:37.558 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [GetSalespersons] 从 rpt_salesperson_map 读取业务员列表
+2026-06-15 15:48:37.566 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [GetSalespersons] 从映射表获取到 6 个业务员
+2026-06-15 15:48:37.835 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [QueryUnverifiedDispatches] 开始查询未审核发货单, 客户编码=null, 日期范围=null~null
+2026-06-15 15:48:37.918 +08:00 [INF] EAMS2026.Application.Services.VouchModifyService [QueryUnverifiedDispatches] 查询完成, 共 20 条 (总计 314)
+2026-06-15 15:49:02.045 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteReport] reportId=2, userId=5
+2026-06-15 15:49:02.050 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteReport] hasView=true
+2026-06-15 15:49:02.055 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [BuildFilterConditions] 生成条件: year = '2026' AND cpersoncode = '0207'
+2026-06-15 15:49:02.056 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [BuildFilterConditions] 修改后SQL: SELECT year,month,ddate,cdcname,cpersonname,cpersoncode,cCusName,cCusAbbName,cShipAddress,cCusPerson,cdlcode,cmaker,cWhName,cInvTopClsName,cInvName,cInvCCode,cInvCName,iQuantity,iNum,isum
+from dflView_eams_crossYearDispatch
+where 1=1
+    AND (year = '2026' AND cpersoncode = '0207')
+2026-06-15 15:49:02.058 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteQueryInternal] 应用报表默认排序: ddate DESC, cdcname ASC
+2026-06-15 15:49:02.064 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql] datasource=erp_u871_currentYear, isSqlServer=true, sql=SELECT year,month,ddate,cdcname,cpersonname,cpersoncode,cCusName,cCusAbbName,cShipAddress,cCusPerson,cdlcode,cmaker,cWhName,cInvTopClsName,cInvName,cInvCCode,cInvCName,iQuantity,iNum,isum
+from dflView_eams_crossYearDispatch
+where 1=1
+    AND (year = '2026' AND cpersoncode = '0207')
+2026-06-15 15:49:02.066 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql] 归一化参数数: 3
+2026-06-15 15:49:02.067 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql]    param ddate -> ddate = 2026-01-01 (String)
+2026-06-15 15:49:02.069 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql]     -> 将字符串转换为DateTime: "2026-01-01T00:00:00.0000000"
+2026-06-15 15:49:02.070 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql]    param year -> year = 2026 (String)
+2026-06-15 15:49:02.072 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql]    param cpersoncode -> cpersoncode = 0207 (String)
+2026-06-15 15:49:02.074 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql] 应用排序: ddate DESC, cdcname ASC
+2026-06-15 15:49:02.076 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql] page=1, pageSize=0
+2026-06-15 15:49:02.077 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql] 无分页SQL: SELECT year,month,ddate,cdcname,cpersonname,cpersoncode,cCusName,cCusAbbName,cShipAddress,cCusPerson,cdlcode,cmaker,cWhName,cInvTopClsName,cInvName,cInvCCode,cInvCName,iQuantity,iNum,isum
+from dflView_eams_crossYearDispatch
+where 1=1
+    AND (year = '2026' AND cpersoncode = '0207')
+ORDER BY ddate DESC, cdcname ASC
+2026-06-15 15:49:02.215 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql] 返回列数=20, 行数=4871
+2026-06-15 16:09:29.493 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [PreviewReport] queryType=proc, datasource=erp_u871_currentYear, paramsCount=0
+2026-06-15 16:09:29.503 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [PreviewReport] 执行存储过程: dflproc_ex_accountingCost
+dflproc_report_accountingCost
+2026-06-15 16:09:29.507 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteStoredProcedure] 将执行 2 个存储过程: dflproc_ex_accountingCost, dflproc_report_accountingCost
+2026-06-15 16:09:30.780 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteStoredProcedure] dflproc_ex_accountingCost 的 sys.parameters 返回 1 个参数: enddate
+2026-06-15 16:09:30.782 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteStoredProcedure] dflproc_ex_accountingCost 接收到 0 个请求参数: 
+2026-06-15 16:09:30.784 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteStoredProcedure] 执行 dflproc_ex_accountingCost, 参数数=1
+2026-06-15 16:09:30.789 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteStoredProcedure]    -> 参数名: enddate
+2026-06-15 16:09:32.173 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteStoredProcedure] dflproc_ex_accountingCost 返回 0 行
+2026-06-15 16:09:32.176 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteStoredProcedure] dflproc_report_accountingCost 的 sys.parameters 返回 0 个参数: 
+2026-06-15 16:09:32.177 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteStoredProcedure] dflproc_report_accountingCost 接收到 0 个请求参数: 
+2026-06-15 16:09:32.178 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteStoredProcedure] 执行 dflproc_report_accountingCost, 参数数=0
+2026-06-15 16:09:32.188 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteStoredProcedure] dflproc_report_accountingCost 返回 2824 行
+2026-06-15 16:09:32.193 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteStoredProcedure] 全部完成, 总计 2824 行, 17 列
+2026-06-15 16:09:32.195 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [PreviewReport] 完成, 耗时=2702ms, 行数=2824
+2026-06-15 16:09:32.201 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [PreviewReport] 第一行JSON预览 (前200): {"\u5E8F\u53F7":789,"\u65E5\u671F":null,"\u65B9\u5411(1\u51650\u7ED3-1\u51FA)":0,"\u4E1A\u52A1\u7C7B\u578B":null,"\u5355\u636E\u6765\u6E90":"\u671F\u521D","\u5355\u636E\u7F16\u53F7":null,"\u4ED3\u5E93
+2026-06-15 16:09:32.202 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [PreviewReport] 第一行JSON总长度: 645
+2026-06-15 16:09:32.203 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [PreviewReport] 列数=17, 列名=序号, 日期, 方向(1入0结-1出), 业务类型, 单据来源, 单据编号, 仓库编码, 存货编码, 存货名称, 存货型号, 数量, 成本单价, 成本金额, 本单金额, 结存数量, 结存金额, 成本计算
+2026-06-15 16:10:22.252 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteReport] reportId=2, userId=5
+2026-06-15 16:10:22.269 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteReport] hasView=true
+2026-06-15 16:10:22.271 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [BuildFilterConditions] 生成条件: year = '2026' AND cpersoncode = '0207'
+2026-06-15 16:10:22.272 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [BuildFilterConditions] 修改后SQL: SELECT year,month,ddate,cdcname,cpersonname,cpersoncode,cCusName,cCusAbbName,cShipAddress,cCusPerson,cdlcode,cmaker,cWhName,cInvTopClsName,cInvName,cInvCCode,cInvCName,iQuantity,iNum,isum
+from dflView_eams_crossYearDispatch
+where 1=1
+    AND (year = '2026' AND cpersoncode = '0207')
+2026-06-15 16:10:22.274 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteQueryInternal] 应用报表默认排序: ddate DESC, cdcname ASC
+2026-06-15 16:10:22.276 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql] datasource=erp_u871_currentYear, isSqlServer=true, sql=SELECT year,month,ddate,cdcname,cpersonname,cpersoncode,cCusName,cCusAbbName,cShipAddress,cCusPerson,cdlcode,cmaker,cWhName,cInvTopClsName,cInvName,cInvCCode,cInvCName,iQuantity,iNum,isum
+from dflView_eams_crossYearDispatch
+where 1=1
+    AND (year = '2026' AND cpersoncode = '0207')
+2026-06-15 16:10:22.279 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql] 归一化参数数: 3
+2026-06-15 16:10:22.280 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql]    param ddate -> ddate = 2026-01-01 (String)
+2026-06-15 16:10:22.282 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql]     -> 将字符串转换为DateTime: "2026-01-01T00:00:00.0000000"
+2026-06-15 16:10:22.284 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql]    param year -> year = 2026 (String)
+2026-06-15 16:10:22.291 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql]    param cpersoncode -> cpersoncode = 0207 (String)
+2026-06-15 16:10:22.294 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql] 应用排序: ddate DESC, cdcname ASC
+2026-06-15 16:10:22.295 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql] page=1, pageSize=0
+2026-06-15 16:10:22.298 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql] 无分页SQL: SELECT year,month,ddate,cdcname,cpersonname,cpersoncode,cCusName,cCusAbbName,cShipAddress,cCusPerson,cdlcode,cmaker,cWhName,cInvTopClsName,cInvName,cInvCCode,cInvCName,iQuantity,iNum,isum
+from dflView_eams_crossYearDispatch
+where 1=1
+    AND (year = '2026' AND cpersoncode = '0207')
+ORDER BY ddate DESC, cdcname ASC
+2026-06-15 16:10:22.582 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql] 返回列数=20, 行数=4871
+2026-06-15 16:10:25.602 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteReport] reportId=2, userId=5
+2026-06-15 16:10:25.621 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteReport] hasView=true
+2026-06-15 16:10:25.622 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [BuildFilterConditions] 生成条件: year = '2026' AND cpersoncode = '0207'
+2026-06-15 16:10:25.623 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [BuildFilterConditions] 修改后SQL: SELECT year,month,ddate,cdcname,cpersonname,cpersoncode,cCusName,cCusAbbName,cShipAddress,cCusPerson,cdlcode,cmaker,cWhName,cInvTopClsName,cInvName,cInvCCode,cInvCName,iQuantity,iNum,isum
+from dflView_eams_crossYearDispatch
+where 1=1
+    AND (year = '2026' AND cpersoncode = '0207')
+2026-06-15 16:10:25.624 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteQueryInternal] 应用报表默认排序: ddate DESC, cdcname ASC
+2026-06-15 16:10:25.720 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql] datasource=erp_u871_currentYear, isSqlServer=true, sql=SELECT year,month,ddate,cdcname,cpersonname,cpersoncode,cCusName,cCusAbbName,cShipAddress,cCusPerson,cdlcode,cmaker,cWhName,cInvTopClsName,cInvName,cInvCCode,cInvCName,iQuantity,iNum,isum
+from dflView_eams_crossYearDispatch
+where 1=1
+    AND (year = '2026' AND cpersoncode = '0207')
+2026-06-15 16:10:25.743 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql] 归一化参数数: 3
+2026-06-15 16:10:25.773 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteReport] reportId=2, userId=5
+2026-06-15 16:10:25.774 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql]    param ddate -> ddate = 2026-01-01 (String)
+2026-06-15 16:10:25.780 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql]     -> 将字符串转换为DateTime: "2026-01-01T00:00:00.0000000"
+2026-06-15 16:10:25.782 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql]    param year -> year = 2026 (String)
+2026-06-15 16:10:25.811 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteReport] hasView=true
+2026-06-15 16:10:25.871 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql]    param cpersoncode -> cpersoncode = 0207 (String)
+2026-06-15 16:10:25.875 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [BuildFilterConditions] 生成条件: year = '2026' AND cpersoncode = '0207'
+2026-06-15 16:10:25.877 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql] 应用排序: ddate DESC, cdcname ASC
+2026-06-15 16:10:25.990 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [BuildFilterConditions] 修改后SQL: SELECT year,month,ddate,cdcname,cpersonname,cpersoncode,cCusName,cCusAbbName,cShipAddress,cCusPerson,cdlcode,cmaker,cWhName,cInvTopClsName,cInvName,cInvCCode,cInvCName,iQuantity,iNum,isum
+from dflView_eams_crossYearDispatch
+where 1=1
+    AND (year = '2026' AND cpersoncode = '0207')
+2026-06-15 16:10:25.991 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql] page=1, pageSize=0
+2026-06-15 16:10:25.993 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteQueryInternal] 应用报表默认排序: ddate DESC, cdcname ASC
+2026-06-15 16:10:25.995 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql] 无分页SQL: SELECT year,month,ddate,cdcname,cpersonname,cpersoncode,cCusName,cCusAbbName,cShipAddress,cCusPerson,cdlcode,cmaker,cWhName,cInvTopClsName,cInvName,cInvCCode,cInvCName,iQuantity,iNum,isum
+from dflView_eams_crossYearDispatch
+where 1=1
+    AND (year = '2026' AND cpersoncode = '0207')
+ORDER BY ddate DESC, cdcname ASC
+2026-06-15 16:10:25.998 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql] datasource=erp_u871_currentYear, isSqlServer=true, sql=SELECT year,month,ddate,cdcname,cpersonname,cpersoncode,cCusName,cCusAbbName,cShipAddress,cCusPerson,cdlcode,cmaker,cWhName,cInvTopClsName,cInvName,cInvCCode,cInvCName,iQuantity,iNum,isum
+from dflView_eams_crossYearDispatch
+where 1=1
+    AND (year = '2026' AND cpersoncode = '0207')
+2026-06-15 16:10:26.003 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql] 归一化参数数: 3
+2026-06-15 16:10:26.007 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql]    param ddate -> ddate = 2026-01-01 (String)
+2026-06-15 16:10:26.009 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql]     -> 将字符串转换为DateTime: "2026-01-01T00:00:00.0000000"
+2026-06-15 16:10:26.010 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql]    param year -> year = 2026 (String)
+2026-06-15 16:10:26.083 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql]    param cpersoncode -> cpersoncode = 0207 (String)
+2026-06-15 16:10:26.085 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql] 应用排序: ddate DESC, cdcname ASC
+2026-06-15 16:10:26.247 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql] 返回列数=20, 行数=4871
+2026-06-15 16:10:26.264 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql] page=1, pageSize=0
+2026-06-15 16:10:26.294 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql] 无分页SQL: SELECT year,month,ddate,cdcname,cpersonname,cpersoncode,cCusName,cCusAbbName,cShipAddress,cCusPerson,cdlcode,cmaker,cWhName,cInvTopClsName,cInvName,cInvCCode,cInvCName,iQuantity,iNum,isum
+from dflView_eams_crossYearDispatch
+where 1=1
+    AND (year = '2026' AND cpersoncode = '0207')
+ORDER BY ddate DESC, cdcname ASC
+2026-06-15 16:10:26.471 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteRawSql] 返回列数=20, 行数=4871
+2026-06-15 16:10:40.375 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [PreviewReport] queryType=proc, datasource=erp_u871_currentYear, paramsCount=0
+2026-06-15 16:10:40.377 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [PreviewReport] 执行存储过程: dflproc_report_accountingCost
+2026-06-15 16:10:40.521 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteStoredProcedure] 将执行 1 个存储过程: dflproc_report_accountingCost
+2026-06-15 16:10:40.770 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteStoredProcedure] dflproc_report_accountingCost 的 sys.parameters 返回 0 个参数: 
+2026-06-15 16:10:40.772 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteStoredProcedure] dflproc_report_accountingCost 接收到 0 个请求参数: 
+2026-06-15 16:10:40.857 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteStoredProcedure] 执行 dflproc_report_accountingCost, 参数数=0
+2026-06-15 16:10:40.873 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteStoredProcedure] dflproc_report_accountingCost 返回 2824 行
+2026-06-15 16:10:40.878 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [ExecuteStoredProcedure] 全部完成, 总计 2824 行, 17 列
+2026-06-15 16:10:40.881 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [PreviewReport] 完成, 耗时=505ms, 行数=2824
+2026-06-15 16:10:40.882 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [PreviewReport] 第一行JSON预览 (前200): {"\u5E8F\u53F7":789,"\u65E5\u671F":null,"\u65B9\u5411(1\u51650\u7ED3-1\u51FA)":0,"\u4E1A\u52A1\u7C7B\u578B":null,"\u5355\u636E\u6765\u6E90":"\u671F\u521D","\u5355\u636E\u7F16\u53F7":null,"\u4ED3\u5E93
+2026-06-15 16:10:40.883 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [PreviewReport] 第一行JSON总长度: 645
+2026-06-15 16:10:40.884 +08:00 [INF] EAMS2026.Infrastructure.Services.ReportService [PreviewReport] 列数=17, 列名=序号, 日期, 方向(1入0结-1出), 业务类型, 单据来源, 单据编号, 仓库编码, 存货编码, 存货名称, 存货型号, 数量, 成本单价, 成本金额, 本单金额, 结存数量, 结存金额, 成本计算
+2026-06-15 17:45:42.959 +08:00 [INF] Microsoft.Hosting.Lifetime Now listening on: http://0.0.0.0:5106
+2026-06-15 17:45:43.023 +08:00 [INF] Microsoft.Hosting.Lifetime Application started. Press Ctrl+C to shut down.
+2026-06-15 17:45:43.025 +08:00 [INF] Microsoft.Hosting.Lifetime Hosting environment: Development
+2026-06-15 17:45:43.025 +08:00 [INF] Microsoft.Hosting.Lifetime Content root path: D:\Codes\Projects\eams2026\src\EAMS2026.Api
