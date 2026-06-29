@@ -1,4 +1,6 @@
+# ============================================
 # .NET
+# ============================================
 bin/
 obj/
 *.user
@@ -6,22 +8,81 @@ obj/
 *.sln.docstates
 .vs/
 
+# ============================================
 # Node
+# ============================================
 node_modules/
 dist/
 *.tsbuildinfo
 
+# ============================================
 # OS
+# ============================================
 .DS_Store
 Thumbs.db
+desktop.ini
 
-# IDE
+# ============================================
+# IDE / Editor
+# ============================================
 .idea/
+.vscode/
 *.swp
 *.swo
+.reasonix/
+.trae/
 
-# Project specific - large dirs
+# ============================================
+# Configuration - secrets / local
+# ============================================
+# 生产/开发配置文件包含凭据，不上传
+# 请参照 appsettings.example.json 创建
+appsettings.json
+appsettings.Development.json
+appsettings.Production.json
+
+# 环境变量文件（含密钥）
+.env
+*.env
+
+# MCP 配置（本地开发配置）
+.mcp.json
+
+# Reasonix 配置
+reasonix.toml
+
+# ============================================
+# Runtime / Logs
+# ============================================
+logs/
+*.log
+
+# ============================================
+# Temporary / Debug files
+# ============================================
+temp/
+temp_*
+test_*.py
+test_*.ps1
+*.csv
+*.bmp
+*.jpg
+*.jpeg
+*.png
+*.gif
+
+# ============================================
+# Project specific - large / non-source dirs
+# ============================================
 publish/
+backups/
+Project_to_be_Imported/
 .dotnet/
 .atomcode/
 .nuget/
+.dbg/
+
+# ============================================
+# Tests (test data, not source)
+# ============================================
+tests/

@@ -1,7 +1,7 @@
 {
   "name": "eams2026-web",
   "private": true,
-  "version": "1.0.0",
+  "version": "0.4.2026.0630",
   "type": "module",
   "scripts": {
     "dev": "vite",

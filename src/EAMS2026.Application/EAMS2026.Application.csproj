@@ -14,7 +14,7 @@
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <Version>0.4.2026.0624</Version>
+    <Version>0.4.2026.0630</Version>
   </PropertyGroup>
 
 </Project>
