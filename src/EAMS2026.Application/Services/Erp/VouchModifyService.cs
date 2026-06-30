@@ -341,6 +341,73 @@ public class VouchModifyService : IVouchModifyService
         return result;
     }
 
+    // ==================== 批量修改发货单客户 ====================
+
+    public async Task<VouchModifyBatchResult> BatchUpdateDispatchCustomerAsync(BatchUpdateCustomerRequest request, long operatorId, string operatorName)
+    {
+        _logger.LogInformation("[BatchUpdateDispatchCustomer] 操作人={Op}({OpId}), 共 {Count} 条, 新客户={NewCusCode}/{NewCusName}",
+            operatorName, operatorId, request.Dlids.Count, request.NewCusCode, request.NewCusName);
+
+        var result = new VouchModifyBatchResult { TotalCount = request.Dlids.Count };
+
+        // 校验客户是否存在
+        var customer = await _vouchRepo.GetCustomerReferenceAsync(request.NewCusCode);
+        if (customer == null)
+        {
+            _logger.LogWarning("[BatchUpdateDispatchCustomer] 客户编码 {Code} 不存在", request.NewCusCode);
+            result.Failures.Add(new BatchFailItem { Dlid = 0, DlCode = "", ErrorMessage = $"客户编码 {request.NewCusCode} 不存在" });
+            result.FailCount = result.TotalCount;
+            return result;
+        }
+
+        foreach (var dlid in request.Dlids)
+        {
+            try
+            {
+                var isUnverified = await _vouchRepo.IsDispatchUnverifiedAsync(dlid);
+                if (!isUnverified)
+                {
+                    _logger.LogWarning("[BatchUpdateDispatchCustomer] 单据 {Dlid} 已审核，跳过", dlid);
+                    result.Failures.Add(new BatchFailItem { Dlid = dlid, DlCode = "", ErrorMessage = "单据已审核" });
+                    continue;
+                }
+
+                var success = await _vouchRepo.UpdateDispatchCustomerAsync(dlid, request.NewCusCode, request.NewCusName);
+                if (success)
+                {
+                    result.SuccessCount++;
+                    await _logRepo.AddAsync(new VouchModifyLog
+                    {
+                        VouchType = "dispatch",
+                        VouchId = dlid,
+                        VouchCode = dlid.ToString(),
+                        FieldName = "cCusCode",
+                        OldValue = request.OldCusCode,
+                        NewValue = request.NewCusCode,
+                        OperatorId = operatorId,
+                        OperatorName = operatorName,
+                        Status = "SUCCESS"
+                    });
+                }
+                else
+                {
+                    _logger.LogWarning("[BatchUpdateDispatchCustomer] 单据 {Dlid} 更新失败", dlid);
+                    result.Failures.Add(new BatchFailItem { Dlid = dlid, DlCode = "", ErrorMessage = "更新失败" });
+                }
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "[BatchUpdateDispatchCustomer] 单据 {Dlid} 异常", dlid);
+                result.Failures.Add(new BatchFailItem { Dlid = dlid, DlCode = "", ErrorMessage = ex.Message });
+            }
+        }
+
+        result.FailCount = result.TotalCount - result.SuccessCount;
+        _logger.LogInformation("[BatchUpdateDispatchCustomer] 批量修改完成: 成功 {Success}/{Total} 条",
+            result.SuccessCount, result.TotalCount);
+        return result;
+    }
+
     // ==================== 客户参照 ====================
 
     public async Task<CustomerRefDto?> GetCustomerReferenceAsync(string code)

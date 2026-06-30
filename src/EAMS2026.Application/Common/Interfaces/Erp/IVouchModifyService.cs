@@ -21,6 +21,7 @@ public interface IVouchModifyService
     Task<VouchModifyResult> UpdateDispatchCustomerAsync(UpdateCustomerRequest request, long operatorId, string operatorName);
     Task<VouchModifyResult> UpdateDispatchDateAsync(UpdateDateRequest request, long operatorId, string operatorName);
     Task<VouchModifyBatchResult> BatchUpdateDispatchDateAsync(BatchUpdateDateRequest request, long operatorId, string operatorName);
+    Task<VouchModifyBatchResult> BatchUpdateDispatchCustomerAsync(BatchUpdateCustomerRequest request, long operatorId, string operatorName);
 
     // 客户参照
     Task<CustomerRefDto?> GetCustomerReferenceAsync(string code);

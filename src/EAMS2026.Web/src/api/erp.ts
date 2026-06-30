@@ -80,6 +80,14 @@ export interface UpdateDateRequest {
   newDate: string
 }
 
+export interface BatchUpdateCustomerRequest {
+  dlids: number[]
+  newCusCode: string
+  newCusName: string
+  oldCusCode?: string
+  oldCusName?: string
+}
+
 export interface BatchUpdateDateRequest {
   dlids: number[]
   newDate: string
@@ -158,6 +166,9 @@ export const vouchModifyApi = {
   },
   batchUpdateDispatchDate(data: BatchUpdateDateRequest): Promise<BatchUpdateResult> {
     return request.put('/erp/vouch-modify/dispatch/date/batch', data)
+  },
+  batchUpdateDispatchCustomer(data: BatchUpdateCustomerRequest): Promise<BatchUpdateResult> {
+    return request.put('/erp/vouch-modify/dispatch/customer/batch', data)
   },
 
   // 客户参照

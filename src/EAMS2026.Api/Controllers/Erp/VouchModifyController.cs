@@ -97,6 +97,14 @@ public class VouchModifyController : BaseController
         return Success(result);
     }
 
+    /// <summary>批量修改发货单客户</summary>
+    [HttpPut("dispatch/customer/batch")]
+    public async Task<IActionResult> BatchUpdateDispatchCustomer([FromBody] BatchUpdateCustomerRequest request)
+    {
+        var result = await _service.BatchUpdateDispatchCustomerAsync(request, GetUserId(), GetUsername());
+        return Success(result);
+    }
+
     // ==================== 客户参照 ====================
 
     /// <summary>客户参照（验证客户编码是否存在）</summary>

@@ -42,7 +42,20 @@
         </el-collapse-item>
       </el-collapse>
 
-      <el-table :data="dispatches" v-loading="loading" border row-key="dlid">
+      <div class="table-toolbar">
+        <div class="toolbar-left">
+          <el-button
+            type="primary"
+            :disabled="selectedDispatches.length === 0"
+            @click="showBatchModifyDialog"
+          >
+            批量修改客户 ({{ selectedDispatches.length }})
+          </el-button>
+        </div>
+      </div>
+
+      <el-table :data="dispatches" v-loading="loading" border row-key="dlid" @selection-change="onSelectionChange">
+        <el-table-column type="selection" width="45" />
         <el-table-column type="expand">
           <template #default="scope">
             <div class="expand-content">
@@ -123,15 +136,44 @@
         </el-button>
       </template>
     </el-dialog>
+
+    <!-- 批量修改客户对话框 -->
+    <el-dialog v-model="batchModifyDialogVisible" title="批量修改发货单客户" width="500px">
+      <el-alert
+        :title="batchAlertTitle"
+        type="info"
+        show-icon
+        :closable="false"
+        style="margin-bottom: 16px"
+      />
+      <el-form :model="batchModifyForm" label-width="100px">
+        <el-form-item label="新客户编码" required>
+          <el-input v-model="batchModifyForm.newCusCode" placeholder="输入客户编码后验证" @blur="validateBatchCustomer">
+            <template #append>
+              <el-button :loading="batchValidating" @click="validateBatchCustomer">验证</el-button>
+            </template>
+          </el-input>
+        </el-form-item>
+        <el-form-item label="新客户名称">
+          <el-input v-model="batchModifyForm.newCusName" disabled />
+        </el-form-item>
+      </el-form>
+      <template #footer>
+        <el-button @click="batchModifyDialogVisible = false">取消</el-button>
+        <el-button type="primary" :loading="batchModifying" :disabled="!batchModifyForm.newCusName" @click="submitBatchModify">
+          确认批量修改
+        </el-button>
+      </template>
+    </el-dialog>
   </div>
 </template>
 
 <script setup lang="ts">
 import { ref, computed, onMounted } from 'vue'
-import { ElMessage } from 'element-plus'
+import { ElMessage, ElMessageBox } from 'element-plus'
 import { vouchModifyApi } from '@/api/erp'
 import { reportApi } from '@/api/report'
-import type { DispatchDto, VouchQueryParam } from '@/api/erp'
+import type { DispatchDto, VouchQueryParam, BatchUpdateResult } from '@/api/erp'
 
 const loading = ref(false)
 const modifying = ref(false)
@@ -167,6 +209,106 @@ const modifyForm = ref({
   newCusCode: '',
   newCusName: ''
 })
+
+// 批量修改
+const selectedDispatches = ref<DispatchDto[]>([])
+const batchUnverifiedCount = computed(() =>
+  selectedDispatches.value.filter(d => !d.cVerifier).length
+)
+const batchAlertTitle = computed(() => {
+  const total = selectedDispatches.value.length
+  const unverified = batchUnverifiedCount.value
+  if (total === 0) return '请选择需要修改的发货单'
+  if (unverified === total) {
+    return `已选择 ${total} 条发货单，将统一修改为同一客户。`
+  }
+  return `已选择 ${total} 条发货单（其中未审核 ${unverified} 条），将统一修改为同一客户。已审核的发货单将被自动跳过。`
+})
+const batchModifyDialogVisible = ref(false)
+const batchModifying = ref(false)
+const batchValidating = ref(false)
+const batchModifyForm = ref({
+  newCusCode: '',
+  newCusName: ''
+})
+
+function onSelectionChange(val: DispatchDto[]) {
+  selectedDispatches.value = val
+}
+
+function showBatchModifyDialog() {
+  if (selectedDispatches.value.length === 0) {
+    ElMessage.warning('请先选择需要修改的发货单')
+    return
+  }
+  batchModifyForm.value = { newCusCode: '', newCusName: '' }
+  batchModifyDialogVisible.value = true
+}
+
+async function validateBatchCustomer() {
+  if (!batchModifyForm.value.newCusCode) {
+    ElMessage.warning('请输入客户编码')
+    return
+  }
+  batchValidating.value = true
+  try {
+    const res = await vouchModifyApi.getCustomerRef(batchModifyForm.value.newCusCode)
+    batchModifyForm.value.newCusName = (res as any)?.data?.cusName ?? ''
+    ElMessage.success(`验证通过: ${(res as any)?.data?.cusName ?? ''}`)
+  } catch {
+    batchModifyForm.value.newCusName = ''
+  } finally {
+    batchValidating.value = false
+  }
+}
+
+async function submitBatchModify() {
+  if (!batchModifyForm.value.newCusCode || !batchModifyForm.value.newCusName) return
+
+  const dlids = selectedDispatches.value
+    .filter(d => !d.cVerifier)
+    .map(d => d.dlid)
+  if (dlids.length === 0) {
+    ElMessage.warning('所选发货单均已审核，无法修改')
+    return
+  }
+
+  try {
+    await ElMessageBox.confirm(
+      `将批量修改 ${dlids.length} 条未审核发货单的客户为「${batchModifyForm.value.newCusCode} - ${batchModifyForm.value.newCusName}」，确定继续？`,
+      '确认批量修改',
+      { type: 'warning', confirmButtonText: '确定', cancelButtonText: '取消' }
+    )
+  } catch {
+    return
+  }
+
+  batchModifying.value = true
+  try {
+    const res = await vouchModifyApi.batchUpdateDispatchCustomer({
+      dlids,
+      newCusCode: batchModifyForm.value.newCusCode,
+      newCusName: batchModifyForm.value.newCusName
+    }) as any
+    const result = res?.data as BatchUpdateResult
+    if (result) {
+      ElMessageBox.alert(
+        `共处理 ${result.totalCount} 条，成功 ${result.successCount} 条，失败 ${result.failCount} 条。` +
+        (result.failures?.length > 0
+          ? `\n\n失败明细：\n${result.failures.map(f => `  · 单据 ${f.dlid}: ${f.errorMessage}`).join('\n')}`
+          : ''),
+        '批量修改结果',
+        { type: result.failCount > 0 ? 'warning' : 'success', confirmButtonText: '知道了' }
+      )
+    } else {
+      ElMessage.success('批量修改成功')
+    }
+    batchModifyDialogVisible.value = false
+    handleQuery()
+  } finally {
+    batchModifying.value = false
+  }
+}
 
 async function handleQuery() {
   loading.value = true
@@ -254,6 +396,11 @@ onMounted(async () => {
 </script>
 
 <style scoped>
+.table-toolbar {
+  display: flex;
+  align-items: center;
+  margin: 12px 0;
+}
 .expand-content {
   padding: 12px 24px;
 }
